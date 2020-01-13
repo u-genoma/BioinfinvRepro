@@ -64,6 +64,99 @@ Algunos ejemplos:
 * [Talleres Internacionales de Genómica del Centro de Ciencias Genómicas, Cuernavaca](http://congresos.nnb.unam.mx/TIB2017/)
 
 
+## Dinámica del curso
+
+### ¿Cómo serán las clases?
+* Exposición + ejercicos y ejemplos en clase
+* Todos los materiales de la clase los iremos subiendo/actualizando a GitHub conforme avance el semestre
+* Dejaremos **lecturas** a casa antes o después de algunos temas. Es una muy buena idea sí leerlas.
+* Ocuparemos Google Classroom para enviar tareas y hacer anuncios del curso. Debes recibir una invitación a tu correo.
+
+* **¿Necesito una computadora?**
+
+El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac o GNU/Linux (**no** Windows, sorry, lo intenté 2 años y es una pesadilla para todxs) y:
+
+  -  [Docker](https://www.docker.com/) instalado y **FUNCIONANDO** (ocuparemos Docker dentro de un mes)
+
+
+* **¿Necesito instalar algo más? Sí**
+     1. Un editor de texto decente. Listo para la 2da clase. Recomendaciones:
+         * Mac o Linux: [Atom](https://atom.io/)
+         * Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
+     2. Un editor de Markdown    
+         * Mac: [MacDown](http://macdown.uranusjr.com/)
+         * Mac o Linux: [Haroopad](http://pad.haroopress.com/) o [Typora](https://typora.io/)
+     3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
+
+     
+ **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
+ 
+
+También necesitas abrir una **cuenta de Github** para unirte al [![Gitter](https://badges.gitter.im/BioinfinvRepro/Bioinfo2020.svg)](https://gitter.im/BioinfinvRepro/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+
+### Este repositorio
+
+El repositorio está dividido en un folder por Unidad. Dentro de cada folder subiremos los apuntes y código utilizado en cada clase conforme los vayamos viendo en el semestre, así como los enlaces a las tareas.
+
+Las notas de este repositorio están escritas en formato **Markdown** y, como notarás, el repositorio se encuentra hospedado en **GitHub**.
+
+Cubriremos ambas herramientas en el curso, pero en resumen:
+
+* Markdown es un procesador texto-a-HTML que de forma sencilla permite formatear texto `así`. Esto es útil para resaltar los los comandos y los resultados de la terminal del resto del texto en los documentos de clase (y en foros de ayuda).
+
+* GitHub es un repositorio web especializado en software (pero se puede subir cualquier texto, como este). La parte de arriba enlista los archivos y carpetas dentro del repositorio. La nota de texto a su derecha es el comentario que yo realicé al subir o modificar (*commit*) el archivo de mi computadora a GitHub. En la parte de abajo puedes leer el contenido de dichos archivos en formato html. Y si los bajas los verás en formato Markdown.
+
+En este mismo repositorio de github están las versiones de cursos que hemos dado los años pasados. Cada curso está en una "rama" de del repositorio (más adelante veremos qué es esto). Si estás siguiendo este curso en youtube en un año diferente al del curso, quizá sea necesario que cambies la rama para que los videos correspondan con los apuntes.
+
+![](github-branches.png)
+
+
+### Mecanismo de calificación
+
+El curso se dividirá en secciones que se calificarán por separado:
+
+**Unidades 1-4:**
+
+* 70% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección
+* 20% Examen
+* 10% Asistencia (física o virtual) y participación 
+
+**Unidad 5:**
+
+* 10% Tareas. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección.
+* 90% Proyecto de la Unidad 5, el cual se califica con:
+	* 10% Organización del repositorio
+	* 15% README **(debe ser en inglés)**
+	* 20% Análisis
+	* 10% Resumen y discusión en formato Markdown 
+	* 15% Gráfica(s) en R
+	* 15% Scripts **deben estar comentados en inglés**
+	* 15% Avances preliminares 
+
+**Unidad 6-9:**
+
+100% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor.
+
+**Proyecto final**
+
+* 10% Organización del repositorio
+* 15% README **(debe ser en inglés)**
+* 20% Análisis
+* 10% Resumen y discusión en formato Markdown 
+* 15% Gráfica(s) en R
+* 15% Scripts **deben estar comentados en inglés**
+* 15% Avances preliminares
+
+Para Chile, las unidades 1-4 y 6-9 constituyen dos cursos independientes. La Unidad 5 y el proyecto final son opcionales.
+
+Para México, todas las unidades y el proyecto final son obligatorios.
+
+**Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión.**
+
+![](truestory.png)
+
+
 ## Temario
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
@@ -214,89 +307,3 @@ Algunos ejemplos:
 
 * Variantes somáticas con Mutect2
 * Variantes en número de copias con GermlineCNVCaller
-
-## Dinámica del curso
-
-### ¿Cómo serán las clases?
-* Exposición + ejercicos y ejemplos en clase
-* Todos los materiales de la clase los iremos subiendo/actualizando a GitHub conforme avance el semestre
-* Dejaremos **lecturas** a casa antes o después de algunos temas. Es una muy buena idea sí leerlas.
-
-* **¿Necesito una computadora?**
-
-El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac o GNU/Linux (**no** Windows, sorry, lo intenté 2 años y es una pesadilla para todxs) y:
-
-  -  [Docker](https://www.docker.com/) instalado y **FUNCIONANDO** (ocuparemos Docker dentro de un mes)
-
-
-* **¿Necesito instalar algo más? Sí**
-     1. Un editor de texto decente. Listo para la 2da clase. Recomendaciones:
-         * Mac o Linux: [Atom](https://atom.io/)
-         * Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
-     2. Un editor de Markdown    
-         * Mac: [MacDown](http://macdown.uranusjr.com/)
-         * Mac o Linux: [Haroopad](http://pad.haroopress.com/) o [Typora](https://typora.io/)
-     3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
-
-También necesitas abrir una **cuenta de Github**
-
- **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
-
-### Este repositorio
-
-El repositorio está dividido en un folder por Unidad. Dentro de cada folder subiremos los apuntes y código utilizado en cada clase conforme los vayamos viendo en el semestre, así como los enlaces a las tareas.
-
-Las notas de este repositorio están escritas en formato **Markdown** y, como notarás, el repositorio se encuentra hospedado en **GitHub**.
-
-Cubriremos ambas herramientas en el curso, pero en resumen:
-
-* Markdown es un procesador texto-a-HTML que de forma sencilla permite formatear texto `así`. Esto es útil para resaltar los los comandos y los resultados de la terminal del resto del texto en los documentos de clase (y en foros de ayuda).
-
-* GitHub es un repositorio web especializado en software (pero se puede subir cualquier texto, como este). La parte de arriba enlista los archivos y carpetas dentro del repositorio. La nota de texto a su derecha es el comentario que yo realicé al subir o modificar (*commit*) el archivo de mi computadora a GitHub. En la parte de abajo puedes leer el contenido de dichos archivos en formato html. Y si los bajas los verás en formato Markdown.
-
-
-### Mecanismo de calificación
-
-El curso se dividirá en secciones que se calificarán por separado:
-
-**Unidades 1-4:**
-
-* 70% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección
-* 20% Examen
-* 10% Asistencia (física o virtual) y participación 
-
-**Unidad 5:**
-
-* 10% Tareas. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección.
-* 90% Proyecto de la Unidad 5, el cual se califica con:
-	* 10% Organización del repositorio
-	* 15% README **(debe ser en inglés)**
-	* 20% Análisis
-	* 10% Resumen y discusión en formato Markdown 
-	* 15% Gráfica(s) en R
-	* 15% Scripts **deben estar comentados en inglés**
-	* 15% Avances preliminares 
-
-**Unidad 6-9:**
-
-100% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor.
-
-**Proyecto final**
-
-* 10% Organización del repositorio
-* 15% README **(debe ser en inglés)**
-* 20% Análisis
-* 10% Resumen y discusión en formato Markdown 
-* 15% Gráfica(s) en R
-* 15% Scripts **deben estar comentados en inglés**
-* 15% Avances preliminares
-
-Para Chile, las unidades 1-4 y 6-9 constituyen dos cursos independientes. La Unidad 5 y el proyecto final son opcionales.
-
-Para México, todas las unidades y el proyecto final son obligatorios.
-
-
-
-### Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión.
-
-![](truestory.png)
