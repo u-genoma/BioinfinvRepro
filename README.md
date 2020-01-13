@@ -165,11 +165,12 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash y R
-* Introducción a los scripts
-
-**Sesión 2: Introducción a bash**
-
 * Funciones básicas de navegación y manejo de archivos con bash
+
+**Sesión 2: Introducción a los scripts y grep**
+
+* Continuación intro bash
+* Introducción a los scripts
 * Regular expressions y búsqueda de patrones (grep)
 
 **Sesión 3: Continaución de bash**
