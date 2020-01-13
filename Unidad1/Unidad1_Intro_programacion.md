@@ -123,7 +123,7 @@ Que quiere decir que no existe el comando `algo`.
 De igual forma si corres `$ date` (incluyendo el `$`) te dirá que no existe el comando `$`, aunque `date` sí sea un comando.
 
 
-La práctica hace al maestro. A continuación veremos algunos de los comandos básicos, pero para practicar más parte de la tarea será resolver los siguientes cursos prácticos:
+La práctica hace al maestro. A continuación veremos algunos de los comandos básicos, pero para practicar más, la primera tarea será resolver los siguientes cursos prácticos:
 
 * Terminar el curso [Learn the Command Line de CodeAcademy](https://www.codecademy.com/learn/learn-the-command-line).
 

@@ -1,34 +1,29 @@
-# README
-
-# Introducción a la bioinformática e investigación reproducible para análisis genéticos
-
-# Introducción a la Bioinformática para Biólogo/as y Genetistas
+# Introducción a la bioinformática e investigación reproducible para análisis genómicos
 
 
-[![Join the chat at https://gitter.im/Bioinfo_Mx-Cl/community](https://badges.gitter.im/Bioinfo_Mx-Cl.svg)](https://gitter.im/Bioinfo_Mx-Cl/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](https://badges.gitter.im/BioinfinvRepro/Bioinfo2020.svg)](https://gitter.im/BioinfinvRepro/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Mediante una colaboración entre el Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México, CONABIO y la U. de Chile, ofreceremos un curso intensivo de bioinformática, orientado a entregar las herramientas básicas para análisis de datos genómicos en el contexto de genética, especialmente la genética de poblaciones.
 
 INSTRUCTORES:
 
-**Dra. Alicia Mastretta Yanes**
+**Dra. Alicia Mastretta Yanes, PhD.**
 Catedrática CONACYT-CONABIO,
 [www.mastrettayanes-lab.org](www.mastrettayanes-lab.org)
 
-**Dra. Camille Truong**
+**Dra. Camille Truong, PhD**.
 Investigadora Instituto de Biología, UNAM
 [camilletruong.wixsite.com](https://camilletruong.wixsite.com/home#!)
 
 **Verónica Reyes Galindo**
 Estudiante doctorado Intituto de Ecología UNAM - CONABIO
 
-**Ricardo Verdugo Salgado**, PhD.,
+**Dr. Ricardo Verdugo Salgado, PhD**
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
 Los materiales aquí presentados son de acceso libre. La transmisión online y videos de clases se pueden encontrar en:
-* Unidades 1-5 y 9 en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber)
-* Unidades 6-12 en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
-* Lista de reproducción con todas las clases (la mantendremos actualizada pero los nuevos videos están disponibles inmediatamente en los canales) [lista](https://www.youtube.com/watch?v=hffIBrCJsMg&list=PLxvX6YVl4RWF5BU_Su8_p2rSHQfMtUNOF)
+* Unidades 1-5 en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber)
+* Unidades 6-9 en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
 
 Sala de chat para **anuncios de la clase** y dudas si lo estás viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)
 
@@ -39,7 +34,7 @@ El **objetivo general es** brindar a los y las alumnas las herramientas computac
 Los **objetivos particulares** son:
 
 1.	Formar a los y las alumnas en los principios de investigación reproducible y metodologías para organizar proyectos bioinformáticos
-2.	Introducir a los alumnos a bash, R, git y Docker
+2.	Introducir a los alumnos a bash, R y git
 3.	Presentar a los alumnos los tipos de datos genéticos producidos por la secuenciación de siguiente generación
 4.	Introducir a los y las alumnas al análisis e datos genómicos y genomas reducidos
 5.	Revisar  a  nivel teórico y  práctico los  métodos  bioinformáticos  clásicos  de  análisis secuencias genómicas
@@ -72,81 +67,151 @@ Algunos ejemplos:
 ## Temario
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
+**Sesión 1:**
+
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash y R
-* Introducción a los Scripts
+* Introducción a los scripts
+
+**Sesión 2**
+
 * Funciones básicas de navegación y manejo de archivos con bash
+* Regular expressions y búsqueda de patrones (grep)
+
+**Sesión 3**
+
 * Funciones básicas de exploración de archivos con bash
 * Redirección con bash
 * Loops con bash
 
 #### Unidad 2 [Organización de un proyecto bioinformático](Unidad2/Unidad2_Organizacion_proyecto_bioinf.md)
+
+**Sesión 1**
+
 * Documentación de scripts y del proyecto
 * Markdown
 * git
+
+**Sesión 2**
+
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
 #### Unidad 3 [Introducción a R con un enfoque bioinformático](Unidad3/Unidad3_Intro_a_R.md)
+
+**Sesión 1**
+
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
-* Funciones propias: crear funciones y utilizarlas con source
 * Rmarkdown y R Notebook
+
+**Sesión 2**
+
+* Funciones propias: crear funciones y utilizarlas con source
+
+**Sesión 3**
+
 * Manipulación y limpieza de datos en R
+
+**Sesión 4**
+
 * Graficar en R
 
-#### Unidad 4 [Introducción al software especializado](Unidad4/Unidad4_Intro_software_bioinformatico.md)
-* Utilidad de software especializado
-* Documentación de software especializado
-* El problema de las versiones y OS para la reproducibilidad
-* Docker
+**Sesión 5**
+
+* Bioconductor
+
+#### Unidad 4 [Introducción a software especializado y uso de servidores remotos](Unidad4/Unidad4_Intro_software_bioinformatico.md)
+
+**Sesión 1**
+
+* Introducción a Software especializado y cómo instalarlo
+* Uso de servidores remotos
 
 #### Unidad 5 [Genética de poblaciones con software especializado](Unidad5/Unidad5-Pop_genetics_software_especializado.md)
+
+**Sesión 2**
+
 * Formatos VCF-tools y plink
-* Paquetes de R
-* Filtrado de individuos y datos perdidos
+* Paquetes de R y otros software para genética de poblaciones
+
+**Sesión 3**
+
 * PCA exploratorios
 * Análisis básicos de diversidad y diferenciación genética
 
 #### Trabajo en casa en proyectos finales y tareas
- Se dará seguimiento online al proyecto final con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
+ Se dará seguimiento online al proyecto de las unidades 1-5 con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
 
 #### Unidad 6 [Introducción a la genómica y secuenciación de siguiente generación](Unidad6/Unidad6_IntroGenomica_NexGenSeq.md)
-* Generación de datos NGS
-* Control de calidad de datos NGS
+
+**Sesión 1 Generación y alineamiento de datos NGS**
+
+* Técnicas de secuenciación
+* Errores de secuenciación
+* Formatos fastq, bam, vcf
+* Análisis básicos de calidad
+
+**Sesión 2 Alineamiento de lecturas de secuenciación** 
+
+* Limpieza de datos crudos
 * Alineamiento contra un genoma de referencia
+ 
+**Sesión 3 Llamado de variantes**
+
 * Llamado de variantes
-* Metagenomica
+* Predicción funcional de variantes
+* Interpretación y anotación de variantes
 
-#### Unidad 7 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
+
+#### Unidad 7 [Metagenómica y GBS](Unidad9/Unidad_9_Ensamblaje_de_genomas.md)
+**Sesión 1 – Metagenómica**
+
+* Secuenciación de amplicones
+* Metabarcoding
+
+**Sesión 2 - Ensamblaje de representación reducida de genomas**
+
+* Metodologías de representación reducida de genomas (RAD, GBS, etc) 
+* Ensamblaje de novo vs. sobre una referencia
+* Principales algoritmos y software (Stacks, pyRAD, Tassel)
+* Primera inspección de los datos
+
+#### Unidad 8 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
+
+**Sesión 1 Expresión diferencial**
+
 * Diseño experimental
-* Microarreglos
-* RNA-seq
-* Expresión diferecial
+* Análisis de expresion diferencia
+
+**Sesión 2 Análisis funcional**
+
 * Clustering
+* Enriquecimiento funcional
 
-#### Unidad 8 Predicción estructural y funcional de Proteínas y ARNs
-* Conceptos básicos de bioinformática estructural
-* Predicción de la estructura secundaria de proteínas
-* Predicción de la estructura secundaria de ARN
-* Predicción de interacciones moleculares (docking)
-* Predicción de efectos funcionales, nociones
 
-#### Unidad 9 [Ensamblaje de genomas](Unidad9/Unidad_9_Ensamblaje_de_genomas.md)
-* Flujo de un proyecto de ensamblaje
-* Teoría de ensamble: grafos de De Bujin y comparativos
-* Principales algoritmos y software (Celera, AllPaths, Soap, Velvet, etc)
-* Formatos de archivos de datos y Métricas
-* Ensamblaje de representación reducida de genomas (RAD, GBS, etc)
-* Principales algoritmos y software (Stacks, pyRAD)
+**Sesión 3 RNA-seq**
 
-#### Unidad 10 Análisis genómicos reproducibles en la nube
+* Generación de datos RNAseq
+*  Modelamiento de datos
+* Software
+
+#### Unidad 9 Análisis genómicos reproducibles en la nube
+
+**Sesión 1**
+
 * Mejores prácitocas de GATK
 * workflow GVCF
+
+**Sesión 2**
+
 * Cromwell
 * WDL
 * Terra
+
+**Sesión 3**
+
 * Variantes somáticas con Mutect2
 * Variantes en número de copias con GermlineCNVCaller
 
@@ -154,11 +219,12 @@ Algunos ejemplos:
 
 ### ¿Cómo serán las clases?
 * Exposición + ejercicos y ejemplos en clase
-* Todos los materiales de la clase los iremos subiendo a GitHub conforme avance el semestre
+* Todos los materiales de la clase los iremos subiendo/actualizando a GitHub conforme avance el semestre
 * Dejaremos **lecturas** a casa antes o después de algunos temas. Es una muy buena idea sí leerlas.
 
 * **¿Necesito una computadora?**
-    * El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac o GNU/Linux (**no** Windows, sorry, lo intenté 2 años y es una pesadilla para todxs) y:
+
+El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac o GNU/Linux (**no** Windows, sorry, lo intenté 2 años y es una pesadilla para todxs) y:
 
   -  [Docker](https://www.docker.com/) instalado y **FUNCIONANDO** (ocuparemos Docker dentro de un mes)
 
@@ -191,18 +257,44 @@ Cubriremos ambas herramientas en el curso, pero en resumen:
 
 ### Mecanismo de calificación
 
-* ~ una tarea por sesión (en línea)
-* Evaluación (examen o proyecto) por sección:
+El curso se dividirá en secciones que se calificarán por separado:
 
-	* Unidades 1-4
+**Unidades 1-4:**
 
-	* Unidad 5
+* 70% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección
+* 20% Examen
+* 10% Asistencia (física o virtual) y participación 
 
-	* Unidad 6-11
+**Unidad 5:**
 
+* 10% Tareas. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección.
+* 90% Proyecto de la Unidad 5, el cual se califica con:
+	* 10% Organización del repositorio
+	* 15% README **(debe ser en inglés)**
+	* 20% Análisis
+	* 10% Resumen y discusión en formato Markdown 
+	* 15% Gráfica(s) en R
+	* 15% Scripts **deben estar comentados en inglés**
+	* 15% Avances preliminares 
 
+**Unidad 6-9:**
 
-Porcentaje aprovación: 60 %
+100% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor.
+
+**Proyecto final**
+
+* 10% Organización del repositorio
+* 15% README **(debe ser en inglés)**
+* 20% Análisis
+* 10% Resumen y discusión en formato Markdown 
+* 15% Gráfica(s) en R
+* 15% Scripts **deben estar comentados en inglés**
+* 15% Avances preliminares
+
+Para Chile, las unidades 1-4 y 6-9 constituyen dos cursos independientes. La Unidad 5 y el proyecto final son opcionales.
+
+Para México, todas las unidades y el proyecto final son obligatorios.
+
 
 
 ### Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión.
