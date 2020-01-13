@@ -111,6 +111,11 @@ En este mismo repositorio de github están las versiones de cursos que hemos dad
 
 ![](github-branches.png)
 
+En la unidad 2 aprenderemos a utilizar github desde la línea de comando, pero por lo pronto, para hacer los ejercicios de la unidad 1: baja el respositorio y guárdalo en tu escritorio. Para bajarlo da click en el botón vere del lado derecho que dice "Clone or Download" y selecciona "Download zip".
+
+![](github_download.png)
+
+
 
 ### Mecanismo de calificación
 
