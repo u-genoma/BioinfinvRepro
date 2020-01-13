@@ -160,19 +160,19 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 ## Temario
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
-**Sesión 1:**
+**Sesión 1:  Introducción al código y la terminal**
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash y R
 * Introducción a los scripts
 
-**Sesión 2**
+**Sesión 2: Introducción a bash**
 
 * Funciones básicas de navegación y manejo de archivos con bash
 * Regular expressions y búsqueda de patrones (grep)
 
-**Sesión 3**
+**Sesión 3: Continaución de bash**
 
 * Funciones básicas de exploración de archivos con bash
 * Redirección con bash
@@ -180,56 +180,56 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 #### Unidad 2 [Organización de un proyecto bioinformático](Unidad2/Unidad2_Organizacion_proyecto_bioinf.md)
 
-**Sesión 1**
+**Sesión 1: Documentación bioinformática**
 
 * Documentación de scripts y del proyecto
 * Markdown
 * git
 
-**Sesión 2**
+**Sesión 2: Github**
 
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
 #### Unidad 3 [Introducción a R con un enfoque bioinformático](Unidad3/Unidad3_Intro_a_R.md)
 
-**Sesión 1**
+**Sesión 1: Introducción a R**
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
 
-**Sesión 2**
+**Sesión 2: Funciones en R**
 
 * Funciones propias: crear funciones y utilizarlas con source
 
-**Sesión 3**
+**Sesión 3: Manipulación y limpieza de datos en R**
 
 * Manipulación y limpieza de datos en R
 
-**Sesión 4**
+**Sesión 4: Graficar en R **
 
 * Graficar en R
 
-**Sesión 5**
+**Sesión 5: Bioconductor **
 
 * Bioconductor
 
 #### Unidad 4 [Introducción a software especializado y uso de servidores remotos](Unidad4/Unidad4_Intro_software_bioinformatico.md)
 
-**Sesión 1**
+**Sesión 1: Software especializado y servidores remotos**
 
 * Introducción a Software especializado y cómo instalarlo
 * Uso de servidores remotos
 
 #### Unidad 5 [Genética de poblaciones con software especializado](Unidad5/Unidad5-Pop_genetics_software_especializado.md)
 
-**Sesión 2**
+**Sesión 2: genética de poblaciones con software bioinformático**
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-**Sesión 3**
+**Sesión 3:coninuación de genética de poblaciones **
 
 * PCA exploratorios
 * Análisis básicos de diversidad y diferenciación genética
@@ -258,8 +258,8 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 * Interpretación y anotación de variantes
 
 
-#### Unidad 7 [Metagenómica y GBS](Unidad9/Unidad_9_Ensamblaje_de_genomas.md)
-**Sesión 1 – Metagenómica**
+#### Unidad 7 [Genomas reducidos y metabarcoding](Unidad9/Unidad_9_Ensamblaje_de_genomas.md)
+**Sesión 1 – Metabarcoding**
 
 * Secuenciación de amplicones
 * Metabarcoding
@@ -292,7 +292,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 #### Unidad 9 Análisis genómicos reproducibles en la nube
 
-**Sesión 1**
+**Sesión 1: GATK **
 
 * Mejores prácitocas de GATK
 * workflow GVCF
