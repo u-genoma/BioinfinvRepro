@@ -1,4 +1,3 @@
-#!/bin/bash
 ## Este script baja 3 secuencias de Chiropterotriton de NCBI
 # Crear directorio para guardar datos
 mkdir -p Chiropt
