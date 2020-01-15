@@ -174,14 +174,13 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 **Sesión 2: Introducción a los scripts y grep**
 
-* Continuación intro bash
-* Introducción a los scripts
+* Funciones básicas de exploración de archivos con bash
 * Regular expressions y búsqueda de patrones (grep)
+* Redirección con bash
 
 **Sesión 3: Continaución de bash**
 
-* Funciones básicas de exploración de archivos con bash
-* Redirección con bash
+* Introducción a los scripts
 * Loops con bash
 
 #### Unidad 2 [Organización de un proyecto bioinformático](Unidad2/Unidad2_Organizacion_proyecto_bioinf.md)
@@ -298,7 +297,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 #### Unidad 9 Análisis genómicos reproducibles en la nube
 
-**Sesión 1: GATK **
+**Sesión 1: GATK**
 
 * Mejores prácitocas de GATK
 * workflow GVCF
