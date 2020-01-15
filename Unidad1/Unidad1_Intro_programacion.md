@@ -13,9 +13,9 @@
 
 Una *habilidad* indispensable en bioinformática
 
-El objetivo de esta clase no es darte un manual completo para resolver cualquier cuestión bioinformática, sino darte las habilidades y herramientas para que llegues por tí misma a las soluciones. Para esto hay una habilidad indispensable: **buscar ayuda en internet**. La enorme mayoría de las preguntas que te hagas sobre bioinformática y programación en general, sobre todo al principio, **son las mismas dudas que tuvieron otros antes** y, casi seguro **las respuestas ya están en algún lugar del internet**. Y si nadie a escrito con tu duda, puedes preguntar. 
+El objetivo de esta clase no es darte un manual completo para resolver cualquier cuestión bioinformática, sino darte las habilidades y herramientas para que llegues por tí misma a las soluciones. Para esto hay una habilidad indispensable: **buscar ayuda en internet**. La enorme mayoría de las preguntas que te hagas sobre bioinformática y programación en general, sobre todo al principio, **son las mismas dudas que tuvieron otros antes** y, casi seguro **las respuestas ya están en algún lugar del internet**. Y si nadie a escrito con tu duda, puedes preguntar.
 
-Las respuestas a muchas de las tareas que dejaré aparecen en los primeros resultados si haces la búsqueda correcta en internet. De hecho, a veces parte de la tarea será que *se te ocurra cómo buscar* la solución en internet. Esto está perfectamente bien y es muuuy distinto a copiarle a un compañero. Saber buscar ayuda e información en interent es una habilidad básica del siglo XXI. 
+Las respuestas a muchas de las tareas que dejaré aparecen en los primeros resultados si haces la búsqueda correcta en internet. De hecho, a veces parte de la tarea será que *se te ocurra cómo buscar* la solución en internet. Esto está perfectamente bien y es muuuy distinto a copiarle a un compañero. Saber buscar ayuda e información en interent es una habilidad básica del siglo XXI.
 
 Por esto estoy 100% de acuerdo con xkcd, no tienes que saberlo todo de memoria. Se vale tener una *Mente extendida* llamada internet:
 
@@ -28,7 +28,7 @@ Por esto estoy 100% de acuerdo con xkcd, no tienes que saberlo todo de memoria. 
 
 * [Biostars](https://www.biostars.org/) es parecido a Stacksoverflow un foro de ayuda especializado en Bioinformática. Aquí sí puedes hacer preguntas enfocadas en datos y software genético, por ejemplo cómo mover de un formato de genomas a otro.
 
-* Grupos de usuarios de un software. Por ejemplo [este de Stacks](https://groups.google.com/forum/#!forum/stacks-users). Son ideales para aclarar detalles específicos y mensajes de error de **ese** software (ie, no de dudas de cómo usar la línea de comando). La comunidad es súper chida y muchas veces lxs autores del software son quiénes responden. 
+* Grupos de usuarios de un software. Por ejemplo [este de Stacks](https://groups.google.com/forum/#!forum/stacks-users). Son ideales para aclarar detalles específicos y mensajes de error de **ese** software (ie, no de dudas de cómo usar la línea de comando). La comunidad es súper chida y muchas veces lxs autores del software son quiénes responden.
 
 
 **Tips sobre cómo pedir/buscar ayuda**
@@ -37,7 +37,7 @@ Por esto estoy 100% de acuerdo con xkcd, no tienes que saberlo todo de memoria. 
 
 * Piensa bien cuáles son las **palabras clave de tu pregunta** y cómo **generalizar** tu caso a algo que cualquiera entienda y que no sea específico a tu computadora. Por ejemplo "How to list files in a directory using the Terminal?" es mucho mejor mejor que "which files are in Manzanas" (tu y yo sabemos que Manzanas es un directorio, pero no el mundo).
 
-* Si vas a pedir ayuda en un foro, lee las reglas y tipo de preguntas atentidas por el foro antes de preguntar. 
+* Si vas a pedir ayuda en un foro, lee las reglas y tipo de preguntas atentidas por el foro antes de preguntar.
 
 * Sigue estas recomendaciones de Stacksoverflow sobre [cómo redactar una buena pregunta](https://stackoverflow.com/help/how-to-ask)
 
@@ -55,29 +55,29 @@ Tu terminal abierta debe verse parecida a esta:
 
 ![TerminalEjemplo](01Terminal.png)
 
-La primera línea dice la fecha y hora y "ttys001". ttys viene de "Teletype" ([un poco de historia aquí](http://stackoverflow.com/questions/4532413/what-is-tty-on-freebsd)) y significa que el *input* es nuestro teclado, identificado como ttys001. 
+La primera línea dice la fecha y hora y "ttys001". ttys viene de "Teletype" ([un poco de historia aquí](http://stackoverflow.com/questions/4532413/what-is-tty-on-freebsd)) y significa que el *input* es nuestro teclado, identificado como ttys001.
 
 En mi caso la segunda línea me dice que tengo correo. Uds probablemente no tengan esto.
 
-La tercera línea es la más importante: dice el **nombre del equipo** (Alicas-MacBook-Pro en este caso), el **directorio** donde estoy (`~` significa "home directory", lo veremos más adelante) y el **nombre del usuario** con quién estoy en la terminal (en mi caso ticatla). 
+La tercera línea es la más importante: dice el **nombre del equipo** (Alicas-MacBook-Pro en este caso), el **directorio** donde estoy (`~` significa "home directory", lo veremos más adelante) y el **nombre del usuario** con quién estoy en la terminal (en mi caso ticatla).
 
 Notarás que la tercera línea termina en `$`
 
-`$` significa que la terminal está corriendo con un interpretador Shell o Bash y por un usuario sin mayores privilegios. Si termina en `#` significa que la estás corriendo como **root** que es un "súper usuario" con permisos para desconfigurarlo todo, ten cuidado. 
+`$` significa que la terminal está corriendo con un interpretador Shell o Bash y por un usuario sin mayores privilegios. Si termina en `#` significa que la estás corriendo como **root** que es un "súper usuario" con permisos para desconfigurarlo todo, ten cuidado.
 
 
 
-#### ¿Qué significa que La Terminal tenga un interpretador? 
+#### ¿Qué significa que La Terminal tenga un interpretador?
 
-Que le damos comandos y nos responde. 
+Que le damos comandos y nos responde.
 
-El la Terminal no existe el *point and click*. El que funcione como una Línea de Comando significa que tienes que darle comandos de qué hacer línea por línea. 
+El la Terminal no existe el *point and click*. El que funcione como una Línea de Comando significa que tienes que darle comandos de qué hacer línea por línea.
 
 Por ejemplo:
 
 `date` nos responde la fecha actual
 
-`echo algo` nos responde el texto "algo". También lo puedes utilizar con más de una palabra. 
+`echo algo` nos responde el texto "algo". También lo puedes utilizar con más de una palabra.
 
 `echo hello world`
 
@@ -105,12 +105,12 @@ $ echo algo
 algo
 $ echo hello world
 hello world
-``` 
- 
+```
+
 Para facilidad visual, de aquí en adelante utilizaremos la opción con el texto a partir de `$` (al menos que sea pertinente ver lo que hay antes). Este tipo de formato te lo encontrarás en diversos foros de ayuda, libros de textos y manuales.
 
 **Ojo** Se pone `$` solo para **distinguir** que lo que sigue es un comando que debes poner en la Terminal, por lo que **NO** debes copiar los comandos a tu terminal incluyendo el `$`.
- 
+
 
 **Pregunta**: ¿Qué pasa si intentas correr el comando  `algo`?:
 
@@ -118,7 +118,7 @@ La terminal dirá:
 
     -bash: algo: command not found
 
-Que quiere decir que no existe el comando `algo`. 
+Que quiere decir que no existe el comando `algo`.
 
 De igual forma si corres `$ date` (incluyendo el `$`) te dirá que no existe el comando `$`, aunque `date` sí sea un comando.
 
@@ -162,18 +162,18 @@ Con `quit()` salgo de la Terminal de R y vuelvo a la Terminal de bash.
 
 R también tiene su propia terminal (lo que sale cuando abres R via su ícono). Sin embargo, nosotros ocuparemos RStudio, que es una interfaz visual que integra la terminal de R con varias funcionalidades útiles e intuitivas.
 
- 
+
 ## Funciones básicas de navegación y manejo de archivos con bash
 
 Windows, Mac y las interfaces gráficas de Linux (como Ubuntu y Biolinux) tienen un sistema de archivos que estamos acostumbrados a explorar a través carpetas y subcarpetas que podemos ver en una ventana. Por ejemplo así:
 
-![Findereg](Finder01_Prac.png) 
+![Findereg](Finder01_Prac.png)
 
 A continuación vamos a ver cómo navegar por este **mismo** sistema de archivos, pero desde la Terminal y con el teclado en vez de desde una ventana y con clicks.
 
 ### `pwd`
 
-`pwd` nos da el directorio en donde estamos (viene de print **working directory**). 
+`pwd` nos da el directorio en donde estamos (viene de print **working directory**).
 
 El directorio de trabajo es **dónde estamos**, equivalente a tener una ventana abierta del explorador en una carpeta determinada. Al menos que le indiques lo contrario, todo archivo que se genere como parte de la ejecución de un programa se guardará aquí. También este será el lugar donde cualquier programa/script buscará los archivos que le pidas, y NO los encontrará si no están exactamente ahí. Claro que es posible decirle que busque en otro directorio, lo veremos adelante.  
 
@@ -181,7 +181,7 @@ El working directory de base es la carpeta "home" del usuario de la computadora.
 
     $ pwd
     /Users/ticatla
- 
+
 La diagonal **/** es el símbolo que separa los directorios en niveles jerárquicos. Es decir `ticatla` es un subdirectorio de `Users` que a su vez es un subdirectorio de `root` (simbolizado aquí como una sola /), la raíz de todos los directorios.
 
 ### `cd`
@@ -190,12 +190,12 @@ La diagonal **/** es el símbolo que separa los directorios en niveles jerárqui
 
 ```
 Alicias-MacBook-Pro:~ ticatla$ cd Desktop/
-Alicias-MacBook-Pro:Desktop ticatla$ 
+Alicias-MacBook-Pro:Desktop ticatla$
 ```
 
 **Pregunta:** ¿Qué pasa con el texto antes del nombre de usuario?
 
-Como se explicó antes, el texto antes de `$` nos indica el nombre del equipo, el directorio actual y el nombre del usuario. El directorio actual cambió de "ticatla" (home) a "Desktop". 
+Como se explicó antes, el texto antes de `$` nos indica el nombre del equipo, el directorio actual y el nombre del usuario. El directorio actual cambió de "ticatla" (home) a "Desktop".
 
 Ahora vamos a navegar al directorio del repositorio. La navegación se puede hacer de diferentes maneras:
 
@@ -216,19 +216,19 @@ Alicias-MacBook-Pro:Prac_Uni1 ticatla$
 
 ```
 
-Háganlo en sus sistemas. Noten que `ticatla` es **mi** nombre de usuario, entonces el path absoluto tiene que llevar **su nombre de usuario**. 
+Háganlo en sus sistemas. Noten que `ticatla` es **mi** nombre de usuario, entonces el path absoluto tiene que llevar **su nombre de usuario**.
 
 Para bajar el repo de la clase a sus compus vayan al [home del repo](https://github.com/AliciaMstt/BioinfinvRepro) y den click en el botón verde que dice **Clone or download**. Guarda el zip en algún lugar fácil (e.g. escritorio) y descomprímelo. Si tienes problemas haciendo esto en Linux avísame o checa [esto](https://askubuntu.com/questions/660846/how-to-zip-and-unzip-a-directory-and-its-files-in-linux).
 
 
 #### Moverse a home:
 
-`~` es una especie de ruta corta a la ruta absoluta de tu directorio home. No importa dónde estés `cd ~` te llevará a home. 
+`~` es una especie de ruta corta a la ruta absoluta de tu directorio home. No importa dónde estés `cd ~` te llevará a home.
 
 
 ```
 Alicias-MacBook-Pro:Prac_Uni1 ticatla$ cd ~
-Alicias-MacBook-Pro:~ ticatla$ 
+Alicias-MacBook-Pro:~ ticatla$
 ```
 
 Ejemplo de ruta relativa:
@@ -237,7 +237,7 @@ Ejemplo de ruta relativa:
 Alicias-MacBook-Pro:Prac_Uni1 ticatla$ cd ~
 Alicias-MacBook-Pro:~ ticatla$ cd Desktop/BioinfInvRepro/Unidad1/Prac_Uni1
 
-Alicias-MacBook-Pro:Prac_Uni1 ticatla$ 
+Alicias-MacBook-Pro:Prac_Uni1 ticatla$
 ```
 
 #### Moverse para atrás (hacia el directorio raíz):
@@ -262,7 +262,7 @@ $ pwd
 
 #### Moverse para atrás y para adelante en la misma línea
 
-Puedes usar `..` muchas veces. Ojo con incluir `/` para separar niveles. 
+Puedes usar `..` muchas veces. Ojo con incluir `/` para separar niveles.
 
 Ejemplo:
 
@@ -281,13 +281,13 @@ Es decir `../` se puede combinar con una ruta relativa. Ejemplo:
 $ pwd
 /Users/ticatla/Desktop/BioinfInvRepro/Prac_Uni1/Tomates/VerdesFritos
 Alicias-MacBook-Pro:VerdesFritos ticatla$ cd ../../Manzanas
-Alicias-MacBook-Pro:Manzanas ticatla$ 
+Alicias-MacBook-Pro:Manzanas ticatla$
 ```
 
 #### No moverse
-O en otras palabras ir al directorio donde ya estás. Suena inútil, y en general lo es si lo hace con `cd`, pero el concepto es importante para otros comandos que veremos más adelante. 
+O en otras palabras ir al directorio donde ya estás. Suena inútil, y en general lo es si lo hace con `cd`, pero el concepto es importante para otros comandos que veremos más adelante.
 
-`cd ./` te lleva al directorio en el que estás. Lo importante a recordar es que `.` significa "el directorio actual". 
+`cd ./` te lleva al directorio en el que estás. Lo importante a recordar es que `.` significa "el directorio actual".
 
 
 #### Errores comunes al usar `cd`
@@ -302,12 +302,12 @@ O en otras palabras ir al directorio donde ya estás. Suena inútil, y en genera
 
   Sí está bien escrito, el directorio Manzanas existe y no lo encuentra. Ok, existe, pero NO en el directorio inmediatamente arriba. Checa dónde estás y a dónde dirigen tus `cd ..`
 
-* `-bash: cd..: command not found`. 
-  
+* `-bash: cd..: command not found`.
+
   Ojo, con tus espacios `cd..` no es lo mismo que `cd ..`. Otro clásico es poner `cd ...`
 
 
-En resumen: checa que esté bien escrito y que puedas ir a ese directorio con la ruta que le estás pidiendo. 
+En resumen: checa que esté bien escrito y que puedas ir a ese directorio con la ruta que le estás pidiendo.
 
 #### Tips de acceso rápido en la Terminal
 
@@ -326,11 +326,11 @@ nuevos_final.bed	nuevos_final.fam
 nuevos_final.bim	nuevos_final.log
 ```
 
-Nota que los enlista en orden alfabético. 
+Nota que los enlista en orden alfabético.
 
 Para tener más info de los archivos:
 
-`ls -l` brinda la misma lista, pero con datos sobre: 
+`ls -l` brinda la misma lista, pero con datos sobre:
 si es un directorio (d) o un archivo (-), permisos (si es sólo lectura, editable, etc y por quién, detalles más adelante), número de links al archivo, qué usuario es el dueño, a qué grupo pertenece dicho usuario, tamaño en bytes, fecha-hora en que se modificó y el nombre del directorio o archivo.
 
 Ejemplo:
@@ -359,14 +359,14 @@ total 5216
 
 `man ls` abre el manual de `ls` (**o de cualquier otro comando**), donde vienen muchas más opciones para usar este comando.
 
-**Tip**: presiona "q" para salir de la pantalla de `man`. 
+**Tip**: presiona "q" para salir de la pantalla de `man`.
 
 **Ejercicio**:
 * Enlista el contenido de `Maiz` por tamaño del archivo y has que el tamaño del archivo se lea en KB y MB (ie reducido en vez de todos los bytes).
 
 ### `mkdir`
 
-Crea un directorio. 
+Crea un directorio.
 
 ```
 $ mkdir Prueba
@@ -419,12 +419,12 @@ $ rm -r Prueba
 $ rm -r ../Manzanas/Prueba
 ```
 
-**Pregunta:** ¿Si borras un directorio se borra su contenido? 
+**Pregunta:** ¿Si borras un directorio se borra su contenido?
 
 
 ### `tar`
 
-Es un método de ultra comprensión (más que zip) utilizado por sistemas Linux/Unix. Viene de "*tape archive*" y originalmente surgió para comprimir archivos para los discos "tape" de respaldo. 
+Es un método de ultra comprensión (más que zip) utilizado por sistemas Linux/Unix. Viene de "*tape archive*" y originalmente surgió para comprimir archivos para los discos "tape" de respaldo.
 
 La compresión tar genera archivos "tarball", gzip y bzip. Con terminaciones como `.tar.gz`. Este tipo de compresión es muy utilizada en datos genómicos.
 
@@ -503,7 +503,7 @@ drwxr-xr-x ticatla/staff     0 2016-02-03 08:11 Maiz/
 
 ### Crear archivos desde la terminal
 
-Es posible crear archivos de texto directamente desde la terminal utilizando programas como `vi` y `nano` o el comando `touch`. 
+Es posible crear archivos de texto directamente desde la terminal utilizando programas como `vi` y `nano` o el comando `touch`.
 
 
 Touch solo crea un archivo sin contenido. Ejemplo :
@@ -511,13 +511,13 @@ Touch solo crea un archivo sin contenido. Ejemplo :
 ```
 $ cd Maiz
 $ touch prueba
-$ ls 
+$ ls
 nuevos_final.bed	nuevos_final.fam	prueba
 nuevos_final.bim	nuevos_final.log
 $ rm prueba
 ```
 
-Con `Nano` o `Vim` podemos 
+Con `Nano` o `Vim` podemos
 
 ```
 $ nano ejemplonano.txt
@@ -527,18 +527,18 @@ Y abrirá una nueva ventana, donde pueden escribir así:
 
 ![nanoej1](nanoej1.png)
 
-Al guardar con `^O` (ctrl + O) pedirá un nombre de archivo. Dirá "ejemplonano.txt" porque fue el nombre que dimos al correr `nano`, pero se puede camibar. 
+Al guardar con `^O` (ctrl + O) pedirá un nombre de archivo. Dirá "ejemplonano.txt" porque fue el nombre que dimos al correr `nano`, pero se puede camibar.
 
 Una vez fuera de nano podemos verlo en la Terminal y volverlo a abrir si queremos:
 
 ```
-$ ls 
+$ ls
 ejemplonano.txt		nuevos_final.bim	nuevos_final.log
 nuevos_final.bed	nuevos_final.fam
 $ nano ejemplonano.txt
 ```
 
-`vim` o `vi` funciona muy parecido. Solo que tienes que aprenderte (o revisar [en un acordeón](https://vim.rtorr.com/)) los shortcuts del teclado. Hay gente que vive solo con vim. 
+`vim` o `vi` funciona muy parecido. Solo que tienes que aprenderte (o revisar [en un acordeón](https://vim.rtorr.com/)) los shortcuts del teclado. Hay gente que vive solo con vim.
 
 
 
@@ -549,7 +549,7 @@ $ nano ejemplonano.txt
 Sintaxis:
 
     curl [opciones] [direccionURLdelarchivo]
-   
+
 
 Ejemplo, podemos bajar el archivo de texto del README que vive en el repositorio de esta clase:
 
@@ -593,7 +593,7 @@ ACCAATGAAATGCTCTTTGAGTAATTGCCTCGATTCAGAATCATTTTTATTTTTCTATCCGAGAACTAAA
 ATGATTAGGAAATAGATACATTACATGGGGAAAGCCGTGTGCAATGAGAAT
 ```
 
-En bioinformática `curl` se utiliza para transferir desde archivos FASTA de secuencias individuales de GeneBank hasta genomas completos. 
+En bioinformática `curl` se utiliza para transferir desde archivos FASTA de secuencias individuales de GeneBank hasta genomas completos.
 
 Nota:
 `wget` hace algo parecido a `curl`, pero lo salva a un archivo directamente. No existe de base en Mac, pero es posible instalarlo.
@@ -612,7 +612,7 @@ Volvamos a ver el contenido de Maiz:
 
 ```
 $ cd Maiz
-$ ls 
+$ ls
 ejemplonano.txt		nuevos_final.bim	nuevos_final.log
 nuevos_final.bed	nuevos_final.fam
 ```
@@ -629,7 +629,7 @@ ejemplo_final.fam	nuevos_final.bim
 ejemplonano.txt		nuevos_final.fam
 ```
 
-Fácilmente podemos ver que hay 7 archivos, y que hay dos que terminan en .bed y dos que terminan en .fam. 
+Fácilmente podemos ver que hay 7 archivos, y que hay dos que terminan en .bed y dos que terminan en .fam.
 
 
 ¿Y si tuviéramos 1,000 archivos con las terminaciones .bed, .fam, bim pero con diferente prefijo? ¿Cómo contarlos y ver cuántos .bed hay?
@@ -647,7 +647,7 @@ $ ls nuevos*
 nuevos_final.bed	nuevos_final.fam
 nuevos_final.bim	nuevos_final.log
 
-``` 
+```
 
 
 ### `?`
@@ -670,12 +670,12 @@ ejemplo_final.bed	nuevos_final.bed
 Hay más comodines, puedes explorarlos [aquí](http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm).
 
 
- 
+
 ## Funciones básicas de exploración de archivos con bash
 
 ### `more`
 
-Nos permite ver el archivo una línea (flecha abajo) o página a la vez (barra espaciadora). Para salir: `q` 
+Nos permite ver el archivo una línea (flecha abajo) o página a la vez (barra espaciadora). Para salir: `q`
 
 ```
 $ more nuevos_final.fam
@@ -708,7 +708,7 @@ $ more nuevos_final.fam
 27 maiz_56 0 0 0 -9
 28 maiz_66 0 0 0 -9
 29 maiz_52 0 0 0 -9
-nuevos_final.fam 
+nuevos_final.fam
 ```
 
 (puedes salir con `q` si no quieres escrolear (yes, esa palabra no existe en español) todo el archivo para abajo)
@@ -717,7 +717,7 @@ nuevos_final.fam
 ### `less`
 Igual que `more` pero se desarrolló más recientemente y puede abrir archivos binarios y otras cosas raras. Juego de palabras con que *less is more*. Pum pum. Se recomienda usar `less` en la vida.
 
-Dentro de `less` (y `more`) podemos escribir `/` y luego texto, mismo que será buscando dentro del archivo. 
+Dentro de `less` (y `more`) podemos escribir `/` y luego texto, mismo que será buscando dentro del archivo.
 
 **Ejercicio**: En el archivo que estamos viendo hay unas muestras de teocintles cuyos nombres empiezan con "teos". ¿En qué líneas del documento están?
 
@@ -758,7 +758,7 @@ $ wc nuevos_final.fam
 
 Viene de *Concatenate*. Sirve para unir uno detrás de otro varios archivos, o para imprimir todo el contendio de un archivo a la consola.
 
-``` 
+```
 $ cat nuevos_final.fam *log
 1 maiz_3 0 0 0 -9
 2 maiz_68 0 0 0 -9
@@ -938,7 +938,7 @@ $ cat nuevos_final.fam *log
 Web-based version check ( --noweb to skip )
 Recent cached web-check found... OK, v1.07 is current
 
-+++ PLINK 1.9 is now available! See above website for details +++ 
++++ PLINK 1.9 is now available! See above website for details +++
 
 Writing this text to log file [ nuevos_final.log ]
 Analysis started: Wed May 06 12:19:25 2015
@@ -951,7 +951,7 @@ Options in effect:
 36931 (of 36931) markers to be included from [ nuevos_final.map ]
 Warning, found 165 individuals with ambiguous sex codes
 Writing list of these individuals to [ nuevos_final.nosex ]
-165 individuals read from [ nuevos_final.ped ] 
+165 individuals read from [ nuevos_final.ped ]
 0 individuals with nonmissing phenotypes
 Assuming a disease phenotype (1=unaff, 2=aff, 0=miss)
 Missing phenotype value is also -9
@@ -965,12 +965,12 @@ Total genotyping rate in remaining individuals is 0.990151
 After frequency and genotyping pruning, there are 36931 SNPs
 After filtering, 0 cases, 0 controls and 165 missing
 After filtering, 0 males, 0 females, and 165 of unspecified sex
-Writing recoded file to [ nuevos_final.raw ] 
+Writing recoded file to [ nuevos_final.raw ]
 
 Analysis finished: Wed May 06 12:19:30 2015
 ```
 
-Es decir, básicamente es como copiar-pegar un archivo al final de otro. 
+Es decir, básicamente es como copiar-pegar un archivo al final de otro.
 
 
 **Ejercicio** ¿Cómo concatenar tres o más archivos a la vez?
@@ -981,21 +981,21 @@ Es decir, básicamente es como copiar-pegar un archivo al final de otro.
 #### ¿Qué son las expresiones regulares
 Las *expresiones regulares* son una herramienta de búsqueda o búsqueda-remplazo de cadenas de texto acorde a un patrón dado. Existen en la línea de comando, pero también en otros lenguajes, como R y casi cualquier buscador de texto.
 
-Una expresión regular se puede pensar como una combinación de caracteres literales y metacaracteres. 
+Una expresión regular se puede pensar como una combinación de caracteres literales y metacaracteres.
 
 * Los **caracteres literales** son de los que están formadas las **palabras en el lenguaje utilizado**. Ejemplo: "c",""o","n","a","b","i","o","2","0","6"
 
 * Los **metacaracteres** son aquellos que tienen una **función particular en la expresión regular**. Ejemplo:  "*","?",".","|","^","$","(",")","[","]"
 
-Las expresiones regulares también se conocen como *regexp*, *regex* o `grep` (global regular expression print), que es el comando que utilizaremos. Pero en realidad `grep` solo es uno de los comandos que las utiliza, es decir hay otros. 
+Las expresiones regulares también se conocen como *regexp*, *regex* o `grep` (global regular expression print), que es el comando que utilizaremos. Pero en realidad `grep` solo es uno de los comandos que las utiliza, es decir hay otros.
 
-#### ¿Para qué sirven? 
+#### ¿Para qué sirven?
 
 Las principales aplicaciones de las expresiones regulares en bioinformática son:
 
 * Reformatear archivos de datos. **Una se la vive haciendo esto**
 * Decirle a un algoritmo que realice análisis en ciertas muestras y no otras
-* Identificar patrones cortos de ADN en una secuencia, por ejemplo enzimas de restricción o índices. 
+* Identificar patrones cortos de ADN en una secuencia, por ejemplo enzimas de restricción o índices.
 
 Utilidad alternativa:
 
@@ -1007,17 +1007,17 @@ El comando `grep` busca dentro de uno o más archivos las líneas que contengan 
 
 `grep [options] [regularexpression] [filename]`
 
-Las opciones de grep pueden verse en el manual (**Pregunta** ¿Cómo buscar el manual de `grep` en la Terminal?). Veremos los casos más usados adelante. 
+Las opciones de grep pueden verse en el manual (**Pregunta** ¿Cómo buscar el manual de `grep` en la Terminal?). Veremos los casos más usados adelante.
 
-La *regularexpression* puede ser tal cual el texto a buscar, pero también podemos hacer una búsqueda mucho más compleja con **operadores**, **cuantificadores**, y **posicionadores**, que de forma similar a las *wildcards* nos permiten realizar búsquedas más flexibles. 
+La *regularexpression* puede ser tal cual el texto a buscar, pero también podemos hacer una búsqueda mucho más compleja con **operadores**, **cuantificadores**, y **posicionadores**, que de forma similar a las *wildcards* nos permiten realizar búsquedas más flexibles.
 
 ##### Operadores
 
 * **.**  Cualquier símbolo (una vez)
 
-* **[....]**  Para hacer una lista de caracteres, por ejemplo [Bb]iology10[1234] acepta cualquiera de las cadenas "Biology102", "biology101". También se pueden incluir rangos, por ejemplo: [0-9] para todos los números. 
+* **[....]**  Para hacer una lista de caracteres, por ejemplo [Bb]iology10[1234] acepta cualquiera de las cadenas "Biology102", "biology101". También se pueden incluir rangos, por ejemplo: [0-9] para todos los números.
 
-* **[^...]** Para hacer una lista de caracteres negativos, o sea que busque cualquiera excepto los enlistados. 
+* **[^...]** Para hacer una lista de caracteres negativos, o sea que busque cualquiera excepto los enlistados.
 
 * **\w** Cualquier "caracter de palabra", ie: letras, números y _.
 * **\W** Cualquier "caracter de NO palabra", ie: símbolos raros que no son letras, números ni _.
@@ -1053,12 +1053,12 @@ La *regularexpression* puede ser tal cual el texto a buscar, pero también podem
 
 
 
-### Usos comunes de `grep` 
+### Usos comunes de `grep`
 
 Empecemos por ver el archivo [tomatesverdes.fasta](../Unidad1/Prac_Uni1/Tomates/tomatesverdes.fasta). (Vive en: `BioinfInvRepro/Unidad1/Prac_Uni1/Tomates/`)
 
 ```
-$ less tomatesverdes.fasta 
+$ less tomatesverdes.fasta
 >gi|156629013|gb|EF438954.1| Physalis philadelphica isolate P061 maturase K (matK) gene, partial cds; chloroplast
 TAGGTCGATTTTGTTGGAAAATCCAGGTTATAACAATAAATTTAGTTTCCTAATTGTGAAACGTTTAATT
 ACTCGAATGTATCAACAGAATCATTTTATTATTTCTACTAATGATTCTAACAAAAATCCATTTTTGGGGT
@@ -1092,41 +1092,41 @@ AATCATTCAATGGTACGTAGTCAAATGTTAGAAAA
 :
 ```
 
-**Preguntas:** 
+**Preguntas:**
 
-1) ¿Qué tipo de archivo es? 
+1) ¿Qué tipo de archivo es?
 
 2) ¿Cuántas secuencias contiene?
 
 3) ¿Cuál es el encabezado de las secuencias?
 
-`grep` puede permitirnos extraer información de archivos como este, pero mucho más grandes y difíciles de ver. 
+`grep` puede permitirnos extraer información de archivos como este, pero mucho más grandes y difíciles de ver.
 
 Formas comunes de usar `grep`:
 
-#### `grep` a secas: 
+#### `grep` a secas:
 Busca una expresión regular y otorga las líneas donde se encontró dicha expresión.
 
 Ejemplo:
 
 ```
-$ grep ">" tomatesverdes.fasta 
+$ grep ">" tomatesverdes.fasta
 >gi|156629013|gb|EF438954.1| Physalis philadelphica isolate P061 maturase K (matK) gene, partial cds; chloroplast
 >gi|156629009|gb|EF438952.1| Physalis philadelphica isolate P059 maturase K (matK) gene, partial cds; chloroplast
 >gi|156628921|gb|EF438908.1| Physalis philadelphica isolate P056 maturase K (matK) gene, partial cds; chloroplast
 >gi|156628893|gb|EF438894.1| Physalis philadelphica isolate P050 maturase K (matK) gene, partial cds; chloroplast
 >gi|156629011|gb|EF438953.1| Physalis philadelphica isolate P060 maturase K (matK) gene, partial cds; chloroplast
 ```
-**Pregunta**: ¿Por qué está ">" entre comillas? 
+**Pregunta**: ¿Por qué está ">" entre comillas?
 
 **Ejercicio** En el mismo directorio hay otro archivo fasta. Utiliza `grep` y algo más para ver el encabezado de `tomatesverdes.fasta` y `jitomate.fasta`. ¿Qué diferencia hay con el output anterior?
 
 
-#### `grep -c` 
-Para contar en cuántas líneas aparece la expresión de búsqueda 
+#### `grep -c`
+Para contar en cuántas líneas aparece la expresión de búsqueda
 
 ```
-$ grep -c ">" tomatesverdes.fasta 
+$ grep -c ">" tomatesverdes.fasta
 5
 ```
 
@@ -1139,8 +1139,8 @@ tomatesverdes.fasta
 
 ```
 
-#### `grep -i` 
-Hace que la búsqueda sea **insensible** a Mayúsculas/minúsculas. 
+#### `grep -i`
+Hace que la búsqueda sea **insensible** a Mayúsculas/minúsculas.
 
 ```
 $ grep -l physalis *.fasta
@@ -1151,17 +1151,17 @@ tomatesverdes.fasta
 ```
 
 #### `grep -w`
-Sirve para buscar palabras completas, por ejemplo para buscar "he" y no "the". 
+Sirve para buscar palabras completas, por ejemplo para buscar "he" y no "the".
 
 ```
-$ grep iso tomatesverdes.fasta 
+$ grep iso tomatesverdes.fasta
 >gi|156629013|gb|EF438954.1| Physalis philadelphica isolate P061 maturase K (matK) gene, partial cds; chloroplast
 >gi|156629009|gb|EF438952.1| Physalis philadelphica isolate P059 maturase K (matK) gene, partial cds; chloroplast
 >gi|156628921|gb|EF438908.1| Physalis philadelphica isolate P056 maturase K (matK) gene, partial cds; chloroplast
 >gi|156628893|gb|EF438894.1| Physalis philadelphica isolate P050 maturase K (matK) gene, partial cds; chloroplast
 >gi|156629011|gb|EF438953.1| Physalis philadelphica isolate P060 maturase K (matK) gene, partial cds; chloroplast
-$ grep -w iso tomatesverdes.fasta 
-$ 
+$ grep -w iso tomatesverdes.fasta
+$
 ```
 
 
@@ -1170,7 +1170,7 @@ $
 Lee el texto entre comillas como una expresión regular  completa, es decir con operadores, cuantificadores y posicionadores. Es útil utilizarlo junto con `-o` para mostrar solo la parte del texto encontrado que cumple con la expresión regular.
 
 ```
-$ grep -oE "\| \w+ \w+" tomatesverdes.fasta 
+$ grep -oE "\| \w+ \w+" tomatesverdes.fasta
 | Physalis philadelphica
 | Physalis philadelphica
 | Physalis philadelphica
@@ -1192,20 +1192,20 @@ El texto dentro del archivo secsIDs debe verse así
 >gi|156628921|gb|EF438908.1|
 >gi|156628893|gb|EF438894.1|
 >gi|156629011|gb|EF438953.1|
-``` 
+```
 
 
 **Más información de expresiones regulares en:**
 
 Cap 2. Cap 3. y Cap 5 de Haddock SHD, Dunn CW (2011) Practical computing for biologists. Sinauer Associates Sunderland, MA.
 
-Buena referencia de expresiones regulares [aquí](http://tldp.org/LDP/abs/html/x17129.html) 
+Buena referencia de expresiones regulares [aquí](http://tldp.org/LDP/abs/html/x17129.html)
 
 Y buenos ejemplos de cómo usar `grep` [aquí](http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
-**Nota:** `awk` y `sed` son otros comandos que también usan expresiones regulares. 
+**Nota:** `awk` y `sed` son otros comandos que también usan expresiones regulares.
 
-`sed` es particularmente útil para sustituir una expresión regular (como una palabra) por otra. 
+`sed` es particularmente útil para sustituir una expresión regular (como una palabra) por otra.
 
 Por ejemplo esta línea cambia "Solanum lycopersicum" del archivo "tomates.fasta" por "jitomate"
 
@@ -1217,13 +1217,13 @@ sed 's/Solanum lycopersicum/jitomate/' tomates.fasta
 
 
 No los cubriremos aquí, pero vale la pena darles un ojo. Recomiendo esta [Introducción a `sed`](http://www.grymoire.com/Unix/Sed.html#uh-1)  y esta [introducción a `awk`](https://www.lifewire.com/write-awk-commands-and-scripts-2200573) así como estos [ejemplos de cómo se utilizan para manipular archivos fasta](http://bioinformatics.cvr.ac.uk/blog/short-command-lines-for-manipulation-fastq-and-fasta-sequence-files/).
- 
- 
+
+
 ## Redirección con bash
 
 **Pregunta** ¿Qué son el Standar output y el Standar input?
 
-###  `>` y `>>` 
+###  `>` y `>>`
 
 Redirige el Standar output (*stdout*) a un archivo en vez de imprimirlo en pantalla.
 
@@ -1235,7 +1235,7 @@ $ ls
 catejemplo.txt		ejemplonano.txt		nuevos_final.fam
 ejemplo_final.bed	nuevos_final.bed	nuevos_final.log
 ejemplo_final.fam	nuevos_final.bim
-$ head catejemplo.txt 
+$ head catejemplo.txt
 1 maiz_3 0 0 0 -9
 2 maiz_68 0 0 0 -9
 3 maiz_91 0 0 0 -9
@@ -1246,14 +1246,14 @@ $ head catejemplo.txt
 8 maiz_58 0 0 0 -9
 9 maiz_51 0 0 0 -9
 10 maiz_82 0 0 0 -9
-$ tail catejemplo.txt 
+$ tail catejemplo.txt
 Total genotyping rate in remaining individuals is 0.990151
 0 SNPs failed missingness test ( GENO > 1 )
 0 SNPs failed frequency test ( MAF < 0 )
 After frequency and genotyping pruning, there are 36931 SNPs
 After filtering, 0 cases, 0 controls and 165 missing
 After filtering, 0 males, 0 females, and 165 of unspecified sex
-Writing recoded file to [ nuevos_final.raw ] 
+Writing recoded file to [ nuevos_final.raw ]
 
 Analysis finished: Wed May 06 12:19:30 2015
 ```
@@ -1264,7 +1264,7 @@ Nota que si el archivo catejemplo.txt ya existe será borrado por el comando ant
 $ cat nuevos_final.fam *log >> catejemplo.txt
 ```
 
-**Ejercicio** utiliza `sed` para sustituir "Solanum lycopersicum" del archivo `Tomates/tomates.fasta` por "jitomate" y guarda el output en un nuevo archivo llamado "edited_tomates.fasta" 
+**Ejercicio** utiliza `sed` para sustituir "Solanum lycopersicum" del archivo `Tomates/tomates.fasta` por "jitomate" y guarda el output en un nuevo archivo llamado "edited_tomates.fasta"
 
 
 ### `|`
@@ -1287,7 +1287,7 @@ $ ls | wc -l
 Otro ejemplo (no se muestra el stdout pues es demasiado largo)
 
 ```
-cat *.fam | more 
+cat *.fam | more
 ```
 
 
@@ -1305,7 +1305,7 @@ Más detalles y otras formas de redireccionar (que ocupan algunos programas) las
 Los *for loops* permiten **repetir** una serie de comandos con diferentes *variables de una lista*.
 
 
-Sintaxis: 
+Sintaxis:
 
 ```
 for i in list; do
@@ -1315,7 +1315,7 @@ for i in list; do
 done
 ```
 
-"i" puede leerse como "el elemento i de la lista". Y  la lista no es más que el conjunto total de las variables que queremos. 
+"i" puede leerse como "el elemento i de la lista". Y  la lista no es más que el conjunto total de las variables que queremos.
 
 Ejemplo:
 
@@ -1334,7 +1334,7 @@ La timina es una base nitrogenada
 **Observaciones importantes:**
 
 * Los elementos de la lista NO se separan por comas (en otros lenguajes sí).
-* Para referirnos al "elemento i" dentro de los comandos debemos usar como prefijo el símbolo `$`. 
+* Para referirnos al "elemento i" dentro de los comandos debemos usar como prefijo el símbolo `$`.
 * No tienes que escribir el `>` antes de `echo` y de `done`, los pongo solo para mostrar que eso aparece en la terminal hasta que terminemos de meter los comandos que formarán parte del loop. De hecho `done` sirve para decir "ok, aquí termina el loop". En los ejemplos de abajo ya no lo pondré.
 
 Otro ejemplo:
@@ -1348,7 +1348,7 @@ Mi mejor amigo es un pastor mesoamericano
 Mi mejor amigo es un xolo
 ```
 
-**Preguntas** 
+**Preguntas**
 
 1) ¿Cuándo debo usar comillas en la lista de elementos?
 
@@ -1367,7 +1367,7 @@ Lo cual hará 100 directorios, llamados directorio1, directorio2 y así.
 
 ### Definir variables
 
-Los for loops utilizan *variables* definidas por el usuario, es decir "i" y "perro" en los ejemplos anteriores. Sin embargo, también pueden crearse variables **afuera** de un for loop, y usarlas para lo que queramos. 
+Los for loops utilizan *variables* definidas por el usuario, es decir "i" y "perro" en los ejemplos anteriores. Sin embargo, también pueden crearse variables **afuera** de un for loop, y usarlas para lo que queramos.
 
 Ejemplo:
 
@@ -1380,9 +1380,9 @@ $ $varx
 
 **Observaciones importantes**
 * NO debe haber espacios entre el símbolo = y la variable o su valor.
-* El nombre de la variable puede ser cualquier cosa que queramos **MENOS** el nombre de un comando que exista. 
+* El nombre de la variable puede ser cualquier cosa que queramos **MENOS** el nombre de un comando que exista.
 
-Las variables se pueden usar para acortar algo que escribamos muy seguido (como un path o un nombre de archivo largos) y conjuntar con otras variables dentro de un loop. 
+Las variables se pueden usar para acortar algo que escribamos muy seguido (como un path o un nombre de archivo largos) y conjuntar con otras variables dentro de un loop.
 
 Ejemplo:
 
@@ -1396,7 +1396,7 @@ El gatito hace miau
 El gatón hace miau
 ```
 
-**Ejercicio** Navega al directorio `BioinfInvRepro/Unidad1/Prac_Uni1`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente. 
+**Ejercicio** Navega al directorio `BioinfInvRepro/Unidad1/Prac_Uni1`. Desde ahí (i.e. **sin** utilizar `cd`) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio `Tomates/VerdesFritos`. Tu for loop debe incluir una variable definida externamente.
 
 
 ### Crear arrays y utilizarlos como una lista en un loop
@@ -1645,8 +1645,8 @@ Hacer algo con la muestra maiz_1
 
 ### Más información de for loops
 
-Aquí presenté la sintaxis más usada, pero hay otros métodos para escribir loops que hacen lo mismo. Y también pueden hacerse más complejos agregando "ifs". 
-Puedes consultar esta y más info de for loops en [esta guía con ejemplos y varios formatos](http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/). 
+Aquí presenté la sintaxis más usada, pero hay otros métodos para escribir loops que hacen lo mismo. Y también pueden hacerse más complejos agregando "ifs".
+Puedes consultar esta y más info de for loops en [esta guía con ejemplos y varios formatos](http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/).
 
 
 ## Introducción a los Scripts
@@ -1657,11 +1657,11 @@ Un **script** es un archivo de nuestros análisis que es:
 * permanente,
 * repetible,
 * anotado,
-* compartible 
+* compartible
 
-En otras palabras, un script es una recopilación por escrito de las instrucciones que queremos que la computadora corra, de modo que al tener esas instrucciones cualquiera pueda repetir el análisis tal cual se hizo. 
+En otras palabras, un script es una recopilación por escrito de las instrucciones que queremos que la computadora corra, de modo que al tener esas instrucciones cualquiera pueda repetir el análisis tal cual se hizo.
 
-El script consta de dos tipos de texto: 
+El script consta de dos tipos de texto:
 
 **1.** El **código** (comandos) que queremos que se ejecute, en el órden que queremos que lo ejecute.
 
@@ -1670,7 +1670,7 @@ Es decir lo mismo que escribiríamos en la Terminal para hacer un análisis, per
 **2.** Comentarios escritos **para un ser humano** en un **lenguaje de humanos**, dígase no solo en español, sino que nos permita entender qué hace el código, qué tipo de información requiere y cualquier otra cosa que una persona cualquiera necesite para poder utilizar el código del script de forma correcta.
 
 
-Para que la computadora distinga entre el código y los comentarios para humanos se utiliza el símbolo `#`. Todo el texto a la *derecha* del símbolo `#` será ignorado por la computadora, aunque sí "se imprima" en la Consola. 
+Para que la computadora distinga entre el código y los comentarios para humanos se utiliza el símbolo `#`. Todo el texto a la *derecha* del símbolo `#` será ignorado por la computadora, aunque sí "se imprima" en la Consola.
 
 Por ejemplo, el texto siguiente es un estracto de un script para correr Admixture:
 
@@ -1686,7 +1686,7 @@ cd ../genetic/JmINGP/out.noreplicates/popstructure
 cp ../batch_1.plink.* ./
 plink --file batch_1.plink --maf 0.05 --geno .2 --make-bed --out batch_1.plink --noweb --allow-no-sex
 
-# run admixture using multithreaded mode, fixed random seed and corss-validation procedure to choose the correct value 
+# run admixture using multithreaded mode, fixed random seed and corss-validation procedure to choose the correct value
 for K in 1 2 3 4 5 6 7 8 9 10 11 12 13;
 do ../../../../bin/admixture --cv batch_1.plink.bed  $K -j4  -s 21 | tee log${K}.out; done
 
@@ -1705,26 +1705,38 @@ El script completo está en un **archivo de texto** llamado [example_script_runa
 
 Ya hemos visto que un script es un archivo de texto con código y comentarios. Esta es una generalidad cierta para cualquier lenguaje de programación (aunque los comentarios no son obligatorios se recomienda mucho).
 
-Sin embargo los scripts que corremos desde la Terminal Unix, es decir scripts de *Bash* o *Shell* requiren de 3 pasos para **convertirse en software**:
+Una ventaja de los scripts es que nos permiten tener en un solo documento *varios* comandos que se utilizaron para hacer algo, es decir, conforme se complican los análisis necesitamos más de una línea de comando para realizarlos.
 
-1. Escribir los comandos a un archivo de texto (escribir el script).
-2. Indicarle al sistema operativo (computadora) que programa (lenguaje) debe utilizar para *interpretar* los comandos
-3. Darle al *archivo* los *permisos* que necesita para poder ser *ejecutado por Shell*.
+Si haces los análisis de tu trabajo en la terminal sin tenerlos en un script es como platicar la introducción de tu tesis sin haberla escrito nunca. Considera el correr comandos en la terminal como una **prueba** y ya que todo funcione, pon todos los comandos juntos en **uno más scripts documentados** y deja que corra el análisis de principio a fin solito (veremos adelante cómo).
 
-### Escribir el script
+
+#### Escribir el script
 
 Escribir un script es escribir en un **editor de texto** los comandos para resolver un problema, de preferencia comentando cada paso.
 
+Editores de texto recomendados:
+
+* Mac y Linux (y hasta Windows): [Atom](https://atom.io/)
+* Linux: [Gedit](http://sourceforge.net/projects/gedit/)
+
+
 Una buena forma de escribir un script es:
 
-1. Escribir el algoritmo, es decir los pasos que queremos hacer.
-2. Marcar dichos pasos como comentarios (recuerda el uso de `#` para indicar que el texto a su derecha es un comentario, no un comando).
-3. Escribir el código para hacer cada paso debajo del comentario correspondiente. 
+1. Escribir qué queremos qué haga el script (objetivo general) y quién lo está haciendo
+2. Escribir el algoritmo, es decir los pasos que queremos hacer.
+3. Marcar dichos pasos como comentarios (recuerda el uso de `#` para indicar que el texto a su derecha es un comentario, no un comando).
+4. Tomarse un descanso y darse un premio
+5. Escribir el código para hacer cada paso debajo del comentario correspondiente.
+6. Revisar los comentarios, agregar detalles de ser necesarios.
+7. Correr el script para ver si funciona de la forma esperada
+8. En caso de éxito, darse un premio, en caso de que no, *debuggear*
 
 Ejemplo:
 
+Objetivo del script: bajar 3 secuencias fasta de *Chiropterotriton* de NCBI
+
 * Algoritmo para guardar secuencias de *Chiropterotriton*
- 
+
 ```
 Definir secuencias a bajar desde NCBI
 Crear directorio para guardar datos
@@ -1733,43 +1745,32 @@ Revisar secuencias
 Fin
 ```
 
-* Algoritmo + código para bajar secuencias de *Chiropterotriton*:
+* Algoritmo + código para bajar secuencias de *Chiropterotriton*, guardado en un archvio de texto llamado `getsecsNCBI.sh`:
 
 ```
 ## Este script baja 3 secuencias de Chiropterotriton de NCBI
+# Alicia Mastretta Yanes, 2019
+
 # Crear directorio para guardar datos
 mkdir Chiropt
 
-# Bajar datos de NCBI 
+# Bajar datos de NCBI
 curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&rettype=fasta&id=937202862,937202860,937202858" > Chiropt/ranas.fasta
 
 # Revisar qué secuencias se bajaron
 grep ">" Chiropt/ranas.fasta
 ```
 
-**Observación**: una ventaja de los scripts es que nos permiten tener en un solo documento *varios* comandos que se utilizaron para hacer algo, es decir, conforme se complican los análisis necesitamos más de una línea de comando para realizarlos.
-
-Si haces los análisis de tu trabajo en la terminal sin tenerlos en un script es como platicar la introducción de tu tesis sin haberla escrito nunca. Considera el correr comandos en la terminal como una **prueba** y ya que todo funcione, pon todos los comandos juntos en **uno más scripts documentados** y deja que corra el análisis de principio a fin solito (veremos adelante cómo).
-
-
-Editores de texto recomendados:
-
-* Mac y Linux (y hasta Windows): [Atom](https://atom.io/)
-* Linux: [Gedit](http://sourceforge.net/projects/gedit/)
-
-
-**NOTA IMPORTANTE**: el workingdirectory de un script siempre es el directorio donde está guardado dicho script. Entonces, es importante que si tu script va a manejar directorios (`cd` a algún lugar) lo planees todo con **rutas relativas** empezando en el directorio donde guardarás el script. ¿Dónde es un buen lugar para guardar el script? Lo veremos con detalle en otra unidad, pero en resumen el mejor lugar es en el mismo directorio que los datos, o en uno muy cercano.
-
-El ejemplo que vimos antes, abierto en un editor de texto se ve así:
+Este ejemplo, abierto en un editor de texto se ve así:
 
 ![egScript_noShebang.png](egScript_noShebang.png)
 
-La terminación `.sh` indica que es un archivo Shell (es decir el interpretador de la Terminal, equivalente a decir Bash, recordemos la Unidad 1). Y al darle esta terminación de archivo, o señalar el tipo de lenguaje en el menú de opciones, el editor de texto nos ayuda a leer el código coloreando los comandos, los flags, las variables y los comentarios.
+La terminación `.sh` indica que es un archivo Shell (es decir el interpretador de la Terminal, equivalente a decir Bash). Y al darle esta terminación de archivo, o señalar el tipo de lenguaje en el menú de opciones, el editor de texto nos ayuda a leer el código coloreando los comandos, los flags, las variables y los comentarios.
 
 En este momento ya podemos correr nuestro script. Sólo hay que ir a la Terminal, `cd` al directorio donde esté nuestro script y utilizar el comando `bash`:
 
 ```
-$ bash getsecsNCBI.sh 
+$ bash getsecsNCBI.sh
 >gi|937202862|gb|KT820711.1| Chiropterotriton sp. SMR-2015b voucher MVZ:Herp:269665 cytochrome b (cytb) gene, partial cds; mitochondrial
 >gi|937202860|gb|KT820710.1| Chiropterotriton sp. SMR-2015a voucher IBH:28182 cytochrome b (cytb) gene, partial cds; mitochondrial
 >gi|937202858|gb|KT820709.1| Chiropterotriton sp. SMR-2015a voucher IBH:28178 cytochrome b (cytb) gene, partial cds; mitochondrial
@@ -1778,9 +1779,19 @@ $ bash getsecsNCBI.sh
 
 `bash` es un comando que a su vez ejecuta comandos de un stdinput o de un archivo, en este caso nuestro script.
 
-Sin embargo este script **aún no está listo para ser un ejecutable**. La terminación `.sh` podría o podría no existir y a `bash` le daría lo mismo para correr el ejemplo anterior. Para hacer de nuestro script un ejecutable es necesario:
+NOTA IMPORTANTE: el workingdirectory de un script siempre es el directorio donde está guardado dicho script. Entonces, es importante que si tu script va a manejar directorios (cd a algún lugar) lo planees todo con **rutas relativas** empezando en el directorio donde guardarás el script. ¿Dónde es un buen lugar para guardar el script? Lo veremos con detalle en otra unidad, pero en resumen el mejor lugar es en el mismo directorio que los datos, o en uno muy cercano.
 
-### Indicar con qué programa *interpretar* el script: `#!`
+
+### Cómo volver software un script
+
+El script que hicimos arriba  **aún no está listo para ser un ejecutable**. La terminación `.sh` podría o podría no existir y a `bash` le daría lo mismo para correr el ejemplo anterior. Para hacer de nuestro script un ejecutable es necesario:
+
+1. Escribir los comandos a un archivo de texto (escribir el script, como hicimos arriba).
+2. Indicarle al sistema operativo (computadora) que programa (lenguaje) debe utilizar para *interpretar* los comandos
+3. Darle al *archivo* los *permisos* que necesita para poder ser *ejecutado por Shell*.
+
+
+#### Indicar con qué programa *interpretar* el script: `#!`
 
 **`#!`** Se lee cómo "Shebang".
 
@@ -1809,19 +1820,19 @@ Nuestro script entonces se verá así:
 Podemos correr este script con `bash` como antes. Sin embargo, si **hacemos el archivo ejecutable** ya no será necesario ejecutarlo a través de bash, ya que será un *programa* por sí mismo.
 
 
-### Hacer ejecutable el archivo
+#### Hacer ejecutable el archivo
 
 `ls -l` nos enlista los archivos (`ls`) y la banera `-l`) nos da información extendida cada archivo, incluyendo los *permisos*.
 
-Por ejemplo: 
+Por ejemplo:
 
 ```
-$ ls -l 
+$ ls -l
 total 8
 drwxr-xr-x  3 ticatla  staff  102 13 Feb 23:09 Chiropt
 -rw-r--r--@ 1 ticatla  staff  350 13 Feb 23:05 getsecsNCBI.sh
 
-``` 
+```
 
 Veamos cómo leerse (imagen cortesía de [aquí](https://www.samba.org/samba/docs/man/Samba-HOWTO-Collection/AccessControls.html)):
 
@@ -1846,7 +1857,7 @@ $ ./getsecsNCBI.sh
 >gi|937202858|gb|KT820709.1| Chiropterotriton sp. SMR-2015a voucher IBH:28178 cytochrome b (cytb) gene, partial cds; mitochondrial
 ```
 
-**Ojo:** hay un `./` antes del nombre del script, esto sirve para decirle dónde está dicho script, ya que por default la Terminal busca los comandos en los directorios enlistados en tu PATH (`echo $PATH`) para saber cuales son. 
+**Ojo:** hay un `./` antes del nombre del script, esto sirve para decirle dónde está dicho script, ya que por default la Terminal busca los comandos en los directorios enlistados en tu PATH (`echo $PATH`) para saber cuales son.
 
 **Comentario:** si tienes una serie de scripts que usas mucho, vale la pena ponerlos todos juntos en una carpeta y volver a esta carpeta parte de tu PATH. Checa el Capítulo 6 de Haddock & Dunn (2011) para cómo.
 
@@ -1854,9 +1865,8 @@ $ ./getsecsNCBI.sh
 
 ##### Ejercicios
 
-1. Escribe **una línea de código** que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad1/Prac_Uni1/Maiz/nuevos_final.fam`. 
+1. Escribe **una línea de código** que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad1/Prac_Uni1/Maiz/nuevos_final.fam`.
 
-2. Escribe **un script** que cree 4 directorios llamados PobA, PobB, PobC, PobD y dentro de cada uno de ellos un archivo de texto que diga "Este es un individuo de la población x" donde x debe corresponder al nombre del directorio. 
+2. Escribe **un script** que cree 4 directorios llamados PobA, PobB, PobC, PobD y dentro de cada uno de ellos un archivo de texto que diga "Este es un individuo de la población x" donde x debe corresponder al nombre del directorio.
 
 3. Escribe un script que baje 5 secuencias (algún loci corto, no un genoma) de una especie que te interese y señala cuántas veces existe la secuencia "TGCA" en cada una de ellas. ¿Sabes qué hace esta secuencia?
-
