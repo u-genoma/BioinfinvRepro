@@ -1,4 +1,5 @@
-#### 
+#### Script to run Admixture with Junierpus and Berberis ddRAD data
+### Alicia Mastretta Yanes 2018
 
 #### Admixture
 
@@ -10,7 +11,7 @@ cd ../genetic/JmINGP/out.noreplicates/popstructure
 cp ../batch_1.plink.* ./
 plink --file batch_1.plink --maf 0.05 --geno .2 --make-bed --out batch_1.plink --noweb --allow-no-sex
 
-# run admixture using multithreaded mode, fixed random seed and corss-validation procedure to choose the correct value 
+# run admixture using multithreaded mode, fixed random seed and corss-validation procedure to choose the correct value
 for K in 1 2 3 4 5 6 7 8 9 10 11 12 13;
 do ../../../../bin/admixture --cv batch_1.plink.bed  $K -j4  -s 21 | tee log${K}.out; done
 
@@ -28,7 +29,7 @@ cd ../genetic/BerSS/out.noreplicates/popstructure
 cp ../batch_1.plink.* ./
 plink --file batch_1.plink --maf 0.05 --geno .2 --make-bed --out batch_1.plink --noweb --allow-no-sex
 
-# run admixture using multithreaded mode, fixed random seed and corss-validation procedure to choose the correct value 
+# run admixture using multithreaded mode, fixed random seed and corss-validation procedure to choose the correct value
 for K in 1 2 3 4 5 6 7;
 do ../../../../bin/admixture --cv batch_1.plink.bed  $K -j4  -s 21 | tee log${K}.out; done
 
