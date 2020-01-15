@@ -1745,7 +1745,7 @@ Revisar secuencias
 Fin
 ```
 
-* Algoritmo + código para bajar secuencias de *Chiropterotriton*, guardado en un archvio de texto llamado `getsecsNCBI.sh`:
+* Algoritmo + comentarios + código para bajar secuencias de *Chiropterotriton*, guardado en un archvio de texto llamado `getsecsNCBI.sh`:
 
 ```
 ## Este script baja 3 secuencias de Chiropterotriton de NCBI
@@ -1780,6 +1780,20 @@ $ bash getsecsNCBI.sh
 `bash` es un comando que a su vez ejecuta comandos de un stdinput o de un archivo, en este caso nuestro script.
 
 NOTA IMPORTANTE: el workingdirectory de un script siempre es el directorio donde está guardado dicho script. Entonces, es importante que si tu script va a manejar directorios (cd a algún lugar) lo planees todo con **rutas relativas** empezando en el directorio donde guardarás el script. ¿Dónde es un buen lugar para guardar el script? Lo veremos con detalle en otra unidad, pero en resumen el mejor lugar es en el mismo directorio que los datos, o en uno muy cercano.
+
+
+**Ejercicio**
+
+Escribe un script que baje 3 secuencias (algún loci corto, no un genoma) de una especie que te guste y que las guarde en un archivo llamado "Mi_especie.fasta", que a su vez esté en un directorio llamado "Mi_especie". Donde "mi especie" debe ser el nombre o género de tu especie. Pista: necesitas el ID de las secuencias para construir la dirección a bajar con curl. **Recuerda los 8 pasos para escribir un script que vimos arriba:**
+
+1. Escribir qué queremos qué haga el script (objetivo general) y quién lo está haciendo
+2. Escribir el algoritmo, es decir los pasos que queremos hacer.
+3. Marcar dichos pasos como comentarios (recuerda el uso de `#` para indicar que el texto a su derecha es un comentario, no un comando).
+4. Tomarse un descanso y darse un premio
+5. Escribir el código para hacer cada paso debajo del comentario correspondiente.
+6. Revisar los comentarios, agregar detalles de ser necesarios.
+7. Correr el script para ver si funciona de la forma esperada
+8. En caso de éxito, darse un premio, en caso de que no, *debuggear*
 
 
 ### Cómo volver software un script
