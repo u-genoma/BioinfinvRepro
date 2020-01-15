@@ -1365,6 +1365,12 @@ Lo cual hará 100 directorios, llamados directorio1, directorio2 y así.
 
 **Pregunta** ¿De qué manera sencilla borrarías esos 100 directorios que acabas de crear?
 
+
+### Ejercicio para familarizarse con los loops
+
+[Blocky games](https://blockly.games/maze?lang=en)
+
+
 ### Definir variables
 
 Los for loops utilizan *variables* definidas por el usuario, es decir "i" y "perro" en los ejemplos anteriores. Sin embargo, también pueden crearse variables **afuera** de un for loop, y usarlas para lo que queramos.
