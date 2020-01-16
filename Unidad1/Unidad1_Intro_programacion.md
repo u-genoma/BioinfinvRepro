@@ -1652,7 +1652,7 @@ Hacer algo con la muestra maiz_1
 ### Más información de for loops
 
 Aquí presenté la sintaxis más usada, pero hay otros métodos para escribir loops que hacen lo mismo. Y también pueden hacerse más complejos agregando "ifs".
-Puedes consultar esta y más info de for loops en [esta guía con ejemplos y varios formatos](http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/).
+Puedes consultar esta y más info de for loops en [esta guía con ejemplos y varios formatos](http://www.thegeekstuff.com/2011/07/bash-for-loop-examples/) y [aquí](https://dccn-hpc-wiki.readthedocs.io/en/latest/docs/bash/exercise_programming.html) para el uso de if-then-else
 
 
 ## Introducción a los Scripts
