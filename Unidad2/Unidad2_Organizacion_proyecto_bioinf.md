@@ -1,6 +1,9 @@
 # Unidad 2: Organización de un proyecto bioinformático
 
-Un proyecto bioinformático consiste en los datos crudos, datos procesados, scripts y documentación  necesarios para reproducir los análisis realizados. Es decir en todo lo que al final debes subir a un repositorio como [Dryad](https://www.datadryad.org/pages/organization) (aunque los datos pueden conectarse desde otros repos, como [SRA](https://www.ncbi.nlm.nih.gov/sra), claro). 
+Un proyecto bioinformático consiste en los datos crudos, datos procesados, scripts y documentación  necesarios para reproducir los análisis realizados. Es decir en todo lo que al final debes subir a un repositorio como [Dryad](https://www.datadryad.org/pages/organization), [Open Science Framework](https://osf.io/), o cualquier otros repos como [SRA](https://www.ncbi.nlm.nih.gov/sra). 
+
+Checa otros repositorios de datos [aquí](http://ropensci.github.io/reproducibility-guide/sections/dataStorage/).
+
 
 #### Organización de directorios 
 
@@ -22,7 +25,19 @@ También es posible tener un directorio para cada subanálisis concreto, por eje
 
 Independientemente del nombre que escojamos para los directorios y archivos, qué es qué y dónde está cada cosa debe ir explicado en un **README**.
 
+
 Para ver un ejemplo de un repositorio organizado así, baja la sección **Data and scripts for population genomics and SDM** de [este repo de Dryad](https://www.datadryad.org/resource/doi:10.5061/dryad.f7248) (El archivo que se llama ++PopGenomicsIBR.zip++).
+
+[Open Science Framework](https://osf.io/) es una platforma gratuita que permite almacener y compartir datos, códigos y otros materiales. Cada archivo obtiene una URL única y persistente para citarlo y compartirlo de forma flexible y controlada. También se puede crear y compartir "preprint" para que otros puedan encontrar y citar su trabajo.
+
+Los archivos se organizan en proyectos estructurados y se agregan colaboradores, dándoles acceso a los datos, protocolos y otros materiales de investigación. El control de versión incorporado sigue la evolución del proyecto y de los archivos, y impide que dos personas hacen cambios al mismo tiempo. Es una muy buena manera de planear y gestionar proyectos colaborativos, y su capacidad de almacen de datos es "infinita" - sin problema se puede depositar y compartir los datos de varios genomas.
+
+Puedes [conectar un repositorio GitHub a un proyecto OSF](https://help.osf.io/hc/en-us/articles/360019929813-Connect-GitHub-to-a-Project), o diferentes repositorios a diferentes componentes dentro del mismo proyecto. Archivos editados en su repositorio GitHub serán accesibles a través de OSF. Del mismo modo archivos editados desde su cuenta OSF se actualizarán en su cuenta GitHub, y puedes elegir de modificar tal version del codigo (usando "branches y forks").
+
+
+Abajo veremos como puedes conectar un repositorio GitHub a un proyecto OSF. Archivos editados en su repositorio GitHub serán accesibles a través de OSF. Del mismo modo, archivos editados desde su cuenta OSF se actualizarán en su cuenta GitHub.
+
+Así a través de OSF y GitHub, puedes dar un aceso publico a tus [datos, scripts y pre-prints](https://angus.readthedocs.io/en/2019/where_to_put_data.html) una vez que están publicados.
 
 
 ## Documentación de scripts y del proyecto
@@ -146,8 +161,7 @@ Es un repositorio de código que:
 
 Lo primero que hay que hacer es este tutorial: [Hello-world Github Guide](https://guides.github.com/activities/hello-world/) para aprender a crear un repo en Github y utilizar su versión web.
 
-**Ejercicio** siguiendo los pasos del tutorial anterior, genera un repositorio entro de **tu cuenta de Github** que se llame "Tareas_BioinfRepro2019_TusIniciales". 
-
+**Ejercicio** siguiendo los pasos del tutorial anterior, genera un repositorio entro de **tu cuenta de Github** que se llame "Tareas_BioinfRepro2019_TusIniciales".
 
 
 ### Los términos más importantes
