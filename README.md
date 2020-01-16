@@ -212,11 +212,11 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 * Manipulación y limpieza de datos en R
 
-**Sesión 4: Graficar en R **
+**Sesión 4: Graficar en R**
 
 * Graficar en R
 
-**Sesión 5: Bioconductor **
+**Sesión 5: Bioconductor**
 
 * Bioconductor
 
@@ -234,7 +234,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-**Sesión 3:coninuación de genética de poblaciones **
+**Sesión 3:coninuación de genética de poblaciones**
 
 * PCA exploratorios
 * Análisis básicos de diversidad y diferenciación genética
