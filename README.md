@@ -21,9 +21,7 @@ Estudiante doctorado Intituto de Ecología UNAM - CONABIO
 **Dr. Ricardo Verdugo Salgado, PhD**
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
-Los materiales aquí presentados son de acceso libre. La transmisión online y videos de clases se pueden encontrar en:
-* Unidades 1-5 en [este canal de Youtube](https://www.youtube.com/channel/UCFXy3RKrbu595t8DyGjGoxg?view_as=subscriber)
-* Unidades 6-9 en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
+Los materiales aquí presentados son de acceso libre. La transmisión online y videos de clases se pueden encontrar en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
 
 Sala de chat para **anuncios de la clase** y dudas si lo estás viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)
 
