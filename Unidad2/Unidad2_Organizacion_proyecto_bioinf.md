@@ -197,13 +197,13 @@ Lo cual abrirá una pantalla de `vim`. Edita tu nombre de usuario y cuenta de co
 
 `$ git config --global user.email "email@example.com"`
 
-`$ git config user.name "Mi_nombre"`
+`$ git config --global user.name "Mi_nombre"`
 
 Donde el texto entre comillas son tus datos.
 
 Comrpueba tu dirección es la correcta con:
 
-`$ git config user.email`
+`$ git config --global user.email`
 
 Debe mostrarse tu dirección correcta.
 
