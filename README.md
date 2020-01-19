@@ -165,43 +165,35 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 [Video de Bienvenida al curso 2020](https://www.youtube.com/watch?v=51y4PLN2mBY)
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
-**Sesión 1:  Introducción al código y la terminal**
-
-[Video 13 Ene: Sesion 1. Introducción al código y la terminal](https://www.youtube.com/watch?v=vziA1KbShoQ)
-
-[Video 14 Ene: Sesion U1.2. Bash, grep y redirección](https://www.youtube.com/watch?v=ppqsw1OVw_0)
-
-[Video 15 Ene: Sesion U1.3. Loops en bash e intro a scripts](https://www.youtube.com/watch?v=OhCBraaRfKs)
-
-[Video Extra: Volver ejecutable un script](https://www.youtube.com/watch?v=wp3eC7FVANg)
+[**Sesión 1:  Introducción al código y la terminal**](https://www.youtube.com/watch?v=vziA1KbShoQ)
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash y R
 * Funciones básicas de navegación y manejo de archivos con bash
 
-**Sesión 2: Introducción a los scripts y grep**
-
-[Video 16 Ene: Documentación en Bioinformática](https://www.youtube.com/watch?v=N_KUce2siNo)
+[**Sesión 2: Introducción a los scripts y grep**](https://www.youtube.com/watch?v=ppqsw1OVw_0)
 
 * Funciones básicas de exploración de archivos con bash
 * Regular expressions y búsqueda de patrones (grep)
 * Redirección con bash
 
-**Sesión 3: Continaución de bash**
+[**Sesión 3: Continaución de bash**](https://www.youtube.com/watch?v=OhCBraaRfKs)
 
 * Introducción a los scripts
 * Loops con bash
 
+[Video Extra: Volver ejecutable un script](https://www.youtube.com/watch?v=wp3eC7FVANg)
+
 #### Unidad 2 [Organización de un proyecto bioinformático](Unidad2/Unidad2_Organizacion_proyecto_bioinf.md)
 
-**Sesión 1: Documentación bioinformática**
+[**Sesión 1: Documentación bioinformática**](https://www.youtube.com/watch?v=N_KUce2siNo)
 
 * Documentación de scripts y del proyecto
 * Markdown
 * git
 
-**Sesión 2: Github**
+[**Sesión 2: Github**](https://www.youtube.com/watch?v=NIZjzU1BTjc)
 
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
