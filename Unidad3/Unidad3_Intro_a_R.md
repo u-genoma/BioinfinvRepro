@@ -86,6 +86,76 @@ La idea es que en el editor de texto vayas escribiendo los comandos y comentario
 * ? + nombre de función: ayuda sobre esa función.
 
 
+## Funciones básicas de R más importantes para bioinformática
+
+
+### R Básico
+
+Antes de pasar a las funciones bionformáticas, veamos la sintaxis básica de R y los principales comandos que aprender.  
+
+Imprime dos veces este [Acordeón de R básico](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf). Ten uno siempre contigo y otro bajo la almuada para la ósmosis.
+
+Ahora veamos estas [notas sobre los tipos de objetos de R básico](Tipos_objetos_baseR.Rmd)
+
+#### R básico en resumen:
+
+* Expresiones matemáticas: `1+1`
+* Strings de texto: `"¡Holaaaaa mundo!"`
+* Valores lógicos: `1<5`, `2+2 ==5`
+* Crear una variable: `x<-5`
+
+* Funciones: son un comando que hace algo específico dentro de R. Ejemplo: `sum()`, `mean()`, `help()`
+
+**Ejercicio**: crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
+
+Vectores:
+
+* vectores `c(5, 4, 6, 7)`, `5:9`
+* Acceso a elementos de un vector `[]`
+
+**Ejercicio:** suma el número 2 a todos los números entre 1 y 150.
+
+**Ejercicio** ¿cuántos números son mayores a 20
+en el vector -13432:234?
+
+Matrices
+
+* Matrices `matrix(0, 3, 5)`
+* Acceso a elementos e una matriz `[ , ]`
+
+Data frames
+
+* Data frame `data.frame(x = c("a", "b", "c"), y = 1:3)`
+* Acceso a elementos e una data.frame `[ , ]`, `$`
+
+
+### Notas sobre cargar archivos:
+`read.delim` sirve para cargar un archivo de texto con filas y columnas. Revisa su ayuda para determinar que variables utilizar para leerlo si está separado por comas, tabulaciones (tab), espacios o qué.
+
+Además de archivos de filas y columnas, se pueden leer a R todo tipo de archivos, en algunos casos esto se hace con paquetes que crearon funciones específicas para esto. Normalmente se llaman `read.algo`. Por ejemplo la función `read.plink` del paquete snpMatrix.
+
+Cuando utilices `read.delim` o símil, asume que tu WD es donde vive tu script y **utiliza rutas relativas** para navegar hasta el archivo que deseas cargar.
+
+(Para poner triste Alicia preguntar por qué es importante hacer lo anterior).
+
+#### Working directory
+Buena práctica recomendada: que tu working directory sea donde sea que viva el script en el que estás trabajando.
+
+Para averiguar cuál es tu WD actual utiliza `getwd()`.
+
+Puedes definir tu WD manualmente con la función `setwd()`, pero OJO: realiza esto en **La Consola**, *NO en tu script*. Neto, porfas.
+
+Una trampa práctica en RStudio para que tu WD sea el lugar donde vive tu script es ir al Menú:
+
+`Session > Set Working Directory > To source file location`
+
+O sease "source file" = tu script activo.
+
+Nota también que si abres RStudio clickeando su ícono, tu WD por default será el home de tu usuario. Sin embargo, si abres RStudio clickeando en un script, el WD default será donde viva dicho script.
+
+
+**Ejercicio:**
+Carga en R el archivo `Prac_Uni3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y ponlo en un objeto de R llamado meta_maiz.
 
 
 ## Rmarkdown y R Notebook
@@ -157,50 +227,6 @@ Un reporte de un script.R funciona si quieres "guardar cómo se ve" correr un an
 Así que cuándo usar cuál depende de la situación y tus gustos.
 
 
-
-## Funciones básicas de R más importantes para bioinformática
-
-
-### R Básico
-
-Antes de pasar a las funciones bionformáticas, veamos la sintaxis básica de R y los principales comandos que aprender.  
-
-Imprime dos veces este [Acordeón de R básico](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf). Ten uno siempre contigo y otro bajo la almuada para la ósmosis.
-
-Ahora veamos estas [notas sobre los tipos de objetos de R básico](Tipos_objetos_baseR.Rmd)
-
-#### R básico en resumen:
-
-* Expresiones matemáticas: `1+1`
-* Strings de texto: `"¡Holaaaaa mundo!"`
-* Valores lógicos: `1<5`, `2+2 ==5`
-* Crear una variable: `x<-5`
-
-* Funciones: son un comando que hace algo específico dentro de R. Ejemplo: `sum()`, `mean()`, `help()`
-
-**Ejercicio**: crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
-
-Vectores:
-
-* vectores `c(5, 4, 6, 7)`, `5:9`
-* Acceso a elementos de un vector `[]`
-
-**Ejercicio:** suma el número 2 a todos los números entre 1 y 150.
-
-**Ejercicio** ¿cuántos números son mayores a 20
-en el vector -13432:234?
-
-Matrices
-
-* Matrices `matrix(0, 3, 5)`
-* Acceso a elementos e una matriz `[ , ]`
-
-Data frames
-
-* Data frame `data.frame(x = c("a", "b", "c"), y = 1:3)`
-* Acceso a elementos e una data.frame `[ , ]`, `$`
-
-
 ### Trabajar con paquetes y datos externos
 
 R base contiene las funciones más básicas, pero la verdadera riqueza de R está en sus paquetes. Estos los puede desarrolar cualquier persona y publicar. Van desde análisis estadísticos generales hasta funciones muy específicas pera determinado campo. En [CRAN](https://cran.r-project.org/) puedes explorar la gran gama de paquetes sobre cualquier tema. Algunos paquetes son especializados para bioinformática, como [adegenet](http://adegenet.r-forge.r-project.org/) y [ape](https://cran.r-project.org/web/packages/ape/ape.pdf). Puedes ver una lista de más paquetes relacionados con genética estadística en [CRAN Task Statistical Genetics](https://cran.r-project.org/web/views/Genetics.html).
@@ -232,32 +258,6 @@ citation("NombrePaquete")
 (o lo que loas autoreas especifiquen en su sitio web)
 
 
-
-#### Notas sobre cargar archivos:
-`read.delim` sirve para cargar un archivo de texto con filas y columnas. Revisa su ayuda para determinar que variables utilizar para leerlo si está separado por comas, tabulaciones (tab), espacios o qué.
-
-Además de archivos de filas y columnas, se pueden leer a R todo tipo de archivos, en algunos casos esto se hace con paquetes que crearon funciones específicas para esto. Normalmente se llaman `read.algo`. Por ejemplo la función `read.plink` del paquete snpMatrix.
-
-Cuando utilices `read.delim` o símil, asume que tu WD es donde vive tu script y **utiliza rutas relativas** para navegar hasta el archivo que deseas cargar.
-
-(Para poner triste Alicia preguntar por qué es importante hacer lo anterior).
-
-#### Working directory
-Buena práctica recomendada: que tu working directory sea donde sea que viva el script en el que estás trabajando.
-
-Para averiguar cuál es tu WD actual utiliza `getwd()`.
-
-Puedes definir tu WD manualmente con la función `setwd()`, pero OJO: realiza esto en **La Consola**, *NO en tu script*. Neto, porfas.
-
-Una trampa práctica en RStudio para que tu WD sea el lugar donde vive tu script es ir al Menú:
-
-`Session > Set Working Directory > To source file location`
-
-O sease "source file" = tu script activo.
-
-Nota también que si abres RStudio clickeando su ícono, tu WD por default será el home de tu usuario. Sin embargo, si abres RStudio clickeando en un script, el WD default será donde viva dicho script.
-
-
 ##### Acordeón funciones útiles al trabajar con paquetes y archivos de datos
 
 * Funciones de sistema: `list.files`, `getwd`, `setwd`
@@ -267,9 +267,6 @@ Nota también que si abres RStudio clickeando su ícono, tu WD por default será
 * Cargar a R un archivo de texto con filas y columnas (separado por tabs o comas): `read.delim`.
 * "Pegar" texto uno detrás de otro: `paste()` y `paste0()`.
 
-
-**Ejercicio:**
-Carga en R el archivo `Prac_Uni3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y ponlo en un objeto de R llamado meta_maiz.
 
 
 ### For loops
