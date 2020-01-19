@@ -88,25 +88,32 @@ La idea es que en el editor de texto vayas escribiendo los comandos y comentario
 
 ## Funciones básicas de R más importantes para bioinformática
 
-
 ### R Básico
-
-Antes de pasar a las funciones bionformáticas, veamos la sintaxis básica de R y los principales comandos que aprender.  
 
 Imprime dos veces este [Acordeón de R básico](https://www.rstudio.com/wp-content/uploads/2016/10/r-cheat-sheet-3.pdf). Ten uno siempre contigo y otro bajo la almuada para la ósmosis.
 
-Ahora veamos estas [notas sobre los tipos de objetos de R básico](Tipos_objetos_baseR.Rmd)
+Antes de pasar a las funciones bionformáticas, veamos la sintaxis básica de R y los principales comandos que aprender.  
 
-#### R básico en resumen:
+En resumen:
 
 * Expresiones matemáticas: `1+1`
 * Strings de texto: `"¡Holaaaaa mundo!"`
 * Valores lógicos: `1<5`, `2+2 ==5`
-* Crear una variable: `x<-5`
+* Crear una variable u **objeto**: `x<-5`
 
-* Funciones: son un comando que hace algo específico dentro de R. Ejemplo: `sum()`, `mean()`, `help()`
+* Funciones: son un comando que hace algo específico dentro de R. 
+
+A diferencia de bash, en R los comandos, o funciones, tienen la sintaxis: "nombre_de_la_funcion()". Entre los paréntesis van los **argumentos** de la función, es decir los datos o parámetros con los cuales queremos que la función haga algo. Para ver qué hace una función, podemos correr en la terminal `?nombre_de_la_funcion`, lo cual abrirá la ayuda detallando los argumentos y cualquier otra información e cómo usar dicha función.
+
+Ejemplo de funciones: `sum()`, `mean()` , log().
+
+Vamos a ver l ayuda de la función `log()` con `?log`.
+
+![](log_help.png)
 
 **Ejercicio**: crea una variable con el logaritmo base 10 de 50 y súmalo a otra variable cuyo valor sea igual a 5.
+
+Ahora vamos a ver con detalle el resto de objetos de R en estas [notas sobre los tipos de objetos de R básico](Tipos_objetos_baseR.Rmd).  Abajo te dejamos un resumen:
 
 Vectores:
 
@@ -129,8 +136,8 @@ Data frames
 * Acceso a elementos e una data.frame `[ , ]`, `$`
 
 
-### Notas sobre cargar archivos:
-`read.delim` sirve para cargar un archivo de texto con filas y columnas. Revisa su ayuda para determinar que variables utilizar para leerlo si está separado por comas, tabulaciones (tab), espacios o qué.
+### Cargar archivos:
+`read.delim` sirve para cargar un archivo de texto con filas y columnas. Revisa su ayuda para determinar qué parámetros utilizar para leerlo si está separado por comas, tabulaciones (tab), espacios o qué.
 
 Además de archivos de filas y columnas, se pueden leer a R todo tipo de archivos, en algunos casos esto se hace con paquetes que crearon funciones específicas para esto. Normalmente se llaman `read.algo`. Por ejemplo la función `read.plink` del paquete snpMatrix.
 
