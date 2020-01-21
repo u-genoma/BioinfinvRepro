@@ -165,75 +165,6 @@ Nota también que si abres RStudio clickeando su ícono, tu WD por default será
 Carga en R el archivo `Prac_Uni3/maices/meta/maizteocintle_SNP50k_meta_extended.txt` y ponlo en un objeto de R llamado meta_maiz.
 
 
-## Rmarkdown y R Notebook
-
-[R Markdown](http://rmarkdown.rstudio.com/index.html) es un formato que te permite crear documentos o reportes, en los que al mismo tiempo guardas y ejecutas código.
-
-![alt text](Rmarkdown1.png)
-
-Primero, instala R Markdown:
-
-```
- install.packages("rmarkdown")
-```
-
-Ahora puedes crear un archivo `.Rmd` en "Archivo > Nuevo archivo > R Markdown". (nota que estoy es distinto que R script).
-
-Un archivo R Markdown es un archivo de texto plano que debe verse algo así:
-
-![alt text](Rmarkdown_text.png)
-
-El archivo tiene tres tipos de contenido:
-
-- Encabezado (---)
-- Código (```)
-- Texto simple (Markdown)
-
-
-Notarás que se pueden ejecutar las líneas de código de forma independiente e interactiva, y que el output (lo que saldría en la consola o los plots) del código de muestra debajo de éste.
-
-
-Cuando abres o creas un archivo Rmd la interfaz de RStudio cambia. Ahora, puedes ejecutar el código usando las flechas y los resultados se despliegan a continuación del código.
-
-![alt text](Notebook_interface.png)
-
-
-
-**Archivos de salida**
-
-A partir de un archivo .Rmd, es posible crear archivos de salida en una gran variedad de formatos, por ejemplo:
-
-- HTML
-- Documentos interactivos
-- Word
-- Diapositivas
-- PDF
-- Páginas web
-- R Notebooks
-
-Checa más formatos de salida [aquí](http://rmarkdown.rstudio.com/formats.html)
-
-Para crear el reporte o archivo de salida, debes correr `render()`, dar click en "Knit" o ⇧+Ctrl+K.
-
-Cuando se renderea un archivo .Rmd, también se crea un archivo html. Este es un archivo HTML que contiene el código y los output resultantes, que puede abrirse en cualquier explorador web y en RStudio.
-
-
-### Generar un reporte de un script .R
-
-Es posible generar un reporte a partir de un script de R, aún cuando **no tenga el formato de un archivo R Markdown**. Únicamente das click en el cuaderno (Compile report) o Ctrl+Shift+K.
-
-![alt text](RColorB.png)
-
-
-### ¿Rmd o reporte de script.R?
-
-Un Rmarkdown es más útil si quieres hacer un reporte de los análisis, o incluso escribir tu tesis, utilizando R, de forma que tanto el texto explicativo como el código estén integrados en el mismo archivo. Esto garantiza la reproducibilidad total, pero solo funciona si todo lo vas a hacer con R y si te acomoda que otros comenten tu documento así.
-
-Un reporte de un script.R funciona si quieres "guardar cómo se ve" correr un análisis o discutirlo con tus colegas, pero no son un reporte tan bonito para entregar a alguien externo. 
-
-Así que cuándo usar cuál depende de la situación y tus gustos.
-
-
 ### Trabajar con paquetes y datos externos
 
 R base contiene las funciones más básicas, pero la verdadera riqueza de R está en sus paquetes. Estos los puede desarrolar cualquier persona y publicar. Van desde análisis estadísticos generales hasta funciones muy específicas pera determinado campo. En [CRAN](https://cran.r-project.org/) puedes explorar la gran gama de paquetes sobre cualquier tema. Algunos paquetes son especializados para bioinformática, como [adegenet](http://adegenet.r-forge.r-project.org/) y [ape](https://cran.r-project.org/web/packages/ape/ape.pdf). Puedes ver una lista de más paquetes relacionados con genética estadística en [CRAN Task Statistical Genetics](https://cran.r-project.org/web/views/Genetics.html).
@@ -449,6 +380,73 @@ El nombre del archivo R no improta, pero es buena práctica ponerle el mismo que
 
 **Ejercicio:** Al script del ejercicio de las pruebas de Mantel, agrega el código necesario para realizar un Partial Mantel test entre la matriz Fst, y las matrices del presente y el LGM, parcializando la matriz flat. Necesitarás el paquete `vegan`.
  
+## Rmarkdown y R Notebook
+
+[R Markdown](http://rmarkdown.rstudio.com/index.html) es un formato que te permite crear documentos o reportes, en los que al mismo tiempo guardas y ejecutas código.
+
+![alt text](Rmarkdown1.png)
+
+Primero, instala R Markdown:
+
+```
+ install.packages("rmarkdown")
+```
+
+Ahora puedes crear un archivo `.Rmd` en "Archivo > Nuevo archivo > R Markdown". (nota que estoy es distinto que R script).
+
+Un archivo R Markdown es un archivo de texto plano que debe verse algo así:
+
+![alt text](Rmarkdown_text.png)
+
+El archivo tiene tres tipos de contenido:
+
+- Encabezado (---)
+- Código (```)
+- Texto simple (Markdown)
+
+
+Notarás que se pueden ejecutar las líneas de código de forma independiente e interactiva, y que el output (lo que saldría en la consola o los plots) del código de muestra debajo de éste.
+
+
+Cuando abres o creas un archivo Rmd la interfaz de RStudio cambia. Ahora, puedes ejecutar el código usando las flechas y los resultados se despliegan a continuación del código.
+
+![alt text](Notebook_interface.png)
+
+
+
+**Archivos de salida**
+
+A partir de un archivo .Rmd, es posible crear archivos de salida en una gran variedad de formatos, por ejemplo:
+
+- HTML
+- Documentos interactivos
+- Word
+- Diapositivas
+- PDF
+- Páginas web
+- R Notebooks
+
+Checa más formatos de salida [aquí](http://rmarkdown.rstudio.com/formats.html)
+
+Para crear el reporte o archivo de salida, debes correr `render()`, dar click en "Knit" o ⇧+Ctrl+K.
+
+Cuando se renderea un archivo .Rmd, también se crea un archivo html. Este es un archivo HTML que contiene el código y los output resultantes, que puede abrirse en cualquier explorador web y en RStudio.
+
+
+### Generar un reporte de un script .R
+
+Es posible generar un reporte a partir de un script de R, aún cuando **no tenga el formato de un archivo R Markdown**. Únicamente das click en el cuaderno (Compile report) o Ctrl+Shift+K.
+
+![alt text](RColorB.png)
+
+
+### ¿Rmd o reporte de script.R?
+
+Un Rmarkdown es más útil si quieres hacer un reporte de los análisis, o incluso escribir tu tesis, utilizando R, de forma que tanto el texto explicativo como el código estén integrados en el mismo archivo. Esto garantiza la reproducibilidad total, pero solo funciona si todo lo vas a hacer con R y si te acomoda que otros comenten tu documento así.
+
+Un reporte de un script.R funciona si quieres "guardar cómo se ve" correr un análisis o discutirlo con tus colegas, pero no son un reporte tan bonito para entregar a alguien externo. 
+
+Así que cuándo usar cuál depende de la situación y tus gustos.
  
  
 ## Manipulación y limpieza de datos en R
