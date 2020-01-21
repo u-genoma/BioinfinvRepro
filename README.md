@@ -204,11 +204,11 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
-* Rmarkdown y R Notebook
 
-**Sesión 2: Funciones en R**
-
+**Sesión 2: Rmrkown y Funciones en R**
+* Continuación intro
 * Funciones propias: crear funciones y utilizarlas con source
+* Rmarkdown y R Notebook
 
 **Sesión 3: Manipulación y limpieza de datos en R**
 
