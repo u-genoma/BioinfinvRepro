@@ -575,5 +575,90 @@ citation("NombrePaquete")
 (o lo que loas autoreas especifiquen en su sitio web)
 
 
+## Guía de bolsillo para trabajar en R
+
+Aquí te dejamos un acordeón con los pasos que no debes olvidar **siempre** que trabajes en R.
+
+
+1. En tu computadora crea un directorio para tu proyecto. Aquí pondras los datos y los scripts. Se recomienda que los datos estén en un subdirectorio llamado `data` y los scripts en uno llamado `bin` o `scripts`. 
+
+2. Guarda tus datos en el directorio `data`. Si los tienes en Excel guarda una versión en formato de texto (separado por comas o por tabulaciones). 
+
+3. Has un back up de tus datos en algún lugar diferente a tu computadora. OSF es un buen lugar.
+
+4. Crea un repositorio de github en el directorio donde están guardados tus scripts.
+
+5. Abre R y crea tu script. Guárdalo en `bin` (o donde hayas decidido guardar tus scripts). 
+
+6. Escribe a manera de comentarios cuál es el objetivo de tu script y cuáles son los principales pasos que crees debes hacer (algoritmo).
+
+7. Desde bash (o conectando RStudio con Github), has un commit de tu trabajo hasta ahora (`git add` y luego `git commit -"create script to do ...."`)
+
+8. Toma un descanso. 
+
+9. Cambia tu wd al lugar  donde guardaste tu script. Para hacer esto **NO escribas `setwd()`** en tu script. Mejor, utiliza **`setwd()` en la Consola** o, si no quieres escribir la ruta a tu script, ve al menú "Session > Set Working directory > To source file location". 
+
+10. Al inicio de tu script carga con `library()` los paquetes que utilizará tu script. Si no los tienes instalados, instálalos con `install.packages()`, corriendo dicho comando **en la consola pero no escribiéndolo en los comandos de tu script**.
+
+11. Después de cargar paquetes, pon una sección donde cargues los **datos**. Esto puedes hacerlo con funciones de la familia `read.` como `read.delim()` o `read.csv`. Para esto recuerda:
+	- dar al argumento `file` la **ruta relativa** desde donde está guardado tu script hasta donde están guardado tu archivo de datos. Por ejemplo `file="../data/mis_datos.txt"` si estás usando la estructura de este ejemplo. 
+	-  revisa los argumentos de tu función read para asegurarte que los datos se carguen como quieres, por ejemplo `header = TRUE` si la primera fila de tus datos tiene el nombre de las columnas.
+	-  crea un objeto (variable) con el archvio que estás leyendo, es decir con `<-`. Por ejemplo: 
+
+```
+my_df <- read.delim(file="../data/mis_datos.txt")
+```
+
+12. Revisa que tus datos sean tus datos y se vean como tus datos. Para esto:
+ 	- Ve tu data frame dando click en el objeto que creaste (aparece en el panel de "Enviroment" de RStudio. O con el comando `View(my_df)`. Este comando lo puedes correr en la consola, pero no lo pongas en tu script.
+ 	- Utiliza `nrow()` y `ncol()` para ver que tus datos tengan el número de filas y columnas que esperas.
+ 	- Revisa los levels (ejemplo `levels(my_df$genero)`) de las variables categóricas de tus datos, esto sirve para identificar typos. 
+ 	- Revisa, revisa, revisa.
+
+13. Asegúrate de que cada paso esté bien comentado hasta ahora. 
+
+14. `git commit -m "load data"`
+
+15. Come algo. 
+
+16. Explora tus datos con gráficas
+
+17. `git commit -m "add exploratory plots"` 
+
+18. Asegúrate que esté bien comentado tu código.
+
+19. Haz pruebas estadísticas para comprobar tus hipótesis. Apóyate de esta tabla:
+
+![](table_stats_R.png)
+
+
+REF: Bekcerman et al (2012). Getting Started with R: An Introduction for Biologists.
+
+19. `git commit -m "add stats analyses" 
+
+20. Comunica tus resultados en un reporte html. Recuerda que puedes crearlo con el botón `knit` si tu script es un .Rmd, o con el botón "Compile report" si tu script es un script de R. 
+
+21. `git commit -m "knit report"
+
+22. Revisa tu código, especilamente los comentarios. Asume que no vas a volver a tocar tu script en 6 meses. ¿Te faltó algo? ¿Puedes escribir comentarios para tu yo del futuro que digan qué te faltó y por donde ir?
+
+23. Ve por cervezas o a socializar de algún otro modo. Cuéntale al mundo lo bonito que es R (pero elige sabiamente cuándo detenerte). 
+
+
+## Primeros auxilios cuando algo no te corre en R
+
+
+* Te falta una `,`
+* Te sobra un espacio
+* Cierra tus `()`
+* El texto va entre `" "`
+* Si no pusiste `<-` no has creado el objeto
+* No estás donde crees que estás (encuéntrate con `getwd()`)
+
+
+
+
+
+
 
 
