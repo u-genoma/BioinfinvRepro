@@ -119,13 +119,13 @@ En la unidad 2 aprenderemos a utilizar github desde la línea de comando, pero p
 
 El curso se dividirá en secciones que se calificarán por separado:
 
-**Unidades 1-4:**
+**Unidades 1-3:**
 
 * 70% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección
 * 20% Examen
 * 10% Asistencia (física o virtual) y participación 
 
-**Unidad 5:**
+**Unidad 4-5:**
 
 * 10% Tareas. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección.
 * 90% Proyecto de la Unidad 5, el cual se califica con:
