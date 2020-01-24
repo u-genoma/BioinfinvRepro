@@ -575,6 +575,10 @@ citation("NombrePaquete")
 (o lo que loas autoreas especifiquen en su sitio web)
 
 
+**Ejercicio:** divídanse por equipos de 2-3 personas según su tipo de datos o análisis. Exploren los paquetes de CRAN y de Bioconductor. Compartan por el gitter el link a la página de descripción del paquete y mencionen brevemente por qué les parece útil. 
+
+
+
 ## Guía de bolsillo para trabajar en R
 
 Aquí te dejamos un acordeón con los pasos que no debes olvidar **siempre** que trabajes en R.
