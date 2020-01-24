@@ -579,9 +579,7 @@ citation("NombrePaquete")
 
 
 
-## Guía de bolsillo para trabajar en R
-
-Aquí te dejamos un acordeón con los pasos que no debes olvidar **siempre** que trabajes en R.
+## Los 25 pasos que no debes olvidar *siempre* que trabajes en R.
 
 
 1. En tu computadora crea un directorio para tu proyecto. Aquí pondras los datos y los scripts. Se recomienda que los datos estén en un subdirectorio llamado `data` y los scripts en uno llamado `bin` o `scripts`. 
@@ -642,13 +640,15 @@ REF: Bekcerman et al (2012). Getting Started with R: An Introduction for Biologi
 
 20. Si creaste funciones y las usas frecuentemente, ponlas en un script separado y cárgalas al inicio de tu script con `source()`.
 
-21. Comunica tus resultados en un reporte html. Recuerda que puedes crearlo con el botón `knit` si tu script es un .Rmd, o con el botón "Compile report" si tu script es un script de R. 
+21. Asegúrate que tu script corra de principio a fin. Para esto borra el cerebro de R con `rm(list=ls())` y vuelve a correr tu script desde el principio.
 
-22. `git commit -m "knit report"`
+22. Comunica tus resultados en un reporte html. Recuerda que puedes crearlo con el botón `knit` si tu script es un .Rmd, o con el botón "Compile report" si tu script es un script de R. 
 
-23. Revisa tu código, especilamente los comentarios. Asume que no vas a volver a tocar tu script en 6 meses. ¿Te faltó algo? ¿Puedes escribir comentarios para tu yo del futuro que digan qué te faltó y por donde ir?
+23. `git commit -m "knit report"`
 
-24. Ve por cervezas o a socializar de algún otro modo. Cuéntale al mundo lo bonito que es R (pero elige sabiamente cuándo detenerte). 
+24. Revisa tu código, especilamente los comentarios. Asume que no vas a volver a tocar tu script en 6 meses. ¿Te faltó algo? ¿Puedes escribir comentarios para tu yo del futuro que digan qué te faltó y por donde ir?
+
+25. Ve por cervezas o a socializar de algún otro modo. Cuéntale al mundo lo bonito que es R (pero elige sabiamente cuándo detenerte). 
 
 
 ## Primeros auxilios cuando algo no te corre en R
