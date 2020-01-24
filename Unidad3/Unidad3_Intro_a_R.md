@@ -636,13 +636,15 @@ REF: Bekcerman et al (2012). Getting Started with R: An Introduction for Biologi
 
 19. `git commit -m "add stats analyses" 
 
-20. Comunica tus resultados en un reporte html. Recuerda que puedes crearlo con el botón `knit` si tu script es un .Rmd, o con el botón "Compile report" si tu script es un script de R. 
+20. Si creaste funciones y las usas frecuentemente, ponlas en un script separado y cárgalas al inicio de tu script con `source()`.
 
-21. `git commit -m "knit report"
+21. Comunica tus resultados en un reporte html. Recuerda que puedes crearlo con el botón `knit` si tu script es un .Rmd, o con el botón "Compile report" si tu script es un script de R. 
 
-22. Revisa tu código, especilamente los comentarios. Asume que no vas a volver a tocar tu script en 6 meses. ¿Te faltó algo? ¿Puedes escribir comentarios para tu yo del futuro que digan qué te faltó y por donde ir?
+22. `git commit -m "knit report"`
 
-23. Ve por cervezas o a socializar de algún otro modo. Cuéntale al mundo lo bonito que es R (pero elige sabiamente cuándo detenerte). 
+23. Revisa tu código, especilamente los comentarios. Asume que no vas a volver a tocar tu script en 6 meses. ¿Te faltó algo? ¿Puedes escribir comentarios para tu yo del futuro que digan qué te faltó y por donde ir?
+
+24. Ve por cervezas o a socializar de algún otro modo. Cuéntale al mundo lo bonito que es R (pero elige sabiamente cuándo detenerte). 
 
 
 ## Primeros auxilios cuando algo no te corre en R
