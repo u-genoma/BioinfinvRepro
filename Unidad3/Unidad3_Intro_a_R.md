@@ -638,7 +638,7 @@ my_df <- read.delim(file="../data/mis_datos.txt")
 
 REF: Bekcerman et al (2012). Getting Started with R: An Introduction for Biologists.
 
-19. `git commit -m "add stats analyses" 
+19. `git commit -m "add stats analyses"`
 
 20. Si creaste funciones y las usas frecuentemente, ponlas en un script separado y cárgalas al inicio de tu script con `source()`.
 
