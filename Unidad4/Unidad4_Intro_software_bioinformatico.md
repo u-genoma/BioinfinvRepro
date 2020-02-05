@@ -658,7 +658,7 @@ $ docker pull biocontainers/vcftools:0.1.15
 Yo puedo entrar a estos contenedores con `-it /bin/bash` como lo hemos hecho antes, pero también puedo utilizarlo para **solo** correr el programa con un comando concreto. Por ejemplo, mostrar la ayuda:
 
 ```
-$ docker run biocontainers/vcftools:0.1.15 vcftools -help
+$ docker run --rm -u 0 biocontainers/vcftools:0.1.15 vcftools -help
 
 VCFtools (0.1.14)
 © Adam Auton and Anthony Marcketta 2009
@@ -676,10 +676,11 @@ Questions, comments, and suggestions should be emailed to:
 
 ```
 
+
 o en FastX-tools:
 
 ```
-$ docker run biocontainers/fastxtools:0.0.14 fastq_to_fasta -h
+$ docker run  --rm -u 0 biocontainers/fastxtools:0.0.14 fastq_to_fasta -h
 usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
 Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
@@ -697,12 +698,15 @@ Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
 ```
 
+* Nota: la flag `-u 0` sirve para correr el contenedor como usuarios raiz en vez del usuario de biodocker. Esto es necesario para correrlo en el cluster de la conabio por como tiene la configuración de los permisos, pero no en tu computadora.
+
+
 **Ejercicio**: ve a la página [https://biocontainers-edu.biocontainers.pro/en/latest/running_example.html](https://biocontainers-edu.biocontainers.pro/en/latest/running_example.html) y lee el ejemplo de cómo usar `blast`. Escribe un script para adoptar el ejemplo de esta página a tu computadora. Guarda tu script en tu repositorio de Github para las tareas del curso y brinda el link a dicho script.
 
 
 ### Tip: borrar automáticamente un contenedor cuando acaba de correr
 
-Cada vez que utilizamos `docker run` se **crea** un contendor nuevo. Por ejemplo si corriste los `docker run` de fastxtools y vcftools de arriba:
+Cada vez que utilizamos `docker run` se **crea** un contendor nuevo. Por ejemplo si corriste los `docker run` de fastxtools y vcftools de arriba sin la flag `--r`:
 
 ```
 $ docker ps -a
@@ -712,14 +716,14 @@ CONTAINER ID        IMAGE                      COMMAND               CREATED    
 
 ```
 
-Esto ocupa espacio en disco y nos llena de contenedores a los que no volveremos a entrar. La solución: borrar un contenedor al salir.
+Esto ocupa espacio en disco y nos llena de contenedores a los que no volveremos a entrar. La solución: **borrar un contenedor al salir, utilizando el flag `--rm`**
 
-Esto se hace con el flag `--rm` para que se borre al salir. **Más** una de estas dos opciones:
+Si quieres correr varios comandos juntos en un mismo contenedor, necesitas agregar `--rm`. **Más** una de estas dos opciones:
 
 1) Indicandole al contenedor que se salga al terminar de correr, **agregando `-c` al final de los comandos que queremos que corra**. Ejemplo:
 
 ```
-$ docker run --rm biocontainers/fastxtools:0.0.14 fastq_to_fasta -h -c
+$ docker run -u 0 --rm biocontainers/fastxtools:0.0.14 fastq_to_fasta -h -c
 usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
 Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
@@ -741,7 +745,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 2) El flag `-c` en realidad sirve para pedirle que corra más de un comando dentro del mismo contenedor (unidos por ejemplo con `|`, `;`, etc). **Si corres el contenedor con `bash -c` y los comandos deseados entre ""** automáticamente se saldrá. Ejemplo:
 
 ```
-$ docker run --rm biocontainers/fastxtools:0.0.14 bash -c "fastq_to_fasta -h ; echo hola mundo"
+$ docker run -u 0 --rm biocontainers/fastxtools:0.0.14 bash -c "fastq_to_fasta -h ; echo hola mundo"
 usage: fastq_to_fasta [-h] [-r] [-n] [-v] [-z] [-i INFILE] [-o OUTFILE]
 Part of FASTX Toolkit 0.0.14 by A. Gordon (assafgordon@gmail.com)
 
@@ -807,7 +811,7 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
 
  `docker run --rm -v [RutaABSOLUTAaldirectorioDeseado:/data]  [biocontainers/IMAGEN] [COMANDOS del sofware en cuestión] -c` para correr el contenedor de una imagen de biocontainers con los comandos específicos de un software dado, con volumen montado a un directorio de nuestra compu donde queramos escribir/leer datos y de tal forma que el contenedor se borre automáticamente al terminar el proceso. Ejemplo:
 
-`docker run --rm -v /home/cirio/aliciamstt/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1/datos:/data biocontainers/fastxtools:0.0.14 bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v"`
+`docker run -u 0 --rm -v /home/cirio/aliciamstt/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1/datos:/data biocontainers/fastxtools:0.0.14 bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v"`
 
 
 (Estos datos ejemplo vienen de [Galaxy Data Libraries](https://usegalaxy.org/library/list#folders/F5bee13e9f312df25/datasets/99fa250d93e003f7) y son de libre uso)
@@ -824,5 +828,7 @@ Si te quedan dudas sobre Docker y cómo aplicarlo a Bionformática revisa esta e
 Código a modificar:
 
 ```
-docker run --rm -v /home/cirio/aliciamstt/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1/datos:/data biocontainers/fastxtools:0.0.14 bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v"
+docker run -u 0 --rm -v /home/cirio/aliciamstt/BioinfinvRepro/Unidad4/Prac_Uni4/DatosContenedor1/datos:/data biocontainers/fastxtools:0.0.14 bash -c "fastx_trimmer -f 1 -l 70 -i human_Illumina_dataset.fastq -v | fastq_quality_filter -q 20 -p 90 -o clean_human_data.fastq -v"
 ```
+
+Recuerda que el flag `-u 0` sólo es necesario si lo corres en el cluster de la CONABIO.
