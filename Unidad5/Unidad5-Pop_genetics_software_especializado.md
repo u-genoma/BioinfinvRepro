@@ -82,6 +82,8 @@ vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers
 
 y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help"`. 
 
+**Importante: si estás corriéndolo en el cluster de la CONABIO, necestas agregar el flag `-u 1600` para poder escribir archivos**
+
 Ahora consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y escribe un script que responda lo siguiente:
 
 a) ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
