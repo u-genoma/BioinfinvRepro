@@ -55,10 +55,10 @@ Ejemplo:
 
 1) Utiliza un comando para bajar los datos en formato vcf del repositorio Schweizer RM, Robinson J, Harrigan R, Silva P, Galaverni M, Musiani M, Green RE, Novembre J, Wayne RK (2015) Data from: Targeted capture and resequencing of 1040 genes reveal environmentally driven functional variation in gray wolves. Dryad Digital Repository. [http://dx.doi.org/10.5061/dryad.8g0s3](http://datadryad.org/resource/doi:10.5061/dryad.8g0s3)
 
-El archivo debe guardarse en `BioinfinvRepro/Unidad5/Prac_Uni5/wolves`. Navega ahí y luego:
+El archivo debe guardarse en `BioinfinvRepro/Unidad5/Prac_Uni5/wolves`. Navega a `Prac_Uni5`, crea un directorio `wolves`, entra ahí y luego:
 
 ```
-wget https://datadryad.org/bitstream/handle/10255/dryad.98341/Filtered_variableSites_fixedSamples_9July2014_minDP10noMissing_ecotypesOnly_n107_GenicRegions_95CallRate.recode.vcf?sequence=1
+wget https://datadryad.org/stash/downloads/file_stream/6226
 ```
 
 **Pregunta** ¿De dónde saqué ese link?
@@ -82,7 +82,7 @@ vcftools="docker run --rm -v /RutaAbsolutaA/Prac_Uni5/wolves:/data biocontainers
 
 y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help"`. 
 
-Ahora consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y responde
+Ahora consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y escribe un script que responda lo siguiente:
 
 a) ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
 
@@ -270,7 +270,6 @@ $ head ../data/maicesArtegaetal2015.fam
 
 ## Paquetes de R y otro sofware para genética de poblaciones
 
-
 Como hemos visto dentro de R los paquetes son un grupo de funciones que alguien desarrolla en torno a un tema específico. Además, fuera de R hay otros paquetes/sofwares que corren desde una terminal shell. 
 
 Aquí nos enfocaremos en las principales herramientas para **genética de poblaciones**. Para esto hay muchas herramientas bioinformáticas, algunas utilizan datos genómicos (e.g. plink, vcf, genomas enteros) y otros marcadores de secuenciación Sanger (microsatélites, secuencias fasta, etc). Siempre asegúrate que **la herramienta que escojar realmente utilice el tipo de datos que tienes**.
@@ -291,62 +290,6 @@ La mejor manera de conocer qué hace y  usar un paquete es seguir un tutorial o 
 
 
 Los análisis de genómica de poblaciones van mucho más allá de R, y hay muchos **otros programas para hacer análisis muy específicos**. [Yann Burgeouis](http://www.yannbourgeois.com/) sacó el fua y creo esta Lista de Métodos de genómica de poblaciones: [methodspopgen.com](http://methodspopgen.com/). Donde recopila métodos para inferir estructura, detectar selección e inferir la historia de la población.
-
-### ¿Qué de todo esto me sirve?
-
-**Ejercicio 1** explora los paquetes de Bioconductor, CRAN, el número especial de MER y methodspopgen.com de acuerdo a tu tema. Escoge tres que creas te serán útiles y explóralos con mayor profundidad. Deben ser **distintos** a los ejemplos que veremos más abajo (SNPRelate, Hierfstat, admixture).
-
-En tu repositorio de github de tareas del curso crea un archivo markdown llamado "Ejemplos_software util.md" y ahí menciona cada paquete que elegiste y describe con tus propias palabras qué hace y para qué parte de tus análisis te serviría. Sé específicx, por ejemplo no digas solo "para hacer análisis de selección" sino "para hacer análisis de selección entre las poblaciones X y Y, ya que mi hipótesis es que estas poblaciones pueden estar bajo selección ya que X está en tales condiciones y Y en tales"
-
-**Ejercicio 2**:
-
-1. Escoge uno de los paquetes del ejercicio pasado.
-2. Busca un tutorial, ayuda o vignette de ese paquete y síguelo con tus datos propios o con datos parecidos a los que tendrás que ya se encuentren publicados.
-3. Si es un paquete de R o Bioconductor utiliza knitr para crear un "notebook" de lo que realizaste.
-4. Sube el código (.R, .sh, etc) y si aplica el notebook (.html o .pdf) a tu repo de tareas de github. 
-
-**Ejercicio 3** hagan equipos (2 personas) conforme a su tipo de datos y/o tema de investigación y discutan paquetes que podrían serles útiles. Luego: 
-
-1) Un integrante del equipo ("persona 1") debe crear un repositorio de github llamado "BioinfRepro_EquipoX" (donde X es el  número de equipo) e invitar como colaborador/a al/la otra integrante ("persona 2") del equipo.
-
-2) Persona 1 debe crear dentro de su repositorio de tareas un archivo markdown llamado "README" y escribir (**en formato markdown** que se vea bien en Github) algo como lo siguiente:
-
-```
-# README
-
-Este repositorio contiene el resultados del ejercicio "sofware interesante" del Equipo X.
-
-Integrantes del equipo:
-* Nombre completo persona 1 
-* Nombre completo persona 2. 
-
-
-```
-
-3) Persona 2 debe hacer un `git clone` de este repositorio, modificar el archivo README para incluir dentro de este archivo el nombre de 2 paquetes que consideren útiles, ligas a referencias, tipo de datos input (eg vcf) y para qué utilizarían los paquetes. Luego persona2 debe hacer el `git commit` para que los cambios se vean en el repositorio generado por persona 1.
-
-4) Cuando esté listo el repo, pasenos el link via Gitter para ponerlo en la sección de abajo.
-
-
-### Resultados ejercicio software interesante por equipos:
-
-(esta sección cambiará una vez tengamos los integrantes de cada equipo y sus links resultado).
-
-[**Equipo 1:**](https://github.com/Themindscupltor/BioinfRepro_Equipo1) (Fernando y Marco "Los no vecinos")
-
-[**Equipo 2:**](https://github.com/cristoichkov/BioinfRepro_Equipo2)
- (Mel y Cristian "Los no nos conocemos")
-
-[**Equipo 3:**](https://github.com/mjfrugone/BioinfRepro_los_nickname_y_el_adoptado) (redgecko7, mjfrugone y Kyle "Los nickname y el adoptado")
-
-[**Equipo 4:**](https://github.com/ALBERTOPP/BioinfRepro_Equipo_4)) (Toño y Alberto "Los ya nos definimos")
-
-[**Equipo 5:**](https://github.com/Duhyadi/BioinfRepro_Equipo5.git) (Mali y Duhya "Las Protoctistas")
-
-[**Equipo 6:**](https://github.com/HeribertoVaquezCardona/BioinfRepro_Equipo6/blob/master/README.md) (GabyB y Heri "Los discretos")
-
-[**Equipo 7:**](https://github.com/laemlaem/BioinfRepro_Equipo7) (Luis y GabyA "Los olvidados")
-
 
 
 ## Algunos ejemplos de PCAs y estructura genética
