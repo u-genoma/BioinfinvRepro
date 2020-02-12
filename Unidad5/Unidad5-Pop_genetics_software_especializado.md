@@ -119,7 +119,7 @@ La manera de manejar los formatos cambió un poco entre las versiones <1.9 y 1.9
 
 **NOTA** Para poder usar Plink recuerda que debes descargar el programa utilizando un wget (de acuerdo a tu sistema operativo Mac, Linux, etc.), descomprimir el directorio, ir al directorio bin y utilizar `./plink` para ejecutar el programa. NO olviden el ./ que nos permite decir la ubicación del ejecutable.
 
-**OJO**, si quieres poder correr plink desde cualquier sitio en tu computadora debes agregar la ruta del ejecutable a tu path. Para hacerlo primero utilizamos `pwd` para obtener la ruta ABSOLUTA del lugar donde se encuentra nuestro ejecutable. Por ejemplo en nuestro usuario de acceso al cluster es /home/cirio (RECUERDA QUE LA RUTA ABSOLUTA CAMBIA DE ACUERDO A TU COMPUTADORA). Una vez que sabemos que es correcta la ruta la podemos agregar al PATH (lugar con rutas de diferentes scipts que ejecutan programas instalados en tu computadora/cluster). La manera es escribiendo `export PATH=$PATH:/home/cirio`, comando en el que se incluye la RUTA ABSOLUTA.
+**OJO**, si quieres poder correr plink desde cualquier sitio en tu computadora debes agregar la ruta del ejecutable a tu path. Para hacerlo primero utilizamos `pwd` para obtener la ruta ABSOLUTA del lugar donde se encuentra nuestro ejecutable. Por ejemplo en nuestro usuario de acceso al cluster es `/home/cirio` (RECUERDA QUE LA RUTA ABSOLUTA CAMBIA DE ACUERDO A TU COMPUTADORA). Una vez que sabemos que es correcta la ruta la podemos agregar al PATH (lugar con rutas de diferentes scripts que ejecutan programas instalados en tu computadora/cluster). La manera es escribiendo `export PATH=$PATH:/home/cirio`, comando en el que se incluye la RUTA ABSOLUTA.
 
 
 
@@ -312,7 +312,7 @@ Herramienta que permite estimar la ancestría de individuos a partir de un set d
 
 **NOTA** Para poder usar admixture recuerda que debes descargar el programa utilizando un wget (de acuerdo a tu sistema operativo Mac, Linux, etc.), descomprimir el directorio, ir al directorio bin y utilizar `./admixture` para ejecutar el programa. NO olviden el ./ que nos permite decir la ubicación del ejecutable.
 
-**OJO**, si quieres poder correr admixture desde cualquier sitio en tu computadora debes agregar la ruta del ejecutable a tu path. Para hacerlo primero utilizamos `pwd` para obtener la ruta ABSOLUTA del lugar donde se encuentra nuestro ejecutable. Por ejemplo en nuestro usuario de acceso al cluster es /home/cirio (RECUERDA QUE LA RUTA ABSOLUTA CAMBIA DE ACUERDO A TU COMPUTADORA). Una vez que sabemos que es correcta la ruta la podemos agregar al PATH (lugar con rutas de diferentes scipts que ejecutan programas instalados en tu computadora/cluster). La manera es escribiendo `export PATH=$PATH:/home/cirio`, comando en el que se incluye la RUTA ABSOLUTA. 
+**OJO**, si quieres poder correr admixture desde cualquier sitio en tu computadora debes agregar la ruta del ejecutable a tu path. Para hacerlo primero utilizamos `pwd` para obtener la ruta ABSOLUTA del lugar donde se encuentra nuestro ejecutable. Por ejemplo en nuestro usuario de acceso al cluster es `/home/cirio` (RECUERDA QUE LA RUTA ABSOLUTA CAMBIA DE ACUERDO A TU COMPUTADORA). Una vez que sabemos que es correcta la ruta la podemos agregar al PATH (lugar con rutas de diferentes scripts que ejecutan programas instalados en tu computadora/cluster). La manera es escribiendo `export PATH=$PATH:/home/cirio`, comando en el que se incluye la RUTA ABSOLUTA. 
 
 
 
