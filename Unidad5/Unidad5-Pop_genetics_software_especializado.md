@@ -117,7 +117,7 @@ En realidad hay varios [tipos de formato plink](https://www.cog-genomics.org/pli
 
 La manera de manejar los formatos cambió un poco entre las versiones <1.9 y 1.9. Siguen siendo compatibles, pero aguas.
 
-**NOTA** Para poder usar Plink recuerda que debes descargar el programa utilizando un wget (de acuerdo a tu sistema operativo Mac, Linux, etc.), descomprimir el directorio **(, ir al directorio bin y utilizar `./plink` para ejecutar el programa. NO olviden el ./ que nos permite decir la ubicación del ejecutable.
+**NOTA** Para poder usar Plink recuerda que debes descargar el programa utilizando un wget (de acuerdo a tu sistema operativo Mac, Linux, etc.), descomprimir el directorio, ir al directorio bin y utilizar `./plink` para ejecutar el programa. NO olviden el ./ que nos permite decir la ubicación del ejecutable.
 
 
 **Plink text (`ped`)**
@@ -307,7 +307,7 @@ Los análisis de genómica de poblaciones van mucho más allá de R, y hay mucho
 ### Admixture
 Herramienta que permite estimar la ancestría de individuos a partir de un set de datos de SNPs. Usa el mismo modelo estadístico que Structure pero es más rápido. [Aquí](http://software.genetics.ucla.edu/admixture/) puedes encontrar el ejecutable y el manual. Para correrlo, solo necesitas tener el ejecutable en tu WD y correrlo con `.admixture`.
 
-**NOTA** Para poder usar admixture recuerda que debes descargar el programa utilizando un wget (de acuerdo a tu sistema operativo Mac, Linux, etc.), descomprimir el directorio **(, ir al directorio bin y utilizar `./admixture` para ejecutar el programa. NO olviden el ./ que nos permite decir la ubicación del ejecutable.
+**NOTA** Para poder usar admixture recuerda que debes descargar el programa utilizando un wget (de acuerdo a tu sistema operativo Mac, Linux, etc.), descomprimir el directorio, ir al directorio bin y utilizar `./admixture` para ejecutar el programa. NO olviden el ./ que nos permite decir la ubicación del ejecutable.
 
 
 Correr admixture es muy sencillo:
