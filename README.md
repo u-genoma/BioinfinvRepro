@@ -201,6 +201,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 #### Unidad 3 [Introducción a R con un enfoque bioinformático](Unidad3/Unidad3_Intro_a_R.md)
 
 [Video **Sesión 1: Introducción a R**](https://www.youtube.com/watch?v=MIzdokGuw_E)
+
 [Video **Sesión 1: Introducción a R-CONTINUACIÓN**](https://www.youtube.com/watch?v=J2rGmyOMBJI)
 
 * R y RStudio
