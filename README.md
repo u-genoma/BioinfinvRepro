@@ -165,20 +165,20 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 [Video de Bienvenida al curso 2020](https://www.youtube.com/watch?v=51y4PLN2mBY)
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
-[**Sesión 1:  Introducción al código y la terminal**](https://www.youtube.com/watch?v=vziA1KbShoQ)
+[Video **Sesión 1:  Introducción al código y la terminal**](https://www.youtube.com/watch?v=vziA1KbShoQ)
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash y R
 * Funciones básicas de navegación y manejo de archivos con bash
 
-[**Sesión 2: Introducción a los scripts y grep**](https://www.youtube.com/watch?v=ppqsw1OVw_0)
+[Video **Sesión 2: Introducción a los scripts y grep**](https://www.youtube.com/watch?v=ppqsw1OVw_0)
 
 * Funciones básicas de exploración de archivos con bash
 * Regular expressions y búsqueda de patrones (grep)
 * Redirección con bash
 
-[**Sesión 3: Continaución de bash**](https://www.youtube.com/watch?v=OhCBraaRfKs)
+[Video **Sesión 3: Continaución de bash**](https://www.youtube.com/watch?v=OhCBraaRfKs)
 
 * Introducción a los scripts
 * Loops con bash
@@ -187,57 +187,57 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 #### Unidad 2 [Organización de un proyecto bioinformático](Unidad2/Unidad2_Organizacion_proyecto_bioinf.md)
 
-[**Sesión 1: Documentación bioinformática**](https://www.youtube.com/watch?v=N_KUce2siNo)
+[Video **Sesión 1: Documentación bioinformática**](https://www.youtube.com/watch?v=N_KUce2siNo)
 
 * Documentación de scripts y del proyecto
 * Markdown
 * git
 
-[**Sesión 2: Github**](https://www.youtube.com/watch?v=NIZjzU1BTjc)
+[Video **Sesión 2: Github**](https://www.youtube.com/watch?v=NIZjzU1BTjc)
 
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
 #### Unidad 3 [Introducción a R con un enfoque bioinformático](Unidad3/Unidad3_Intro_a_R.md)
 
-[**Sesión 1: Introducción a R**](https://www.youtube.com/watch?v=MIzdokGuw_E)
-[**Sesión 1: Introducción a R-CONTINUACIÓN**](https://www.youtube.com/watch?v=J2rGmyOMBJI)
+[Video **Sesión 1: Introducción a R**](https://www.youtube.com/watch?v=MIzdokGuw_E)
+[Video **Sesión 1: Introducción a R-CONTINUACIÓN**](https://www.youtube.com/watch?v=J2rGmyOMBJI)
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 
-[**Sesión 2: Rmrkown y Funciones en R**](https://www.youtube.com/watch?v=98AaKGzfdCw)
+[Video **Sesión 2: Rmrkown y Funciones en R**](https://www.youtube.com/watch?v=98AaKGzfdCw)
 * Continuación intro
 * Funciones propias: crear funciones y utilizarlas con source
 * Rmarkdown y R Notebook
 
-[**Sesión 3: Manipulación y limpieza de datos en R**](https://www.youtube.com/watch?v=cvTvySyvG-s)
+[Video **Sesión 3: Manipulación y limpieza de datos en R**](https://www.youtube.com/watch?v=cvTvySyvG-s)
 
 * Manipulación y limpieza de datos en R
 
-[**Sesión 4: Graficar en R**](https://www.youtube.com/watch?v=3LSx8cdx2Do)
+[Video **Sesión 4: Graficar en R**](https://www.youtube.com/watch?v=3LSx8cdx2Do)
 
 * Graficar en R
 
-[**Sesión 5: Bioconductor**](https://www.youtube.com/watch?v=hTGqqeZomVM)
+[Video **Sesión 5: Bioconductor**](https://www.youtube.com/watch?v=hTGqqeZomVM)
 
 * Bioconductor
 
 #### Unidad 4 [Introducción a software especializado y uso de servidores remotos](Unidad4/Unidad4_Intro_software_bioinformatico.md)
 
-[**Sesión 1: Software especializado y servidores remotos**](https://www.youtube.com/watch?v=YpD1n-Fzomk)
+[Video **Sesión 1: Software especializado y servidores remotos**](https://www.youtube.com/watch?v=YpD1n-Fzomk)
 
 * Introducción a Software especializado y cómo instalarlo
 * Uso de servidores remotos
 
 #### Unidad 5 [Genética de poblaciones con software especializado](Unidad5/Unidad5-Pop_genetics_software_especializado.md)
 
-[**Sesión 1: genética de poblaciones con software bioinformático**](https://www.youtube.com/watch?v=Gdxwh2oSkOY)
+[Video **Sesión 1: genética de poblaciones con software bioinformático**](https://www.youtube.com/watch?v=Gdxwh2oSkOY)
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-[**Sesión 2:coninuación de genética de poblaciones**](https://www.youtube.com/watch?v=uvomUe2Ju_k)
+[Video **Sesión 2:coninuación de genética de poblaciones**](https://www.youtube.com/watch?v=uvomUe2Ju_k)
 
 * PCA exploratorios
 * Análisis básicos de diversidad y diferenciación genética
