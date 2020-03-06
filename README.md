@@ -200,43 +200,44 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 
 #### Unidad 3 [Introducción a R con un enfoque bioinformático](Unidad3/Unidad3_Intro_a_R.md)
 
-**Sesión 1: Introducción a R**
+[**Sesión 1: Introducción a R**](https://www.youtube.com/watch?v=MIzdokGuw_E)
+[**Sesión 1: Introducción a R-CONTINUACIÓN**](https://www.youtube.com/watch?v=J2rGmyOMBJI)
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 
-**Sesión 2: Rmrkown y Funciones en R**
+[**Sesión 2: Rmrkown y Funciones en R**](https://www.youtube.com/watch?v=98AaKGzfdCw)
 * Continuación intro
 * Funciones propias: crear funciones y utilizarlas con source
 * Rmarkdown y R Notebook
 
-**Sesión 3: Manipulación y limpieza de datos en R**
+[**Sesión 3: Manipulación y limpieza de datos en R**](https://www.youtube.com/watch?v=cvTvySyvG-s)
 
 * Manipulación y limpieza de datos en R
 
-**Sesión 4: Graficar en R**
+[**Sesión 4: Graficar en R**](https://www.youtube.com/watch?v=3LSx8cdx2Do)
 
 * Graficar en R
 
-**Sesión 5: Bioconductor**
+[**Sesión 5: Bioconductor**](https://www.youtube.com/watch?v=hTGqqeZomVM)
 
 * Bioconductor
 
 #### Unidad 4 [Introducción a software especializado y uso de servidores remotos](Unidad4/Unidad4_Intro_software_bioinformatico.md)
 
-**Sesión 1: Software especializado y servidores remotos**
+[**Sesión 1: Software especializado y servidores remotos**](https://www.youtube.com/watch?v=YpD1n-Fzomk)
 
 * Introducción a Software especializado y cómo instalarlo
 * Uso de servidores remotos
 
 #### Unidad 5 [Genética de poblaciones con software especializado](Unidad5/Unidad5-Pop_genetics_software_especializado.md)
 
-**Sesión 2: genética de poblaciones con software bioinformático**
+[**Sesión 1: genética de poblaciones con software bioinformático**](https://www.youtube.com/watch?v=Gdxwh2oSkOY)
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-**Sesión 3:coninuación de genética de poblaciones**
+[**Sesión 2:coninuación de genética de poblaciones**](https://www.youtube.com/watch?v=uvomUe2Ju_k)
 
 * PCA exploratorios
 * Análisis básicos de diversidad y diferenciación genética
