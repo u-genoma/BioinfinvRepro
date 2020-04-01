@@ -178,7 +178,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 * Regular expressions y búsqueda de patrones (grep)
 * Redirección con bash
 
-[Video **Sesión 3: Continaución de bash**](https://www.youtube.com/watch?v=OhCBraaRfKs)
+[Video **Sesión 3: Continuación de bash**](https://www.youtube.com/watch?v=OhCBraaRfKs)
 
 * Introducción a los scripts
 * Loops con bash
