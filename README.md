@@ -238,7 +238,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-[Video **Sesión 2:coninuación de genética de poblaciones**](https://www.youtube.com/watch?v=uvomUe2Ju_k)
+[Video **Sesión 2:continuación de genética de poblaciones**](https://www.youtube.com/watch?v=uvomUe2Ju_k)
 
 * PCA exploratorios
 * Análisis básicos de diversidad y diferenciación genética
