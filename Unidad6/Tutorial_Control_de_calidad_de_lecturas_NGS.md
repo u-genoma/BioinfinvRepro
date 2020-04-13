@@ -45,11 +45,11 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 #### 5. Tarea ####
 
-1. Para el archivo fastq se solicita:
-	* Contar cuantos reads hay en el archivo (usar comandos unix) y compararlo luego con lo entregado en el informe de calidad obtenido en los siguientes pasos.
-	* Ubicar el read 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read?
-	* Con respecto a la calidad, traducir el código de calidad del read a valor númerico usando la codificación entregada en clase.
-
+1. Usando comandos Unix:
+	* Contar el número de lecturas (reads) en un archivo fastq
+        * Previsualizar las primeras 50 líneas del mismo archivo fastq
+	* Ubicar la lectura 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read? Etc. Utilice fechas y etiquetas para identificar cada parte.
+	* Traducir el código de calidad para las primeras 10 bases del tercer read a valores numéricos (Q) usando la codificación entregada en clase.
 2. Genere un informe de calidad con fastq para una muestra (cada estudiante una muestra distinta), para R1 y R2.
 
 3. Baje los archivos HTML a su computados mediante sftp (puede usar cualquier cliente o la línea de comandos. Por ejemplo, ejecutando desde su computador local:
@@ -60,9 +60,10 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 4. Analice el informe de calidad creado con fastqc para las lecturas R1 y R2.
 
+5. Compare los valores calculados en el punto 1 con lo entregado en el informe de calidad obtenido con FastQC
+
 5. Seleccione las 4 figuras más importantes a su criterio para analizar la calidad de la corrida, cópielas a un archivo Word y agregue su interpretación de cada figura.
 
 6. En la primera página, ponga una portada con su nombre, y Tarea 1 de la Unidad 6
 
-** Plazo de entrega: Lunes 20/4 **
 ** Forma de entrega: Google classroom **
