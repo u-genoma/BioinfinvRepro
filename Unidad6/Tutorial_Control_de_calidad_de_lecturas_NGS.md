@@ -64,5 +64,5 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 6. En la primera página, ponga una portada con su nombre, y Tarea 1 de la Unidad 6
 
-** Plazo de entrega: Martes 16/4 **
+** Plazo de entrega: Lunes 20/4 **
 ** Forma de entrega: Google classroom **
