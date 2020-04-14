@@ -6,7 +6,7 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 ### Sesión 1: Generación de datos NGS y control de calidad ###
 
 1. [Láminas proyectadas en clase](Sesion1_Generacion_Analisis_de_datosNGS_RAV_2019.pdf)
-2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
+2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://youtu.be/C0lPYZNAljQ)
 3. Tutorial: [Control de calidad de lecturas NGS](Tutorial_Control_de_calidad_de_lecturas_NGS.md)
 
 ### Sessión 2: Alineamiento de lecturas de secuenciación ###
