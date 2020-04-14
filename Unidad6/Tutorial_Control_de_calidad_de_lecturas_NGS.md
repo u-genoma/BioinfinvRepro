@@ -17,8 +17,8 @@ Para realizar un trimming adecuado de lecturas se debe hacer un análisis previo
 3. Cree un Directorio con su nombre. Ejemplo:
 
    ```
-   mkdir ricardo
-   cd ricardo
+   mkdir ricardo_2020
+   cd ricardo_2020
    ```
 
 4. Ejecute FastQC de la siguiente forma para un archivo fastq (contiene las lecturas crudas):
