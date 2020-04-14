@@ -3,7 +3,7 @@
 
 En esta unidad aprenderemos los aspectos escenciales de la generación de datos de secuenciación y su análisis mediante herramientas bioinformáticas libres.
 
-### Sesión 1: Generación y alineamiento de datos NGSS ###
+### Sesión 1: Generación de datos NGS y control de calidad ###
 
 1. [Láminas proyectadas en clase](Sesion1_Generacion_Analisis_de_datosNGS_RAV_2019.pdf)
 2. Video sobre secuenciación por síntesis mostrado en clase: [link](https://www.youtube.com/watch?v=fCd6B5HRaZ8)
