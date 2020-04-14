@@ -47,7 +47,7 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 1. Usando comandos Unix:
 	* Contar el número de lecturas (reads) en un archivo fastq
-	* Previsualizar las primeras 50 líneas del mismo archivo fastq
+	* Previsualizar las primeras 40 líneas del mismo archivo fastq
 	* Ubicar la lectura 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read? Etc. Utilice fechas y etiquetas para identificar cada parte.
 	* Traducir el código de calidad para las primeras 10 bases del tercer read a valores numéricos (Q) usando la codificación entregada en clase.
 
