@@ -50,7 +50,8 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 	* Previsualizar las primeras 50 líneas del mismo archivo fastq
 	* Ubicar la lectura 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read? Etc. Utilice fechas y etiquetas para identificar cada parte.
 	* Traducir el código de calidad para las primeras 10 bases del tercer read a valores numéricos (Q) usando la codificación entregada en clase.
-2. Genere un informe de calidad con fastq para una muestra (cada estudiante una muestra distinta), para R1 y R2.
+
+2. Genere un informe de calidad con FastQC para una muestra (cada estudiante una muestra distinta), para R1 y R2.
 
 3. Baje los archivos HTML a su computados mediante sftp (puede usar cualquier cliente o la línea de comandos. Por ejemplo, ejecutando desde su computador local:
    `scp  bioinfo1@genoma.med.uchile.cl:ricardo/S3_R1_fastqc* .  `
