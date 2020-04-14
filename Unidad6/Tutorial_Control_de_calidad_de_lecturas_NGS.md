@@ -44,19 +44,25 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 
 #### 5. Tarea ####
-1. Genere un informe de calidad con fastq para una muestra (cada estudiante una muestra distinta), para R1 y R2.
 
-2. Baje los archivos HTML a su computados mediante sftp (puede usar cualquier cliente o la línea de comandos. Por ejemplo, ejecutando desde su computador local:
+1. Para el archivo fastq se solicita:
+    A. Contar cuantos reads hay en el archivo (usar comandos unix) y compararlo luego con lo entregado en el informe de calidad obtenido en los siguientes pasos.
+    B. Ubicar el read 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read? 
+    C. Con respecto a la calidad, traducir el código de calidad del read a valor númerico usando la codificación entregada en clase.
+
+2. Genere un informe de calidad con fastq para una muestra (cada estudiante una muestra distinta), para R1 y R2.
+
+3. Baje los archivos HTML a su computados mediante sftp (puede usar cualquier cliente o la línea de comandos. Por ejemplo, ejecutando desde su computador local:
    `scp  bioinfo1@genoma.med.uchile.cl:ricardo/S3_R1_fastqc* .  `
 
    Nota: el punto al final es importante, porque dice que los archivos deben copiarse en el directorio actual (en el computador local).
    Nota 2: el asterisco significa cualquier caracter(es) y permite hacer match con múltiples archivos.
 
-3. Analice el informe de calidad creado con fastqc para las lecturas R1 y R2.
+4. Analice el informe de calidad creado con fastqc para las lecturas R1 y R2.
 
-4. Seleccione las 4 figuras más importantes a su criterio para analizar la calidad de la corrida, cópielas a un archivo Word y agregue su interpretación de cada figura.
+5. Seleccione las 4 figuras más importantes a su criterio para analizar la calidad de la corrida, cópielas a un archivo Word y agregue su interpretación de cada figura.
 
-5. En la primera página, ponga una portada con su nombre, y Tarea 1 de la Unidad 6
+6. En la primera página, ponga una portada con su nombre, y Tarea 1 de la Unidad 6
 
 ** Plazo de entrega: Martes 16/4 **
 ** Forma de entrega: Google classroom **
