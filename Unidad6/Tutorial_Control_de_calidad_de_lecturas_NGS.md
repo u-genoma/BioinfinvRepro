@@ -47,8 +47,8 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 1. Para el archivo fastq se solicita:
 	* Contar cuantos reads hay en el archivo (usar comandos unix) y compararlo luego con lo entregado en el informe de calidad obtenido en los siguientes pasos.
-	* Ubicar el read 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read? 
-    	* Con respecto a la calidad, traducir el código de calidad del read a valor númerico usando la codificación entregada en clase.
+	* Ubicar el read 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read?
+	* Con respecto a la calidad, traducir el código de calidad del read a valor númerico usando la codificación entregada en clase.
 
 2. Genere un informe de calidad con fastq para una muestra (cada estudiante una muestra distinta), para R1 y R2.
 
