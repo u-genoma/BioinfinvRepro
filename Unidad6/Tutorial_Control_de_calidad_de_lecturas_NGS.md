@@ -33,7 +33,7 @@ Para realizar un trimming adecuado de lecturas se debe hacer un análisis previo
 
 #### 4. Análisis luego de la poda ####
 
-Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la secuencia del fago PhiX y lecturas con una calidad baja.
+Se realiza una poda de los datos para eliminar adaptadores, lecturas con  la secuencia del fago PhiX y lecturas con una calidad baja.
 
 1. Usando las filtradas ejecute FastQC para contrastar las diferencias tras el filtro:
    Datos: `bioinfo1/181004_curso_calidad_datos_NGS/fastq_filter`
@@ -44,6 +44,11 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 
 #### 5. Tarea ####
+
+
+Se pide realizar los siguientes puntos tanto para las secuencias crudas y podadas. Además de generar los informes de calidades deben realizar una comparación de los 
+resultados. Recuerden que la ubicación de las secuencias crudas 
+es en el directorio: 181004_curso_calidad_datos_NGS/fastq_raw/ y las secuencias ya podadas se encuentran en 181004_curso_calidad_datos_NGS/fastq_filter
 
 1. Usando comandos Unix:
 	* Contar el número de lecturas (reads) en un archivo fastq
@@ -64,6 +69,7 @@ Realizarom una poda de los datos para eliminar adaptadores, lecturas con  la sec
 5. Compare los valores calculados en el punto 1 con lo entregado en el informe de calidad obtenido con FastQC
 
 5. Seleccione las 4 figuras más importantes a su criterio para analizar la calidad de la corrida, cópielas a un archivo Word y agregue su interpretación de cada figura.
+   Recuerde hacer la comparación de R1 y R2 para las secuencias crudas y las secuencias podadas.
 
 6. En la primera página, ponga una portada con su nombre, y Tarea 1 de la Unidad 6
 
