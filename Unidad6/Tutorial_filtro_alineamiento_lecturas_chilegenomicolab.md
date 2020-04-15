@@ -173,6 +173,9 @@ samtools index S10_sorted_RG.bam
 ```
 ### 2.6 Generar un reporte de calidad
 
+Qualimap es una aplicación escrita en Java y R que posee una interfaz gráfica de usuario (GUI) y una interfaz de línea de comandos para facilitar el control de calidad de los datos de alineamiento de secuencias.
+Este programa proporciona una vista general de los datos que ayuda a detectar sesgos en la secuenciación y / o mapeo de los datos y facilita la toma de decisiones para un análisis posterior.
+
 Comando:
 ```sh
 qualimap bamqc -bam muestra_sorted_RG.bam -gff regiones_blanco.bed -nw 400 -hm 3
