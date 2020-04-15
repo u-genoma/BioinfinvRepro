@@ -5,9 +5,10 @@ Ingenieros en Bioinformática
 Abril 2020
 
 En este tutorial presentamos los pasos necesarios para realizar el filtrado y alineamiento de secuencias. En la siguiente imagen les mostramos
-el pipeline a seguir en este tutorial.
+el pipeline a seguir en este tutorial. El análisis de calidad fue realizado en el la clase anterior.
 
 ![pipeline a seguir](pipelines_alineamiento.png) 
+
 El siguiente protocolo está diseñado para ser implementado en el servidor genoma.med.uchile.cl dentro de la carpeta de cada usuario de bioinfo1.
 
 ### Conectarse al servidor
@@ -68,7 +69,7 @@ ref=/opt/bbmap/resources/phix174_ill.ref.fa.gz
 ```
 La entrada (in1, in2) son las lecturas filtradas en el paso anterior. Esto crea un 2 archivos "filter2.fastq.gz" correspondiente a las lecturas pareadas donde se eliminan la secuencia del fago phix que alinean con las secuencias del archivo fasta "phix174_ill.ref.fa.gz".
 
-### 1.3 Trimming por calidad de las lecturas
+### 1.3 Filtrado por calidad de las lecturas
 Comando:
 ```sh
 bbduk.sh -Xmx2g threads=1 \
@@ -113,7 +114,7 @@ Nota 1: Ejecute los siguientes comandos e inspeccione las distintas opciones que
 bwa
 man bwa
 ```
-## Procesamiento del alineamiento
+
 El siguiente conjunto de operaciones de preprocesamiento formatea los datos para adaptarse a los requisitos de las herramientas GATK convirtiendo los datos de asignación en un archivo BAM ordenado por posición, con el campo "Read Group" añadido.
 
 ### 2.2 Convertir archivo sam a bam (binario)
