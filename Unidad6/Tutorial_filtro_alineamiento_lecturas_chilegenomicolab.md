@@ -178,9 +178,13 @@ Comando:
 qualimap bamqc -bam muestra_sorted_RG.bam -gff regiones_blanco.bed -nw 400 -hm 3
 ```
 
+Ejemplo:
+```sh
+qualimap bamqc -bam S10_sorted_RG.bam - gff ../181004_curso_calidad_datos_NGS/regiones_blanco.bed -nw 400 -hm 3
+```
 
 
-## 2.7 Tarea
+### 3 Tarea
 
 1) Realizar el ensamble de las lecturas R1 y R2 del paciente seleccionado para la tarea anterior contra el genoma humano hg19.
 2) Generar un reporte técnico de calidad del ensamble con *qualimap*.
