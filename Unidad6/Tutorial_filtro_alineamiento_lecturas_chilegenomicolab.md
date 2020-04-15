@@ -1,9 +1,13 @@
 # Tutorial para el filtro y alineamiento de lecturas
 
-Cristian Yáñez Lara
-Ingeniero Bioinformático
-Abril 2019
+Karen Oróstica y Cristian Yañez
+Ingenieros en Bioinformática
+Abril 2020
 
+En este tutorial presentamos los pasos necesarios para realizar el filtrado y alineamiento de secuencias. En la siguiente imagen les mostramos
+el pipeline a seguir en este tutorial.
+
+![pipeline a seguir](pipelines_alineamiento.png) 
 El siguiente protocolo está diseñado para ser implementado en el servidor genoma.med.uchile.cl dentro de la carpeta de cada usuario de bioinfo1.
 
 ### Conectarse al servidor
@@ -13,9 +17,9 @@ ssh -Y bioinfo1@genoma.med.uchile.cl
 Usar la clave entregada en clase.
 ### Acceda al directorio con su nombre:
 ```sh
-cd cyanez/
+cd korostica/
 ```
-Para la demostración, usaremos el directorio cyanez. Usted debe usar su propio directorio.
+Para la demostración, usaremos el directorio korostica. El alumno debe usar su propio directorio.
 
 ## 1. Filtrado de lecturas
 
@@ -41,7 +45,7 @@ out1=S10_R1_filter1.fastq.gz \
 out2=S10_R2_filter1.fastq.gz \
 ref=/opt/bbmap/resources/adapters.fa tpe tbo
 ```
-La entrada in1, in2 son las lecturas crudas. Esto crea dos archivos "filter1.fastq.gz" correspondiente a las lecturas pareadas donde se eliminan la secuencia de adaptadores y contaminantes que alinean con las secuencias del archivo fasta "adapters.fa".
+La entrada in1, in2 son las lecturas crudas. Esto crea dos archivos con el sufijo "filter1.fastq.gz" correspondiente a las lecturas pareadas donde se eliminan la secuencia de adaptadores y contaminantes que alinean con las secuencias del archivo fasta "adapters.fa".
 
 ### 1.2 Eliminación de lecturas que contengan secuencia del fago phix
 Comando:
