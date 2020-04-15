@@ -103,11 +103,12 @@ muestra_R2.fastq.gz \
 ```
 Ejemplo:
 ```sh
-bwa mem -t 4 -M /datos/reference/genomes/hg19_reference/hg19.fasta \
+bwa mem -t 4 -M /home-old/data/references/genomes/hg19_reference/hg19.fasta \
 S10_R1_filter3.fastq.gz \
 S10_R2_filter3.fastq.gz \
 > S10.sam
 ```
+
 Nota 1: Ejecute los siguientes comandos e inspeccione las distintas opciones que entrega bwa y los atributos que puede modificar.
 
 ```sh
