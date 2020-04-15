@@ -11,7 +11,7 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 
 ### Sessión 2: Alineamiento de lecturas de secuenciación ###
 1. [Láminas proyectadas en clase](Sesion2_Alineamineto_de_datos_NGS_RAV_2019.pdf)
-2. Video1 sobre secuenciación por síntesis mostrado en clase: [Parte 1](https://www.youtube.com/watch?v=lrVdCKd4S8I)  [Parte 2](https://www.youtube.com/watch?v=gj19_DKhFXw) [Parte 3](https://www.youtube.com/watch?v=qyIszYEfxN4)
+2. Video1 sobre secuenciación por síntesis mostrado en clase: [Parte 1](https://www.youtube.com/watch?v=lrVdCKd4S8I)  [Parte 2](https://www.youtube.com/watch?v=gj19_DKhFXw)
 3. Tutorial: [Filtrado y alineamiento de lecturas NGS](Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
 
 ### Sessión 3: Llamado de variantes ###

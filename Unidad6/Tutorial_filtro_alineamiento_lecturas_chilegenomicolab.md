@@ -190,7 +190,7 @@ qualimap bamqc -bam S10_sorted_RG.bam - gff ../181004_curso_calidad_datos_NGS/re
 ### 3 Tarea
 
 1) Realizar el alineamiento de las lecturas R1 y R2 del paciente seleccionado para la tarea anterior contra el genoma humano hg19.
-2) Generar un reporte técnico de calidad del ensamble con *qualimap*.
+2) Generar un reporte técnico de calidad del alineamiento con *qualimap*.
 3) Seleccionar 4 figuras que a su juicio sean las más informativas sobre la calidad de los datos y del ensamble.
 4) Incluir las figuras en la sección de Resultados de un reporte técnico. Describir cada figura con una leyenda descriptiva. Adicionalmente, en el texto de la sección, interpretar los resultados y citar cada figura. Debe referirse a la calidad de los datos y del alineamiento. Enfóquese especialmente en los posibles problemas con los datos o alineamientos. Comente potenciales razones que expliquen lo observado. Incluya una sección con las principales *Conclusiones* para la muestra.
 5) Incluya el reporte completo generado con *qualimap* como anexo.
