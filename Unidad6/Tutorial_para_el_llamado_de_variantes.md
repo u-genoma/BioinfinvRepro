@@ -9,12 +9,13 @@ El siguiente protocolo está diseñado para ser implementado en el servidor geno
 
 Usamos el programa Genome Analysis Toolkit (GATK) para el procesamiento en las siguientes etapas. De forma general los parámetros de GATK indican lo siguiente:
 
-Parámetro	Descripción
-* -T			Herramienta utilizada
-* -R			Archivo de referencia (el mismo usado en el alineamiento)
-* -I			Archivo de entrada el cual varía según la etapa del análisis
-* -L			Archivo .bed con las regiones target del experimento
-* -o			Archivo de salida generado el cual varía según la etapa del análisis
+| Parámetro | Descripción |
+| ------------- |:-------------:|
+| -T | Herramienta utilizada |
+| -R | Archivo de referencia (el mismo usado en el alineamiento) |
+| -I | Archivo de entrada el cual varía según la etapa del análisis |
+* -L | Archivo .bed con las regiones target del experimento |
+| -o | Archivo de salida generado el cual varía según la etapa del análisis |
 
 ### Recalibración de calidades de bases (Q) en lecturas
 
