@@ -34,7 +34,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T BaseRecalibrator -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -I ../Alineamiento/S10_sorted_RG.bam -knownSites /home-old/data/references/genomes/hg19_reference/dbSNP_hg19.vcf -o S10_recall_data.table
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T BaseRecalibrator -R /datos/reference/genomes/hg19_reference/hg19.fasta -I ../Alineamiento/S10_sorted_RG.bam -knownSites /datos/reference/genomes/hg19_reference/dbSNP_hg19.vcf -o S10_recall_data.table
 ```
 Esto crea un archivo "muestra_recall_data.table" que contienen los datos de covarianza que se utilizarán en el paso posterior. 
 
@@ -53,7 +53,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T PrintReads -R  /home-old/data/references/genomes/hg19_reference/hg19.fasta -I ../Alineamiento/S10_sorted_RG.bam --BQSR S10_recall_data.table -o S10_recall_reads.bam
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T PrintReads -R  /datos/reference/genomes/hg19_reference/hg19.fasta -I ../Alineamiento/S10_sorted_RG.bam --BQSR S10_recall_data.table -o S10_recall_reads.bam
 ```
 ## Llamado de variantes
 
@@ -74,7 +74,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T HaplotypeCaller -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -I S10_recall_reads.bam --dbsnp /home-old/data/references/genomes/hg19_reference/dbSNP_hg19.vcf -stand_call_conf 30 -L "chr19" -o S10_raw_variants.vcf
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T HaplotypeCaller -R /datos/reference/genomes/hg19_reference/hg19.fasta -I S10_recall_reads.bam --dbsnp /datos/reference/genomes/hg19_reference/dbSNP_hg19.vcf -stand_call_conf 30 -L "chr19" -o S10_raw_variants.vcf
 ```
 **Nota **: Para el curso práctico solo se calculan las variantes en el contig del cromosoma 19 (para disminuir tiempos de cómputo), para analizar el genoma completo se debe eliminar el parámetro -L "chr19" del comando.
 
@@ -99,7 +99,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -V S10_raw_variants.vcf -selectType SNP -o S10_RAW_SNP.vcf
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants -R /datos/reference/genomes/hg19_reference/hg19.fasta -V S10_raw_variants.vcf -selectType SNP -o S10_RAW_SNP.vcf
 ```
 ### Filtrar SNPs
 
@@ -152,7 +152,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -V S10_RAW_INDEL.vcf --filterExpression "DP <10" --filterName "FILTER" -o S10_FILTERED_INDEL.vcf
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration -R /datos/reference/genomes/hg19_reference/hg19.fasta -V S10_RAW_INDEL.vcf --filterExpression "DP <10" --filterName "FILTER" -o S10_FILTERED_INDEL.vcf
 ```
 ### Combinar vcfs filtrados
 Juntamos los archivos vcf anotados de SNPs e Indels en uno solo
@@ -169,7 +169,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T CombineVariants -R /home-old/data/references/genomes/hg19_reference/hg19.fasta --variant:foo S10_FILTERED_SNP.vcf --variant:bar S10_FILTERED_INDEL.vcf -o S10_FILTER_VARIANTS.vcf -genotypeMergeOptions PRIORITIZE -priority foo,bar
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T CombineVariants -R /datos/reference/genomes/hg19_reference/hg19.fasta --variant:foo S10_FILTERED_SNP.vcf --variant:bar S10_FILTERED_INDEL.vcf -o S10_FILTER_VARIANTS.vcf -genotypeMergeOptions PRIORITIZE -priority foo,bar
 ```
 **Nota**: Las variantes que pasan los filtros se etiquetan como PASS y las que no pasan los filtros se etiquetan como FILTER. Para el curso (datos de prueba) se usó un filtro de cobertura de 10 lecturas, lo cual fue considerado mínimo para poder determinar de forma adecuada el genotipo, pero es arbitrario. 
 
