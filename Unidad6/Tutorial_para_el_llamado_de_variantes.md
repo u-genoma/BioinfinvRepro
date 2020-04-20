@@ -103,7 +103,7 @@ java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants -R 
 ```
 ### Filtrar SNPs
 
-Aplicamos el filtro al conjunto de SNPs 
+Aplicamos el filtro al conjunto de SNPs. Usamos la expresión 'DP> 10' para incluir sólo los sitios con suficiente profundidad (depth > 10). 
 
 Comando:
 ```sh
