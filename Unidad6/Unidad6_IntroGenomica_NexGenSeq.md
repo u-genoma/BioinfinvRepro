@@ -16,7 +16,7 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 
 ### Sessión 3: Llamado de variantes ###
 1. [Láminas proyectadas en clase](Sesion3_Llamado_de_variantes_RAV_2019.pdf)
-2. Video de la clase: [link](https://www.youtube.com/watch?v=x8hegyWQECo)
+2. Video de la clase: [Llamado de variantes](https://www.youtube.com/watch?v=x8hegyWQECo)
 3. Tutorial: [Llamado de variantes](Tutorial_para_el_llamado_de_variantes.md)
 
 ### Sesión 4 - Metagenómica ###
