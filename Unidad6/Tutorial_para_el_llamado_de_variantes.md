@@ -14,7 +14,7 @@ Usamos el programa Genome Analysis Toolkit (GATK) para el procesamiento en las s
 | -T | Herramienta utilizada |
 | -R | Archivo de referencia (el mismo usado en el alineamiento) |
 | -I | Archivo de entrada el cual varía según la etapa del análisis |
-* -L | Archivo .bed con las regiones target del experimento |
+| -L | Archivo .bed con las regiones target del experimento |
 | -o | Archivo de salida generado el cual varía según la etapa del análisis |
 
 ### Recalibración de calidades de bases (Q) en lecturas
