@@ -135,7 +135,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants -R /datos/reference/genomes/hg19_reference/hg19.fasta -V S10_raw_variants.vcf -selectType INDEL -o S10_RAW_INDEL.vcf
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T SelectVariants -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -V S10_raw_variants.vcf -selectType INDEL -o S10_RAW_INDEL.vcf
 ```
 ### Filtrar InDels
 Aplicamos el filtro al conjunto de Indels
