@@ -5,6 +5,8 @@ Abril 2020
 
 El siguiente protocolo está diseñado para ser implementado en el servidor genoma.med.uchile.cl dentro de la carpeta de cada usuario de bioinfo1. Además, se asume que ya se ejecutó el tutorial [Tutorial para el filtro y alineamiento de lecturas](Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md).
 
+![pipeline a seguir](pipelines_llamadoVariantes.png)
+
 ## Procesamiento del alineamiento usando GATK
 
 Usamos el programa Genome Analysis Toolkit (GATK) para el procesamiento en las siguientes etapas. De forma general los parámetros de GATK indican lo siguiente:
