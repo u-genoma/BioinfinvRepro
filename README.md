@@ -137,7 +137,7 @@ El curso se dividirá en secciones que se calificarán por separado:
 	* 15% Scripts **deben estar comentados en inglés**
 	* 15% Avances preliminares 
 
-**Unidad 6-9:**
+**Unidad 6-8:**
 
 100% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor.
 
@@ -151,7 +151,7 @@ El curso se dividirá en secciones que se calificarán por separado:
 * 15% Scripts **deben estar comentados en inglés**
 * 15% Avances preliminares
 
-Para Chile, las unidades 1-4 y 6-9 constituyen dos cursos independientes. La Unidad 5 y el proyecto final son opcionales.
+Para Chile, las unidades 1-4 y 6-8 constituyen dos cursos independientes. La Unidad 5 y el proyecto final son opcionales.
 
 Para México, todas las unidades y el proyecto final son obligatorios.
 
@@ -266,21 +266,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
-
-#### Unidad 7 [Genomas reducidos y metabarcoding](Unidad9/Unidad_9_Ensamblaje_de_genomas.md)
-**Sesión 1 – Metabarcoding**
-
-* Secuenciación de amplicones
-* Metabarcoding
-
-**Sesión 2 - Ensamblaje de representación reducida de genomas**
-
-* Metodologías de representación reducida de genomas (RAD, GBS, etc) 
-* Ensamblaje de novo vs. sobre una referencia
-* Principales algoritmos y software (Stacks, pyRAD, Tassel)
-* Primera inspección de los datos
-
-#### Unidad 8 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
+#### Unidad 7 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
 
 **Sesión 1 Expresión diferencial**
 
@@ -299,7 +285,7 @@ Para México, todas las unidades y el proyecto final son obligatorios.
 *  Modelamiento de datos
 * Software
 
-#### Unidad 9 Análisis genómicos reproducibles en la nube
+#### Unidad 8 Análisis genómicos reproducibles en la nube
 
 **Sesión 1: GATK**
 
