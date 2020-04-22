@@ -5,7 +5,7 @@
 
 ### Acerca de este tutorial
 
-  El  objetivo del tutorial es introducir técnicas de el análisis de datos de microarreglos para detectar **genes diferencialmente expresados (DE** por su sigla en inglés**)** producto de factores experimentales o de sus interacciones. Se presenta un flujo de trabajo de análisis completo utilizando el lenguaje R.  Aunque se utilizan varios paquetes de R durante el tutorial no intento cubrir toda la funcionalidad disponible en cada uno de ellos.  Consulte la documentación de cada paquete para obtener más detalles sobre las funciones desponibles en cada paquete o tutoriales más específicos. El contenido de este tutorial es responsabilidad exclusiva del autor y no ha sido respaldado por los autores de los paquetes de R aquí utilizados. 
+  El  objetivo del tutorial es introducir técnicas de el análisis de datos de microarreglos para detectar **genes diferencialmente expresados** (**DE** por su sigla en inglés) producto de factores experimentales o de sus interacciones. Se presenta un flujo de trabajo de análisis completo utilizando el lenguaje R.  Aunque se utilizan varios paquetes de R durante el tutorial no intento cubrir toda la funcionalidad disponible en cada uno de ellos.  Consulte la documentación de cada paquete para obtener más detalles sobre las funciones desponibles en cada paquete o tutoriales más específicos. El contenido de este tutorial es responsabilidad exclusiva del autor y no ha sido respaldado por los autores de los paquetes de R aquí utilizados. 
 
 ### Descripción de los datos
 
