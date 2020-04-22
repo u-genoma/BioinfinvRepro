@@ -19,6 +19,3 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 2. Video de la clase: [Llamado de variantes](https://www.youtube.com/watch?v=x8hegyWQECo)
 3. Tutorial: [link](Tutorial_para_el_llamado_de_variantes.md)
 
-### Sesión 4 - Metagenómica ###
-*Pronto*
-
