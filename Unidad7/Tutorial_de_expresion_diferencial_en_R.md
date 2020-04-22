@@ -235,7 +235,7 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 
 |  Término     | Descripción| 
 |--------------|:-------------:|
-|  Geno        |        | genotipo| 
+|  Geno        |       genotipo| 
 | Trt                     | tratamiento| 
 | Int                     | interacción genotipo x tratamiento| 
 | Geno_I              | efecto genotipo en animales intactos (no castrados)|
