@@ -102,7 +102,7 @@ annot     <- read.delim("MouseRef-8_annot.txt")
   Agruparemos 'Bad' con 'No match' como ' Bad sones' y todo lo demás como 'Good probes'.
 ```R
   probe_qc <- ifelse(annot$ProbeQuality %in% c("Bad", "No match"), "Bad probes",
-+  "Good probes")
+  "Good probes")
 ```
   Leer la tabla con el diseño de las hibridaciones. 
 ```R
@@ -126,10 +126,10 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 15    15  CDR032-DIL 4340571033                G       BY         C  BY.C
 16    16      CDR024 4340571033                H        B         C   B.C
 ```
-  Luego, los cuatro grupos experimentales se pueden denotar por BC, BI, BY.C y BY.I. 
+  Luego, los cuatro grupos experimentales se pueden denotar por B.C, B.I, BY.C y BY.I. 
 
 #### Control de calidad
-  Crea gráicos de cajas coloreados por la calidad de la sonda.  La salida está en la Figura 2. 
+  Crea gráficos de cajas coloreados por la calidad de la sonda.  La salida está en la Figura 2. 
 ```R
  palette(rainbow(4))
  alabel <- sprintf("Array%02i", 1:length(signal))
@@ -147,7 +147,11 @@ annot     <- read.delim("MouseRef-8_annot.txt")
  dev.off()
 ```
 
-  Crea cuadros de caja de colores por tratamiento.  La  salida se muestra en la Figura 3. La posición de las matrices, desde A a  H, se muestra en el eje x porque las matrices de Illumina pueden tener  un efecto de posición, con una mayor intensidad en las primeras  posiciones y una más baja en las últimas (Verdugo et al. 2009) .  Este fue el caso en este experimento, aunque el efecto no es obvio en el subconjunto de 5000 sondas utilizadas en este tutorial. 
+![Figura2_Datos_brutos](Figura2_Datos_brutos.png)
+  **Figura 2**. Diagramas de caja de datos sin procesar en escala log por microarreglo y calidad de sonda.  El ancho de las cajas es proporcional al número de sondas.
+
+
+El siguiente código crea cuadros de caja de colores por tratamiento.  La  salida se muestra en la Figura 3. La posición de las matrices, desde A a  H, se muestra en el eje x porque las matrices de Illumina pueden tener  un efecto de posición, con una mayor intensidad en las primeras  posiciones y una más baja en las últimas (Verdugo et al. 2009) .  Este fue el caso en este experimento, aunque el efecto no es obvio en el subconjunto de 5000 sondas utilizadas en este tutorial. 
 
 ```R
  png(file.path(outdir,"boxplot_raw_treatment.png"), width=4, height=4, unit="in", res=150)
@@ -158,10 +162,7 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 
  dev.off()
 ```
-
-![Figura2_Datos_brutos](Figura2_Datos_brutos.png)
-  **Figura 2**. Diagramas de caja de datos sin procesar en escala log por microarreglo y calidad de sonda.  El ancho de las cajas es proporcional al número de sondas. 
-
+ 
 ![Figura3_Datos_brutos_por_tratamiento](Figura3_Datos_brutos_por_tratamiento.png)
 
 **Figura 3.**    Diagramas de caja de datos en bruto por microarreglo. Las cajas están coloreadas según tratamiento. 
