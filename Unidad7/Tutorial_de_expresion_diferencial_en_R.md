@@ -93,7 +93,7 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 ```
   No todas las sondas muestran la misma calidad al ser alineadas contra el genoma de referencia.  Para obtener más información, consulte el documento ReMOAT (Barbosa-Morais et al. 2010) . 
 ```R
-> table(annot$ProbeQuality)
+ table(annot$ProbeQuality)
 
         Bad        Good    Good****    No match     Perfect  Perfect*** Perfect**** 
         289          60          15           5        4468          53         110
@@ -101,13 +101,13 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 ```
   Agruparemos 'Bad' con 'No match' como ' Bad sones' y todo lo demás como 'Good probes'.
 ```R
- > probe_qc <- ifelse(annot$ProbeQuality %in% c("Bad", "No match"), "Bad probes",
+  probe_qc <- ifelse(annot$ProbeQuality %in% c("Bad", "No match"), "Bad probes",
 +  "Good probes")
 ```
   Leer la tabla con el diseño de las hibridaciones. 
 ```R
-> design <- read.csv("YChrom_design.csv")
-> print(design)
+ design <- read.csv("YChrom_design.csv")
+ print(design)
    Array Sample_Name Sentrix_ID Sentrix_Position Genotype Treatment Group
 1      1  CDR017-DIL 4340571022                A        B         I   B.I
 2      2      CDR025 4340571022                B       BY         I  BY.I
@@ -248,27 +248,27 @@ annot     <- read.delim("MouseRef-8_annot.txt")
   Ahora, construya un matriz de contrastes donde las filas son contrastes y las columnas son grupos experimentales: 
 ```R
 #                            B.C  B.I BY.C BY.I
-> cmat <- rbind(Geno     =  c( 1,   1,  -1,  -1 )*.5,
-+               Trt      =  c( 1,  -1,   1,  -1 )*.5,
-+               Int      =  c( 1,  -1,  -1,   1 ),
-+               Geno_I   =  c( 0,   1,   0,  -1 ),
-+               Geno_C   =  c( 1,   0,  -1,   0 ),
-+               Trt_B    =  c( 1,  -1,   0,   0 ),
-+               Trt_BY   =  c( 0,   0,   1,  -1 ),
-+               B.C_BY.I =  c( 1,   0,   0,  -1 ),
-+               B.I_BY.C =  c( 0,   1,  -1,   0 ))
+ cmat <- rbind(Geno     =  c( 1,   1,  -1,  -1 )*.5,
+               Trt      =  c( 1,  -1,   1,  -1 )*.5,
+               Int      =  c( 1,  -1,  -1,   1 ),
+               Geno_I   =  c( 0,   1,   0,  -1 ),
+               Geno_C   =  c( 1,   0,  -1,   0 ),
+               Trt_B    =  c( 1,  -1,   0,   0 ),
+               Trt_BY   =  c( 0,   0,   1,  -1 ),
+               B.C_BY.I =  c( 1,   0,   0,  -1 ),
+               B.I_BY.C =  c( 0,   1,  -1,   0 ))
 ```
   Podemos usar estos contrastes para calcular algunas razones (conocidas como *fold change* en inglés y abreviado por *FC*) que pueden ser de interés.  Calculemos el producto matricial de medias por grupo con la transpuesta de la matriz de contrastes. El resultado es una matriz de diferencias entre grupos en la escala logarítmica. 
 ```R
-> logDiff  <- Means %*% t(cmat)
+ logDiff  <- Means %*% t(cmat)
 ```
   Transforme las diferencias de registro a la escala FC (la función `lofdiff2FC` está definida en Rfxs.R) . 
 ```R
-> FC <- apply(logDiffs, 2, logdiff2FC)
+ FC <- apply(logDiffs, 2, logdiff2FC)
 ```
   Pruebe cada contraste utilizando 200 permutaciones de las muestras.  En una situación real se recomiendan al menos 1.000 permutaciones.  Las pruebas de *F* se realizarán utilizando una estimación de  varianza residual por sonda (*F1*) y una estimación basada en contracción de varianza residual que utiliza información de múltiples sondas (*Fs*) (Cui et al. 2005) . 
 ```R
-> test.cmat <- matest(madata, fit.fix, term="Group", Contrast=cmat, n.perm=200, 
+ test.cmat <- matest(madata, fit.fix, term="Group", Contrast=cmat, n.perm=200, 
 +                     test.type = "ttest", shuffle.method="sample", verbose=TRUE)
 Doing F-test on observed data ...
 Doing permutation. This may take a long time ... 
@@ -277,35 +277,35 @@ Finish permutation #  200
 ```
   Los nombres de los contrastes no se guardan en la microarreglo de los resultados de la permutación, por lo que vamos a copiarlos de la microarreglo de valores *p* tabulares (error en R/MAanova ). 
 ```R
-> colnames(test.cmat$Fs$Pvalperm) <- colnames(test.cmat$Fs$Ptab)
+ colnames(test.cmat$Fs$Pvalperm) <- colnames(test.cmat$Fs$Ptab)
 ```
   Control de comparaciones múltiples usando transformación FDR:
 ```R
-> test.cmat <- adjPval(test.cmat, method="adaptive")
+ test.cmat <- adjPval(test.cmat, method="adaptive")
 ```
   Grafique los valores de *p* comparando diferentes formas de calcularlos ( consulte `?matest`).  El resultado se muestra en la Figura 4. 
 ```R
-> png(file.path(outdir,"P-values Hist.png"), width=6, height=6, unit="in", res=150)
-> par(mfrow=c(2,2), oma=c(2,0,2,0), cex=.8, xpd=NA)
-> palette(rainbow(3))
-> plot(density(test.cmat$F1$Ptab[,1]), col=1, main="F1:Ptab", lwd=2)
-> lines(density(test.cmat$F1$Ptab[,2]), col=2, lwd=2)
-> lines(density(test.cmat$F1$Ptab[,3]), col=3, lwd=2)
+ png(file.path(outdir,"P-values Hist.png"), width=6, height=6, unit="in", res=150)
+ par(mfrow=c(2,2), oma=c(2,0,2,0), cex=.8, xpd=NA)
+ palette(rainbow(3))
+ plot(density(test.cmat$F1$Ptab[,1]), col=1, main="F1:Ptab", lwd=2)
+ lines(density(test.cmat$F1$Ptab[,2]), col=2, lwd=2)
+ lines(density(test.cmat$F1$Ptab[,3]), col=3, lwd=2)
 
-> plot(density(test.cmat$F1$Pvalperm[,1]), col=1, main="F1:Pvalperm", lwd=2)
-> lines(density(test.cmat$F1$Pvalperm[,2]), col=2, lwd=2)
-> lines(density(test.cmat$F1$Pvalperm[,3]), col=3, lwd=2)
+ plot(density(test.cmat$F1$Pvalperm[,1]), col=1, main="F1:Pvalperm", lwd=2)
+ lines(density(test.cmat$F1$Pvalperm[,2]), col=2, lwd=2)
+ lines(density(test.cmat$F1$Pvalperm[,3]), col=3, lwd=2)
 
-> plot(density(test.cmat$Fs$Ptab[,1]), col=1, main="Fs:Ptab", lwd=2)
-> lines(density(test.cmat$Fs$Ptab[,2]), col=2, lwd=2)
-> lines(density(test.cmat$Fs$Ptab[,3]), col=3, lwd=2)
+ plot(density(test.cmat$Fs$Ptab[,1]), col=1, main="Fs:Ptab", lwd=2)
+ lines(density(test.cmat$Fs$Ptab[,2]), col=2, lwd=2)
+ lines(density(test.cmat$Fs$Ptab[,3]), col=3, lwd=2)
 
-> plot(density(test.cmat$Fs$Pvalperm[,1]), col=1, main="Fs:Pvalperm", lwd=2)
-> lines(density(test.cmat$Fs$Pvalperm[,2]), col=2, lwd=2)
-> lines(density(test.cmat$Fs$Pvalperm[,3]), col=3, lwd=2)
+ plot(density(test.cmat$Fs$Pvalperm[,1]), col=1, main="Fs:Pvalperm", lwd=2)
+ lines(density(test.cmat$Fs$Pvalperm[,2]), col=2, lwd=2)
+ lines(density(test.cmat$Fs$Pvalperm[,3]), col=3, lwd=2)
 
-> legend(-.5, -1.6, legend=c("Geno", "Trt", "Int"), col=1:3,lwd=2,xjust=.5,ncol=3,xpd=NA)
-> dev.off()
+ legend(-.5, -1.6, legend=c("Geno", "Trt", "Int"), col=1:3,lwd=2,xjust=.5,ncol=3,xpd=NA)
+ dev.off()
 ```
 
 ![Figura4_Densidad_valoresP](Figura4_Densidad_valoresP.png)
@@ -313,12 +313,12 @@ Finish permutation #  200
 
   Resuma en una tabla los resultados para todas los transcriptos presentes.  Exportaremos solo los resultados de las pruebas `Fs` y los vapores `Pvalperm` de permutaciones.
 ```R
-> results <- data.frame(annot, Means, SEs, F_val=test.cmat$Fs$Fobs,
-+                       P_val=test.cmat$Fs$Pvalperm, FDR=test.cmat$Fs$adjPvalperm, FC=FC)
+ results <- data.frame(annot, Means, SEs, F_val=test.cmat$Fs$Fobs,
+                       P_val=test.cmat$Fs$Pvalperm, FDR=test.cmat$Fs$adjPvalperm, FC=FC)
 ```
   Exportar todos los resultados.  Puede abrir DE_results.csv en Excel o Calc OpenOffice . 
 ```R
-> write.table(results, file=file.path(outdir,"DE_results.csv"), sep=",", row.names=F)
+ write.table(results, file=file.path(outdir,"DE_results.csv"), sep=",", row.names=F)
 ```
 
 
@@ -335,36 +335,36 @@ Finish permutation #  200
 
   Crear un identificador del gen basado en EntrezGene y utilizar el ID de la sonda cuando no esté asociada a un gen:
 ```R
-> results$GeneID <- results$EntrezID
-> results$GeneID[is.na(results$GeneID)] <- results$ProbeID[is.na(results$GeneID)]
+ results$GeneID <- results$EntrezID
+ results$GeneID[is.na(results$GeneID)] <- results$ProbeID[is.na(results$GeneID)]
 ```
   Cuente las sondas seleccionadas por expresión diferencial por genotipo, tratamiento y/o interacción:
 ```R
-> Probes.DE <- results[, c("FDR.Geno", "FDR.Trt", "FDR.Int")]  <= fdr_th
-> Genes.DE  <- apply(Probes.DE, 2, tapply, results$GeneID, any)
+ Probes.DE <- results[, c("FDR.Geno", "FDR.Trt", "FDR.Int")]  <= fdr_th
+ Genes.DE  <- apply(Probes.DE, 2, tapply, results$GeneID, any)
 ```
   Ahora  cuente los genes significativos para comparaciones específicas de manera de determinar la dirección de las diferencias cuando la interacción es significativa. Debido a que estamos interesados en los genes que muestran una interacción, no podemos usar el contraste Geno, ya que prueba el efecto marginal del genotipo en todos los tratamientos.  En otras palabras, prueba los efectos que son consistentes en ambos tratamientos.  Este contraste puede ser cero incluso si el genotipo tiene efectos significativos y de magnitud idéntica en ambos tratamientos pero con signos opuestos.  Los mismo podría ocurrir para los efectos del tratamiento en cada genotipo.  Por lo tanto, necesitamos usar los contrastes que prueban las diferencias de genotipo dentro de cada nivel de tratamiento, y viceversa.
 
   Usando solo las sondas seleccionadas por efectos de interacción, cuente las sondas significativas para el efecto de genotipo en ratones intactos (I) y/o castrados (C) . 
 ```R
-> Probes.Int_Geno <- results[results$FDR.Int <= fdr_th, 
-+                            c("FDR.Geno_I", "FDR.Geno_C")] <= fdr_th
-> Genes.Int_Geno  <- apply(Probes.Int_Geno, 2, tapply, 
-+                          results$GeneID[results$FDR.Int <= fdr_th], any)
+ Probes.Int_Geno <- results[results$FDR.Int <= fdr_th, 
+                            c("FDR.Geno_I", "FDR.Geno_C")] <= fdr_th
+ Genes.Int_Geno  <- apply(Probes.Int_Geno, 2, tapply, 
+                          results$GeneID[results$FDR.Int <= fdr_th], any)
 ```
   Usando  solamente sondas seleccionadas por efectos de interacción, cuente  las sondas significativas para el efecto de tratamiento en ratones del genotipo B y/o del genotipo BY. 
 ```R
-> Probes.Int_Trt  <- results[results$FDR.Int <= fdr_th,
-+                            c("FDR.Trt_B", "FDR.Trt_BY")]  <= fdr_th
-> Genes.Int_Trt   <- apply(Probes.Int_Trt, 2, tapply,
-+                          results$GeneID[results$FDR.Int <= fdr_th], any)
+ Probes.Int_Trt  <- results[results$FDR.Int <= fdr_th,
+                            c("FDR.Trt_B", "FDR.Trt_BY")]  <= fdr_th
+ Genes.Int_Trt   <- apply(Probes.Int_Trt, 2, tapply,
+                          results$GeneID[results$FDR.Int <= fdr_th], any)
 ```
   Cargue la librería `limma` para crear diagramas de Venn.  Contar genes para cada combinación de efectos marginales y de interacción. 
 ```R
-> library(limma)
-> Counts.DE <- vennCounts(Genes.DE)
+ library(limma)
+ Counts.DE <- vennCounts(Genes.DE)
 
-> print(Counts.DE)
+ print(Counts.DE)
      FDR.Geno FDR.Trt FDR.Int Counts
 [1,]        0       0       0    663
 [2,]        0       0       1     29
@@ -379,9 +379,9 @@ attr(,"class")
 ```
   Contar los genes DE entre niveles de un factor condicional en el otro factor. 
 ```R
-> Counts.Int_Geno <- vennCounts(Genes.Int_Geno)
+ Counts.Int_Geno <- vennCounts(Genes.Int_Geno)
 
-> print(Counts.Int_Geno)
+ print(Counts.Int_Geno)
      FDR.Geno_I FDR.Geno_C Counts
 [1,]          0          0      3
 [2,]          0          1    110
@@ -390,9 +390,9 @@ attr(,"class")
 attr(,"class")
 [1] "VennCounts"
 
-> Counts.Int_Trt  <- vennCounts(Genes.Int_Trt) 
+ Counts.Int_Trt  <- vennCounts(Genes.Int_Trt) 
 
-> print(Counts.Int_Trt)
+ print(Counts.Int_Trt)
      FDR.Trt_B FDR.Trt_BY Counts
 [1,]         0          0      1
 [2,]         0          1    101
@@ -403,11 +403,11 @@ attr(,"class")
 ```
   Graficar los genes DE por efectos marginales o de interacción.  La salida se muestra en la Figura 5. 
 ```R
-> png(file.path(outdir, "vennDiagram_DiffExprs.png"), width=3.5, height=3, unit="in", res=150)
-> par(cex=.7)
-> vennDiagram(Counts.DE, names=c("Geno", "Trt", "Int"), 
-+             main="\n\n\nDifferentially Expressed Genes")
-> dev.off()
+ png(file.path(outdir, "vennDiagram_DiffExprs.png"), width=3.5, height=3, unit="in", res=150)
+ par(cex=.7)
+ vennDiagram(Counts.DE, names=c("Geno", "Trt", "Int"), 
+             main="\n\n\nDifferentially Expressed Genes")
+ dev.off()
 ```
 
 ![Figura5_Diagrama_de_Venn](Figura5_Diagrama_de_Venn.png)
@@ -418,13 +418,15 @@ attr(,"class")
 
   Generación de Diagramas de Venn de los genes que responden al genotipo de manera dependiente del tratamiento y viceversa (el resultado se muestra en la Figura 6):
 ```R
-> png(file.path(outdir, "vennDiagram_Int.png"), width=6.5, height=3, unit="in", res=150)
-> par(mfrow=c(1,2), cex=.7)
-> vennDiagram(Counts.Int_Geno, names=c("I", "C"), 
-+             main="\n\n\nGenes Responding to Genotype\nin a Treatment Dependent Manner")
-> vennDiagram(Counts.Int_Trt, names=c("B", "BY"),
-+             main="\n\n\nGenes Responding to Treatment\nin a Genotype Dependent Manner")
-> dev.off()
+ png(file.path(outdir, "vennDiagram_Int.png"), width=6.5, height=3, unit="in", res=150)
+
+ par(mfrow=c(1,2), cex=.7)
+ vennDiagram(Counts.Int_Geno, names=c("I", "C"), 
+             main="\n\n\nGenes Responding to Genotype\nin a Treatment Dependent Manner")
+ vennDiagram(Counts.Int_Trt, names=c("B", "BY"),
+             main="\n\n\nGenes Responding to Treatment\nin a Genotype Dependent Manner")
+
+ dev.off()
 ```
 
 #### Interpretation de los Diagramas de Venn
@@ -436,7 +438,7 @@ attr(,"class")
 #### Pruebas funcionales
   Utilizaremos el paquete `topGO` para investigar si existen procesos biológicos enriquecidos en los genes seleccionados para los efectos de interacción Genotipo x Tratamiento. 
 ```R
-> library("topGO")
+ library("topGO")
 ```
   Las sondas no anotadas no se pueden usar para el análisis de enriquecimiento, así que las eliminaremos 
 ```R
@@ -460,20 +462,20 @@ genes.int <- as.factor(genes.int)
 ```
   Cree un objeto de datos de clase *topGO*, que contiene todo lo necesario para el enriquecimiento de las pruebas. 
 ```R
-> GOdata <- new("topGOdata", ontology="BP", allGenes=genes.int,
-+               description="Genes DE by Trt by GenoInteraction", nodeSize=5,
-+               annotationFun=annFUN.org, mapping="org.Mm.eg.db", ID="entrez")               
+ GOdata <- new("topGOdata", ontology="BP", allGenes=genes.int,
+               description="Genes DE by Trt by GenoInteraction", nodeSize=5,
+               annotationFun=annFUN.org, mapping="org.Mm.eg.db", ID="entrez")               
 ```
   Pruebe si existe enriquecimiento de términos GO utilizando una prueba exacta de Fisher.  Usaremos dos algoritmos, la prueba clásica de término por término y el algoritmo " elim " , que tiene en cuenta la jerarquía de los términos GO para evitar la redundancia.  Para obtener detalles sobre estas y otras pruebas disponibles en topGO, consulte la documentación del paquete y (Alexa et al. 2006) . 
 ```R
-> resultFisher.classic <- runTest(GOdata, algorithm = "classic", statistic = "fisher")
-> resultFisher.elim    <- runTest(GOdata, algorithm = "elim", statistic = "fisher")
+ resultFisher.classic <- runTest(GOdata, algorithm = "classic", statistic = "fisher")
+ resultFisher.elim    <- runTest(GOdata, algorithm = "elim", statistic = "fisher")
 
-> GO_BP_Table <- GenTable(GOdata, , topNodes = 20, Fisher.classic=resultFisher.classic, 
-+                         Fisher.elim=resultFisher.elim, 
-+                         orderBy = "Fisher.elim", ranksOf = "Fisher.classic")
+ GO_BP_Table <- GenTable(GOdata, , topNodes = 20, Fisher.classic=resultFisher.classic, 
+                         Fisher.elim=resultFisher.elim, 
+                         orderBy = "Fisher.elim", ranksOf = "Fisher.classic")
 
-> print(GO_BP_Table)
+ print(GO_BP_Table)
         GO.ID                                        Term Annotated Significant Expected
 1  GO:0001934 positive regulation of protein phosphory...        11           5     0.85
 2  GO:0030334                regulation of cell migration        23           7     1.79
@@ -500,8 +502,8 @@ genes.int <- as.factor(genes.int)
   Ahora e xporte la tabla completa de los principales términos del formato CSV de GO (puede abrirse en Excel o Calc OpenOffice ) . 
 
 ```R
-> write.table(GO_BP_Table, file.path(outdir, "GO_BP_Table.csv"), sep=",", 
-+  row.names=F)
+ write.table(GO_BP_Table, file.path(outdir, "GO_BP_Table.csv"), sep=",", 
+  row.names=F)
 ```
 
   ***¡Felicidades!***  Ha completado este tutorial.  Ahora puede usar el *script* de este tutorial como plantilla y modificarlo para el análisis de sus propios datos. 
