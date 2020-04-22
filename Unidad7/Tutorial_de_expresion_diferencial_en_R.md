@@ -83,13 +83,13 @@ Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran dispo
 ```
   Lea los datos en bruto, es decir, no normalizados y tal cual fueron generados.  Los archivos de Illumina contienen muchos tipos diferentes de datos.  Los valores de intensidad, es decir, un indicador de la expresión del gen, se encuentran en la columna *AVG_Signal* (promedio entre esferas).  La columna *Detection.Pval* contiene valores *p* para la detección de transcritos, que se utilizarán para determinar si un gen se expresa.
 ```R
- Data.Raw  <- read.delim("Illum_data_sample.txt")
+ Data.Raw  <- read.delim("../data/Illum_data_sample.txt")
  signal    <- grep("AVG_Signal", colnames(Data.Raw)) # vector de columnas con datos 
  detection <- grep("Detection.Pval", colnames(Data.Raw)) # vector de columnas con valores p  
 ```
   Importe las anotaciones de las sondas. 
 ```R
-annot     <- read.delim("MouseRef-8_annot.txt")
+annot     <- read.delim("../data/MouseRef-8_annot.txt")
 ```
   No todas las sondas muestran la misma calidad al ser alineadas contra el genoma de referencia.  Para obtener más información, consulte el documento ReMOAT (Barbosa-Morais et al. 2010) . 
 ```R
@@ -106,7 +106,7 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 ```
   Leer la tabla con el diseño de las hibridaciones. 
 ```R
- design <- read.csv("YChrom_design.csv")
+ design <- read.csv("../data/YChrom_design.csv")
  print(design)
    Array Sample_Name Sentrix_ID Sentrix_Position Genotype Treatment Group
 1      1  CDR017-DIL 4340571022                A        B         I   B.I
@@ -261,16 +261,16 @@ El siguiente código crea cuadros de caja de colores por tratamiento.  La  salid
 ```
   Podemos usar estos contrastes para calcular algunas razones (conocidas como *fold change* en inglés y abreviado por *FC*) que pueden ser de interés.  Calculemos el producto matricial de medias por grupo con la transpuesta de la matriz de contrastes. El resultado es una matriz de diferencias entre grupos en la escala logarítmica. 
 ```R
- logDiff  <- Means %*% t(cmat)
+ logDiffs  <- Means %*% t(cmat)
 ```
-  Transforme las diferencias de registro a la escala FC (la función `lofdiff2FC` está definida en Rfxs.R) . 
+  Transforme las diferencias de registro a la escala FC (la función `logdiff2FC` está definida en Rfxs.R) . 
 ```R
  FC <- apply(logDiffs, 2, logdiff2FC)
 ```
   Pruebe cada contraste utilizando 200 permutaciones de las muestras.  En una situación real se recomiendan al menos 1.000 permutaciones.  Las pruebas de *F* se realizarán utilizando una estimación de  varianza residual por sonda (*F1*) y una estimación basada en contracción de varianza residual que utiliza información de múltiples sondas (*Fs*) (Cui et al. 2005) . 
 ```R
  test.cmat <- matest(madata, fit.fix, term="Group", Contrast=cmat, n.perm=200, 
-+                     test.type = "ttest", shuffle.method="sample", verbose=TRUE)
+                     test.type = "ttest", shuffle.method="sample", verbose=TRUE)
 Doing F-test on observed data ...
 Doing permutation. This may take a long time ... 
 Finish permutation #  100 
