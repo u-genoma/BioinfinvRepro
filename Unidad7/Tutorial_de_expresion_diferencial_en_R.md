@@ -1,12 +1,4 @@
----
-Title		: Tutorial de análisis de expresión diferencial en R 
-Subtitle	: Unidad 6 - Análisis de Transcriptomas
-Project		: Curso de Bioinformática CL-MX  
-Author		: Ricardo Verdugo
-Affiliation	: Universidad de Chile
-Web			: genomed.med.uchile.cl
-Date		: 2019-05-01  
----
+
 # Tutorial de análisis de expresión diferencial en R
 
 ## Ricardo A. Verdugo
