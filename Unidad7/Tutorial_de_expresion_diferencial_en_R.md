@@ -78,15 +78,14 @@ Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran dispo
   Crear un directorio de salida , si no existe. 
 ```R
 > if(!file.exists(outdir)) {
-+  dir.create(outdir, mode = "0755", recursive=T)
-+ }
+  dir.create(outdir, mode = "0755", recursive=T)
+ }
 ```
   Lea los datos en bruto, es decir, no normalizados y tal cual fueron generados.  Los archivos de Illumina contienen muchos tipos diferentes de datos.  Los valores de intensidad, es decir, un indicador de la expresión del gen, se encuentran en la columna *AVG_Signal* (promedio entre esferas).  La columna *Detection.Pval* contiene valores *p* para la detección de transcritos, que se utilizarán para determinar si un gen se expresa.
 ```R
-> Data.Raw  <- read.delim("Illum_data_sample.txt")
-> signal    <- grep("AVG_Signal", colnames(Data.Raw)) # vector de columnas con datos 
-> detection <- grep("Detection.Pval", colnames(Data.Raw)) # vector de columnas con valores p 
-n.Pval", colnames (Data.Raw)) # 
+ Data.Raw  <- read.delim("Illum_data_sample.txt")
+ signal    <- grep("AVG_Signal", colnames(Data.Raw)) # vector de columnas con datos 
+ detection <- grep("Detection.Pval", colnames(Data.Raw)) # vector de columnas con valores p  
 ```
   Importe las anotaciones de las sondas. 
 ```R
@@ -132,28 +131,32 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 #### Control de calidad
   Crea gráicos de cajas coloreados por la calidad de la sonda.  La salida está en la Figura 2. 
 ```R
-> palette(rainbow(4))
-> alabel <- sprintf("Array%02i", 1:length(signal))
-> afact  <- factor(rep(alabel, each=nrow(Data.Raw)))
-> qcfact <- factor(rep(probe_qc, length(signal)))
-> png(file.path(outdir,"boxplot_raw_probe_qc.png"), width=6.5, height=4, unit="in", res=150)
-+  par(xpd=NA, mar= c(6.1, 5.1, 4.1, 2.1), cex=.7, las=3)
-+  boxplot(unlist(log2(Data.Raw[,signal]))~qcfact+afact, horiz=T, main="Raw log2 values Boxplot",
-+          col=rep(1:2, length(signal)), axes=F, varwidth=TRUE)
-+  axis(1, at=seq(1, length(signal)*2, by=2)+.5, labels=alabel)
-+  axis(2)
-+  legend("top", legend=levels(qcfact), fill=1:2, ncol=2, xjust=.5, bty="n", inset=-.1)
-> dev.off()
+ palette(rainbow(4))
+ alabel <- sprintf("Array%02i", 1:length(signal))
+ afact  <- factor(rep(alabel, each=nrow(Data.Raw)))
+ qcfact <- factor(rep(probe_qc, length(signal)))
+ png(file.path(outdir,"boxplot_raw_probe_qc.png"), width=6.5, height=4, unit="in", res=150)
+
+  par(xpd=NA, mar= c(6.1, 5.1, 4.1, 2.1), cex=.7, las=3)
+  boxplot(unlist(log2(Data.Raw[,signal]))~qcfact+afact, horiz=T, main="Raw log2 values Boxplot",
+          col=rep(1:2, length(signal)), axes=F, varwidth=TRUE)
+  axis(1, at=seq(1, length(signal)*2, by=2)+.5, labels=alabel)
+  axis(2)
+  legend("top", legend=levels(qcfact), fill=1:2, ncol=2, xjust=.5, bty="n", inset=-.1)
+
+ dev.off()
 ```
 
   Crea cuadros de caja de colores por tratamiento.  La  salida se muestra en la Figura 3. La posición de las matrices, desde A a  H, se muestra en el eje x porque las matrices de Illumina pueden tener  un efecto de posición, con una mayor intensidad en las primeras  posiciones y una más baja en las últimas (Verdugo et al. 2009) .  Este fue el caso en este experimento, aunque el efecto no es obvio en el subconjunto de 5000 sondas utilizadas en este tutorial. 
 
 ```R
-> png(file.path(outdir,"boxplot_raw_treatment.png"), width=4, height=4, unit="in", res=150)
-> par(xpd=NA, mar= c(6.1, 4.1, 4.1, 2.1), cex=.7)
-> boxplot(as.data.frame(log2(Data.Raw[,signal])), horiz=T, main="Raw log2 values Boxplot", las=1, col=design$Treatment, names=design$Sentrix_Position, cex.axis=.9)
-> legend(8, 2.5, legend=levels(design$Treatment), fill=1:2, ncol=2, xjust=.5)
-> dev.off()
+ png(file.path(outdir,"boxplot_raw_treatment.png"), width=4, height=4, unit="in", res=150)
+
+ par(xpd=NA, mar= c(6.1, 4.1, 4.1, 2.1), cex=.7)
+ boxplot(as.data.frame(log2(Data.Raw[,signal])), horiz=T, main="Raw log2 values Boxplot", las=1, col=design$Treatment, names=design$Sentrix_Position, cex.axis=.9)
+ legend(8, 2.5, legend=levels(design$Treatment), fill=1:2, ncol=2, xjust=.5)
+
+ dev.off()
 ```
 
 ![Figura2_Datos_brutos](Figura2_Datos_brutos.png)
@@ -165,34 +168,34 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 
   Cree diagramas de dispersión de datos sin procesar en escala log2.  Salida no mostrada. 
 ```R
-> png(file.path(outdir,"Pairs_scatter_log2.png"), width=8, height=8, unit="in", res=150)
-> par(cex=.2, mar=c(2.1,2.1,2.1,1.1))
-> pairs(log2(Data.Raw[,signal]), main="Log2 Raw Intensity Values", pch=".",  gap=.5, cex.labels=.5)
-> dev.off()
+ png(file.path(outdir,"Pairs_scatter_log2.png"), width=8, height=8, unit="in", res=150)
+ par(cex=.2, mar=c(2.1,2.1,2.1,1.1))
+ pairs(log2(Data.Raw[,signal]), main="Log2 Raw Intensity Values", pch=".",  gap=.5, cex.labels=.5)
+ dev.off()
 ```
 
 #### Filtrado de la sonda por QC
 
   Las sondas de mala calidad tienden a tener una señal más baja que las sondas buenas. Por lo tanto se recomienda para eliminarlas. Hay 4706 sondas que permanecen después de este paso. 
 ```R
-> Data.Raw <- Data.Raw[probe_qc %in% "Good probes",]
-> annot    <- annot[probe_qc %in% "Good probes",]
+ Data.Raw <- Data.Raw[probe_qc %in% "Good probes",]
+ annot    <- annot[probe_qc %in% "Good probes",]
 ```
   Crear un microarreglo de datos brutos. 
 ```R
-> rawdata           <- as.matrix(Data.Raw[,signal])
-> rownames(rawdata) <- Data.Raw$PROBE_ID
-> colnames(rawdata) <- design$Sample_Name
+ rawdata           <- as.matrix(Data.Raw[,signal])
+ rownames(rawdata) <- Data.Raw$PROBE_ID
+ colnames(rawdata) <- design$Sample_Name
 ```
 
 #### Normalización de datos
 
   Cargue el paquete `preprocessCore` con funciones de normalización y aplique una normalización de *cuantiles* (hay otros métodos disponibles este y otros  paquetes como affy). 
 ```R
-> library(preprocessCore)
-> normdata           <- normalize.quantiles(rawdata) 
-> colnames(normdata) <- colnames(rawdata)
-> rownames(normdata) <- rownames(rawdata)
+ library(preprocessCore)
+ normdata           <- normalize.quantiles(rawdata) 
+ colnames(normdata) <- colnames(rawdata)
+ rownames(normdata) <- rownames(rawdata)
 ```
 #### Filtrado de sondas
 
@@ -200,45 +203,45 @@ annot     <- read.delim("MouseRef-8_annot.txt")
 
   Crear una matriz de valores lógicos, T / F, usando las probabilidades de detección calculadas por BeadStudio (software Illumina para la extracción de características desde las imágenes). Cuente el número de valores T por nivel de `Group` y seleccione una sonda si el recuento es ≥ 2 (correspodiente 50% de las réplicas en este caso) en cualquier grupo experimental.  Luego aplique el vector de filtrado a las matrices de datos y de anotaciones. 
 ```R
-> probe_present      <- Data.Raw[,detection] < 0.04
-> detected_per_group <- t(apply(probe_present, 1, tapply, design$Group, sum))
-> present  <- apply(detected_per_group >= 2, 1, any)
-> normdata <- normdata[present,]
-> annot    <- annot[present, ]
+ probe_present      <- Data.Raw[,detection] < 0.04
+ detected_per_group <- t(apply(probe_present, 1, tapply, design$Group, sum))
+ present  <- apply(detected_per_group >= 2, 1, any)
+ normdata <- normdata[present,]
+ annot    <- annot[present, ]
 ```
 
 #### Prueba de expresión diferencial
 
   Cargue el paquete MAanova y cree un objeto de clase `madata` que solo incluye sondas que detectaron transcritos. Este objeto almacena tanto la matriz de datos como de tabla de diseño.
 ```R
-> library(maanova)
-> madata <- read.madata(normdata, design, log.trans=T)
+ library(maanova)
+ madata <- read.madata(normdata, design, log.trans=T)
 ```
   Ajustar el modelo. 
 ```R
-> fit.fix <- fitmaanova(madata, formula=~Group)
+ fit.fix <- fitmaanova(madata, formula=~Group)
 ```
   Estime algunas estadísticos básicos para cada grupo experimental para ser incluidas en la tabla final de los resultados. 
 ```R
-> Means           <- t(apply(madata$data, 1, tapply, design$Group, mean)) 
-> colnames(Means) <- paste("Mean", colnames(Means), sep=":")
-> SEs             <- t(apply(madata$data, 1, tapply, design$Group, function(x) sqrt(var(x)/length(x))))
-> colnames(SEs)   <- paste("SE", colnames(SEs), sep=":")
+ Means           <- t(apply(madata$data, 1, tapply, design$Group, mean)) 
+ colnames(Means) <- paste("Mean", colnames(Means), sep=":")
+ SEs             <- t(apply(madata$data, 1, tapply, design$Group, function(x) sqrt(var(x)/length(x))))
+ colnames(SEs)   <- paste("SE", colnames(SEs), sep=":")
 ```
 
 #### Construya una matriz de contrastes de interés
 
   Dado que este estudio utilizó un diseño factorial, es posible hacer diferentes preguntas a partir de los datos.  Cada pregunta puede ser puesta a prueba por una contraste entre grupos experimentales.  La función `matest` del paquete R/MAanova puede  utilizar una matriz de contrastes y evaluar si esas comparaciones explican una proporción significativa de la varianza en los datos de expresión.  Definamos algunos términos para simplificar la nomenclatura. 
 
-  Término     | Descripción 
-          ---|:---
-  Geno                | genotipo 
-  Trt                     | tratamiento 
-  Int                     | interacción genotipo x tratamiento 
-  Geno_I              | efecto genotipo en animales intactos (no castrados)
-  Geno_C            |  efecto genotipo en animales castrados
-  Trt_B                 |  efecto del tratamiento en el genotipo B 
-  Trt_BY               | efecto del tratamiento en el genotipo BY 
+|  Término     | Descripción| 
+|--------------|:-------------:|
+|  Geno        |        | genotipo| 
+| Trt                     | tratamiento| 
+| Int                     | interacción genotipo x tratamiento| 
+| Geno_I              | efecto genotipo en animales intactos (no castrados)|
+| Geno_C            |  efecto genotipo en animales castrados|
+| Trt_B                 |  efecto del tratamiento en el genotipo B| 
+| Trt_BY               | efecto del tratamiento en el genotipo BY |
 
   Los  contrastes son vectores de coeficientes que cuando se multiplican con un vector de promedios por grupo experimental, crean contrastes que pueden evaluarse estadísticamente.  Para crear los vectores de coeficientes de contraste, asuma que los grupos experimentales están ordenados alfabéticamente.
 
