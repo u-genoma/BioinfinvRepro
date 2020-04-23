@@ -312,7 +312,7 @@ Finish permutation #  200
 ![Figura4_Densidad_valoresP](Figura4_Densidad_valoresP.png)
   **Figura 4**. Densidad de la distribución de los valores de *p*. Ptab: tabular, Pvalperm: permutación, F1: prueba de *F* convencional, Fs: prueba de *F* con contracción de la varianza usando información de múltiples sondas (técnica para aumentar el poder de la prueba). 
 
-  Resuma en una tabla los resultados para todas los transcriptos presentes.  Exportaremos solo los resultados de las pruebas `Fs` y los vapores `Pvalperm` de permutaciones.
+  Resuma en una tabla los resultados para todas los transcriptos presentes.  Exportaremos solo los resultados de las pruebas `Fs` y los valores `Pvalperm` de permutaciones.
 ```R
  results <- data.frame(annot, Means, SEs, F_val=test.cmat$Fs$Fobs,
                        P_val=test.cmat$Fs$Pvalperm, FDR=test.cmat$Fs$adjPvalperm, FC=FC)
