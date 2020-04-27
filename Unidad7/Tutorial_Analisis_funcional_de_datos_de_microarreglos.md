@@ -1,12 +1,12 @@
-## Analisis funcional de datos de microarreglos
+Analisis funcional de datos de microarreglos
 
-### Ricardo Verdugo
+Ricardo Verdugo
 
-#### Datos
+Datos
 
-Para este tutorial, utilizaremos la matriz datos normalizados que generamos en el tutorial [Análisis de expresión diferencial en R](Tutorial_de_expresion_diferencial_en_R.md)
+Para este tutorial, utilizaremos la matriz datos normalizados que generamos en el tutorial Análisis de expresión diferencial en R
 
-En el tutorial pasado, generamos un objeto `normdata`. Vaya la carpeta `DE_tutorial`, vuelva a importar los datos y normalizarlos. Una vez generada la matrix de datos, expórtela como un archivo plano separado por tabulaciones.
+En el tutorial pasado, generamos un objeto normdata. Vaya la carpeta DE_tutorial, vuelva a importar los datos y normalizarlos. Una vez generada la matrix de datos, expórtela como un archivo plano separado por tabulaciones.
 
 ```R
 outdir     <- "output"
@@ -50,27 +50,27 @@ write.table(file.path(outdir, "normdata.txt", sep="\t", row.names=T))
 
 Luego cree una nueva carpeta para este tutorial e inicie una sesión de R usado esa capeta como directorio de trabajo.
 
+```R
 Importe los datos
 
-```R
 mydata <- read.delim("normdata.txt", as.is=T)
-```
+Cambie los nombres de las columnas para que sea más fácil identificar el grupo experimental en los siguientes gráficos.
 
-Cambie los nombres de las columnas para que sea más fácil identificar el grupo experimental en los siguientes gráficos. 
-
-```R
 design <- read.csv("~/DE_tutorial/YChrom_design.csv")
 colnames(mydata) <- design$Group
 ```
 
-#### Tutorial
-Este tutorial está basado en el [Cluster Analysis, Quick-R, DataCamp](https://www.statmethods.net/advstats/cluster.html).
+Tutorial
 
-##### Preparar los datos
-mydata <- na.omit (mydata) # eliminación en forma de lista de faltantes
-mydata <- scale (mydata) # estandarizar variables
+Este tutorial está basado en el Cluster Analysis, Quick-R, DataCamp.
 
-##### Particionamiento (*Clustering*)
+```R
+Preparar los datos
+
+mydata <- na.omit (mydata) # eliminación en forma de lista de faltantes mydata <- scale (mydata) # estandarizar variables
+```
+
+Particionamiento (Clustering)
 
 K-means clustering es el método de partición más popular. Requiere que el analista especifique la cantidad de clusters que extraer. Una gráfica de la suma de cuadrados dentro de los grupos por número de grupos extraídos puede ayudar a determinar el número apropiado de grupos. El analista busca una curva en la gráfica similar a una prueba de evaluación en el análisis factorial. Ver Everitt y Hothorn (pág. 251).
 
@@ -88,13 +88,14 @@ fit <- kmeans(mydata, 5) # 5 cluster solution
 aggregate(mydata,by=list(fit$cluster),FUN=mean)
 # append cluster assignment
 mydata <- data.frame(mydata, fit$cluster) 
+
 ```
-Se puede invocar una versión robusta de K-means basada en mediods usando pam () en lugar de kmeans (). La función pamk () en el paquete fpc es una envoltura para pam que también imprime el número sugerido de grupos en función del ancho de silueta promedio óptimo.
-Aglomerante jerárquico
+Se puede invocar una versión robusta de K-means basada en mediods usando pam () en lugar de kmeans (). La función pamk () en el paquete fpc es una envoltura para pam que también imprime el número sugerido de grupos en función del ancho de silueta promedio óptimo. Aglomerante jerárquico
 
 Hay una amplia gama de enfoques de agrupamiento jerárquico. He tenido buena suerte con el método de Ward que se describe a continuación.
 
-##### Clúster jerárquico
+Clúster jerárquico
+
 ```R
 d <- dist(mydata, method = "euclidean") # distance matrix
 fit <- hclust(d, method="single")
@@ -116,18 +117,23 @@ fit <- pvclust(mydata, method.hclust="single",
 plot(fit) # dendograma con valores p
 # agregar rectángulos alrededor de grupos altamente soportados por los datos
 pvrect(fit, alpha=.95) 
-
 ```
-##### Particionamiento basado en un modelo
+
+Particionamiento basado en un modelo
+
 Los enfoques basados en modelos asumen una variedad de modelos de datos y aplican la estimación de máxima probabilidad y los criterios de Bayes para identificar el modelo más probable y el número de conglomerados. Específicamente, la función Mclust () en el paquete mclust selecciona el modelo óptimo de acuerdo con BIC para EM inicializado por agrupación jerárquica para modelos de mezcla Gaussianos parametrizados. (¡Uf!). Uno elige el modelo y la cantidad de conglomerados con el BIC más grande. Consulte la ayuda (mclustModelNames) para obtener detalles sobre el modelo elegido como el mejor.
+
 ```R
 library(mclust)
 fit <- Mclust(mydata)
 plot(fit) # graficar resultados
 summary(fit) # muestra el mejor modelo
 ```
-##### Generacion de gráficos para el resultados del particionamiento
+
+Generación de gráficos para el resultados del particionamiento
+
 Siempre es una buena idea mirar los resultados del particionamiento resultante.
+
 ```R
 # Particionamiento K-means con 5 agrupamientos
 fit <- kmeans (mydata, 5)
@@ -138,15 +144,19 @@ fit <- kmeans (mydata, 5)
 library(cluster)
 clusplot(mydata, fit$cluster, color=TRUE, shade=TRUE,
    labels=2, lines=0)
+
 ```
+Tarea
 
-### Tarea
+Usando el set de datos normalizados de la tarea de expresión diferencial (con los 5000 sondas seleccionadas por usted), y seleccionados por expresión diferencial para cualquiera de los contrastes:
 
-Usando el set de datos normalizados de la [tarea de expresión diferencial](Unidad7_Analisis_de_Transcriptomas.md) (con los 5000 sondas seleccionadas por usted), y seleccionados por expresión diferencial para cualquiera de los contrastes:
+Realice un particionamiento jerárquico de sus muestras con la medida de distancia euclideana
+Realice un particionamiento jerárquico de sus sondas usando el complemento de la correlación de pearson como la medida de distancia.
+Genere gráficos de suma de cuadrados para sondas y para muestras
+Basándose en los gráficos de sumas de cuadrados, elija el k más apropiado en su criterio para sondas y para muestras
+Agregue rectángulos a los particionamiento jerárquicos (nota, en su informe puede mostrar solo el arbolo final, con los rectángulos).
+Guarde su trabajo como un informe en formato Markdown.
 
-1. Realice un particionamiento jerárquico de sus **muestras** con la medida de distancia euclideana
-2. Realice un particionamiento jerárquico de sus **sondas** usando el complemento de la correlación de pearson como la medida de distancia.
-3. Genere gráficos de suma de cuadrados para sondas y para muestras
-4. Basándose en los gráficos de sumas de cuadrados, elija el *k* más apropiado en su criterio para sondas y para muestras
-5. Agregue rectángulos a los particionamiento jerárquicos (nota, en su informe puede mostrar solo el arbolo final, con los rectángulos).
-6. Guarde su trabajo como un informe en formato Markdown.
+
+
+
