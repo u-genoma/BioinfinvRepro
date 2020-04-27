@@ -45,7 +45,7 @@ present  <- apply(detected_per_group >= 2, 1, any)
 normdata <- normdata[present,]
 annot    <- annot[present, ]
 
-write.table(file.path(outdir, "normdata.txt", sep="\t", row.names=T))
+write.table(normdata, file.path(outdir, "normdata.txt"), sep="\t", row.names=T)
 ```
 
 Luego cree una nueva carpeta para este tutorial e inicie una sesión de R usado esa capeta como directorio de trabajo.
