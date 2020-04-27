@@ -53,7 +53,7 @@ Luego cree una nueva carpeta para este tutorial e inicie una sesión de R usado 
 ```R
 ## Importe los datos
 
-mydata <- read.delim("normdata.txt", as.is=T)
+mydata <- read.delim("../output/normdata.txt", as.is=T)
 Cambie los nombres de las columnas para que sea más fácil identificar el grupo experimental en los siguientes gráficos.
 
 design <- read.csv("../data/YChrom_design.csv")
