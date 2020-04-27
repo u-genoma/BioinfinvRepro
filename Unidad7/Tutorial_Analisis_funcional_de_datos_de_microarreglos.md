@@ -99,7 +99,7 @@ Hay una amplia gama de enfoques de agrupamiento jerárquico. He tenido buena sue
 ### Clúster jerárquico
 
 ```R
-d <- dist(mydata, method = "euclidean") # distance matrix
+d <- dist(t(mydata), method = "euclidean") # distance matrix
 fit <- hclust(d, method="ward.D")
 plot(fit, hang = -1, cex = 0.3) # display dendogram
 groups <- cutree(fit, k=5) # cut tree into 5 clusters
@@ -117,7 +117,7 @@ library(pvclust)
 
 # Al representar un objeto pvclust se obtiene el dendrograma con los valores de
 # AU-pvalue en rojo y BP-values en verde
-fit <- pvclust(mydata, method.hclust="ward.D",
+fit <- pvclust(t(mydata), method.hclust="ward.D",
    method.dist="euclidean")
 plot(fit) # dendograma con valores p
 # agregar rectángulos alrededor de grupos altamente soportados por los datos
@@ -155,14 +155,14 @@ clusplot(mydata, fit$cluster, color=TRUE, shade=TRUE,
 ```
 ## Tarea
 
-Usando el set de datos normalizados de la tarea de expresión diferencial (con los 5000 sondas seleccionadas por usted), y seleccionados por expresión diferencial para cualquiera de los contrastes:
+Usando los genes seleccionados por expresión diferencial obtenidos:
 
-Realice un particionamiento jerárquico de sus muestras con la medida de distancia euclideana
-Realice un particionamiento jerárquico de sus sondas usando el complemento de la correlación de pearson como la medida de distancia.
-Genere gráficos de suma de cuadrados para sondas y para muestras
-Basándose en los gráficos de sumas de cuadrados, elija el k más apropiado en su criterio para sondas y para muestras
-Agregue rectángulos a los particionamiento jerárquicos (nota, en su informe puede mostrar solo el arbolo final, con los rectángulos).
-Guarde su trabajo como un informe en formato Markdown.
+* Realice un particionamiento jerárquico de sus muestras con la medida de distancia euclideana
+* Realice un particionamiento jerárquico de sus sondas usando el complemento de la correlación de pearson como la medida de distancia.
+* Genere gráficos de suma de cuadrados para sondas y para muestras
+* Basándose en los gráficos de sumas de cuadrados, elija el k más apropiado en su criterio para sondas y para muestras
+*Agregue rectángulos a los particionamiento jerárquicos (nota, en su informe puede mostrar solo el arbolo final, con los rectángulos).
+Guarde su trabajo como un informe en formato pdf.
 
 
 
