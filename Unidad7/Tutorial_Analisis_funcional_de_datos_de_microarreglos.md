@@ -74,7 +74,7 @@ mydata <- na.omit (mydata) # eliminación en forma de lista de faltantes mydata 
 
 ## Particionamiento (Clustering)
 
-K-means clustering es el método de partición más popular. Requiere que el analista especifique la cantidad de clusters que extraer. Una gráfica de la suma de cuadrados dentro de los grupos por número de grupos extraídos puede ayudar a determinar el número apropiado de grupos. El analista busca una curva en la gráfica similar a una prueba de evaluación en el análisis factorial. Ver Everitt y Hothorn (pág. 251).
+K-means clustering es el método de partición más popular. Requiere que el analista especifique la cantidad de clusters que desea extraer. Una gráfica de la suma de cuadrados dentro de los grupos por número de grupos extraídos puede ayudar a determinar el número apropiado de grupos. El analista busca una curva en la gráfica similar a una prueba de evaluación en el análisis factorial. Ver Everitt y Hothorn (pág. 251).
 
 ```R
 # Determinar el número de grupos
