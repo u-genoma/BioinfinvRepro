@@ -64,7 +64,7 @@ colnames(mydata) <- design$Group
 
 ## Tutorial
 
-Este tutorial está basado en el Cluster Analysis, Quick-R, DataCamp.
+Este tutorial está basado en el [Cluster Analysis, Quick-R, DataCamp](https://www.statmethods.net/advstats/cluster.html).
 
 ```R
 Preparar los datos
