@@ -100,7 +100,7 @@ Hay una amplia gama de enfoques de agrupamiento jerárquico. He tenido buena sue
 
 ```R
 d <- dist(mydata, method = "euclidean") # distance matrix
-fit <- hclust(d, method="single")
+fit <- hclust(d, method="ward.D")
 plot(fit, hang = -1, cex = 0.3) # display dendogram
 groups <- cutree(fit, k=5) # cut tree into 5 clusters
 # draw dendogram with red borders around the 5 clusters
