@@ -85,11 +85,17 @@ plot(1:15, wss, type="b", xlab="Number of Clusters",
   ylab="Within groups sum of squares") 
 
 # K-Means Cluster Analysis
+
 fit <- kmeans(mydata, 5) # 5 cluster solution
 # get cluster means
 aggregate(mydata,by=list(fit$cluster),FUN=mean)
+
 # append cluster assignment
+library(factoextra)
+fviz_cluster(fit, data = mydata)
+
 mydata <- data.frame(mydata, fit$cluster) 
+
 
 ```
 Se puede invocar una versión robusta de K-means basada en mediods usando pam () en lugar de kmeans (). La función pamk () en el paquete fpc es una envoltura para pam que también imprime el número sugerido de grupos en función del ancho de silueta promedio óptimo. Aglomerante jerárquico
