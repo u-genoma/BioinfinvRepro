@@ -108,14 +108,21 @@ rect.hclust(fit, k=5, border="red")
 ```
 
 La función pvclust () en el paquete pvclust proporciona valores p para el agrupamiento jerárquico basado en el remuestreo bootstrap multiescala. Los clusters que son altamente compatibles con los datos tendrán valores p grandes. Tenga en cuenta que pvclust agrupa columnas, no filas. Transponer sus datos antes de usar.
+La idea detrás de esta estrategia es emplear bootstrap-resampling para simular pseudo-muestras con las que se repete el clustering. Luego se evalúa la frecuencia con la que se repite cada cluster.
+El paquete pvclust automatiza este proceso para el caso particular de hierarchical clustering, calculando dos tipos de p-value: AU (Approximately Unbiased) p-value y BP (Bootstrap Probability) value, siendo el primero la opción recomendada por los creadores del paquete. Clusters con un valor de AU igual o por encima del 95% tienen fiabilidad muy alta. Se trata de un método que requiere muchos recursos computacionales ya que, para conseguir buena precisión, se necesitan al menos 1000 simulaciones. El paquete incluye la posibilidad de recurrir a computación paralela para reducir el tiempo de computación. 
 
 ```R
 # Particionamiento jerárquico con valores p a partir de Bootstraps
 library(pvclust)
+
+# Al representar un objeto pvclust se obtiene el dendrograma con los valores de
+# AU-pvalue en rojo y BP-values en verde
 fit <- pvclust(mydata, method.hclust="ward.D",
    method.dist="euclidean")
 plot(fit) # dendograma con valores p
 # agregar rectángulos alrededor de grupos altamente soportados por los datos
+# Con la función pvrect() se encuadran aquellos clusters significativos para una
+# confianza del 95%.
 pvrect(fit, alpha=.95) 
 ```
 
