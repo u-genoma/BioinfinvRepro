@@ -107,14 +107,14 @@ groups <- cutree(fit, k=5) # cut tree into 5 clusters
 rect.hclust(fit, k=5, border="red") 
 ```
 
-La función pvclust () en el paquete pvclust proporciona valores p para el agrupamiento jerárquico basado en el remuestreo bootstrap multiescala. Los clusters que son altamente compatibles con los datos tendrán valores p grandes. Detalles de la interpretación se proporcionan Suzuki. Tenga en cuenta que pvclust agrupa columnas, no filas. Transponer sus datos antes de usar.
+La función pvclust () en el paquete pvclust proporciona valores p para el agrupamiento jerárquico basado en el remuestreo bootstrap multiescala. Los clusters que son altamente compatibles con los datos tendrán valores p grandes. Tenga en cuenta que pvclust agrupa columnas, no filas. Transponer sus datos antes de usar.
 
 La función pvclust () en el paquete pvclust proporciona valores p para el agrupamiento jerárquico basado en el remuestreo bootstrap multiescala. Los clusters que son altamente compatibles con los datos tendrán valores p grandes. Detalles de la interpretación se proporcionan Suzuki. Tenga en cuenta que pvclust agrupa columnas, no filas. Transponer sus datos antes de usar.
 
 ```R
 # Particionamiento jerárquico con valores p a partir de Bootstraps
 library(pvclust)
-fit <- pvclust(mydata, method.hclust="single",
+fit <- pvclust(mydata, method.hclust="ward.D",
    method.dist="euclidean")
 plot(fit) # dendograma con valores p
 # agregar rectángulos alrededor de grupos altamente soportados por los datos
@@ -148,7 +148,7 @@ clusplot(mydata, fit$cluster, color=TRUE, shade=TRUE,
    labels=2, lines=0)
 
 ```
-Tarea
+## Tarea
 
 Usando el set de datos normalizados de la tarea de expresión diferencial (con los 5000 sondas seleccionadas por usted), y seleccionados por expresión diferencial para cualquiera de los contrastes:
 
