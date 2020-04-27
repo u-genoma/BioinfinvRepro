@@ -1,8 +1,8 @@
-Analisis funcional de datos de microarreglos
+# Analisis funcional de datos de microarreglos
 
-Ricardo Verdugo
+Ricardo Verdugo y Karen Oróstica
 
-Datos
+## Datos
 
 Para este tutorial, utilizaremos la matriz datos normalizados que generamos en el tutorial Análisis de expresión diferencial en R
 
@@ -51,7 +51,7 @@ write.table(file.path(outdir, "normdata.txt", sep="\t", row.names=T))
 Luego cree una nueva carpeta para este tutorial e inicie una sesión de R usado esa capeta como directorio de trabajo.
 
 ```R
-Importe los datos
+## Importe los datos
 
 mydata <- read.delim("normdata.txt", as.is=T)
 Cambie los nombres de las columnas para que sea más fácil identificar el grupo experimental en los siguientes gráficos.
@@ -60,7 +60,7 @@ design <- read.csv("~/DE_tutorial/YChrom_design.csv")
 colnames(mydata) <- design$Group
 ```
 
-Tutorial
+## Tutorial
 
 Este tutorial está basado en el Cluster Analysis, Quick-R, DataCamp.
 
@@ -70,7 +70,7 @@ Preparar los datos
 mydata <- na.omit (mydata) # eliminación en forma de lista de faltantes mydata <- scale (mydata) # estandarizar variables
 ```
 
-Particionamiento (Clustering)
+## Particionamiento (Clustering)
 
 K-means clustering es el método de partición más popular. Requiere que el analista especifique la cantidad de clusters que extraer. Una gráfica de la suma de cuadrados dentro de los grupos por número de grupos extraídos puede ayudar a determinar el número apropiado de grupos. El analista busca una curva en la gráfica similar a una prueba de evaluación en el análisis factorial. Ver Everitt y Hothorn (pág. 251).
 
@@ -94,7 +94,7 @@ Se puede invocar una versión robusta de K-means basada en mediods usando pam ()
 
 Hay una amplia gama de enfoques de agrupamiento jerárquico. He tenido buena suerte con el método de Ward que se describe a continuación.
 
-Clúster jerárquico
+### Clúster jerárquico
 
 ```R
 d <- dist(mydata, method = "euclidean") # distance matrix
@@ -119,7 +119,7 @@ plot(fit) # dendograma con valores p
 pvrect(fit, alpha=.95) 
 ```
 
-Particionamiento basado en un modelo
+### Particionamiento basado en un modelo
 
 Los enfoques basados en modelos asumen una variedad de modelos de datos y aplican la estimación de máxima probabilidad y los criterios de Bayes para identificar el modelo más probable y el número de conglomerados. Específicamente, la función Mclust () en el paquete mclust selecciona el modelo óptimo de acuerdo con BIC para EM inicializado por agrupación jerárquica para modelos de mezcla Gaussianos parametrizados. (¡Uf!). Uno elige el modelo y la cantidad de conglomerados con el BIC más grande. Consulte la ayuda (mclustModelNames) para obtener detalles sobre el modelo elegido como el mejor.
 
@@ -130,7 +130,7 @@ plot(fit) # graficar resultados
 summary(fit) # muestra el mejor modelo
 ```
 
-Generación de gráficos para el resultados del particionamiento
+### Generación de gráficos para el resultados del particionamiento
 
 Siempre es una buena idea mirar los resultados del particionamiento resultante.
 
