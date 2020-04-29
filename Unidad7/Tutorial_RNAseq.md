@@ -43,8 +43,8 @@ La carpeta ‘common’ a su vez, contiene tres carpetas almacenando los inputs 
 Cada estudiante debe, como paso inicial de este tutorial, ubicarse en el directorio principal y, desde ahí, entrar a su carpeta de usuario (ej: raverdugo), ingresar a ella y crear una nueva carpeta que se llamará ‘Tarea7.3/code’, desde donde se ejecutarán el resto de las instrucciones.
 ```sh
 cd <mi usuario>
-mkdir -p Tarea7.3/code
-cd Tarea7.3/code
+mkdir -p RNA_seq/code
+cd RNA_seq/code
 ```
 
 
@@ -300,3 +300,14 @@ write.table(x=results_culture, file=file.path(output_table, "table_de_genes_cult
 #Genotipo
 write.table(x=results_genotype, file=file.path(output_table, "table_de_genes_genotype.csv"), quote=F, sep="\t", dec=".", row.names=T, col.names=T)
 ```
+
+## Tarea
+
+Realizar desde el punto 8 en adelante. 
+Entregar un informe en Rmarkdown con la siguiente estructura:
+* Introducción
+* Métodos (incluir códigos)
+* resultados y discusión (incluir de forma automatica las figuras de los códigos en R)
+* Conclusiones
+
+
