@@ -39,3 +39,55 @@ En resumen, uno de los ventajas de la meta-genómica y la meta-transcriptomica s
 
 
 ## 3. Meta-barcoding
+
+El código de barras de DNA es un método que utiliza una región corta del DNA (gen o no-codificante) para identificar especies. Por comparación con una **biblioteca de secuencias** de referencia, se puede identificar la secuencia de un individuo de la misma forma que un escáner del supermercado.
+
+Códigos de barras más comúnmente utilizadas para animales (y algunos protistas) es una porción del gen mitocondrial del citocromo c (COI o COX1). Esos estudios son muy controvertidos en plantas, dando que no se ha encontrado un código de barra universal. Por lo tanto se usa regiones tanto del DNA cloroplasto (rbcL, matK) o nuclear (RuBisCO, ITS2).
+
+Los microorganismos se detectan utilizando diferentes regiones de genes. El gen 16S rDNA se usa ampliamente en la identificación de procariotas, mientras que el gen 18S rDNA se usa principalmente para detectar eucariotas microbianos. En el caso de hongos, el código de barras universal es la region no-codificante de ITS rDNA (ITS1 o ITS2), pero para ciertos grupos se necesita otras regiones como 18S rDNA (hongos micorrízicos arbusculares) o 28S rDNA (Ophiostomatales). Estas regiones se eligieron por ser faciles de amplificar en un rango amplio de especies, y tener una variación intraespecífica menor a la variación interespecífica, lo que se conoce como **barcoding gap**. El procentage de similitud usado para delimitar especies de micro-organismos está definido a *97%*, aunque ese porcentaje puede variar entre diferentes grupos. 
+
+![barcoding_gap](https://github.com/u-genoma/BioinfinvRepro/blob/master/Unidad8/Metagenomica/barcoding_gap.png)
+
+Cuando se usa códigos de barras para identificar organismos dentro de una muestra que contiene el DNA de más de un organismo, se habla de **meta-barcoding**. Esos taxones se definen basándose en el *barcoding gap* (en general con 97% de similitud), por lo cual se identifican como **operational taxonomic units** (OTUs) que pueden ser aproximados como “especies”.  
+
+Estudios de meta-barcoding se han multiplicado en un esfuerzo por identificar la diversidad de especies de un ambito particular (suelo, agua) o en partes de un organismo (***microbioma*** de las hojas, del estomago de animales, etc). Han permitido el descubrimiento de muchas especies desconocidas y de patrones ecológicos fundamentales para los ecosistemas. Sin embargo existen varios siesgos metodólogicos que hay que tener en cuenta para tener estimaciones robustas de diversidad.
+
+
+### PCR
+Para poder secuenciar el código de barra de todos los organismos presentes dentro de una muestra es necesario amplificarlo por PCR. Por lo tanto, no existen *primers* que funcionan para todos los micro-organismos (como es el caso de la meta-genómica), por lo cual los procariontes y eucariontes se tienen que analizar de manera separada. 
+
+Adentro de los diferentes reinos de eucariontes, ciertos primers tienen más afinidades para ciertos grupos y menos (o no funcionan en absoluto) para otros, por lo cual esos grupos serán más dificiles de detectar. Por ejemplo, muchos hongos micorrízicos arbusculares (sub-phylum Glomeromycotina) no se pueden amplificar con los primers "universales" de ITS, por lo cual estudios sobre esos grupos usan en general la región de 18S rDNA ([Leckberg et al. 2018](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.15035)). En resúmen, la **elección de los primers** es fundamental para limitar siesgos en la detección de los micro-organismos de intéres.
+
+Adémas, porque los primers tienen una afinidad variable entre los grupos de organismos presente en una muestra, **no se puede usar la abundancia de reads dentro de una muestra como proxy para determinar la abundancia de OTUs**. Eso se puede verificar usando controles positivos (o *mock*) que tienen el DNA de varias especies en cuantidad identica ([Nguyen et al. 2014](https://nph.onlinelibrary.wiley.com/doi/full/10.1111/nph.12923)).
+
+
+### "Pairing" de los reads
+Muchas plataformas como Illumina secuencian el DNA en ambos direcciones y el *denoising* de los datos implica ensemblar los reads *forward* y *reverse*. Eso puede generar siesgos si la cualidad de los reads *forward* y *reverse* no es igual en todos los grupos taxonómicos ([Truong et al. 2019](https://nph.onlinelibrary.wiley.com/doi/abs/10.1111/nph.15714)).
+
+En esa [pipeline](https://github.com/camillethuyentruong/Illumina_paired_end), desarollamos scripts en python para recuperar *single* reads de alta cualidad en  [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic) y
+[QIIME](https://qiime2.org/).
+
+
+### Delimitación de los OTUs
+Obviamente, el *barcoding gap* no es identico para todos los grupos de organismos ([Garnica et al. 2016](https://academic.oup.com/femsec/article/92/4/fiw045/2197947)), por lo cual el uso de 97% de similitud permite una **estimación** de la diversidad de especies, no su delimitacíon.
+
+Otro factor importante durante el *clustering* de los reads en OTUs es el **tamaño** de los reads. Obviamente, el número de mutaciones a 97% de similitud no es lo mismo para reads de un tamaño de 150 bp o de 300 bp. El tamaño del código de barras de ITS (hongos) suele ser muy variable. Por lo tanto se desarollaron algoritmos que toman en cuenta el tamaño de los reads. Por ejemplo, [AMPtk](https://amptk.readthedocs.io/en/latest/pre-processing.html?highlight=padding) usa un *padding* de los reads para que todos sean del mismo tamaño.
+
+
+### Identificación de los OTUs
+Como mencionado arriba, la identificación de los OTUs se hace por comparación (*BLAST*) con **bibliotecas de secuencias** de referencia, como GenBank, [Greengenes](https://greengenes.secondgenome.com/) (bacterias) o [UNITE](https://unite.ut.ee/index.php) (hongos). Si una especie no existe en la base de datos, el OTU no podrá ser identificado. Existen miliones de secuencias ambientales y miles de OTUs de hongos que todavía quedan desconocidos ([Nilsson et al. 2016](https://mycokeys.pensoft.net/articles.php?id=7553)).
+
+
+### Ejemplos de pipelines
+
+Existen una variedad de pipelines para analizar datos de meta-barcoding. Sin embargo, todas contienen los siguientes pasos:
+
+* Pre-Processing / Denoising: eliminar los primers, filtrado de cualidad y de secuencias chimericas, *padding*, etc.
+* OTU clustering
+* Filtros de la tabla de OTUs: frecuencia, contaminaciones (usando *controles positivos y negativos*)
+* Asignación taxonomica: BLAST
+
+
+[QIIME](https://qiime2.org/) ha sido desarollado y es optimizado para analizar datos de bacterias.
+
+En el caso de hongos, [AMPtk](https://amptk.readthedocs.io/en/latest/pre-processing.html?highlight=padding) es muy eficiente para el clustering (*padding*), filtrado y asignacíon taxonómica de los OTUs.
