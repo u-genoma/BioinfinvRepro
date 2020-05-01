@@ -2,7 +2,7 @@
 
 Conéctate al clúster de CONABIO
 
-Los datos que usaremos están en `metagenomics/fastq`
+Los datos que usaremos están en `metagenomica/fastq`
 
 Son 24 muestras de suelo rizosférico recolectados en sitios de bosque nativo (**N**) y mixto (**M**) de Quercus (**Q**) y de Juniperus (**J**).
 
