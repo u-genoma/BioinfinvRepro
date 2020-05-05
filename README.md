@@ -141,19 +141,30 @@ El curso se dividirá en secciones que se calificarán por separado:
 
 100% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor.
 
-**Proyecto final**
+**Proyecto final opcional**
 
-* 10% Organización del repositorio
-* 15% README **(debe ser en inglés)**
-* 20% Análisis
-* 10% Resumen y discusión en formato Markdown 
-* 15% Gráfica(s) en R
-* 15% Scripts **deben estar comentados en inglés**
-* 15% Avances preliminares
+Igual que el proyecto de la Unidad 5 pero con:
 
-Para Chile, las unidades 1-4 y 6-8 constituyen dos cursos independientes. La Unidad 5 y el proyecto final son opcionales.
+A) Tus datos propios
 
-Para México, todas las unidades y el proyecto final son obligatorios.
+o
+
+B) Los datos de alguna tarea de las vistas en unidad 6-9 que se acerquen a lo que trabajarás en tu proyecto.
+
+Los scripts pueden ser **muy sencillos** por ejemplo: bajar las secuencias, examinarlas con fastqc y hacer una gráfica del número de reads por muestra.
+
+Se calificará:
+
+* 20% Organización del repositorio
+* 20% README **(debe ser en inglés)**
+* 20% Resumen y discusión en formato Markdown 
+* 20% Gráfica(s) en R (mínima 1)
+* 20% Script(s) (mínimo 1) **deben estar comentados en inglés** 
+
+
+Para Chile, las unidades 1-4 y 6-8 constituyen dos cursos independientes. La Unidad 5 es opcional.
+
+Para México, todas las unidades son obligatorias.
 
 **Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión.**
 
