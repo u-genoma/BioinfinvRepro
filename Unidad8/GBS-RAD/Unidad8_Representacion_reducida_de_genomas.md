@@ -1,4 +1,4 @@
-# Métodos de representación reducida de genomas (GSBS, RADseq y amigos)
+# Métodos de representación reducida de genomas (GBS, RADseq y amigos)
 
 
 #### Alicia Mastretta Yanes
@@ -68,7 +68,9 @@ El ensamblado de novo es más complicado y requiere ajustar varios **parámetros
 * Los parámetros óptimos **varian dependiendo del set de datos** (taxa, calidad de los reads, profundidad, etc)
 * No son los mismos entre pogramas
 
-*In general terms, these parameters should be relaxed enough to account for genetic variation and sequencing errors, but strict enough to discriminate between paralogous loci.*Rochette & Catchen et al (2017) Nature Protocols
+*In general terms, these parameters should be relaxed enough to account for genetic variation and sequencing errors, but strict enough to discriminate between paralogous loci.*
+
+Rochette & Catchen et al (2017) Nature Protocols
 
 Los parámetros más sensibles son la covertura (número de reads por locus):
 
@@ -108,7 +110,10 @@ Hay varios programas para trabajar con datos reducidos de genomas. Cuál usar de
 
 ### Stacks
 [Webpage](http://catchenlab.life.illinois.edu/stacks/)
-[Manual](http://catchenlab.life.illinois.edu/stacks/manual/)[Main parameters](http://catchenlab.life.illinois.edu/stacks/param_tut.php)
+
+[Manual](http://catchenlab.life.illinois.edu/stacks/manual/)
+
+[Main parameters](http://catchenlab.life.illinois.edu/stacks/param_tut.php)
 
 Pipeline:
 
@@ -126,14 +131,19 @@ En este artículo (pdf en el google classroom) se describe un protocolo paso por
 Rochette, N. C. & Catchen, J. M. Deriving genotypes from RAD-seq short-read data using Stacks. Nature Protocols 12, 2640–2659 (2017).
 
 ![](slides/Slide16.png)
-[Demo scripts](https://bitbucket.org/rochette/rad-seq-genotyping-demo/src/default/)
-[Demo data](http://catchenlab.life.illinois.edu/data/rochette2017_gac_or.tar.gz)
+
+[Demo scripts](https://bitbucket.org/rochette/rad-seq-genotyping-demo/src/default/)
+
+[Demo data](http://catchenlab.life.illinois.edu/data/rochette2017_gac_or.tar.gz)
 
 
 ### ipyrad
 
 [Webpage](https://ipyrad.readthedocs.io/en/latest/1-ethos.html)
-[Manual](https://ipyrad.readthedocs.io/en/latest/index.html)[Main parameters](https://ipyrad.readthedocs.io/en/latest/6-params.html)
+
+[Manual](https://ipyrad.readthedocs.io/en/latest/index.html)
+
+[Main parameters](https://ipyrad.readthedocs.io/en/latest/6-params.html)
 
 Pipeline:
 
@@ -143,10 +153,12 @@ Pipeline:
 
 #### Tutorial ipyrad
 [Tutorial introductorio](https://ipyrad.readthedocs.io/en/latest/tutorial_intro_cli.html)
-[Tutorial avanzado](https://ipyrad.readthedocs.io/en/latest/tutorial_advanced_cli.html)
+
+[Tutorial avanzado](https://ipyrad.readthedocs.io/en/latest/tutorial_advanced_cli.html)
 
 ![](slides/Slide18.png)
-[Tutorial Análisis POST ensamble](https://ipyrad.readthedocs.io/en/latest/API-analysis/index.html)
+
+[Tutorial Análisis POST ensamble](https://ipyrad.readthedocs.io/en/latest/API-analysis/index.html)
 
 El tutorial anterior viene con un [link de binder](https://mybinder.org/v2/gh/dereneaton/ipyrad/master?filepath=newdocs%2FAPI-analysis) donde puedes ver los análisis en tu explorador sin instalar nada. 
 
@@ -154,10 +166,18 @@ El tutorial anterior viene con un [link de binder](https://mybinder.org/v2/gh/de
 
 ### Tassel
 * [Webpage](https://www.maizegenetics.net/tassel)
-* [Manual](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual)* [Rtassel (conection to R!)](https://bitbucket.org/bucklerlab/rtassel/wiki/Home)Pipeline:
-![](slides/Slide20.png)Interfaz amigable para ver genotipos:
+* [Manual](https://bitbucket.org/tasseladmin/tassel-5-source/wiki/UserManual)
+* [Rtassel (conection to R!)](https://bitbucket.org/bucklerlab/rtassel/wiki/Home)
 
-![](slides/Slide21.png)
+Pipeline:
+
+![](slides/Slide20.png)
+
+Interfaz amigable para ver genotipos:
+
+![](slides/Slide21.png)
+
+
 ## Optimizar el ensamblaje novo 
 
 La información de un set de datos RADseq/GBS etc varía dependiendo de los parámetros de ensamblado de novo, como describimos en el artículo:
@@ -165,7 +185,8 @@ La información de un set de datos RADseq/GBS etc varía dependiendo de los par�
 Mastretta-Yanes, A., Arrigo, N., Alvarez, N., Jorgensen, T. H., Piñero, D., & Emerson, B. C. (2015). Restriction site-associated DNA sequencing, genotyping error estimation and de novo assembly optimization for population genetic inference. Molecular Ecology Resources, 15(1), 28–41. doi: 10.1111/1755-0998.12291
 
 
-![](slides/Slide22.png)
+
+![](slides/Slide22.png)
 
 ![](slides/Slide23.png)
 
@@ -183,9 +204,15 @@ Oh shit.
 ¿Qué parámetros escojo? ¿Con qué loci me quedo?
 
 Solución:
-![](slides/Slide24.png)
 
-Sí vale la pena:![](slides/Slide25.png)![](slides/Slide26.png)
+![](slides/Slide24.png)
+
+Sí vale la pena:
+
+![](slides/Slide25.png)
+
+![](slides/Slide26.png)
+
 
 ## Primera inspección de los datos
 
@@ -211,10 +238,15 @@ Una vez que tengas un ensamblado base, puedes seguir filtrando por:
 Para esto son útiles VCFtools y plink. Recuerden vimos [vcf y plink de unidades pasadas](https://github.com/u-genoma/BioinfinvRepro/blob/master/Unidad5/Unidad5-Pop_genetics_software_especializado.md) (ejemplo lobos). 
 
 
-#### Si tienes especies diferentes vale la pena hacer ensambles con y sin outgroups o taxa distintos.Los sitios de restricción también mutan. Entre más distantes sean los taxa, más probabilidades de que los sitios de restricción hayan mutado. Esto incrementa el missing data entre individuos con sitio de restricción mutado. Es decir:
-**The more phylogenetically distant the individuals, the LESS loci the assembly will produce**
+#### Si tienes especies diferentes vale la pena hacer ensambles con y sin outgroups o taxa distintos.
 
-Por lo tanto puedes hacer diferentes ensambles con las mismas secuencias crudas pero utilizando diferentes individuos. E.g: "all taxa" para un análisis filogenético y "ingroup samples" para análisis de genética de poblaciones dentro de una sola spp.### Verás el sitio de restricción en tus fastqc reports
+Los sitios de restricción también mutan. Entre más distantes sean los taxa, más probabilidades de que los sitios de restricción hayan mutado. Esto incrementa el missing data entre individuos con sitio de restricción mutado. Es decir:
+
+**The more phylogenetically distant the individuals, the LESS loci the assembly will produce**
+
+Por lo tanto puedes hacer diferentes ensambles con las mismas secuencias crudas pero utilizando diferentes individuos. E.g: "all taxa" para un análisis filogenético y "ingroup samples" para análisis de genética de poblaciones dentro de una sola spp.
+
+### Verás el sitio de restricción en tus fastqc reports
 
 
 ![](slides/Slide29.png)
