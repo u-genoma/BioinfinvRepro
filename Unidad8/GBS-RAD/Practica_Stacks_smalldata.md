@@ -307,7 +307,7 @@ Ejemplo:
 ```
 M_values="1 2 3 "
 for M in $M_values ;do
-	mkdir ../tests.denovo/stacks.M$M
+	mkdir -p ../tests.denovo/stacks.M$M
 done
 ```
 
