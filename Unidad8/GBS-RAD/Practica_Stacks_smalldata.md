@@ -104,7 +104,7 @@ Alternativamente puedes tener un directorio `cleaned` y otro `samples` para las 
 
 
 #### Paso 0) Preparar input
-El paso 0 de la pipeline es poner nuestras secuencias en `/raw`, y los barcodes y population map en `info`. Como notarás si haces `ls` a esos directorios, estos pasos ya están hechos.
+El paso 0 de la pipeline es poner nuestras secuencias en `/raw`, y los barcodes y population map en `/info`. Como notarás si haces `ls` a esos directorios, estos pasos ya están hechos.
 
 
 Según la [sección de los barcodes del manual de Stacks](http://catchenlab.life.illinois.edu/stacks/manual/#specbc), estos deben estar en un archivo que se vea así:
@@ -114,7 +114,7 @@ Según la [sección de los barcodes del manual de Stacks](http://catchenlab.life
 Por ejemplo: 
 
 ```
-$ cat info/barcodes.lane1.tsv 
+$ cat ../info/barcodes.lane1.tsv 
 CTCGCC	sj_1819.35
 GACTCT	sj_1819.31
 GAGAGA	sj_1819.32
@@ -136,7 +136,7 @@ Estructura:
 Ejemplo:
 
 ```
-$ cat info/popmap.tsv 
+$ cat ../info/popmap.tsv 
 cs_1335.01	cs
 cs_1335.02	cs
 cs_1335.03	cs
@@ -184,7 +184,8 @@ Las pocas muestras que demultiplexearemos están especificadas en `../info/barco
 Crear variables con rutas relativas:
 
 ```
-raw_dir=../raw/lane1/barcodes_file=../info/barcodes.lane1_few.tsv
+raw_dir=../raw/lane1/
+barcodes_file=../info/barcodes.lane1_few.tsv
 out_dir=../cleaned/
 ```
 
@@ -273,7 +274,7 @@ Script completo en el protocolo de Rochette: [3.genome_db.sh](https://bitbucket.
 
 Correr Stacks, tanto de novo como con genoma de referencia, tarda. Y como tendrás que hacer varias pruebas para ajustar parámetros es buena idea hacer estas pruebas con un subset de los datos. Por ejemplo 10-12 muestras representativias de tus taxa/poblaciones y número de secuencias por muestras.
 
-Escoje estas muestras y ponlas en un population map de prueba que viva en `info`. En este caso utilizaremos solo 3 muestras  para fines demostrativos. 
+Escoje estas muestras y ponlas en un population map de prueba que viva en `/info`. En este caso utilizaremos solo 3 muestras  para fines demostrativos. 
 
 Estas ya están seleccionadas (son las mismas que yo ya dejé demultiplexeadas) y están enlistadas en un pop map que se así: 
 
