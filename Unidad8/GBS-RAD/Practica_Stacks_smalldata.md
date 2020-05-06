@@ -1,4 +1,4 @@
-# Práctica Stacks en vivo
+# Práctica Stacks en vivo con datos pequeños
 
 Esta prática de Stacks está basada en:
 

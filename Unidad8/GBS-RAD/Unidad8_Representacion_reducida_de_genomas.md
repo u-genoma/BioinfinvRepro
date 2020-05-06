@@ -3,9 +3,20 @@
 
 #### Alicia Mastretta Yanes
 
+## Práctica
+
+Para este tema haremos una práctica con el programa Stacks. Hay dos versiones del tutorial en este repo:
+
+* [Práctica de Stacks en vivo con datos pequeños](./Practica_Stacks_smalldata.md) que es la que ocuparemos durante la clase y podrás seguir en el cluster de la conabio. 
+
+y
+
+* [La misma práctica pero con los datos completos](Practica_Stacks_fulldata.md) por si te intersa seguir el tutorial con más muestras y corriendo los pasos más tardados en otro servidor.
+
+Pero antes de pasar a la práctica empezaremos por la teoría.
 
 
-## Metodologías de representación reducida de genomas (RAD, GBS, etc)
+## Teoría
 
 
 Las metodologías de representación reducida de genomas consisten en secuenciar una fracción del genoma en vez del genoma completo. 
