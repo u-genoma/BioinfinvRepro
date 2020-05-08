@@ -296,18 +296,19 @@ Para México, todas las unidades son obligatorias.
 *  Modelamiento de datos
 * Software
 
-#### Unidad 8 Análisis genómicos reproducibles en la nube
+#### Unidad 8 [Análisis genómicos reproducibles en la nube](Unidad8/Unidad8_Analisis_Genomicos_Reproducibles_en_la_Nube.md)
 
-**Sesión 1: GATK**
+**Sesión 1 Introdución a Terra**
 
-* Mejores prácitocas de GATK
-* workflow GVCF
-
-**Sesión 2**
-
-* Cromwell
-* WDL
 * Terra
+* Jupyter (en la nube)
+* WDL
+
+**Sesión 2 GATK**
+
+* Mejores prácticas de GATK
+* workflow GVCF
+* (Más) WDL
 
 **Sesión 3**
 
