@@ -1,18 +1,22 @@
-#### Unidad 9 Análisis genómicos reproducibles en la nube
+# Unidad 9: Análisis genómicos reproducibles en la nube #
+## Matthieu J. Miossec (twitter: [@RealMattJM](https://twitter.com/RealMattJM)) ##
 
-**Sesión 1 Introdución a Terra**
+En esta ultima unidad aprendemos como manejar datos genómicos en la nube, más especificamente sobre la plataforma [Terra](https://app.terra.bio).
 
-* Terra
+
+### Sesión 1: Introdución a Terra ###
+
+1. [Láminas proyectadas en clase](Terra.pdf)
+2. Video:[link](https://youtu.be/YHvqfeCIerU)
+
+### Sesión 2: GATK en Terra ###
+
 * Jupyter (en la nube)
-* WDL
-
-**Sesión 2 GATK**
-
 * Mejores prácticas de GATK
 * workflow GVCF
-* (Más) WDL
+* WDL
 
-**Sesión 3**
+### Sesión 3: Otras herramientas en la nube ###
 
 * Variantes somáticas con Mutect2
 * Variantes en número de copias con GermlineCNVCaller
