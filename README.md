@@ -293,21 +293,22 @@ Para México, todas las unidades son obligatorias.
 **Sesión 3 RNA-seq**
 
 * Generación de datos RNAseq
-*  Modelamiento de datos
+* Modelamiento de datos
 * Software
 
-#### Unidad 8 Análisis genómicos reproducibles en la nube
+#### Unidad 9 [Análisis genómicos reproducibles en la nube](Unidad9/Analisis_genomicos_reproducibles_en_la_nube.md)
 
-**Sesión 1: GATK**
+**Sesión 1**
 
-* Mejores prácitocas de GATK
-* workflow GVCF
+* Terra
+* pipelining en la nube
 
 **Sesión 2**
 
-* Cromwell
+* Mejores prácticas de GATK
+* workflow GVCF
+* Jupyter
 * WDL
-* Terra
 
 **Sesión 3**
 
