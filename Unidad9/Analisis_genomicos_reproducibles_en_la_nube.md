@@ -13,10 +13,9 @@ Para crear una cuenta seguir la siguiente guía: [crear cuenta](crear_cuenta_Ter
 
 ### Sesión 2: GATK en Terra ###
 
-* Jupyter (en la nube)
-* Mejores prácticas de GATK
-* workflow GVCF
-* WDL
+1.[Láminas proyectadas en clase](GATK_mejores_practicas.pdf)
+2.Video:[link](https://youtu.be/RrEw5D75kXE)
+3.TSV:[link](TerraDemo.tsv)
 
 ### Sesión 3: Otras herramientas en la nube ###
 
