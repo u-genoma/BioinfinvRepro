@@ -19,5 +19,5 @@ Para crear una cuenta seguir la siguiente guía: [crear cuenta](crear_cuenta_Ter
 
 ### Sesión 3: Otras herramientas en la nube ###
 
-* Variantes somáticas con Mutect2
-* Variantes en número de copias con GermlineCNVCaller
+1. [Láminas proyectadas en clase](WDL_Mutect2_gCNV.pdf)
+2. Video:[link](https://youtu.be/3ILywKeyCk0)
