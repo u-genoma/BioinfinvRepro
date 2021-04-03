@@ -19,8 +19,9 @@ Investigadora Instituto de Biología, UNAM
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile
 [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
-**Dr. Matthieu J. Miossec, PhD **
-Bioinformatics Analyst, Wellcome Centre for Human Genetics de la Universidad de Oxford. [https://www.researchgate.net/profile/Matthieu-Miossec](https://www.researchgate.net/profile/Matthieu-Miossec)
+**Dr. Matthieu J. Miossec, PhD**
+Bioinformatics Analyst, Wellcome Centre for Human Genetics de la Universidad de Oxford
+[https://www.researchgate.net/profile/Matthieu-Miossec](https://www.researchgate.net/profile/Matthieu-Miossec)
 
 **Dr. Luis Castañeda, PhD**
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile
