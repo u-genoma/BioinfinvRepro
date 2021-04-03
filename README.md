@@ -15,11 +15,20 @@ Catedrática CONACYT-CONABIO,
 Investigadora Instituto de Biología, UNAM
 [camilletruong.wixsite.com](https://camilletruong.wixsite.com/home#!)
 
-**Verónica Reyes Galindo**
-Estudiante doctorado Intituto de Ecología UNAM - CONABIO
-
 **Dr. Ricardo Verdugo Salgado, PhD**
-Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, U. de Chile, [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
+Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile
+[http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
+
+**Dr. Matthieu J. Miossec, PhD **
+Bioinformatics Analyst, Wellcome Centre for Human Genetics de la Universidad de Oxford. [https://www.researchgate.net/profile/Matthieu-Miossec](https://www.researchgate.net/profile/Matthieu-Miossec)
+
+**Dr. Luis Castañeda, PhD**
+Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile
+[https://sites.google.com/site/lecastane/](https://sites.google.com/site/lecastane/)
+
+**Dr. Pablo Saenz Agudelo**
+Profesor Asociado, Instituto de Ciencias Ambientales y Evolutivas, Facultad de Ciencias, Universidad Austral de Chile
+[http://icaev.cl/academicos/pablo-saenz-agudelo/](http://icaev.cl/academicos/pablo-saenz-agudelo/)
 
 Los materiales aquí presentados son de acceso libre. La transmisión online y videos de clases se pueden encontrar en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
 
@@ -87,8 +96,9 @@ El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac
      3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
 
      
+
  **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
- 
+
 
 También necesitas abrir una **cuenta de Github** para unirte al [![Gitter](https://badges.gitter.im/BioinfinvRepro/Bioinfo2020.svg)](https://gitter.im/BioinfinvRepro/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
@@ -257,9 +267,9 @@ Para México, todas las unidades son obligatorias.
 #### Trabajo en casa en proyectos finales y tareas
  Se dará seguimiento online al proyecto de las unidades 1-5 con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
 
-#### Unidad 6 [Introducción a la genómica y secuenciación de siguiente generación](Unidad6/Unidad6_IntroGenomica_NexGenSeq.md)
+#### Unidad 6 Introducción a la genómica y secuenciación de siguiente generación
 
-**Sesión 1 Generación y alineamiento de datos NGS**
+**Sesión 1 Generación y QC de datos NGS**
 
 * Técnicas de secuenciación
 * Errores de secuenciación
@@ -270,14 +280,14 @@ Para México, todas las unidades son obligatorias.
 
 * Limpieza de datos crudos
 * Alineamiento contra un genoma de referencia
- 
+
 **Sesión 3 Llamado de variantes**
 
 * Llamado de variantes
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
-#### Unidad 7 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
+#### Unidad 7 Análisis de transcriptomas
 
 **Sesión 1 Expresión diferencial**
 
@@ -296,21 +306,31 @@ Para México, todas las unidades son obligatorias.
 * Modelamiento de datos
 * Software
 
-#### Unidad 9 [Análisis genómicos reproducibles en la nube](Unidad9/Analisis_genomicos_reproducibles_en_la_nube.md)
+### Unidad 8 Metagenómica y GBS
+**Sesión 1 Metagenómica**
+* Secuenciación de amplicones
+* Barcoding
+* Metabarcoding
+
+** Sesión 2 Ensamblaje de representación reducida de genomas**
+* Metodologías de representación reducida de genomas (RAD, GBS, etc)
+* Ensamblaje de novo vs. sobre una referencia
+* Principales algoritmos y software (Stacks, pyRAD, Tassel)
+* Uso de replicados para informar el ensamblaje
+* Primera inspección de los datos
+
+#### Unidad 9 Análisis genómicos reproducibles en la nube
 
 **Sesión 1**
-
 * Terra
 * pipelining en la nube
 
 **Sesión 2**
-
 * Mejores prácticas de GATK
 * workflow GVCF
 * Jupyter
 * WDL
 
 **Sesión 3**
-
 * Variantes somáticas con Mutect2
 * Variantes en número de copias con GermlineCNVCaller
