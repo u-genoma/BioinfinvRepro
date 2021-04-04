@@ -14,17 +14,16 @@ Para realizar un trimming adecuado de lecturas se debe hacer un análisis previo
 2. Usando las lecturas crudas de una secuenciación NGS ejecute FastQC:
    Los datos están en Datos: `181004_curso_calidad_datos_NGS/fastq_raw`
 
-3. Cree un Directorio con su nombre. Ejemplo:
-
+3. Cree y anetre a un eirectorio con su inicial y apellido. Ejemplo:
    ```
-   mkdir ricardo_2020
-   cd ricardo_2020
+   mkdir jperez
+   cd jperez
    ```
-
+   
 4. Ejecute FastQC de la siguiente forma para un archivo fastq (contiene las lecturas crudas):
 
 `$ fastqc “archivo_fastq” -o “directorio_salida” `
-`
+
    Ejemplo de una muestra usando las lecturas crudas:
 
 `$ fastqc ../181004_curso_calidad_datos_NGS/fastq_raw/S3_R1.fastq.gz -o . `
@@ -40,13 +39,15 @@ Se realiza una poda de los datos para eliminar adaptadores, lecturas con  la sec
 
 2. Ejemplo de la muestra anterior usando las lecturas filtradas:
 
-`$ fastqc ../181004_curso_calidad_datos_NGS/fastq_filter/S3_R1_filter.fastq.gz -o .``
+`$ fastqc ../181004_curso_calidad_datos_NGS/fastq_filter/S3_R1_filter.fastq.gz -o .`
 
+| ![Per base sequence quality](FastQC_Fig1.png) |
+|:--:|
+| *Imagen de la calidad de las secuencias generada por FastQC. * |
 
 #### 5. Tarea ####
 
-
-Se pide realizar los siguientes puntos tanto para las secuencias crudas y podadas. Además de generar los informes de calidades deben realizar una comparación de los 
+Realizar los siguientes puntos tanto para las secuencias crudas y podadas. Además de generar los informes de calidades deben realizar una comparación de los 
 resultados. Recuerden que la ubicación de las secuencias crudas 
 es en el directorio: 181004_curso_calidad_datos_NGS/fastq_raw/ y las secuencias ya podadas se encuentran en 181004_curso_calidad_datos_NGS/fastq_filter
 
