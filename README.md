@@ -1,7 +1,6 @@
 # Introducción a la bioinformática e investigación reproducible para análisis genómicos
 
-
-[![Gitter](https://badges.gitter.im/BioinfinvRepro/Bioinfo2020.svg)](https://gitter.im/BioinfinvRepro/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/ugenoma/Bioinfo2020.svg)](https://gitter.im/ugenoma/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Mediante una colaboración entre el Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México, CONABIO y la U. de Chile, ofreceremos un curso intensivo de bioinformática, orientado a entregar las herramientas básicas para análisis de datos genómicos en el contexto de genética, especialmente la genética de poblaciones.
 
