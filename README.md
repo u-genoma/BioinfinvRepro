@@ -268,7 +268,7 @@ Para México, todas las unidades son obligatorias.
 #### Trabajo en casa en proyectos finales y tareas
  Se dará seguimiento online al proyecto de las unidades 1-5 con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
 
-#### Unidad 6 Introducción a la genómica y secuenciación de siguiente generación
+#### Unidad 6 [Introducción a la genómica y secuenciación de siguiente generación](Unidad6/Unidad6_IntroGenomica_NexGenSeq.md)
 
 **Sesión 1 Generación y QC de datos NGS**
 
@@ -313,7 +313,8 @@ Para México, todas las unidades son obligatorias.
 * Barcoding
 * Metabarcoding
 
-** Sesión 2 Ensamblaje de representación reducida de genomas**
+**Sesión 2 Ensamblaje de representación reducida de genomas**
+
 * Metodologías de representación reducida de genomas (RAD, GBS, etc)
 * Ensamblaje de novo vs. sobre una referencia
 * Principales algoritmos y software (Stacks, pyRAD, Tassel)
@@ -327,6 +328,7 @@ Para México, todas las unidades son obligatorias.
 * pipelining en la nube
 
 **Sesión 2**
+
 * Mejores prácticas de GATK
 * workflow GVCF
 * Jupyter

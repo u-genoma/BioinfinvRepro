@@ -53,7 +53,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 Ejemplo:
 ```sh
-java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T PrintReads -R  /home-old/data/references/genomes/hg19_reference/hg19.fasta -I ../Alineamiento/S10_sorted_RG.bam --BQSR S10_recall_data.table -o S10_recall_reads.bam
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T PrintReads -R  /home-old/data/references/genomes/hg19_reference/hg19.fasta -I S10_sorted_RG.bam --BQSR S10_recall_data.table -o S10_recall_reads.bam
 ```
 ## Llamado de variantes
 

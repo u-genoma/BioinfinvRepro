@@ -18,7 +18,7 @@ ssh -Y bioinfo1@genoma.med.uchile.cl
 Usar la clave entregada en clase.
 ### Acceda al directorio con su nombre:
 ```sh
-cd korostica/
+cd jperez/
 ```
 Para la demostración, usaremos el directorio korostica. El alumno debe usar su propio directorio.
 
@@ -183,7 +183,7 @@ qualimap bamqc -bam muestra_sorted_RG.bam -gff regiones_blanco.bed -nw 400 -hm 3
 
 Ejemplo:
 ```sh
-qualimap bamqc -bam S10_sorted_RG.bam - gff ../181004_curso_calidad_datos_NGS/regiones_blanco.bed -nw 400 -hm 3
+/opt/qualimap_v2.2.1_2/qualimap bamqc -bam S10_sorted_RG.bam - gff ../181004_curso_calidad_datos_NGS/regiones_blanco.bed -outdir ./S10_sorted_RG
 ```
 
 
