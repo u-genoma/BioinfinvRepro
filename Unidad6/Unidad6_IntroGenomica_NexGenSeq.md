@@ -10,8 +10,8 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 3. Tutorial: [Control de calidad de lecturas NGS](Tutorial_Control_de_calidad_de_lecturas_NGS.md)
 
 ### Sessión 2: Alineamiento de lecturas de secuenciación ###
-1. Láminas proyectadas en clase:
-2. Video de la clase:
+1. [Láminas proyectadas en clase](Sesion2_Alineamineto_de_datos_NGS_RAV_2021.pdf)
+2. Video de la clase:  https://youtu.be/xpuWQniu4nI
 3. Tutorial: [Alineamiento de lecturas](Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
 
 ### Sessión 3: Llamado de variantes ###
