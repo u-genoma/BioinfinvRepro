@@ -12,7 +12,7 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 ### Sessión 2: Alineamiento de lecturas de secuenciación ###
 1. Láminas proyectadas en clase:
 2. Video de la clase:
-3. Tutorial: 
+3. Tutorial: [Alineamiento de lecturas](Unidad6/Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
 
 ### Sessión 3: Llamado de variantes ###
 1. Láminas proyectadas en clase:
