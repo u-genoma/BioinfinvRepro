@@ -109,12 +109,9 @@ S10_R2_filter3.fastq.gz \
 > S10.sam
 ```
 
-Nota 1: Ejecute los siguientes comandos e inspeccione las distintas opciones que entrega bwa y los atributos que puede modificar.
+Nota 1: Revise la [documentación de bwa](http://manpages.org/bwa) e inspeccione las distintas opciones que entrega bwa y los atributos que puede modificar.
 
-```sh
-bwa
-man bwa
-```
+
 
 El siguiente conjunto de operaciones de preprocesamiento formatea los datos para adaptarse a los requisitos de las herramientas GATK convirtiendo los datos de asignación en un archivo BAM ordenado por posición, con el campo "Read Group" añadido.
 
@@ -178,12 +175,12 @@ Este programa proporciona una vista general de los datos que ayuda a detectar se
 
 Comando:
 ```sh
-qualimap bamqc -bam muestra_sorted_RG.bam -gff regiones_blanco.bed -nw 400 -hm 3
+qualimap bamqc -bam muestra_sorted_RG.bam -gff regiones_blanco.bed
 ```
 
 Ejemplo:
 ```sh
-/opt/qualimap_v2.2.1_2/qualimap bamqc -bam S10_sorted_RG.bam - gff ../181004_curso_calidad_datos_NGS/regiones_blanco.bed -outdir ./S10_sorted_RG
+/opt/qualimap_v2.2.1_2/qualimap bamqc -bam S10_sorted_RG.bam -gff ../181004_curso_calidad_datos_NGS/regiones_blanco.bed -outdir ./S10_sorted_RG
 ```
 
 
