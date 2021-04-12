@@ -16,5 +16,6 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 
 ### Sessión 3: Llamado de variantes ###
 1. Láminas proyectadas en clase: [Láminas proyectadas en clase](Sesion3_Llamado_de_variantes_RAV_2021.pdf)
-2. Video de la clase: 
+2. Video de la clase: [Clase](https://youtu.be/Ge7UzmtDpUg), [Tutorial](https://youtu.be/Ylod8bX_7-U)
 3. Tutorial: [Llamado de Variantes](Tutorial_para_el_llamado_de_variantes.md)
+
