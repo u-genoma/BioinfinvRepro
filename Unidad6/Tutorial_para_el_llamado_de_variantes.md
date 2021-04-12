@@ -154,7 +154,14 @@ Ejemplo:
 ```sh
 java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -V S10_RAW_INDEL.vcf --filterExpression "DP <10" --filterName "FILTER" -o S10_FILTERED_INDEL.vcf
 ```
+
+
+**Nota**: Las variantes que pasan los filtros se etiquetan como PASS y las que no pasan los filtros se etiquetan como FILTER. Para el curso (datos de prueba) se usó un filtro de cobertura de 10 lecturas, lo cual fue considerado mínimo para poder determinar de forma adecuada el genotipo, pero es arbitrario. 
+
+
+
 ### Combinar vcfs filtrados
+
 Juntamos los archivos vcf anotados de SNPs e Indels en uno solo
 Comando:
 ```sh
@@ -171,8 +178,6 @@ Ejemplo:
 ```sh
 java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T CombineVariants -R /home-old/data/references/genomes/hg19_reference/hg19.fasta --variant:foo S10_FILTERED_SNP.vcf --variant:bar S10_FILTERED_INDEL.vcf -o S10_FILTER_VARIANTS.vcf -genotypeMergeOptions PRIORITIZE -priority foo,bar
 ```
-**Nota**: Las variantes que pasan los filtros se etiquetan como PASS y las que no pasan los filtros se etiquetan como FILTER. Para el curso (datos de prueba) se usó un filtro de cobertura de 10 lecturas, lo cual fue considerado mínimo para poder determinar de forma adecuada el genotipo, pero es arbitrario. 
-
 ## Anotación de variantes
 
 En esta etapa se le añaden anotaciones a las variantes para predecir los efectos de estas en los genes humanos, como el cambio de sentido en la transcripción, etc. Para esto usamos el programa snpEff.

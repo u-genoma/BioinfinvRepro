@@ -15,6 +15,6 @@ En esta unidad aprenderemos los aspectos escenciales de la generación de datos 
 3. Tutorial: [Alineamiento de lecturas](Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
 
 ### Sessión 3: Llamado de variantes ###
-1. Láminas proyectadas en clase:
-2. Video de la clase:
-3. Tutorial: 
+1. Láminas proyectadas en clase: [Láminas proyectadas en clase](Sesion3_Llamado_de_variantes_RAV_2021.pdf)
+2. Video de la clase: 
+3. Tutorial: [Llamado de Variantes](Tutorial_para_el_llamado_de_variantes.md)
