@@ -287,7 +287,7 @@ Para México, todas las unidades son obligatorias.
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
-#### Unidad 7 Análisis de transcriptomas
+#### Unidad 7 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
 
 **Sesión 1 Expresión diferencial**
 

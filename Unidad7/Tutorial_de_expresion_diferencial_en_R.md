@@ -470,7 +470,7 @@ genes.int <- as.factor(genes.int)
   Cree un objeto de datos de clase *topGO*, que contiene todo lo necesario para el enriquecimiento de las pruebas. 
 ```R
  GOdata <- new("topGOdata", ontology="BP", allGenes=genes.int,
-               description="Genes DE by Trt by GenoInteraction", nodeSize=5,
+               description="Genes DE by Interaction", nodeSize=5,
                annotationFun=annFUN.org, mapping="org.Mm.eg.db", ID="entrez")               
 ```
   Pruebe si existe enriquecimiento de términos GO utilizando una prueba exacta de Fisher.  Usaremos dos algoritmos, la prueba clásica de término por término y el algoritmo " elim " , que tiene en cuenta la jerarquía de los términos GO para evitar la redundancia.  Para obtener detalles sobre estas y otras pruebas disponibles en topGO, consulte la documentación del paquete y (Alexa et al. 2006) . 

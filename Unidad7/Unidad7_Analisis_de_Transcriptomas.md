@@ -6,7 +6,7 @@ En esta unidad aprenderemos cómo analizar datos trasncriptómicos generados med
 ### Sesión 1: Expresión Diferencial ###
 
 1. [Láminas proyectadas en clase](Sesion1_Analisis_expresion_diferencial.pdf)
-2. Video: [Parte 1](https://youtu.be/pbCjp3jrtlA) [Parte 2](https://youtu.be/ynI1L9TT1PM)
+2. Video: [Parte 1](https://youtu.be/pbCjp3jrtlA) [Parte 2](https://youtu.be/ynI1L9TT1PM) [Parte 3 Tutorial](https://youtu.be/aJjq5GzGS38)
 3. Tutorial: [Análisis de expresión diferencial en R](Tutorial_de_expresion_diferencial_en_R.md)
 
 ### Sessión 2: Análisis funcional ###
