@@ -27,7 +27,13 @@
 **Figura 1**. Diseño de las hibridaciones de muestras por chip y dentro de chip.  Los colores representan el genotipo [azul = C57BL/6J (B);  verde = C57BL/6J-chrY<A/J/NaJ> (BY) y tratamiento de castración [amarillo = intacto (I);  rojo = castrado (C)]. 
 
 ### Ubicación de los archivos del tutorial
-Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran disponibles en [DE_tutorial](DE_tutorial). Si ejecuta el tutorial en el servidor `genoma`, podrá encontrar el tutorial descomprimido en el directorio `DE_tutorial` del `home`.
+Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran disponibles en [DE_tutorial](DE_tutorial). Si ejecuta el tutorial en el servidor `genoma`, podrá encontrar el tutorial descomprimido en el directorio `DE_tutorial` del `home`. Copie el directorio completo a su propio directorio de trabajo. 
+
+Por ejemplo:
+```bash
+$ cp -R DE_tutorial ~/jpeperez/
+$ cd ~/jpeperez/DE_tutorial
+```
 
 ### Antes de ejecutar el tutorial
 
@@ -68,28 +74,28 @@ Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran dispo
 #### Preliminares
   Defina algunas constantes (es una buena práctica declararlas al comienzo de los scripts) .
 ```R
-> outdir     <- "output"
-> fdr_th     <- 0.2 # Proporción de descubrimientos falsos que son aceptables 
+outdir     <- "output"
+fdr_th     <- 0.2 # Proporción de descubrimientos falsos que son aceptables 
 ```
   Lea un archivo que define algunas funciones que son necesarias para el análisis . 
 ```R
-> source("Rfxs.R")
+source("Rfxs.R")
 ```
   Crear un directorio de salida , si no existe. 
 ```R
-> if(!file.exists(outdir)) {
+if(!file.exists(outdir)) {
   dir.create(outdir, mode = "0755", recursive=T)
  }
 ```
   Lea los datos en bruto, es decir, no normalizados y tal cual fueron generados.  Los archivos de Illumina contienen muchos tipos diferentes de datos.  Los valores de intensidad, es decir, un indicador de la expresión del gen, se encuentran en la columna *AVG_Signal* (promedio entre esferas).  La columna *Detection.Pval* contiene valores *p* para la detección de transcritos, que se utilizarán para determinar si un gen se expresa.
 ```R
- Data.Raw  <- read.delim("../data/Illum_data_sample.txt")
+ Data.Raw  <- read.delim("Illum_data_sample.txt")
  signal    <- grep("AVG_Signal", colnames(Data.Raw)) # vector de columnas con datos 
  detection <- grep("Detection.Pval", colnames(Data.Raw)) # vector de columnas con valores p  
 ```
   Importe las anotaciones de las sondas. 
 ```R
-annot     <- read.delim("../data/MouseRef-8_annot.txt")
+annot     <- read.delim("MouseRef-8_annot.txt")
 ```
   No todas las sondas muestran la misma calidad al ser alineadas contra el genoma de referencia.  Para obtener más información, consulte el documento ReMOAT (Barbosa-Morais et al. 2010) . 
 ```R
@@ -106,7 +112,7 @@ annot     <- read.delim("../data/MouseRef-8_annot.txt")
 ```
   Leer la tabla con el diseño de las hibridaciones. 
 ```R
- design <- read.csv("../data/YChrom_design.csv")
+ design <- read.csv("YChrom_design.csv")
  print(design)
    Array Sample_Name Sentrix_ID Sentrix_Position Genotype Treatment Group
 1      1  CDR017-DIL 4340571022                A        B         I   B.I
