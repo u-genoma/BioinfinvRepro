@@ -5,7 +5,7 @@
 
 ### Acerca de este tutorial
 
-  El  objetivo del tutorial es introducir técnicas de el análisis de datos de microarreglos para detectar **genes diferencialmente expresados** (**DE** por su sigla en inglés) producto de factores experimentales o de sus interacciones. Se presenta un flujo de trabajo de análisis completo utilizando el lenguaje R.  Aunque se utilizan varios paquetes de R durante el tutorial no intento cubrir toda la funcionalidad disponible en cada uno de ellos.  Consulte la documentación de cada paquete para obtener más detalles sobre las funciones desponibles en cada paquete o tutoriales más específicos. El contenido de este tutorial es responsabilidad exclusiva del autor y no ha sido respaldado por los autores de los paquetes de R aquí utilizados. 
+  El  objetivo del tutorial es introducir técnicas de el análisis de datos de microarreglos para detectar **genes diferencialmente expresados** (DE por su sigla en inglés) producto de factores experimentales o de sus interacciones. Se presenta un flujo de trabajo de análisis completo utilizando el lenguaje R.  Aunque se utilizan varios paquetes de R durante el tutorial no intento cubrir toda la funcionalidad disponible en cada uno de ellos.  Consulte la documentación de cada paquete para obtener más detalles sobre las funciones desponibles en cada paquete o tutoriales más específicos. El contenido de este tutorial es responsabilidad exclusiva del autor y no ha sido respaldado por los autores de los paquetes de R aquí utilizados. 
 
 ### Descripción de los datos
 
@@ -162,7 +162,7 @@ El siguiente código crea cuadros de caja de colores por tratamiento.  La  salid
 
  dev.off()
 ```
- 
+
 ![Figura3_Datos_brutos_por_tratamiento](Figura3_Datos_brutos_por_tratamiento.png)
 
 **Figura 3.**    Diagramas de caja de datos en bruto por microarreglo. Las cajas están coloreadas según tratamiento. 
@@ -234,14 +234,14 @@ El siguiente código crea cuadros de caja de colores por tratamiento.  La  salid
 
   Dado que este estudio utilizó un diseño factorial, es posible hacer diferentes preguntas a partir de los datos.  Cada pregunta puede ser puesta a prueba por una contraste entre grupos experimentales.  La función `matest` del paquete R/MAanova puede  utilizar una matriz de contrastes y evaluar si esas comparaciones explican una proporción significativa de la varianza en los datos de expresión.  Definamos algunos términos para simplificar la nomenclatura. 
 
-|  Término     | Descripción| 
+|  Término     | Descripción|
 |--------------|:-------------:|
-|  Geno        |       genotipo| 
-| Trt                     | tratamiento| 
-| Int                     | interacción genotipo x tratamiento| 
+|  Geno        |       genotipo|
+| Trt                     | tratamiento|
+| Int                     | interacción genotipo x tratamiento|
 | Geno_I              | efecto genotipo en animales intactos (no castrados)|
 | Geno_C            |  efecto genotipo en animales castrados|
-| Trt_B                 |  efecto del tratamiento en el genotipo B| 
+| Trt_B                 |  efecto del tratamiento en el genotipo B|
 | Trt_BY               | efecto del tratamiento en el genotipo BY |
 
   Los  contrastes son vectores de coeficientes que cuando se multiplican con un vector de promedios por grupo experimental, crean contrastes que pueden evaluarse estadísticamente.  Para crear los vectores de coeficientes de contraste, asuma que los grupos experimentales están ordenados alfabéticamente.
