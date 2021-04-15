@@ -31,8 +31,8 @@ Los *scripts* y datos necesarios para ejecutar este tutorial se encuentran dispo
 
 Por ejemplo:
 ```bash
-$ cp -R DE_tutorial ~/jpeperez/
-$ cd ~/jpeperez/DE_tutorial
+$ cp -R DE_tutorial ~/jperez/
+$ cd ~/jperez/DE_tutorial
 ```
 
 ### Antes de ejecutar el tutorial
@@ -529,7 +529,7 @@ genes.int <- as.factor(genes.int)
   Verdugo, Ricardo A., Christian F. Deschepper, Gloria Muñoz, Daniel Pompa y Gary A. Churchill.  2009. “Importancia de la aleatorización en diseños experimentales de micromatrices con plataformas Illumina”. Nucl.  Acidos Res.  37: 5610-8. 
 
 ### Tarea
-1. Obtener la matriz completa de datos desde GEO, ver link en la [Descripción de los datos](#Descripción-de-los-datos).
+1. Obtener la matriz completa de datos, disponible en el archivo `Illum_data.txt`. Asegúrese tarmbién usar el archivo de anotaciones `MouseRef-8_annot_full.txt` que contiene todas las 25697 sondas. Ambos archivos están disponibles en la carpeta del tutorial.
 2. Importar la matriz en R, seleccionar aleatoriamente 5000 filas y exportar el subset de datos en un archivo plano separado por tabulaciones.
 3. Ejecute este tutorial, pero con algunos cambios:
    1. usando su matriz de datos en vez de la usada en la demostración.
