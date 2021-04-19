@@ -15,15 +15,15 @@ if(!file.exists(outdir)) {
   dir.create(outdir, mode = "0755", recursive=T)
  }
 
-Data.Raw  <- read.delim("../Illum_data_sample.txt")
+Data.Raw  <- read.delim("Illum_data_sample.txt")
 signal    <- grep("AVG_Signal", colnames(Data.Raw)) # vector de columnas con datos 
 detection <- grep("Detection.Pval", colnames(Data.Raw))
 
-annot     <- read.delim("../MouseRef-8_annot.txt")
+annot     <- read.delim("MouseRef-8_annot.txt")
 probe_qc  <- ifelse(annot$ProbeQuality %in% c("Bad", "No match"), "Bad probes",
   "Good probes")
 
-design    <- read.csv("../YChrom_design.csv")
+design    <- read.csv("YChrom_design.csv")
 print(design)
 
 Data.Raw <- Data.Raw[probe_qc %in% "Good probes",]
