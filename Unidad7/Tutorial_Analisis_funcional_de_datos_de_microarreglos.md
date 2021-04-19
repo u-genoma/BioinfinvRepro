@@ -58,7 +58,7 @@ mydata <- read.delim("../output/normdata.txt", as.is=T)
 Cambie los nombres de las columnas para que sea más fácil identificar el grupo experimental en los siguientes gráficos.
 
 ```R
-design <- read.csv("../data/YChrom_design.csv")
+design <- read.csv("../YChrom_design.csv")
 colnames(mydata) <- design$Group
 ```
 
@@ -67,9 +67,10 @@ colnames(mydata) <- design$Group
 Este tutorial está basado en el [Cluster Analysis, Quick-R, DataCamp](https://www.statmethods.net/advstats/cluster.html).
 
 ```R
-Preparar los datos
+# Preparar los datos
 
-mydata <- na.omit (mydata) # eliminación en forma de lista de faltantes mydata <- scale (mydata) # estandarizar variables
+mydata <- na.omit (mydata) # eliminación en forma de lista de faltantes
+mydata <- scale (mydata) # estandarizar variables
 ```
 
 ## Particionamiento (Clustering)
@@ -94,7 +95,7 @@ aggregate(mydata,by=list(fit$cluster),FUN=mean)
 library(factoextra)
 fviz_cluster(fit, data = mydata)
 
-mydata <- data.frame(mydata, fit$cluster) 
+mydata2 <- data.frame(mydata, fit$cluster) 
 
 
 ```
@@ -138,7 +139,7 @@ Los enfoques basados en modelos asumen una variedad de modelos de datos y aplica
 
 ```R
 library(mclust)
-fit <- Mclust(mydata)
+fit <- Mclust(mydata2)
 plot(fit) # graficar resultados
 summary(fit) # muestra el mejor modelo
 ```
@@ -161,14 +162,14 @@ clusplot(mydata, fit$cluster, color=TRUE, shade=TRUE,
 ```
 ## Tarea
 
-Usando los genes seleccionados por expresión diferencial obtenidos:
+Usando los genes seleccionados por expresión diferencial obtenidos, ya sea por tratamiento, genotipo o por interacción:
 
 * Realice un particionamiento jerárquico de sus muestras con la medida de distancia euclideana
 * Realice un particionamiento jerárquico de sus sondas usando el complemento de la correlación de pearson como la medida de distancia.
 * Genere gráficos de suma de cuadrados para sondas y para muestras
 * Basándose en los gráficos de sumas de cuadrados, elija el k más apropiado en su criterio para sondas y para muestras
-*Agregue rectángulos a los particionamiento jerárquicos (nota, en su informe puede mostrar solo el arbolo final, con los rectángulos).
-Guarde su trabajo como un informe en formato pdf.
+* Agregue rectángulos a los particionamiento jerárquicos (nota, en su informe puede mostrar solo el arbolo final, con los rectángulos).
+* Guarde su trabajo como un informe en formato pdf.
 
 
 
