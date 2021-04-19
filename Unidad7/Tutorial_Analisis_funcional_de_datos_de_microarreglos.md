@@ -9,7 +9,7 @@ Para este tutorial, utilizaremos la matriz datos normalizados que generamos en e
 En el tutorial pasado, generamos un objeto normdata. Vaya la carpeta DE_tutorial, vuelva a importar los datos y normalizarlos. Una vez generada la matrix de datos, expórtela como un archivo plano separado por tabulaciones.
 
 ```R
-outdir     <- "../output"
+outdir     <- "output"
 
 if(!file.exists(outdir)) {
   dir.create(outdir, mode = "0755", recursive=T)
