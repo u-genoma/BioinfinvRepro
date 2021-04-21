@@ -15,7 +15,7 @@ En esta unidad aprenderemos cómo analizar datos trasncriptómicos generados med
 3. Tutorial: [Analisis funcional de datos de microarreglos](Tutorial_Analisis_funcional_de_datos_de_microarreglos.md)
 
 ### Sessión 3: RNA-seq ###
-1. Láminas proyectadas en clase
-2. Video: link
+1. [Láminas proyectadas en clase](Sesion3_RNAseq.pdf)
+2. Video: [Clase](https://www.youtube.com/watch?v=bexfluMFNL4) [Tutorial](https://www.youtube.com/watch?v=TE3lboomTD8)
 3. Tutorial: [Analisis de datos de RNA-seq](Tutorial_RNAseq.md)
 
