@@ -16,8 +16,10 @@ En esta ultima unidad aprendemos como manejar datos genómicos en la nube con [G
 
 En esta ultima unidad aprendemos como manejar datos genómicos en la nube, más especificamente sobre la plataforma [Terra](https://app.terra.bio).
 
-**El siguiente link incluye etapas que ya no estan disponible**
+**Importante: el siguiente link incluye etapas que ya no estan disponible:**
+
 Para crear una cuenta seguir la siguiente guía: [crear cuenta](crear_cuenta_Terra.pdf)
+
 **___________________________________________________________**
 
 ### Sesión 1: Introdución a Terra ###
