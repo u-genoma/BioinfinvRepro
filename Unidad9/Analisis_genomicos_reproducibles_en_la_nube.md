@@ -1,10 +1,24 @@
 # Unidad 9: Análisis genómicos reproducibles en la nube #
 ## Matthieu J. Miossec (twitter: [@RealMattJM](https://twitter.com/RealMattJM)) ##
 
+# 2021
+
+En esta ultima unidad aprendemos como manejar datos genómicos en la nube con [Google Cloud](https://console.cloud.google.com/) y luego la plataforma dedicada del Broad Institute, [Terra](https://app.terra.bio).
+
+### Sesión 1: Introdución a la Genómica en la nube con Google Cloud (17 de mayo)
+
+### Sesión 2: Introdución a Terra (19 de mayo)
+
+### Sesión 3: Otras herramientas en Terra (24 de mayo)
+
+
+# 2020
+
 En esta ultima unidad aprendemos como manejar datos genómicos en la nube, más especificamente sobre la plataforma [Terra](https://app.terra.bio).
 
+**El siguiente link incluye etapas que ya no estan disponible**
 Para crear una cuenta seguir la siguiente guía: [crear cuenta](crear_cuenta_Terra.pdf)
-
+**___________________________________________________________**
 
 ### Sesión 1: Introdución a Terra ###
 
