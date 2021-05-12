@@ -306,7 +306,7 @@ Para México, todas las unidades son obligatorias.
 * Modelamiento de datos
 * Software
 
-### Unidad 8 Metagenómica y GBS
+### Unidad 8 [Aplicaciones de NGS](Unidad8/Unidad8_Aplicaciones_de_NGS.md)
 **Sesión 1 Metagenómica**
 * Secuenciación de amplicones
 * Barcoding
