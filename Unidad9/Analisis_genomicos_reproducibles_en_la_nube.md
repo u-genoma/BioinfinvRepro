@@ -7,10 +7,11 @@ En esta ultima unidad aprendemos como manejar datos genómicos en la nube con [G
 
 ### Sesión 1: Introdución a la Genómica en la nube con Google Cloud (17 de mayo)
 
+1. [Láminas proyectadas en clase](Intro_Cloud.pdf)
+
 ### Sesión 2: Introdución a Terra (19 de mayo)
 
 ### Sesión 3: Otras herramientas en Terra (24 de mayo)
-
 
 # 2020
 
