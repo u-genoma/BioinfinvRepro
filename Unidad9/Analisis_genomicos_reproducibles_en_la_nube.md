@@ -11,6 +11,9 @@ En esta ultima unidad aprendemos como manejar datos genómicos en la nube con [G
 
 ### Sesión 2: Introdución a Terra (19 de mayo)
 
+1. [Láminas proyectadas en clase](Intro_Terra2021.pdf)
+2. Video:
+
 ### Sesión 3: Otras herramientas en Terra (24 de mayo)
 
 
