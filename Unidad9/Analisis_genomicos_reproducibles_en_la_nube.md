@@ -17,4 +17,4 @@ En esta ultima unidad aprendemos como manejar datos genómicos en la nube con [G
 ### Sesión 3: Otras herramientas en Terra (24 de mayo)
 
 1. [Láminas proyectadas en clase](GATK_mejores_practicas2021.pdf)
-2. 
+2. Vide: [link](https://youtu.be/mYpDkBIgozw)
