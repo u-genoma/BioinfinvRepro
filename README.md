@@ -131,9 +131,9 @@ En la unidad 2 aprenderemos a utilizar github desde la línea de comando, pero p
 
 ### Mecanismo de calificación
 
-El curso se dividirá en tres secciones que se calificarán por separado. Se asiganarean tareas al finalde cada sesión. El resultados de la tareas debe ser enviado para evaluación cada viernes hasta las 23:00 hrs. Cada tarea será evaludo con una nota del 1-7. La nota de la unidad será calculada como:
+El curso se dividirá en tres secciones que se calificarán por separado. Se asiganarean tareas al finalde cada sesión. El resultados de la tareas debe ser enviado para evaluación cada viernes hasta las 23:00 hrs. Cada tarea será evaluada con una nota del 1-7. La nota de la unidad será calculada como:
 
-* 80% promerio aritmético entre las notas de las tareas de la unidad
+* 80% promedio aritmético entre las notas de las tareas de la unidad
 * 20% Proyecto de la unidad, el cual se califica con:  
   * 15% Organización del repositorio
   * 15% README **(debe ser en inglés)**
@@ -142,7 +142,9 @@ El curso se dividirá en tres secciones que se calificarán por separado. Se asi
   * 15% Gráfica(s) en R
   * 15% Scripts **deben estar comentados en inglés**
 
-Para México, todas las unidades son obligatorias.
+El "Proyecto" de la unidad consiste una carpeta dentro de un repositorio personal en Github donde el estudiante debe depositar sus tareas. Veremos cómo hacerlo en la sesión 2 de la Unidad 1.
+
+Todas las unidades son obligatorias.
 
 **Copiar o plagiar (tareas, exámenes, trabajo final, lo que sea) es motivo suficiente para reprobarte sin lugar a discusión.**
 
@@ -154,115 +156,108 @@ Para México, todas las unidades son obligatorias.
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
 
-**Sesión 1:  Introducción al código y la terminal**
+**Sesión 1:  Mis primeros comandos**
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
-* Introducción a la consola y línea de comando de bash y R
+* Introducción a la consola y línea de comando de bash
 * Funciones básicas de navegación y manejo de archivos con bash
+* Introducción a los scripts
 
-[Video **Sesión 2: Introducción a los scripts y grep**](https://www.youtube.com/watch?v=ppqsw1OVw_0)
+Trabajo individual:
 
 * Funciones básicas de exploración de archivos con bash
 * Regular expressions y búsqueda de patrones (grep)
 * Redirección con bash
-
-[Video **Sesión 3: Continuación de bash**](https://www.youtube.com/watch?v=OhCBraaRfKs)
-
-* Introducción a los scripts
 * Loops con bash
 
-[Video Extra: Volver ejecutable un script](https://www.youtube.com/watch?v=wp3eC7FVANg)
-
-#### Unidad 2 [Organización de un proyecto bioinformático](Unidad2/Unidad2_Organizacion_proyecto_bioinf.md)
-
-[Video **Sesión 1: Documentación bioinformática**](https://www.youtube.com/watch?v=N_KUce2siNo)
+**Sesión 2: Organización de un proyecto bioinformático**
 
 * Documentación de scripts y del proyecto
 * Markdown
 * git
+* Github
 
-[Video **Sesión 2: Github**](https://www.youtube.com/watch?v=NIZjzU1BTjc)
+Trabajo individual:
 
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-#### Unidad 3 [Introducción a R con un enfoque bioinformático](Unidad3/Unidad3_Intro_a_R.md)
-
-[Video **Sesión 1: Introducción a R**](https://www.youtube.com/watch?v=MIzdokGuw_E)
-
-[Video **Sesión 1: Introducción a R-CONTINUACIÓN**](https://www.youtube.com/watch?v=J2rGmyOMBJI)
+** Sesión 3: Introducción a R con un enfoque bioinformático**
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
-
-[Video **Sesión 2: Rmrkown y Funciones en R**](https://www.youtube.com/watch?v=98AaKGzfdCw)
-
-* Continuación intro
-* Funciones propias: crear funciones y utilizarlas con source
 * Rmarkdown y R Notebook
 
-[Video **Sesión 3: Manipulación y limpieza de datos en R**](https://www.youtube.com/watch?v=cvTvySyvG-s)
+** Sesión 4: Programación y análisis de datos en R**
 
+* Funciones propias: crear funciones y utilizarlas con source
 * Manipulación y limpieza de datos en R
 
-[Video **Sesión 4: Graficar en R**](https://www.youtube.com/watch?v=3LSx8cdx2Do)
+Trabajo individual:
 
 * Graficar en R
-
-[Video **Sesión 5: Bioconductor**](https://www.youtube.com/watch?v=hTGqqeZomVM)
-
 * Bioconductor
 
-#### Unidad 4 [Introducción a software especializado y uso de servidores remotos](Unidad4/Unidad4_Intro_software_bioinformatico.md)
+#### Unidad 2 Genética de poblaciones con software especializado
 
-[Video **Sesión 1: Software especializado y servidores remotos**](https://www.youtube.com/watch?v=YpD1n-Fzomk)
-
-* Introducción a Software especializado y cómo instalarlo
-* Uso de servidores remotos
-
-#### Unidad 5 [Genética de poblaciones con software especializado](Unidad5/Unidad5-Pop_genetics_software_especializado.md)
-
-[Video **Sesión 1: genética de poblaciones con software bioinformático**](https://www.youtube.com/watch?v=Gdxwh2oSkOY)
+**Sesión 1: Datos genéticos**
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-[Video **Sesión 2:continuación de genética de poblaciones**](https://www.youtube.com/watch?v=uvomUe2Ju_k)
+**Sesión 2: Análisis genético de poblaciones**
 
 * PCA exploratorios
-* Análisis básicos de diversidad y diferenciación genética
+* Análisis de estructura poblacional
+* Análisis de mestizaje
 
-#### Trabajo en casa en proyectos finales y tareas
+**Sesión 3: Análisis de ADN antiguo**
 
- Se dará seguimiento online al proyecto de las unidades 1-5 con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
+* Particularidades de los datos aDNA
+* Limpieza de datos
+* Llamado de variantes
+* Algunos análisis poblaciones con aDNA
 
-#### Unidad 6 [Introducción a la genómica y secuenciación de siguiente generación](Unidad6/Unidad6_IntroGenomica_NexGenSeq.md)
+#### Unidad 3 Generación y alineamiento de datos NGS
 
 **Sesión 1 Generación y QC de datos NGS**
 
 * Técnicas de secuenciación
 * Errores de secuenciación
-* Formatos fastq, bam, vcf
-* Análisis básicos de calidad
-
-**Sesión 2 Alineamiento de lecturas de secuenciación** 
-
 * Limpieza de datos crudos
+
+Trabajo individual:
+
+* Formatos fastq, bam, vcf
+
+**Sesión 2: Introducción a las bases de datos**
+
+* Datos de secuencias
+* Bases de datos biológicas
+
+**Sesión 3: Análisis de secuencias**
+
 * Alineamiento contra un genoma de referencia
-
-**Sesión 3 Llamado de variantes**
-
 * Llamado de variantes
+
+Trabajo individual:
+
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
-#### Unidad 7 [Análisis de transcriptomas](Unidad7/Unidad7_Analisis_de_Transcriptomas.md)
+**Sesión 4: Genómica del cáncer**
+
+* Llamado de mutaciones somáticas
+* Aplicaciones para la precisión del diagnóstico
+
+#### Unidad 4 Análisis de transcriptomas
 
 **Sesión 1 Expresión diferencial**
 
+* Microarreglos
 * Diseño experimental
-* Análisis de expresion diferencia
+* Análisis de expresión diferencial
 
 **Sesión 2 Análisis funcional**
 
@@ -274,38 +269,3 @@ Para México, todas las unidades son obligatorias.
 * Generación de datos RNAseq
 * Modelamiento de datos
 * Software
-
-### Unidad 8 [Aplicaciones de NGS](Unidad8/Unidad8_Aplicaciones_de_NGS.md)
-
-**Sesión 1 Metagenómica**
-
-* Secuenciación de amplicones
-* Barcoding
-* Metabarcoding
-
-**Sesión 2 Ensamblaje de representación reducida de genomas**
-
-* Metodologías de representación reducida de genomas (RAD, GBS, etc)
-* Ensamblaje de novo vs. sobre una referencia
-* Principales algoritmos y software (Stacks, pyRAD, Tassel)
-* Uso de replicados para informar el ensamblaje
-* Primera inspección de los datos
-
-#### Unidad 9 Análisis genómicos reproducibles en la nube
-
-**Sesión 1**
-
-* Terra
-* pipelining en la nube
-
-**Sesión 2**
-
-* Mejores prácticas de GATK
-* workflow GVCF
-* Jupyter
-* WDL
-
-**Sesión 3**
-
-* Variantes somáticas con Mutect2
-* Variantes en número de copias con GermlineCNVCaller
