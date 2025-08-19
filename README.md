@@ -1,22 +1,32 @@
 # Introducción a la bioinformática e investigación reproducible para análisis genómicos
 
-[![Gitter](https://badges.gitter.im/ugenoma/Bioinfo2020.svg)](https://gitter.im/ugenoma/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+<!--[![Gitter](https://badges.gitter.im/ugenoma/Bioinfo2020.svg)](https://gitter.im/ugenoma/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)-->
 
 Mediante una colaboración entre el Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México, CONABIO y la U. de Chile, ofreceremos un curso intensivo de bioinformática, orientado a entregar las herramientas básicas para análisis de datos genómicos en el contexto de genética, especialmente la genética de poblaciones.
 
-INSTRUCTORES:
-
-**Dra. Alicia Mastretta Yanes, PhD.**
+INSTRUCTORES ENCARGADOS:
+**Dra. Alicia Mastretta Yanes, PhD.** (México)
 Catedrática CONACYT-CONABIO,
 [www.mastrettayanes-lab.org](www.mastrettayanes-lab.org)
+
+**Dr. Ricardo Verdugo Salgado, PhD** (Chile)
+Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
+
+INSTRUCTURES PARTICIPANTES:
+
+**Karen Oróstica Tapia, PhD.**
+Investigadora Docente, Insitituto de Ciencia de Datos, Universidad del Desarrollo
+[https://ingenieria.udd.cl/persona/karen-orostica](https://ingenieria.udd.cl/persona/karen-orostica)
+
+**Constanza de la Fuente, PhD.**
+Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile
+[https://orcid.org/0000-0002-2857-3615](https://orcid.org/0000-0002-2857-3615)
+
+INSTRUCTORES de versiones pasadas:
 
 **Dra. Camille Truong, PhD**.
 Investigadora Instituto de Biología, UNAM
 [camilletruong.wixsite.com](https://camilletruong.wixsite.com/home#!)
-
-**Dr. Ricardo Verdugo Salgado, PhD**
-Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile
-[http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
 
 **Dr. Matthieu J. Miossec, PhD**
 Bioinformatics Analyst, Wellcome Centre for Human Genetics de la Universidad de Oxford
@@ -40,68 +50,64 @@ El **objetivo general es** brindar a los y las alumnas las herramientas computac
 
 Los **objetivos particulares** son:
 
-1.	Formar a los y las alumnas en los principios de investigación reproducible y metodologías para organizar proyectos bioinformáticos
-2.	Introducir a los alumnos a bash, R y git
-3.	Presentar a los alumnos los tipos de datos genéticos producidos por la secuenciación de siguiente generación
-4.	Introducir a los y las alumnas al análisis e datos genómicos y genomas reducidos
-5.	Revisar  a  nivel teórico y  práctico los  métodos  bioinformáticos  clásicos  de  análisis secuencias genómicas
-6.	Asesorar a los alumnos en la realización de sus propios proyectos bioinformáticos
-
+1. Formar a los y las alumnas en los principios de investigación reproducible y metodologías para organizar proyectos bioinformáticos
+2. Introducir a los alumnos a bash, R y git
+3. Presentar a los alumnos los tipos de datos genéticos producidos por la secuenciación de siguiente generación
+4. Introducir a los y las alumnas al análisis e datos genómicos y genomas reducidos
+5. Revisar  a  nivel teórico y  práctico los  métodos  bioinformáticos  clásicos  de  análisis secuencias genómicas
+6. Asesorar a los alumnos en la realización de sus propios proyectos bioinformáticos
 
 ### Que sí es este curso
 
 * Una introducción a los métodos y mejores prácticas de la biología computacional, los análisis bioinformáticos y la ciencia reproducible.
 * Un resumen general de los tipos de datos utilizados en genómica y las herramientas computacionales para analizarlos.
-* Una introducción para saber utilizar la línea de comando y R de forma fluida a través de mucha práctica. **Muchos cursos enfocados en análisis de datos genómicos asumen que ya sabes esto, o dan una introducción flash y luego saltan al otro tema, lo que hace  _muy difícil_ realmente aprovechar el otro tema o te deja con malas prácticas difíciles de borrar.**
+* Una introducción para saber utilizar la línea de comandos y R de forma fluida a través de mucha práctica. **Muchos cursos enfocados en análisis de datos genómicos asumen que ya sabes esto, o dan una introducción flash y luego saltan al otro tema, lo que hace  _muy difícil_ realmente aprovechar el otro tema o te deja con malas prácticas difíciles de borrar.**
 * El lenguaje para aprender a entender los manuales de cualquier software bioinformático para poder utilizarlo a fondo por cuenta propia.
 * Un curso con mucha práctica de R enfocado en ciencia reproducible, limpieza y graficación de datos biológicos y genéticos.
-* El piso básico para poder tomar un curso más avanzado o adentrarse por uno mismo en algún análisis concreto (ensamblado de genomas, análisis transcriotómicos, filogenética con métodos Bayesianos, etc).
-
+* El piso básico para poder tomar un curso más avanzado o adentrarse por uno mismo en algún análisis concreto (ensamblado de genomas, análisis transcriptómicos, filogenética con métodos bayesianos, etc).
 
 ### Que NO es este curso
 
-* La respuesta a qué tienes que hacer en tu proyecto de tesis.
-* Una discusión profunda de los diferentes softwares para analizar datos GBS, RAD, genomas, transcriptomas, metabarcoding, etc.
+* La respuesta a lo que tienes que hacer en tu proyecto de tesis.
+* Una discusión profunda de los diferentes programas para analizar datos GBS, RAD, genomas, transcriptomas, metabarcoding, etc.
 
-En otras palabras en este curso no te vamos a decir qué programa utilizar ni discutir a profundidad métodos de ensamblado etc. Para eso hay cursos especializados intensivos de un par de días que asumen ya sabes usar chido la terminal.
+En otras palabras, en este curso no te vamos a decir qué programa utilizar ni discutir a profundidad métodos de ensamblado, etc. Para eso hay cursos especializados intensivos de un par de días que asumen ya saben usar la terminal.
 
 Algunos ejemplos:
 
 * [Curso Bioinformática Instituto de Biotecnología, Cuernavaca](http://uusmd.unam.mx/curso/).
 * [Talleres Internacionales de Genómica del Centro de Ciencias Genómicas, Cuernavaca](http://congresos.nnb.unam.mx/TIB2017/)
 
-
 ## Dinámica del curso
 
 ### ¿Cómo serán las clases?
+
 * Exposición + ejercicos y ejemplos en clase
+
 * Todos los materiales de la clase los iremos subiendo/actualizando a GitHub conforme avance el semestre
+
 * Dejaremos **lecturas** a casa antes o después de algunos temas. Es una muy buena idea sí leerlas.
+
 * Ocuparemos Google Classroom para enviar tareas y hacer anuncios del curso. Debes recibir una invitación a tu correo.
 
 * **¿Necesito una computadora?**
 
 El curso es teórico-práctico, por lo que se requiere traigan su laptop con Mac o GNU/Linux (**no** Windows, sorry, lo intenté 2 años y es una pesadilla para todxs) y:
 
-  -  [Docker](https://www.docker.com/) instalado y **FUNCIONANDO** (ocuparemos Docker dentro de un mes)
-
-
+- [Docker](https://www.docker.com/) instalado y **FUNCIONANDO** (ocuparemos Docker dentro de un mes)
 * **¿Necesito instalar algo más? Sí**
-     1. Un editor de texto decente. Listo para la 2da clase. Recomendaciones:
-         * Mac o Linux: [Atom](https://atom.io/)
-         * Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
-     2. Un editor de Markdown    
-         * Mac: [MacDown](http://macdown.uranusjr.com/)
-         * Mac o Linux: [Haroopad](http://pad.haroopress.com/) o [Typora](https://typora.io/)
-     3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
+  
+  1. Un editor de texto decente. Listo para la 2da clase. Recomendaciones:
+     * Mac o Linux: [Atom](https://atom.io/)
+     * Linux: [Gedit](http://sourceforge.net/projects/gedit/) u otro que te guste.
+  2. Un editor de Markdown    
+     * Mac: [MacDown](http://macdown.uranusjr.com/)
+     * Mac o Linux: [Haroopad](http://pad.haroopress.com/) o [Typora](https://typora.io/)
+  3. [R y RStudio](https://www.rstudio.com/products/rstudio/download/).
+  
+  **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
 
-     
-
- **Si van a tomar notas, que sean ahí o en un editor de Markdown, nooooo en Word, de veritas de veritas**.
-
-
-También necesitas abrir una **cuenta de Github** para unirte al [![Gitter](https://badges.gitter.im/BioinfinvRepro/Bioinfo2020.svg)](https://gitter.im/BioinfinvRepro/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
+<!-- También necesitas abrir una **cuenta de Github** para unirte al [![Gitter](https://badges.gitter.im/BioinfinvRepro/Bioinfo2020.svg)](https://gitter.im/BioinfinvRepro/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)-->
 
 ### Este repositorio
 
@@ -123,56 +129,18 @@ En la unidad 2 aprenderemos a utilizar github desde la línea de comando, pero p
 
 ![](github_download.png)
 
-
-
 ### Mecanismo de calificación
 
-El curso se dividirá en secciones que se calificarán por separado:
+El curso se dividirá en tres secciones que se calificarán por separado. Se asiganarean tareas al finalde cada sesión. El resultados de la tareas debe ser enviado para evaluación cada viernes hasta las 23:00 hrs. Cada tarea será evaludo con una nota del 1-7. La nota de la unidad será calculada como:
 
-**Unidades 1-3:**
-
-* 70% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección
-* 20% Examen
-* 10% Asistencia (física o virtual) y participación 
-
-**Unidad 4-5:**
-
-* 10% Tareas. Todas las tareas tienen el mismo valor. Habrá tareas opcionales, que se suman a la calificación esta sección.
-* 90% Proyecto de la Unidad 5, el cual se califica con:
-	* 10% Organización del repositorio
-	* 15% README **(debe ser en inglés)**
-	* 20% Análisis
-	* 10% Resumen y discusión en formato Markdown 
-	* 15% Gráfica(s) en R
-	* 15% Scripts **deben estar comentados en inglés**
-	* 15% Avances preliminares 
-
-**Unidad 6-8:**
-
-100% Tareas. Aproximadamente una tarea por sesión. Todas las tareas tienen el mismo valor.
-
-**Proyecto final opcional**
-
-Igual que el proyecto de la Unidad 5 pero con:
-
-A) Tus datos propios
-
-o
-
-B) Los datos de alguna tarea de las vistas en unidad 6-9 que se acerquen a lo que trabajarás en tu proyecto.
-
-Los scripts pueden ser **muy sencillos** por ejemplo: bajar las secuencias, examinarlas con fastqc y hacer una gráfica del número de reads por muestra.
-
-Se calificará:
-
-* 20% Organización del repositorio
-* 20% README **(debe ser en inglés)**
-* 20% Resumen y discusión en formato Markdown 
-* 20% Gráfica(s) en R (mínima 1)
-* 20% Script(s) (mínimo 1) **deben estar comentados en inglés** 
-
-
-Para Chile, las unidades 1-4 y 6-8 constituyen dos cursos independientes. La Unidad 5 es opcional.
+* 80% promerio aritmético entre las notas de las tareas de la unidad
+* 20% Proyecto de la unidad, el cual se califica con:  
+  * 15% Organización del repositorio
+  * 15% README **(debe ser en inglés)**
+  * 20% Análisis
+  * 20% Resumen y discusión en formato Markdown 
+  * 15% Gráfica(s) en R
+  * 15% Scripts **deben estar comentados en inglés**
 
 Para México, todas las unidades son obligatorias.
 
@@ -180,13 +148,13 @@ Para México, todas las unidades son obligatorias.
 
 ![](truestory.png)
 
-
 ## Temario
 
 [Video de Bienvenida al curso 2020](https://www.youtube.com/watch?v=51y4PLN2mBY)
 
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
-[Video **Sesión 1:  Introducción al código y la terminal**](https://www.youtube.com/watch?v=vziA1KbShoQ)
+
+**Sesión 1:  Introducción al código y la terminal**
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
@@ -229,6 +197,7 @@ Para México, todas las unidades son obligatorias.
 * Funciones básicas de R más importantes para bioinformática
 
 [Video **Sesión 2: Rmrkown y Funciones en R**](https://www.youtube.com/watch?v=98AaKGzfdCw)
+
 * Continuación intro
 * Funciones propias: crear funciones y utilizarlas con source
 * Rmarkdown y R Notebook
@@ -265,6 +234,7 @@ Para México, todas las unidades son obligatorias.
 * Análisis básicos de diversidad y diferenciación genética
 
 #### Trabajo en casa en proyectos finales y tareas
+
  Se dará seguimiento online al proyecto de las unidades 1-5 con las herramientas de la Unidad 2 y se dejarán tareas para mantener la práctica de las unidades anteriores
 
 #### Unidad 6 [Introducción a la genómica y secuenciación de siguiente generación](Unidad6/Unidad6_IntroGenomica_NexGenSeq.md)
@@ -299,7 +269,6 @@ Para México, todas las unidades son obligatorias.
 * Clustering
 * Enriquecimiento funcional
 
-
 **Sesión 3 RNA-seq**
 
 * Generación de datos RNAseq
@@ -307,7 +276,9 @@ Para México, todas las unidades son obligatorias.
 * Software
 
 ### Unidad 8 [Aplicaciones de NGS](Unidad8/Unidad8_Aplicaciones_de_NGS.md)
+
 **Sesión 1 Metagenómica**
+
 * Secuenciación de amplicones
 * Barcoding
 * Metabarcoding
@@ -323,6 +294,7 @@ Para México, todas las unidades son obligatorias.
 #### Unidad 9 Análisis genómicos reproducibles en la nube
 
 **Sesión 1**
+
 * Terra
 * pipelining en la nube
 
@@ -334,5 +306,6 @@ Para México, todas las unidades son obligatorias.
 * WDL
 
 **Sesión 3**
+
 * Variantes somáticas con Mutect2
 * Variantes en número de copias con GermlineCNVCaller
