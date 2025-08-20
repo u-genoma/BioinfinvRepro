@@ -169,8 +169,6 @@ Trabajo individual:
 * Redirección con bash
 * Loops con bash
 
-**Sesión 2: Organización de un proyecto bioinformático**
-
 [**Sesión 2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
 
 * Documentación de scripts y del proyecto
