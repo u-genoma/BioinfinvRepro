@@ -152,9 +152,9 @@ Todas las unidades son obligatorias.
 
 ## Temario
 
-#### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
+#### Unidad 1 Introducción a la programación
 
-**Sesión 1:  Mis primeros comandos**
+[**Sesión 1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
@@ -170,6 +170,8 @@ Trabajo individual:
 * Loops con bash
 
 **Sesión 2: Organización de un proyecto bioinformático**
+
+[**Sesión 2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
 
 * Documentación de scripts y del proyecto
 * Markdown
