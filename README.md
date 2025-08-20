@@ -42,7 +42,7 @@ Profesor Asociado, Instituto de Ciencias Ambientales y Evolutivas, Facultad de C
 
 Los materiales aquí presentados son de acceso libre. La transmisión online y videos de clases se pueden encontrar en [este canal de Youtube](https://www.youtube.com/channel/UCqrgi3eXb3J51QMO0LQrgOA)
 
-Sala de chat para **anuncios de la clase** y dudas si lo estás viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)
+<!--Sala de chat para **anuncios de la clase** y dudas si lo estás viendo remotamente: [en Gitter](https://gitter.im/Bioinfo_Mx-Cl/community)-->
 
 ## Objetivos
 
@@ -63,7 +63,7 @@ Los **objetivos particulares** son:
 * Un resumen general de los tipos de datos utilizados en genómica y las herramientas computacionales para analizarlos.
 * Una introducción para saber utilizar la línea de comandos y R de forma fluida a través de mucha práctica. **Muchos cursos enfocados en análisis de datos genómicos asumen que ya sabes esto, o dan una introducción flash y luego saltan al otro tema, lo que hace  _muy difícil_ realmente aprovechar el otro tema o te deja con malas prácticas difíciles de borrar.**
 * El lenguaje para aprender a entender los manuales de cualquier software bioinformático para poder utilizarlo a fondo por cuenta propia.
-* Un curso con mucha práctica de R enfocado en ciencia reproducible, limpieza y graficación de datos biológicos y genéticos.
+* Un curso con mucha práctica de R enfocado en ciencia reproducible, limpieza y gráfica de datos biológicos y genéticos.
 * El piso básico para poder tomar un curso más avanzado o adentrarse por uno mismo en algún análisis concreto (ensamblado de genomas, análisis transcriptómicos, filogenética con métodos bayesianos, etc).
 
 ### Que NO es este curso
@@ -125,13 +125,13 @@ En este mismo repositorio de github están las versiones de cursos que hemos dad
 
 ![](github-branches.png)
 
-En la unidad 2 aprenderemos a utilizar github desde la línea de comando, pero por lo pronto, para hacer los ejercicios de la unidad 1: baja el respositorio y guárdalo en tu escritorio. Para bajarlo da click en el botón vere del lado derecho que dice "Clone or Download" y selecciona "Download zip".
+En la unidad 2 aprenderemos a utilizar github desde la línea de comando, pero por lo pronto, para hacer los ejercicios de la unidad 1: baja el respositorio y guárdalo en tu escritorio. Para bajarlo da click en el botón verde del lado derecho que dice "Clone or Download" y selecciona "Download zip".
 
 ![](github_download.png)
 
 ### Mecanismo de calificación
 
-El curso se dividirá en tres secciones que se calificarán por separado. Se asiganarean tareas al finalde cada sesión. El resultados de la tareas debe ser enviado para evaluación cada viernes hasta las 23:00 hrs. Cada tarea será evaluada con una nota del 1-7. La nota de la unidad será calculada como:
+El curso se dividirá en tres secciones que se calificarán por separado. Se asiganarán tareas al final de cada sesión. El resultados de la tareas debe ser enviado para evaluación cada viernes hasta las 23:00 hrs. Cada tarea será evaluada con una nota del 1-7. La nota de la unidad será calculada como:
 
 * 80% promedio aritmético entre las notas de las tareas de la unidad
 * 20% Proyecto de la unidad, el cual se califica con:  
