@@ -152,8 +152,6 @@ Todas las unidades son obligatorias.
 
 ## Temario
 
-[Video de Bienvenida al curso 2020](https://www.youtube.com/watch?v=51y4PLN2mBY)
-
 #### Unidad 1 [Introducción a la programación](Unidad1/Unidad1_Intro_programacion.md)
 
 **Sesión 1:  Mis primeros comandos**
@@ -183,13 +181,13 @@ Trabajo individual:
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-** Sesión 3: Introducción a R con un enfoque bioinformático**
+**Sesión 3: Introducción a R con un enfoque bioinformático**
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
 
-** Sesión 4: Programación y análisis de datos en R**
+**Sesión 4: Programación y análisis de datos en R**
 
 * Funciones propias: crear funciones y utilizarlas con source
 * Manipulación y limpieza de datos en R
