@@ -35,7 +35,7 @@ Por esto estoy 100% de acuerdo con xkcd, no tienes que saberlo todo de memoria. 
 
 * Busca en inglés
 
-* Piensa bien cuáles son las **palabras clave de tu pregunta** y cómo **generalizar** tu caso a algo que cualquiera entienda y que no sea específico a tu computadora. Por ejemplo "How to list files in a directory using the Terminal?" es mucho mejor mejor que "which files are in Manzanas" (tu y yo sabemos que Manzanas es un directorio, pero no el mundo).
+* Piensa bien cuáles son las **palabras clave de tu pregunta** y cómo **generalizar** tu caso a algo que cualquiera entienda y que no sea específico a tu computadora. Por ejemplo "How to list files in a directory using the Terminal?" es mucho mejor que "which files are in Manzanas" (tu y yo sabemos que Manzanas es un directorio, pero no todo el mundo lo sabe).
 
 * Si vas a pedir ayuda en un foro, lee las reglas y tipo de preguntas atentidas por el foro antes de preguntar.
 
