@@ -152,9 +152,11 @@ Todas las unidades son obligatorias.
 
 ## Temario
 
-#### Unidad 1 Introducción a la programación
+### [VIDEO: Bienvenida al curso](https://youtu.be/uHydMEk1biw)
 
-[**Sesión 1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
+### Unidad 1 Introducción a la programación
+
+#### [**Sesión 1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
@@ -169,7 +171,9 @@ Trabajo individual:
 * Redirección con bash
 * Loops con bash
 
-[**Sesión 2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
+[**VIDEO: Sesión 1**](https://youtu.be/lxVjr32CQ98)
+
+#### [**Sesión 2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
 
 * Documentación de scripts y del proyecto
 * Markdown
@@ -181,13 +185,13 @@ Trabajo individual:
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-**Sesión 3: Introducción a R con un enfoque bioinformático**
+### Sesión 3: Introducción a R con un enfoque bioinformático**
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
 
-**Sesión 4: Programación y análisis de datos en R**
+### **Sesión 4: Programación y análisis de datos en R**
 
 * Funciones propias: crear funciones y utilizarlas con source
 * Manipulación y limpieza de datos en R
@@ -197,29 +201,29 @@ Trabajo individual:
 * Graficar en R
 * Bioconductor
 
-#### Unidad 2 Genética de poblaciones con software especializado
+### Unidad 2 Genética de poblaciones con software especializado
 
-**Sesión 1: Datos genéticos**
+#### **Sesión 1: Datos genéticos**
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-**Sesión 2: Análisis genético de poblaciones**
+#### **Sesión 2: Análisis genético de poblaciones**
 
 * PCA exploratorios
 * Análisis de estructura poblacional
 * Análisis de mestizaje
 
-**Sesión 3: Análisis de ADN antiguo**
+#### **Sesión 3: Análisis de ADN antiguo**
 
 * Particularidades de los datos aDNA
 * Limpieza de datos
 * Llamado de variantes
 * Algunos análisis poblaciones con aDNA
 
-#### Unidad 3 Generación y alineamiento de datos NGS
+### Unidad 3 Generación y alineamiento de datos NGS
 
-**Sesión 1 Generación y QC de datos NGS**
+#### **Sesión 1 Generación y QC de datos NGS**
 
 * Técnicas de secuenciación
 * Errores de secuenciación
@@ -229,12 +233,12 @@ Trabajo individual:
 
 * Formatos fastq, bam, vcf
 
-**Sesión 2: Introducción a las bases de datos**
+#### **Sesión 2: Introducción a las bases de datos**
 
 * Datos de secuencias
 * Bases de datos biológicas
 
-**Sesión 3: Análisis de secuencias**
+#### **Sesión 3: Análisis de secuencias**
 
 * Alineamiento contra un genoma de referencia
 * Llamado de variantes
@@ -244,25 +248,25 @@ Trabajo individual:
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
-**Sesión 4: Genómica del cáncer**
+#### **Sesión 4: Genómica del cáncer**
 
 * Llamado de mutaciones somáticas
 * Aplicaciones para la precisión del diagnóstico
 
-#### Unidad 4 Análisis de transcriptomas
+### Unidad 4 Análisis de transcriptomas
 
-**Sesión 1 Expresión diferencial**
+#### **Sesión 1 Expresión diferencial**
 
 * Microarreglos
 * Diseño experimental
 * Análisis de expresión diferencial
 
-**Sesión 2 Análisis funcional**
+#### **Sesión 2 Análisis funcional**
 
 * Clustering
 * Enriquecimiento funcional
 
-**Sesión 3 RNA-seq**
+#### **Sesión 3 RNA-seq**
 
 * Generación de datos RNAseq
 * Modelamiento de datos
