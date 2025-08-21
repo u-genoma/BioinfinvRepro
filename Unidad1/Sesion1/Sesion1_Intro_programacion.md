@@ -1811,7 +1811,7 @@ $ ./getsecsNCBI.sh
 
 ##### Ejercicios
 
-1. Escribe **una línea de código** que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad1/Prac_Uni1/Maiz/nuevos_final.fam`.
+1. Escribe **una línea de código** que cree un archivo con los nombres de las muestras de maiz enlistadas en `/Unidad1/Sesion1/Prac_Uni1/Maiz/nuevos_final.fam`.
 
 2. Escribe **un script** que cree 4 directorios llamados PobA, PobB, PobC, PobD y dentro de cada uno de ellos un archivo de texto que diga "Este es un individuo de la población x" donde x debe corresponder al nombre del directorio.
 
