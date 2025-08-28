@@ -158,6 +158,8 @@ Todas las unidades son obligatorias.
 
 #### [**Sesión 1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
 
+[**VIDEO: Sesión 1**](https://youtu.be/lxVjr32CQ98)
+
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash
@@ -171,9 +173,9 @@ Trabajo individual:
 * Redirección con bash
 * Loops con bash
 
-[**VIDEO: Sesión 1**](https://youtu.be/lxVjr32CQ98)
-
 #### [**Sesión 2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
+
+[**VIDEO: Sesión 2**](https://youtu.be/6kpQ0PtIae0)
 
 * Documentación de scripts y del proyecto
 * Markdown
