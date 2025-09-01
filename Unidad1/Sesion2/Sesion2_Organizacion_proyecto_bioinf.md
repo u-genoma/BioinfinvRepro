@@ -492,7 +492,7 @@ Las tareas ("cards") de un proyecto pueden quedarse como tareas simplemente, o v
 
 **Ejercicio** Genera un repositorio dentro de tu cuenta de Github que se llame "Tareas\_BioinfRepro2019\_TusIniciales".  
 
-**Ejercicio** Agréganos a Lorena y a mi como colaboradoras en el repositorio de tareas del curso que creaste en tu cuenta de Github.
+**Ejercicio** Agrégme a mi como colaborador en el repositorio de tareas del curso que creaste en tu cuenta de Github. Mi nobre de usaiurio es "ravuch"
 
 Parte de los proyectos del curso involucrarán crear proyectos de github e irlos actualizando con sus avances a lo largo del semestre.
 
