@@ -388,6 +388,12 @@ Para ver el historial de commits que se han hecho en el repo. Por default te mos
 
 2) Como mi repo tiene más de una rama, necesitarás agregar a tu `git clone` lo siguiente: `--branch master --single-branch`.
 
+3) Modica la página de esta sesion en tu copia local, inclyebdo tus datos (nombre y fecha de modificacón).
+
+4) Realiza un comit de tus cambios
+
+5) Toma un pantallazo de la página modificada (en un editor de Markdown) y del teminar luego de ejecuta `$ git status` incluye esos pantallazos con respectivas explicaciones de qué muestran en la página de las tadea para la Sesión en tu respositorio personal.   
+
 #### `git` para la vida diaria en resumen:
 
 1) `git status` dentro del directorio de tu repo para ver si hay cambios.
