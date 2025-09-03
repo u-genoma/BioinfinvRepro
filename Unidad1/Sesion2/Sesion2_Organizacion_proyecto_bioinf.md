@@ -346,7 +346,7 @@ Pero ojo, antes de andar con `pull` por la vida [checa las bondades de `git fetc
 
 #### `git fetch`
 
-Si vas a trabajar con repos de otras personas problablemente no quieras hacer un `merge` en automático (que es lo que hace `pull` tras bambalinas) con tu repo local, sino que solo quieras jalar los cambios que hayan hecho otros. Por ejemplo los archivos que agregue a este repo sin que borre lo que tu hayas hecho en tu versión. [Para evitar posibles problemas asociados a esto se recomienda usar `fetch`]((https://help.github.com/articles/fetching-a-remote/)).
+Si vas a trabajar con repos de otras personas probablemente no quieras hacer un `merge` en automático (que es lo que hace `pull` tras bambalinas) con tu repo local, sino que solo quieras jalar los cambios que hayan hecho otros. Por ejemplo los archivos que agregue a este repo sin que borre lo que tu hayas hecho en tu versión. [Para evitar posibles problemas asociados a esto se recomienda usar `fetch`]((https://help.github.com/articles/fetching-a-remote/)).
 
 [Otra referencia de fetch vs pull](https://longair.net/blog/2009/04/16/git-fetch-and-merge/)
 
@@ -408,11 +408,11 @@ Para ver el historial de commits que se han hecho en el repo. Por default te mos
 
 Hay muchas formas. [Esta respuesta de Stacksoverflow es una buena guía](https://stackoverflow.com/questions/4114095/how-to-revert-a-git-repository-to-a-previous-commit).
 
-### Recomendación: ignorar archivos que no queremos que git siga**
+### Recomendación: ignorar archivos que no queremos que git siga
 
-Algunso archivos no queremos que sean considerados por `git`, por ejemplo archivos que la compu hace en automático como los "fantasmitas de Mac" o archivos de datos muy pesados si queremos solo publicar el código. Podemos entonces decirle a git cuáles archivos ignorar. Pasos:
+Algunos archivos no queremos que sean considerados por `git`, por ejemplo archivos que la compu hace en automático como los "fantasmitas de Mac" o archivos de datos muy pesados si queremos solo publicar el código. Podemos entonces decirle a git cuáles archivos ignorar. Pasos:
 
-1) Crear un archiovo `.gitignore` en el wd de tu repositorio (donde vive tu `.git` que se creó con `git init` o con `git clone`).
+1) Crear un archivo `.gitignore` en el wd de tu repositorio (donde vive tu `.git` que se creó con `git init` o con `git clone`).
 
 `touch .gitignore` (nota el punto `.`)
 
@@ -451,7 +451,7 @@ También puedes crear un `.gitignore` global que aplique en todos los repos de t
 1) Clona el repo (esto **solo hay que hacerlo una vez**)
 
 ```
-git clone https://github.com/AliciaMstt/BioinfinvRepro.git --branch master --single-branch
+git clone https://github.com/u-genoma/BioinfinvRepro.git --branch master --single-branch
 ```
 
 2) Entra al repo

@@ -187,13 +187,13 @@ Trabajo individual:
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-### Sesión 3: Introducción a R con un enfoque bioinformático**
+### [Sesión 3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
 
-### **Sesión 4: Programación y análisis de datos en R**
+### Sesión 4: Programación y análisis de datos en R
 
 * Funciones propias: crear funciones y utilizarlas con source
 * Manipulación y limpieza de datos en R
@@ -205,18 +205,18 @@ Trabajo individual:
 
 ### Unidad 2 Genética de poblaciones con software especializado
 
-#### **Sesión 1: Datos genéticos**
+#### Sesión 1: Datos genéticos
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-#### **Sesión 2: Análisis genético de poblaciones**
+#### Sesión 2: Análisis genético de poblaciones
 
 * PCA exploratorios
 * Análisis de estructura poblacional
 * Análisis de mestizaje
 
-#### **Sesión 3: Análisis de ADN antiguo**
+#### Sesión 3: Análisis de ADN antiguo
 
 * Particularidades de los datos aDNA
 * Limpieza de datos
@@ -225,7 +225,7 @@ Trabajo individual:
 
 ### Unidad 3 Generación y alineamiento de datos NGS
 
-#### **Sesión 1 Generación y QC de datos NGS**
+#### Sesión 1 Generación y QC de datos NGS
 
 * Técnicas de secuenciación
 * Errores de secuenciación
