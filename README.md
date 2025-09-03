@@ -188,7 +188,7 @@ Trabajo individual:
 * Creación de pipelines
 
 ### [Sesión 3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
-
+[**VIDEO: Sesión 3**](https://youtu.be/txXnnxVx21o)
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
