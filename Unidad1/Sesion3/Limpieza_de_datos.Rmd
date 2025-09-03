@@ -145,7 +145,7 @@ información esta por grupo demográfico de acuerdo a sexo (m, f), y edad (0-4,
 
 
 ```{r}
-tb <- read.csv("PracUni3/ejemplosgenerales/data/tb.csv")
+tb <- read.csv("PracUni1Ses3/ejemplosgenerales/data/tb.csv")
 head(tb)
 colnames(tb)
 ```
@@ -187,7 +187,7 @@ columnas, veamos una base de datos de clima en Cuernavaca. ¿Cuáles son las
 variables en estos datos?
 
 ```{r}
-clima <- read.delim("PracUni3/ejemplosgenerales/data/clima.txt", stringsAsFactors=FALSE)
+clima <- read.delim("PracUni1Ses3/ejemplosgenerales/data/clima.txt", stringsAsFactors=FALSE)
 head(clima)
 ```
 
