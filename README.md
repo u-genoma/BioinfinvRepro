@@ -187,16 +187,16 @@ Trabajo individual:
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-### [Sesión 3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
+#### [Sesión 3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
 
-### Sesión 4: Programación y análisis de datos en R
+#### [Sesión 4: Programación y análisis de datos en R](Unidad1/Sesion3/Sesion3_Intro_a_R.md#funciones-propias-crear-funciones-y-utilizarlas-con-source)
 
-* Funciones propias: crear funciones y utilizarlas con source
-* Manipulación y limpieza de datos en R
+* Funciones propias: crear funciones y utilizarlas con source ([Video opcional](https://www.youtube.com/watch?v=98AaKGzfdCw))
+* Manipulación y limpieza de datos en R ([Video opcional](https://www.youtube.com/watch?v=cvTvySyvG-s))
 
 Trabajo individual:
 
