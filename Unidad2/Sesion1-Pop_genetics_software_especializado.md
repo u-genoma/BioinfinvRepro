@@ -99,19 +99,19 @@ El mejor punto de partida son el [tutorial oficial](https://vcftools.github.io/d
 
 Consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y escribe un script que responda lo siguiente para el archivo `GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf ` **sin copiarlo a su directorio**:
 
-a) ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
-b) ¿Cuántos sitios del archivo no tienen datos perdidos?
-c) Genera un archivo en tu carpeta de trabajo llamado que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
-d) Reporta cuántas variantes tienen el archivo generado
-e) Reporta la cobertura promedio para todos los individuos del set de datos
-f) Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
-g) Filtra el archivo de frecuencias para solo incluir variantes bialélicas (tip: awk puede ser útil para realizar esta tarea, tip2: puedes usar bcftools para filtrar variantes con más de dos alelos antes de calcular las frecuencias)
-h) Llama a un script escrito en lenguaje R que lee el archivo de frecuencias de variantes bialélicas y guarda un histograma con el espectro de MAF para las variantes bialélicas
-i) ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
-j) Calcula la heterocigosidad de cada individuo.
-k) Calcula la diversidad nucleotídica por sitio.
-l) Filtra los sitios que tengan una frecuencia del alelo menor <0.05
-m) Convierte el archivo `wolves_maf05.vcf` a formato plink. 
+1. ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
+1. ¿Cuántos sitios del archivo no tienen datos perdidos?
+1. Genera un archivo en tu carpeta de trabajo llamado que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
+1. Reporta cuántas variantes tienen el archivo generado
+1. Reporta la cobertura promedio para todos los individuos del set de datos
+1. Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
+1. Filtra el archivo de frecuencias para solo incluir variantes bialélicas (tip: awk puede ser útil para realizar esta tarea, tip2:  puedes usar bcftools para filtrar variantes con más de dos alelos antes de calcular las frecuencias)
+1. Llama a un script escrito en lenguaje R que lee el archivo de frecuencias de variantes bialélicas y guarda un histograma con el espectro de MAF para las variantes bialélicas
+1. ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
+1. Calcula la heterocigosidad de cada individuo.
+1. Calcula la diversidad nucleotídica por sitio.
+1. Filtra los sitios que tengan una frecuencia del alelo menor <0.05
+1. Convierte el archivo `wolves_maf05.vcf` a formato plink. 
 
 ## Plink
 
