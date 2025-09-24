@@ -101,7 +101,7 @@ Consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y e
 
 1. ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
 1. ¿Cuántos sitios del archivo no tienen datos perdidos?
-1. Genera un archivo en tu carpeta de trabajo llamado que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
+1. Genera un archivo en tu carpeta de trabajo `Prac_Uni5/data` que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
 1. Reporta cuántas variantes tienen el archivo generado
 1. Reporta la cobertura promedio para todos los individuos del set de datos
 1. Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
@@ -286,5 +286,3 @@ CDSJ469 CDSJ469 0 0 2 1
 5) Realiza un cuna comparación entre el sexo y archivo `fam`y el `popinfo` y calcula la proporción de discordancias
 6) Realiza un test de estimación de sexo usando plink y reporta los resultados en formato de tabla para todos los individuos con discordancia entre el sexto reportado en `fam` y el calculado con plink.
 7) Genera una tabla de contingencia de individuos por sexo y ancestría (hint: ver columna Ancestry en el archivo `popinfo`)
-
-## 
