@@ -1,4 +1,4 @@
-# Unidad 5: Genética de poblaciones con software especializado
+# Unidad 2: Genética de poblaciones con software especializado
 
 Los **datos crudos** son las secuencias tal cual salen de la plataforma de secuenciación (Illumina, IonTorrent, PacBio, entre otros). Es decir los **reads** (lecturas).  Este tipo de datos son con los que alimentamos a nuestra pipeline de ensamblado o mapeo a genoma de referencia para eventualmente *llamar SNPs* y poder tener los diferentes alelos para miles de loci (genotipos) en cada uno de nuestros individuos.
 
@@ -101,39 +101,27 @@ Consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y e
 
 a) ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
 
-
 b) ¿Cuántos sitios del archivo no tienen datos perdidos?
-
 
 c) Genera un archivo en tu carpeta de trabajo llamado que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
 
-
 d) Reporta cuántas variantes tienen el archivo generado
-
 
 e) Reporta la cobertura promedio para todos los individuos del set de datos
 
-
 f) Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
-
 
 g) Filtra el archivo de frecuencias para solo incluir variantes bialélicas (tip: awk puede ser útil para realizar esta tarea, tip2:  puedes usar bcftools para filtrar variantes con más de dos alelos antes de calcular las frecuencias)
 
-
 h) Llama a un script escrito en lenguaje R que lee el archivo de frecuencias de variantes bialélicas y guarda un histograma con el espectro de MAF para las variantes bialélicas
-
 
 i) ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
 
-
 j) Calcula la heterocigosidad de cada individuo.
-
 
 k) Calcula la diversidad nucleotídica por sitio.
 
-
 l) Filtra los sitios que tengan una frecuencia del alelo menor <0.05
-
 
 m) Convierte el archivo `wolves_maf05.vcf` a formato plink. 
 
