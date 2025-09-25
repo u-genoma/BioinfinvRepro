@@ -158,7 +158,7 @@ Todas las unidades son obligatorias.
 
 #### [**Sesión 1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
 
-[**VIDEO: Sesión 1**](https://youtu.be/lxVjr32CQ98)
+[**VIDEO: Sesión 1.1**](https://youtu.be/lxVjr32CQ98)
 
 * Código en computación
 * Cómo buscar ayuda (permanentemente)
@@ -175,7 +175,7 @@ Trabajo individual:
 
 #### [**Sesión 2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
 
-[**VIDEO: Sesión 2**](https://youtu.be/6kpQ0PtIae0)
+[**VIDEO: Sesión 1.2**](https://youtu.be/6kpQ0PtIae0)
 
 * Documentación de scripts y del proyecto
 * Markdown
@@ -187,25 +187,25 @@ Trabajo individual:
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-#### [Sesión 3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
+#### [Sesión 1,3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
 
+[**VIDEO: Sesión 1.3**](https://youtu.be/txXnnxVx21o)
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
-
-#### [Sesión 4: Programación y análisis de datos en R](Unidad1/Sesion3/Sesion3_Intro_a_R.md#funciones-propias-crear-funciones-y-utilizarlas-con-source)
-
 * Funciones propias: crear funciones y utilizarlas con source ([Video opcional](https://www.youtube.com/watch?v=98AaKGzfdCw))
-* Manipulación y limpieza de datos en R ([Video opcional](https://www.youtube.com/watch?v=cvTvySyvG-s))
 
 Trabajo individual:
 
 * Graficar en R
 * Bioconductor
+* Manipulación y limpieza de datos en R ([Video opcional](https://www.youtube.com/watch?v=cvTvySyvG-s))
 
 ### Unidad 2 Genética de poblaciones con software especializado
 
 #### Sesión 1: Datos genéticos
+
+[**VIDEO: Sesión 2.1**](https://youtu.be/TYR9Xd_lIBA)
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
