@@ -444,15 +444,8 @@ Elimine variantes duplicadas del set ChileGenomico
 
 ```sh
 $ plink --bfile chilean_all48_hg19_10 --list-duplicate-vars suppress-first
-$ plink --bfile chilean_all48_hg19_10 --exclude plink.dupvar --make-bed --out chilean_all48_hg19_11
+$ plink --bfile chilean_all48_hg19_10 --exclude plink.dupvar --make-bed --out chilean_all48_hg19_11Extraiga las variantes presentes en los datos de ChileGenomico.
 ```
-
-```sh
-$ plink --bfile chilean_all48_hg19_10 --list-duplicate-vars suppress-first
-$ plink --bfile chilean_all48_hg19_10 --exclude plink.dupvar --make-bed --out chilean_all48_hg19_11
-```
-
-Extraiga las variantes presentes en los datos de ChileGenomico.
 
 ```sh
 $ cut -f 2 chilean_all48_hg19_11.bim | sort -u > chilean_all48_hg19_11.snps
@@ -560,7 +553,7 @@ Se genera un archivo de SNPs no coincidentes entre los dos archivos.
 Intercambiar los alelos de los SNPs no coincidentes.
 
 ```sh
-$ plink --bfile chilean_all48_hg19_13 -flip flip_list.txt --reference-allele 1kG_ref-list.txt --make-bed --out chilean_all48_hg19_14
+$ plink --bfile chilean_all48_hg19_13 --flip flip_list.txt --reference-allele 1kG_ref-list.txt --make-bed --out chilean_all48_hg19_14
 ```
 
 Compruebe si hay SNPs que siguen siendo problemáticos después de haberlos volteado.
@@ -603,25 +596,19 @@ Se asume que los SNPs no están ligados. Por lo tanto usaremos un conjunto de SN
 
 ```sh
 $ plink --bfile MDS_merge --extract indepSNP.prune.in --genome --out MDS_merge2
-$ plink --bfile MDS_merge --read-genome MDS_merge2.genome --cluster --mds-plot 10 --out MDS_merge3
+$ plink --bfile MDS_merge --read-genome MDS_merge2.genome --cluster --mds-plot 10 --out MDS_merge2
 ```
 
 *** Nota***: esto no reduce el tamaño del conjunto de datos MDS_merge2, solo crea el archivo `MDS_merge2.genome` para el set reducido de SNPs con bajo LD.
 
 ### Paso 2: Generar un archivo con información de poblaciones
 
-Descargue el archivo con información de población del conjunto de datos de 1000 genomas.
-
-```sh
-$ wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20100804/20100804.ALL.panel
-```
-
-El archivo 20100804.ALL.panel contiene códigos de población de los individuos de 1000 genomas.
+El archivo `$G/20100804.ALL.panel` (obtenido desde [aquí]([ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20100804/20100804.ALL.panel](ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20100804/20100804.ALL.panel))) contiene códigos de población de los individuos de 1000 genomas .
 
 Convierta los códigos de población en códigos de superpoblación (es decir, AFR, AMR, ASN y EUR).
 
 ```sh
-awk '{print$1,$1,$2}' 20100804.ALL.panel > ethnicity_1kG.txt
+awk '{print$1,$1,$2}' $G/20100804.ALL.panel > ethnicity_1kG.txt
 sed 's/JPT/ASN/g' ethnicity_1kG.txt>ethnicity_1kG2.txt
 sed 's/ASW/AFR/g' ethnicity_1kG2.txt>ethnicity_1kG3.txt
 sed 's/CEU/EUR/g' ethnicity_1kG3.txt>ethnicity_1kG4.txt
@@ -698,6 +685,7 @@ $ plink --bfile MDS_merge --extract indepSNP.prune.in --make-bed --out MDS_merge
 Ahora sí podemos correr ADMIXTURE.
 
 ```sh
+$ module load admixture
 $ admixture -j4 --cv MDS_merge_r2_lt_0.2.bed 3 > MDS_merge_r2_lt_0.2.K3.log
 ```
 
