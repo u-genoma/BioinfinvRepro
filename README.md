@@ -190,6 +190,7 @@ Trabajo individual:
 #### [Sesión 1,3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
 
 [**VIDEO: Sesión 1.3**](https://youtu.be/txXnnxVx21o)
+
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
@@ -203,14 +204,14 @@ Trabajo individual:
 
 ### Unidad 2 Genética de poblaciones con software especializado
 
-#### Sesión 1: Datos genéticos
+#### [Sesión 1: Datos genéticos](Unidad2/Sesion1/Pop_genetics_software_especializado.md)
 
 [**VIDEO: Sesión 2.1**](https://youtu.be/TYR9Xd_lIBA)
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-#### Sesión 2: Análisis genético de poblaciones
+#### [Sesión 2: Análisis genético de poblaciones](Unidad2/Sesion2/Tutorial_PopGeno.md)
 
 * PCA exploratorios
 * Análisis de estructura poblacional
