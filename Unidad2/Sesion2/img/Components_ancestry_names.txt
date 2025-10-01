@@ -1,0 +1,5 @@
+K	Component	Ancestry
+1	4	V4	EUR
+2	4	V1	ASN
+3	4	V2	AYM
+4	4	V3	AFR
