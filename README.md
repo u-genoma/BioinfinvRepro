@@ -213,6 +213,8 @@ Trabajo individual:
 
 #### [Sesión 2: Análisis genético de poblaciones](Unidad2/Sesion2/Tutorial_PopGeno.md)
 
+[**VIDEO: Sesión 2.2**](https://youtu.be/LtxeavYa6sE)
+
 * PCA exploratorios
 * Análisis de estructura poblacional
 * Análisis de mestizaje
@@ -220,7 +222,7 @@ Trabajo individual:
 #### [Sesión 3: Genética de Poblaciones 2](Unidad2/Sesion3/Tutorial_de_Genetica_de_Poblaciones_usado_estadisticos_F.md)
 
 Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Medicina, Universidad de Chile
-
+[**PPT: Sesión 2.3**](Unidad2/Sesion3/Genetica_de_Poblaciones_2.pdf)
 [**VIDEO: Sesión 2.3**](https://youtu.be/BdNl7IJzCt0)
 
 * Estadísticos F2, F3, F4

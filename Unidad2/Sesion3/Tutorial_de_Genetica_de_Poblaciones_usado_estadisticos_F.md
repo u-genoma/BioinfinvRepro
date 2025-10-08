@@ -2,6 +2,8 @@
 
 Autora: Constanza de la Fuente
 
+La clase asociada a este tutorila se encuentra [aquí](Genetica_de_Poblaciones_2.pdf).
+
 Este tutorial se encuentra disponible en el servidor del curso (genoma.med.uchile.cl) en la siguiente ubicación.
 
 ```
@@ -317,8 +319,6 @@ adm$popdrop
 
 REPEAT WITH Germany_CordedWare.AG AS TARGET
 
-
-
 # Tarea
 
 Realice los análisis descritos en los archivos
@@ -336,5 +336,3 @@ Incluya el código más relevante y su output en formato de texto, tabla o figur
 Creen una carpeta específica para los ejercicios de esta sesión.
 
 Identifique la tarea y el estudiante en cada archivo markdown.
-
-
