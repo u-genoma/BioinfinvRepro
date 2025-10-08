@@ -217,12 +217,17 @@ Trabajo individual:
 * Análisis de estructura poblacional
 * Análisis de mestizaje
 
-#### Sesión 3: Análisis de ADN antiguo
+#### [Sesión 3: Genética de Poblaciones 2](Unidad2/Sesion3/Tutorial_de_Genetica_de_Poblaciones_usado_estadísticos_F.md)
 
-* Particularidades de los datos aDNA
-* Limpieza de datos
-* Llamado de variantes
-* Algunos análisis poblaciones con aDNA
+Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Medicina, Universidad de Chile
+
+[**VIDEO: Sesión 2.3**](https://youtu.be/BdNl7IJzCt0)
+
+* Estadísticos F2, F3, F4
+
+* qpWave – qpAdm
+
+* Modelos pqGraph
 
 ### Unidad 3 Generación y alineamiento de datos NGS
 
