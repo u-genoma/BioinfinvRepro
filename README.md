@@ -217,7 +217,7 @@ Trabajo individual:
 * Análisis de estructura poblacional
 * Análisis de mestizaje
 
-#### [Sesión 3: Genética de Poblaciones 2](Unidad2/Sesion3/Tutorial_de_Genetica_de_Poblaciones_usado_estadísticos_F.md)
+#### [Sesión 3: Genética de Poblaciones 2](Unidad2/Sesion3/Tutorial_de_Genetica_de_Poblaciones_usado_estadisticos_F.md)
 
 Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Medicina, Universidad de Chile
 
