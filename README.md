@@ -233,7 +233,10 @@ Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Med
 
 ### Unidad 3 Generación y alineamiento de datos NGS
 
-#### Sesión 1 Generación y QC de datos NGS
+#### [Sesión 1 Generación y QC de datos NGS](Unidad3/Sesion1/Tutorial_Control_de_calidad_de_lecturas_NGS.md)
+
+[**PPT: Sesión 3.1**](Unidad3/Sesion1/Sesion1_Generacion_Analisis_de_datosNGS_RAV_2019.pdf)
+[**VIDEO: Sesión 3.1**](https://www.youtube.com/watch?v=aoZ6o4silGk)
 
 * Técnicas de secuenciación
 * Errores de secuenciación
