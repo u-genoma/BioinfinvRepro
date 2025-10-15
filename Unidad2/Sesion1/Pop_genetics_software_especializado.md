@@ -100,18 +100,18 @@ El mejor punto de partida son el [tutorial oficial](https://vcftools.github.io/d
 Consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y escribe un script que responda lo siguiente para el archivo `GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf ` **sin copiarlo a su directorio**:
 
 1. ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
-1. ¿Cuántos sitios del archivo no tienen datos perdidos?
-1. Genera un archivo en tu carpeta de trabajo `Prac_Uni5/data` que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
-1. Reporta cuántas variantes tienen el archivo generado
-1. Reporta la cobertura promedio para todos los individuos del set de datos
-1. Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
-1. Filtra el archivo de frecuencias para solo incluir variantes bialélicas (tip: awk puede ser útil para realizar esta tarea, tip2:  puedes usar bcftools para filtrar variantes con más de dos alelos antes de calcular las frecuencias)
-1. Llama a un script escrito en lenguaje R que lee el archivo de frecuencias de variantes bialélicas y guarda un histograma con el espectro de MAF para las variantes bialélicas
-1. ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
-1. Calcula la heterocigosidad de cada individuo.
-1. Calcula la diversidad nucleotídica por sitio.
-1. Filtra los sitios que tengan una frecuencia del alelo menor <0.05
-1. Convierte el archivo `wolves_maf05.vcf` a formato plink. 
+2. ¿Cuántos sitios del archivo no tienen datos perdidos?
+3. Genera un archivo en tu carpeta de trabajo `Prac_Uni5/data` que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
+4. Reporta cuántas variantes tienen el archivo generado
+5. Reporta la cobertura promedio para todos los individuos del set de datos
+6. Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
+7. Filtra el archivo de frecuencias para solo incluir variantes bialélicas (tip: awk puede ser útil para realizar esta tarea, tip2:  puedes usar bcftools para filtrar variantes con más de dos alelos antes de calcular las frecuencias)
+8. Llama a un script escrito en lenguaje R que lee el archivo de frecuencias de variantes bialélicas y guarda un histograma con el espectro de MAF para las variantes bialélicas
+9. ¿Cuántos sitios tienen una frecuencia del alelo menor <0.05?
+10. Calcula la heterocigosidad de cada individuo.
+11. Calcula la diversidad nucleotídica por sitio.
+12. Filtra los sitios que tengan una frecuencia del alelo menor <0.05
+13. Convierte el archivo `wolves_maf05.vcf` a formato plink. 
 
 ## Plink
 
@@ -282,7 +282,7 @@ CDSJ176 CDSJ176 0 0 1 1
 CDSJ469 CDSJ469 0 0 2 1
 ```
 
-4) Utiliza la info el archivo `data/chilean_all48_hg19_popinfo.csv` y el comando `update-ids` de plink para cambiar los nombres de las muestras de `data/chilean_all48_hg19.fam` de tal forma que el family ID corresponda a la info de la columna `Categ.Altitud` en `maizteocintle_SNP50k_meta_extended.txt`. Pista: este ejercicio requiere varias operaciones, puedes dividirlas en diferentes scripts de bash o de R y bash. Tu respuesta debe incluir todos los scripts (y deben estar en /code). 
+4) Utiliza la info el archivo `data/chilean_all48_hg19_popinfo.csv` y el comando `update-ids` de plink para cambiar los nombres de las muestras de `data/chilean_all48_hg19.fam` de tal forma que el family ID corresponda a la info de la columna `Ancestry` en `chilean_all48_hg19_popinfo.csv`. Pista: este ejercicio requiere varias operaciones, puedes dividirlas en diferentes scripts de bash o de R y bash. Tu respuesta debe incluir todos los scripts (y deben estar en /code). 
 5) Realiza un cuna comparación entre el sexo y archivo `fam`y el `popinfo` y calcula la proporción de discordancias
 6) Realiza un test de estimación de sexo usando plink y reporta los resultados en formato de tabla para todos los individuos con discordancia entre el sexto reportado en `fam` y el calculado con plink.
 7) Genera una tabla de contingencia de individuos por sexo y ancestría (hint: ver columna Ancestry en el archivo `popinfo`)
