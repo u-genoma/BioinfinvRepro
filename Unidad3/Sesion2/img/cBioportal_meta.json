@@ -1,0 +1,1447 @@
+{
+  "table_of_contents": [
+    {
+      "title": "cBioPortal para analizar datos\ngen\u00f3micos de c\u00e1ncer",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.880859375,
+          75.303466796875
+        ],
+        [
+          527.3442993164062,
+          75.303466796875
+        ],
+        [
+          527.3442993164062,
+          135.685546875
+        ],
+        [
+          71.880859375,
+          135.685546875
+        ]
+      ]
+    },
+    {
+      "title": "Introducci\u00f3n",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          72.0,
+          162.48797607421875
+        ],
+        [
+          218.41810607910156,
+          162.48797607421875
+        ],
+        [
+          218.41810607910156,
+          188.48797607421875
+        ],
+        [
+          72.0,
+          188.48797607421875
+        ]
+      ]
+    },
+    {
+      "title": "Navegaci\u00f3n por la p\u00e1gina principal",
+      "heading_level": null,
+      "page_id": 0,
+      "polygon": [
+        [
+          71.58984375,
+          431.17529296875
+        ],
+        [
+          472.726318359375,
+          430.8671875
+        ],
+        [
+          472.726318359375,
+          457.17529296875
+        ],
+        [
+          71.58984375,
+          457.1796875
+        ]
+      ]
+    },
+    {
+      "title": "Ejemplo",
+      "heading_level": null,
+      "page_id": 1,
+      "polygon": [
+        [
+          71.58984375,
+          331.55523681640625
+        ],
+        [
+          132.7556610107422,
+          330.9619140625
+        ],
+        [
+          132.7556610107422,
+          347.55523681640625
+        ],
+        [
+          71.58984375,
+          348.2294921875
+        ]
+      ]
+    },
+    {
+      "title": "Pesta\u00f1a \"Summary\" (Resumen)",
+      "heading_level": null,
+      "page_id": 2,
+      "polygon": [
+        [
+          71.58984375,
+          416.7255554199219
+        ],
+        [
+          299.56585693359375,
+          415.244140625
+        ],
+        [
+          299.56585693359375,
+          432.7255554199219
+        ],
+        [
+          71.58984375,
+          433.333984375
+        ]
+      ]
+    },
+    {
+      "title": "Modificar los datos mostrados en la pesta\u00f1a\n\"Summary\"",
+      "heading_level": null,
+      "page_id": 3,
+      "polygon": [
+        [
+          70.42578125,
+          369.9398193359375
+        ],
+        [
+          526.87353515625,
+          368.7861328125
+        ],
+        [
+          526.87353515625,
+          416.3875732421875
+        ],
+        [
+          70.42578125,
+          416.3875732421875
+        ]
+      ]
+    },
+    {
+      "title": "Agregar nuevos datos a la pesta\u00f1a \"Summary\"",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          70.42578125,
+          73.5927734375
+        ],
+        [
+          405.4229431152344,
+          73.5927734375
+        ],
+        [
+          405.4229431152344,
+          90.03289794921875
+        ],
+        [
+          70.42578125,
+          90.03289794921875
+        ]
+      ]
+    },
+    {
+      "title": "Eliminar datos directamente desde la pesta\u00f1a \"Summary\"",
+      "heading_level": null,
+      "page_id": 4,
+      "polygon": [
+        [
+          72.0,
+          257.369140625
+        ],
+        [
+          481.8652648925781,
+          255.724609375
+        ],
+        [
+          481.8652648925781,
+          273.97430419921875
+        ],
+        [
+          71.0078125,
+          273.97430419921875
+        ]
+      ]
+    },
+    {
+      "title": "Navegaci\u00f3n en la pesta\u00f1a \"Clinical Data\" (Datos\ncl\u00ednicos)",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          71.58984375,
+          74.4150390625
+        ],
+        [
+          526.0552368164062,
+          72.7705078125
+        ],
+        [
+          526.0552368164062,
+          120.9888916015625
+        ],
+        [
+          71.58984375,
+          120.9888916015625
+        ]
+      ]
+    },
+    {
+      "title": "Datos individuales de pacientes",
+      "heading_level": null,
+      "page_id": 5,
+      "polygon": [
+        [
+          71.298828125,
+          552.3355712890625
+        ],
+        [
+          299.64508056640625,
+          551.3291015625
+        ],
+        [
+          299.64508056640625,
+          568.3355712890625
+        ],
+        [
+          71.298828125,
+          568.5966796875
+        ]
+      ]
+    },
+    {
+      "title": "Tipos de datos demogr\u00e1ficos",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          70.716796875,
+          312.4609375
+        ],
+        [
+          279.47015380859375,
+          310.81640625
+        ],
+        [
+          279.47015380859375,
+          328.47576904296875
+        ],
+        [
+          70.716796875,
+          328.90625
+        ]
+      ]
+    },
+    {
+      "title": "Interpretaci\u00f3n de los datos de sexo",
+      "heading_level": null,
+      "page_id": 6,
+      "polygon": [
+        [
+          72.0,
+          511.83758544921875
+        ],
+        [
+          323.9512634277344,
+          510.2158203125
+        ],
+        [
+          323.9512634277344,
+          527.8375854492188
+        ],
+        [
+          71.0078125,
+          527.8375854492188
+        ]
+      ]
+    },
+    {
+      "title": "Interpretaci\u00f3n de los datos de raza",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          71.880859375,
+          261.8916015625
+        ],
+        [
+          321.280029296875,
+          260.2470703125
+        ],
+        [
+          321.280029296875,
+          278.22576904296875
+        ],
+        [
+          71.880859375,
+          278.22576904296875
+        ]
+      ]
+    },
+    {
+      "title": "Interpretaci\u00f3n de los datos de edad al diagn\u00f3stico",
+      "heading_level": null,
+      "page_id": 7,
+      "polygon": [
+        [
+          72.0,
+          574.2692260742188
+        ],
+        [
+          428.0118713378906,
+          572.7080078125
+        ],
+        [
+          428.0118713378906,
+          590.2692260742188
+        ],
+        [
+          71.880859375,
+          590.2692260742188
+        ]
+      ]
+    },
+    {
+      "title": "Localizaci\u00f3n de la tabla \"Mutated Genes\" (Genes\nMutados) en la pesta\u00f1a Summary",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          71.58984375,
+          384.8203125
+        ],
+        [
+          526.3549194335938,
+          383.17578125
+        ],
+        [
+          526.3549194335938,
+          431.4537048339844
+        ],
+        [
+          71.58984375,
+          431.4537048339844
+        ]
+      ]
+    },
+    {
+      "title": "Interpretaci\u00f3n de la tabla \"Mutated Genes\"",
+      "heading_level": null,
+      "page_id": 9,
+      "polygon": [
+        [
+          72.0,
+          615.4658203125
+        ],
+        [
+          374.3211975097656,
+          613.8212890625
+        ],
+        [
+          374.3211975097656,
+          631.5963745117188
+        ],
+        [
+          71.0078125,
+          631.5963745117188
+        ]
+      ]
+    },
+    {
+      "title": "Ejemplo con el gen KRAS",
+      "heading_level": null,
+      "page_id": 10,
+      "polygon": [
+        [
+          71.0078125,
+          509.3935546875
+        ],
+        [
+          236.09829711914062,
+          509.3935546875
+        ],
+        [
+          236.09829711914062,
+          525.0166015625
+        ],
+        [
+          71.0078125,
+          525.0166015625
+        ]
+      ]
+    },
+    {
+      "title": "Uso de la barra de b\u00fasqueda en la tabla \"Mutated Genes\"",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          71.0078125,
+          74.00390625
+        ],
+        [
+          482.8260192871094,
+          74.00390625
+        ],
+        [
+          482.8260192871094,
+          90.03289794921875
+        ],
+        [
+          71.0078125,
+          90.03289794921875
+        ]
+      ]
+    },
+    {
+      "title": "Cu\u00e1ndo ordenar los datos de un estudio por gen",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          71.880859375,
+          462.66668701171875
+        ],
+        [
+          418.2408447265625,
+          461.291015625
+        ],
+        [
+          418.2408447265625,
+          478.66668701171875
+        ],
+        [
+          70.716796875,
+          479.380859375
+        ]
+      ]
+    },
+    {
+      "title": "Ejemplo de filtrado con el gen KRAS",
+      "heading_level": null,
+      "page_id": 11,
+      "polygon": [
+        [
+          72.0,
+          628.2109375
+        ],
+        [
+          301.43389892578125,
+          626.56640625
+        ],
+        [
+          301.43389892578125,
+          643.01171875
+        ],
+        [
+          72.0,
+          644.65625
+        ]
+      ]
+    },
+    {
+      "title": "Uso de la barra de b\u00fasqueda en la tabla \"Mutated Genes\"",
+      "heading_level": null,
+      "page_id": 12,
+      "polygon": [
+        [
+          71.58984375,
+          544.7509765625
+        ],
+        [
+          482.8260192871094,
+          543.1064453125
+        ],
+        [
+          482.8260192871094,
+          560.8610229492188
+        ],
+        [
+          70.42578125,
+          560.8610229492188
+        ]
+      ]
+    },
+    {
+      "title": "Navegaci\u00f3n hacia la pesta\u00f1a Clinical Data (Datos\nCl\u00ednicos)",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          71.298828125,
+          217.4892578125
+        ],
+        [
+          526.2965698242188,
+          215.8447265625
+        ],
+        [
+          526.2965698242188,
+          264.3516845703125
+        ],
+        [
+          70.134765625,
+          264.3516845703125
+        ]
+      ]
+    },
+    {
+      "title": "Datos mostrados en la pesta\u00f1a Clinical Data",
+      "heading_level": null,
+      "page_id": 13,
+      "polygon": [
+        [
+          72.0,
+          510.17645263671875
+        ],
+        [
+          390.60693359375,
+          509.3935546875
+        ],
+        [
+          390.60693359375,
+          526.1764526367188
+        ],
+        [
+          71.298828125,
+          526.6611328125
+        ]
+      ]
+    },
+    {
+      "title": "Acceder a los datos de un paciente individual",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          71.0078125,
+          74.4150390625
+        ],
+        [
+          474.6985778808594,
+          74.4150390625
+        ],
+        [
+          474.6985778808594,
+          94.5411376953125
+        ],
+        [
+          71.0078125,
+          94.5411376953125
+        ]
+      ]
+    },
+    {
+      "title": "Pesta\u00f1a Summary del paciente",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          71.58984375,
+          170.6201171875
+        ],
+        [
+          297.254638671875,
+          170.6201171875
+        ],
+        [
+          297.254638671875,
+          186.74188232421875
+        ],
+        [
+          71.58984375,
+          186.74188232421875
+        ]
+      ]
+    },
+    {
+      "title": "Variantes g\u00e9nicas y cambios en prote\u00ednas",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          71.880859375,
+          543.517578125
+        ],
+        [
+          370.4634704589844,
+          541.873046875
+        ],
+        [
+          370.4634704589844,
+          560.2848510742188
+        ],
+        [
+          70.716796875,
+          560.2848510742188
+        ]
+      ]
+    },
+    {
+      "title": "Interpretaci\u00f3n del tipo de mutaci\u00f3n",
+      "heading_level": null,
+      "page_id": 14,
+      "polygon": [
+        [
+          72.0,
+          712.806396484375
+        ],
+        [
+          320.38970947265625,
+          711.6708984375
+        ],
+        [
+          320.38970947265625,
+          728.8064041137695
+        ],
+        [
+          72.0,
+          728.9384765625
+        ]
+      ]
+    },
+    {
+      "title": "Ordenar la tabla de mutaciones",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          71.880859375,
+          323.33758544921875
+        ],
+        [
+          297.8564147949219,
+          322.328125
+        ],
+        [
+          297.8564147949219,
+          339.33758544921875
+        ],
+        [
+          70.716796875,
+          339.33758544921875
+        ]
+      ]
+    },
+    {
+      "title": "Uso de la barra de b\u00fasqueda para encontrar un gen espec\u00edfico",
+      "heading_level": null,
+      "page_id": 15,
+      "polygon": [
+        [
+          71.298828125,
+          605.7105712890625
+        ],
+        [
+          519.5989990234375,
+          604.7763671875
+        ],
+        [
+          519.5989990234375,
+          621.7105712890625
+        ],
+        [
+          71.298828125,
+          622.0439453125
+        ]
+      ]
+    },
+    {
+      "title": "Visualizaci\u00f3n de mutaciones en cromosomas",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          71.298828125,
+          122.87371826171875
+        ],
+        [
+          394.4577941894531,
+          121.2841796875
+        ],
+        [
+          394.4577941894531,
+          138.87371826171875
+        ],
+        [
+          70.134765625,
+          138.87371826171875
+        ]
+      ]
+    },
+    {
+      "title": "Visualizaci\u00f3n en la pesta\u00f1a Pathways (V\u00edas de se\u00f1alizaci\u00f3n)",
+      "heading_level": null,
+      "page_id": 16,
+      "polygon": [
+        [
+          71.58984375,
+          553.4498901367188
+        ],
+        [
+          502.9615783691406,
+          552.1513671875
+        ],
+        [
+          502.9615783691406,
+          569.4498901367188
+        ],
+        [
+          70.42578125,
+          569.4498901367188
+        ]
+      ]
+    },
+    {
+      "title": "Pesta\u00f1a Clinical Data del paciente individual",
+      "heading_level": null,
+      "page_id": 17,
+      "polygon": [
+        [
+          70.716796875,
+          296.39617919921875
+        ],
+        [
+          387.96490478515625,
+          296.015625
+        ],
+        [
+          387.96490478515625,
+          312.39617919921875
+        ],
+        [
+          70.716796875,
+          312.4609375
+        ]
+      ]
+    }
+  ],
+  "page_stats": [
+    {
+      "page_id": 0,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          387
+        ],
+        [
+          "Line",
+          29
+        ],
+        [
+          "ListItem",
+          9
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 1,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          307
+        ],
+        [
+          "Line",
+          20
+        ],
+        [
+          "ListItem",
+          7
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 2,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          155
+        ],
+        [
+          "Line",
+          8
+        ],
+        [
+          "Text",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 3,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          171
+        ],
+        [
+          "Line",
+          10
+        ],
+        [
+          "Text",
+          3
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 4,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          377
+        ],
+        [
+          "Line",
+          18
+        ],
+        [
+          "Text",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 5,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          321
+        ],
+        [
+          "Line",
+          19
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 6,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          467
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 7,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          399
+        ],
+        [
+          "Line",
+          17
+        ],
+        [
+          "Text",
+          5
+        ],
+        [
+          "Figure",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 8,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          627
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "ListGroup",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 9,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          387
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 10,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          445
+        ],
+        [
+          "TableCell",
+          57
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "Text",
+          6
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Table",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 11,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          449
+        ],
+        [
+          "Line",
+          24
+        ],
+        [
+          "Text",
+          10
+        ],
+        [
+          "SectionHeader",
+          3
+        ],
+        [
+          "Picture",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 12,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          499
+        ],
+        [
+          "Line",
+          27
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 13,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          597
+        ],
+        [
+          "Line",
+          35
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "ListItem",
+          5
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "ListGroup",
+          2
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 14,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          437
+        ],
+        [
+          "Line",
+          23
+        ],
+        [
+          "Text",
+          8
+        ],
+        [
+          "SectionHeader",
+          4
+        ],
+        [
+          "Figure",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 15,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          625
+        ],
+        [
+          "Line",
+          32
+        ],
+        [
+          "Text",
+          9
+        ],
+        [
+          "ListItem",
+          4
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 16,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          585
+        ],
+        [
+          "Line",
+          31
+        ],
+        [
+          "Text",
+          11
+        ],
+        [
+          "ListItem",
+          2
+        ],
+        [
+          "SectionHeader",
+          2
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    },
+    {
+      "page_id": 17,
+      "text_extraction_method": "pdftext",
+      "block_counts": [
+        [
+          "Span",
+          119
+        ],
+        [
+          "Line",
+          9
+        ],
+        [
+          "ListItem",
+          3
+        ],
+        [
+          "Figure",
+          1
+        ],
+        [
+          "SectionHeader",
+          1
+        ],
+        [
+          "Text",
+          1
+        ],
+        [
+          "Picture",
+          1
+        ],
+        [
+          "ListGroup",
+          1
+        ]
+      ],
+      "block_metadata": {
+        "llm_request_count": 0,
+        "llm_error_count": 0,
+        "llm_tokens_used": 0,
+        "previous_text": "",
+        "previous_type": "",
+        "previous_order": 0
+      }
+    }
+  ],
+  "debug_data_path": "debug_data/cBioportal"
+}
