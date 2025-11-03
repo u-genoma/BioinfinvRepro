@@ -247,6 +247,8 @@ Trabajo individual:
 * Formatos fastq, bam, vcf
 
 #### [Sesión 2: Introducción a las bases de datos](Unidad3/Sesion2/Tutorial_cBioPortal.md)
+
+[**PPT: Sesión 3.2**](Unidad3/Sesion2/Sesion2_DBBiologicas_bioinfo.pdf)
 [**VIDEO: Sesión 3.2**](https://youtu.be/h-IQFwbv7Cs)
 * Datos de secuencias
 * Bases de datos biológicas
