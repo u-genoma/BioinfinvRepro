@@ -6,7 +6,7 @@
 
 En esta sesión aprenderemos los aspectos esenciales sobre el análisis de datos de secuenciación masiva para la detección de variantes genéticas.
 
-[Láminas proyectadas en clase](Alineamiento y llamado NGS - RAV - 2025 150dpi.pdf)
+[Láminas proyectadas en clase](Alineamiento_y_llamado_variantes_NGS_2025.pdf))
 
 **Tutorial 1**: [Alineamiento de lecturas](Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
 

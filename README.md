@@ -256,7 +256,7 @@ Trabajo individual:
 
 #### [Sesión 3: Análisis de secuencias](Unidad3/Sesion3/README.md)
 
-[**PPT: Sesión 3.2**](Unidad3/Sesion3/Alineamiento y llamado NGS - RAV - 2025 150dpi.pdf)
+[**PPT: Sesión 3.3**](Unidad3/Sesion3/Alineamiento_y_llamado_variantes_NGS_2025.pdf)
 
 * [Alineamiento contra un genoma de referencia](Unidad3/Sesion3/Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
 * [Llamado de variantes](Unidad3/Sesion3/Tutorial_para_el_llamado_de_variantes.md)
