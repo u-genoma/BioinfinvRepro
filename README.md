@@ -250,13 +250,16 @@ Trabajo individual:
 
 [**PPT: Sesión 3.2**](Unidad3/Sesion2/Sesion2_DBBiologicas_bioinfo.pdf)
 [**VIDEO: Sesión 3.2**](https://youtu.be/h-IQFwbv7Cs)
+
 * Datos de secuencias
 * Bases de datos biológicas
 
-#### **Sesión 3: Análisis de secuencias**
+#### [Sesión 3: Análisis de secuencias](Unidad3/Sesion3/README.md)
 
-* Alineamiento contra un genoma de referencia
-* Llamado de variantes
+[**PPT: Sesión 3.2**](Unidad3/Sesion3/Alineamiento y llamado NGS - RAV - 2025 150dpi.pdf)
+
+* [Alineamiento contra un genoma de referencia](Unidad3/Sesion3/Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
+* [Llamado de variantes](Unidad3/Sesion3/Tutorial_para_el_llamado_de_variantes.md)
 
 Trabajo individual:
 
