@@ -266,6 +266,14 @@ Trabajo individual:
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
+#### [Sesión 4: Análisis de ADN con CLC](Unidad3/Sesion4/Analisis_con_CLC.md)
+
+[**VIDEO: Sesión 3.4**](https://qiagen.zoom.us/rec/share/EkeRexxOe4uKvhc4qMgovZgsJItv3vvCeG6x80uXhFuJsdE0aFlTMQLva__DNmzE.Lfx8UQTsUdvnONR5) (Passcode: ^4BTqT6?)
+
+* Herramientoas de analisis de NGS de Qiagen
+* Introducción al CLC Genomics Workbench
+* Demostración análisis de datos NGS con CLC
+
 #### **Sesión 4: Genómica del cáncer**
 
 * Llamado de mutaciones somáticas
