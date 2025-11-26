@@ -1,8 +1,10 @@
-source("Rfxs.R")
-load.package("preprocessCore", bioC=T)
-load.package("maanova", bioC=T)
-load.package("limma", bioC=T)
-load.package("topGO", bioC=T)
-load.package("org.Mm.eg.db", bioC=T)
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("preprocessCore")
+BiocManager::install("maanova")
+BiocManager::install("limma")
+BiocManager::install("topGO")
+BiocManager::install("org.Mm.eg.db")
 
 
