@@ -73,7 +73,7 @@ detection <- grep("Detection.Pval", colnames(Data.Raw)) # vector of columns with
 # ==== ===== ===========
 annot     <- read.delim("MouseRef-8_annot.txt")
 # Make sure that probes are in same order as in the dataset
-annot <- annot[match(Data.Raw$ProbeID, annot$IlluminaID), ]
+annot <- annot[match(Data.Raw$PROBE_ID, annot$ProbeID), ]
 # Not all probes have the same quality from sequence alignment to the genome.
 table(annot$ProbeQuality)
 # We will group 'Bad' with 'No match' as bad and everything else as good.
@@ -82,7 +82,7 @@ probe_qc <- ifelse(annot$ProbeQuality %in% c("Bad", "No match"), "Bad probes", "
 
 # Read hybridization design
 # ==== ============= ======
-design <- read.csv("YChrom_design.csv")
+design <- read.csv("YChrom_design.csv", as.is=F)
 # Lets take a look
 print(design)
 
@@ -106,7 +106,7 @@ png(file.path(outdir,"boxplot_raw_probe_qc.png"), width=6, height=3, unit="in", 
 dev.off()
 
 # Color by treatment
-png(file.path(outdir,"boxplot_raw_treatment.png"), width=4, height=3, unit="in", res=150)
+png(file.path(outdir,"boxplot_raw_treatment.png"), width=6, height=3, unit="in", res=150)
   par(xpd=NA, mar= c(6.1, 4.1, 4.1, 2.1), cex=.7)
   boxplot(as.data.frame(log2(Data.Raw[,signal])), horiz=T, main="Raw log2 values Boxplot", las=1,
           col=design$Treatment, names=design$Sentrix_Position, cex.axis=.9,
