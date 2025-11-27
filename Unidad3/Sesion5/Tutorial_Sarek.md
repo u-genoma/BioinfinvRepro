@@ -1,4 +1,4 @@
-# Tutorial Sarek Completo
+# Tutorial Sarek
 
 Incluye scripts germinal y somático y tarea al final.
 
