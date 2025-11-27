@@ -274,14 +274,14 @@ Trabajo individual:
 * Introducción al CLC Genomics Workbench
 * Demostración análisis de datos NGS con CLC
 
-#### **Sesión 4: Genómica del cáncer**
+#### [Sesión 5: Genómica del cáncer](Unidad3/Sesion5/Tutorial_Sarek.md)
 
 * Llamado de mutaciones somáticas
 * Aplicaciones para la precisión del diagnóstico
 
-### Unidad 4 Análisis de transcriptomas
+### [Unidad 4 Análisis de transcriptomas](Unidad4/Analisis_de_Transcriptomas.md)
 
-#### **Sesión 1 Expresión diferencial**
+#### [Sesión 1 Expresión diferencial](Unidad4/Sesion1/Tutorial_de_expresion_diferencial_en_R.md)
 
 * Microarreglos
 * Diseño experimental

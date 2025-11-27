@@ -6,8 +6,8 @@ En esta unidad aprenderemos cómo analizar datos transcriptómicos generados med
 
 ### Sesión 1: Expresión Diferencial
 
-1. [Láminas proyectadas en clase](Sesion1/Sesion1_Analisis_expresion_diferencial.pdf)
-2. Video: [Parte 1](https://youtu.be/pbCjp3jrtlA) [Parte 2](https://youtu.be/ynI1L9TT1PM) [Parte 3 Tutorial](https://youtu.be/aJjq5GzGS38)
+1. [Láminas proyectadas en clase](Unidad4/Sesion1/Sesion1_Expresion_diferencial.pdf)
+2. Video: [Parte 1 Clase](https://youtu.be/-GOh4KGDnVU) [Parte 2 Tutorial](https://youtu.be/un-eTG0keXc)
 3. Tutorial: [Análisis de expresión diferencial en R](Sesion1/Tutorial_de_expresion_diferencial_en_R.md)
 
 ### Sessión 2: Análisis funcional
