@@ -276,6 +276,10 @@ Trabajo individual:
 
 #### [Sesión 5: Genómica del cáncer](Unidad3/Sesion5/Tutorial_Sarek.md)
 
+[**VIDEO: Sesión 3.5 Clase**](https://youtu.be/qp91ZbavBfQ)
+[**VIDEO: Sesión 3.5 Nomenclatura mutaciones**](https://youtu.be/dFuxDvJlfNY)
+[**VIDEO: Sesión 3.5 Tutorial**](https://youtu.be/CrGRCj8p85k)
+
 * Llamado de mutaciones somáticas
 * Aplicaciones para la precisión del diagnóstico
 
