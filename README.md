@@ -256,10 +256,9 @@ Trabajo individual:
 
 #### [Sesión 3: Análisis de secuencias](Unidad3/Sesion3/README.md)
 
-[**PPT: Sesión 3.3**](Unidad3/Sesion3/Alineamiento_y_llamado_variantes_NGS_2025.pdf)
-
 * [Alineamiento contra un genoma de referencia](Unidad3/Sesion3/Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
 * [Llamado de variantes](Unidad3/Sesion3/Tutorial_para_el_llamado_de_variantes.md)
+  [PPT: Sesión 3.3](Unidad3/Sesion3/Alineamiento_y_llamado_variantes_NGS_2025.pdf)
 
 Trabajo individual:
 
@@ -268,28 +267,42 @@ Trabajo individual:
 
 #### [Sesión 4: Análisis de ADN con CLC](Unidad3/Sesion4/Analisis_con_CLC.md)
 
-[**VIDEO: Sesión 3.4**](https://qiagen.zoom.us/rec/share/EkeRexxOe4uKvhc4qMgovZgsJItv3vvCeG6x80uXhFuJsdE0aFlTMQLva__DNmzE.Lfx8UQTsUdvnONR5) (Passcode: ^4BTqT6?)
-
 * Herramientoas de analisis de NGS de Qiagen
 * Introducción al CLC Genomics Workbench
 * Demostración análisis de datos NGS con CLC
+  [VIDEO: Sesión 3.4](https://qiagen.zoom.us/rec/share/EkeRexxOe4uKvhc4qMgovZgsJItv3vvCeG6x80uXhFuJsdE0aFlTMQLva__DNmzE.Lfx8UQTsUdvnONR5) (Passcode: ^4BTqT6?)
 
 #### [Sesión 5: Genómica del cáncer](Unidad3/Sesion5/Tutorial_Sarek.md)
 
-[**VIDEO: Sesión 3.5 Clase**](https://youtu.be/qp91ZbavBfQ)
-[**VIDEO: Sesión 3.5 Nomenclatura mutaciones**](https://youtu.be/dFuxDvJlfNY)
-[**VIDEO: Sesión 3.5 Tutorial**](https://youtu.be/CrGRCj8p85k)
-
 * Llamado de mutaciones somáticas
+
 * Aplicaciones para la precisión del diagnóstico
+  
+  ##### Material:
+
+* [VIDEO: Sesión 3.5 Clase](https://youtu.be/qp91ZbavBfQ)
+
+* [VIDEO: Sesión 3.5 Nomenclatura mutaciones](https://youtu.be/dFuxDvJlfNY)
+
+* [VIDEO: Sesión 3.5 Tutorial](https://youtu.be/CrGRCj8p85k)
 
 ### [Unidad 4 Análisis de transcriptomas](Unidad4/Analisis_de_Transcriptomas.md)
 
 #### [Sesión 1 Expresión diferencial](Unidad4/Sesion1/Tutorial_de_expresion_diferencial_en_R.md)
 
 * Microarreglos
+
 * Diseño experimental
+
 * Análisis de expresión diferencial
+  
+  ##### Material:
+
+* [Láminas proyectadas en clase](Unidad4/Sesion1/Sesion1_Expresion_diferencial.pdf)
+
+* [VIDEO: Sesión 4.1 Clase](https://youtu.be/-GOh4KGDnVU)
+
+* [VIDEO: Sesión 4.1 Tutorial](https://youtu.be/un-eTG0keXc)
 
 #### **Sesión 2 Análisis funcional**
 
