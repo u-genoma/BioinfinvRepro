@@ -304,10 +304,15 @@ Trabajo individual:
 
 * [VIDEO: Sesión 4.1 Tutorial](https://youtu.be/un-eTG0keXc)
 
-#### **Sesión 2 Análisis funcional**
+#### [Sesión 2 Análisis funcional](Unidad4/Sesion2/Tutorial_Analisis_funcional_de_datos_de_microarreglos.md)
 
 * Clustering
+
 * Enriquecimiento funcional
+
+##### Material:
+
+* [Láminas proyectadas en clase](Unidad4/Sesion2/Sesion2_Analisis_funcional_RAV_2025.pdf)
 
 #### **Sesión 3 RNA-seq**
 
