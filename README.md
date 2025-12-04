@@ -313,6 +313,8 @@ Trabajo individual:
 ##### Material:
 
 * [Láminas proyectadas en clase](Unidad4/Sesion2/Sesion2_Analisis_funcional_RAV_2025.pdf)
+* [VIDEO: Sesión 4.2 Clase](https://youtu.be/f_9dWbyGN00)
+* [VIDEO: Sesión 4.2 Tutorial](https://youtu.be/vOopjOpOhKA)
 
 #### **Sesión 3 RNA-seq**
 
