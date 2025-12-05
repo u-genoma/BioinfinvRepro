@@ -1,4 +1,4 @@
-# Analisis funcional de datos de microarreglos
+# Análisis clustering
 
 Ricardo Verdugo y Karen Oróstica
 
@@ -125,6 +125,8 @@ ILMN_3033922  1891.1571  1859.8280  1949.1789 1739.1569           4
 ILMN_3092673  7479.2309  8047.4719  8237.6955 7479.2309           2
 ```
 
+¿Haría algún procesamiento adicional a los datos de expresión para que el clustering sea óptimo? ¿Podría la distribución de los afectar las estimación de promedios, los que son importantes para los métodos paramétricos como k-means? Si este fuera el caso, ¿qué podría realizar para solucionarlo?
+
 ### Calcule los promedios de expresión por cluster
 
 ```R
@@ -228,9 +230,10 @@ dev.off()
 
 Usando solo los genes seleccionados por expresión diferencial obtenidos en el tutorial de expresión diferencial, ya sea por tratamiento, genotipo o por interacción:
 
-* Realice un particionamiento jerárquico de sus muestras con la medida de distancia euclideana
-* Realice un particionamiento jerárquico de sus sondas usando el complemento de la correlación de pearson como la medida de distancia.
+* Realice un particionamiento jerárquico de sus muestras con la medida de distancia euclidiana
+* Realice un particionamiento jerárquico de sus sondas usando el complemento de la correlación de Pearson como la medida de distancia.
+* Asegúrese de realizar los procesamientos de datos necesarios para que la distribución y escala de los datos sean apropiadas para la metodología de clústeres utilizada en cada caso.
 * Genere gráficos de suma de cuadrados para sondas y para muestras
 * Basándose en los gráficos de sumas de cuadrados, elija el k más apropiado en su criterio para sondas y para muestras
-* Agregue rectángulos a los particionamiento jerárquicos (nota, en su informe puede mostrar solo el arbolo final, con los rectángulos).
+* Agregue rectángulos a los particionamientos jerárquicos (nota: en su informe puede mostrar solo el árbol final, con los rectángulos).
 * Guarde su trabajo como un informe en formato pdf.
