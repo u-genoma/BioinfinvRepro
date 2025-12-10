@@ -316,8 +316,11 @@ Trabajo individual:
 * [VIDEO: Sesión 4.2 Clase](https://youtu.be/f_9dWbyGN00)
 * [VIDEO: Sesión 4.2 Tutorial](https://youtu.be/vOopjOpOhKA)
 
-#### **Sesión 3 RNA-seq**
+#### [Sesión 3 RNA-seq](Unidad4/Sesion3/Tutorial_RNAseq.md)
 
 * Generación de datos RNAseq
 * Modelamiento de datos
 * Software
+
+##### Material:
+* [Láminas proyectadas en clase](Unidad4/Sesion3/Sesion2SSesion3_RNAseq.pdf)
