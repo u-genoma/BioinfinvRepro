@@ -272,7 +272,7 @@ Trabajo individual:
 * Demostración análisis de datos NGS con CLC
   [VIDEO: Sesión 3.4](https://qiagen.zoom.us/rec/share/EkeRexxOe4uKvhc4qMgovZgsJItv3vvCeG6x80uXhFuJsdE0aFlTMQLva__DNmzE.Lfx8UQTsUdvnONR5) (Passcode: ^4BTqT6?)
 
-#### [Sesión 5: Genómica del cáncer](Unidad3/Sesion5/Tutorial_Sarek.md)
+#### [Sesión 5: Genómica del cáncer](Unidad3/Sesion5/Tutorial_Sarek_v2.md)
 
 * Llamado de mutaciones somáticas
 
@@ -323,4 +323,5 @@ Trabajo individual:
 * Software
 
 ##### Material:
-* [Láminas proyectadas en clase](Unidad4/Sesion3/Sesion2SSesion3_RNAseq.pdf)
+
+* [Láminas proyectadas en clase](Unidad4/Sesion3/Sesion3_RNAseq.pdf)

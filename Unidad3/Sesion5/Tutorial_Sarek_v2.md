@@ -198,23 +198,70 @@ Los dos script son capaces de:
 Debemos crear un archivo de configuración para indicarle a nextflow la capacidad de memoria que debe utilizar. Para esto creamos el archivo `local_sarek_8cpus.config` que debe estar en el directorio `code`.
 
 ```
-// Config local para correr Sarek en un servidor con 16 CPUs
+//
+// nextflow.config — Versión final estable para Sarek en Singularity (SIN AWS)
+// Optimizado para evitar errores de memoria, threads (EAGAIN) y espacio en disco
+//
 
+// Carpeta de salida por defecto
+params {
+    outdir = "results_sarek_clase"
+}
+
+// Perfil Singularity
+profiles {
+
+    singularity {
+        process.executor        = 'local'
+        singularity.enabled     = true
+        singularity.autoMounts  = true
+        singularity.cacheDir    = "${System.getenv('HOME')}/.singularity_cache"
+    }
+}
+
+// Límite global de paralelismo
 executor {
-    name = 'local'
-    cpus = 16      // lo que realmente tiene tu maquina
+    name      = 'local'
+    cpus      = 2
+    queueSize = 2
 }
 
-// Limite global: ningun proceso puede usar mas de 8 CPUs
+//
+// Control de recursos para evitar OOM, exit 137 y errores de threads
+//
 process {
-    resourceLimits = [ cpu: 8 ]
-}
 
-// (opcional, pero mas explicito)
-// Forzar especificamente el proceso de alineamiento BWAMEM1_MEM a 8 CPUs
-process {
+    // Límite global para todos los procesos
+    resourceLimits = [
+        cpu    : 2,
+        memory : '4 GB'
+    ]
+
+    // Procesos pesados controlados
+    withName: GETPILEUPSUMMARIES {
+        cpus   = 2
+        memory = '4 GB'
+    }
+
+    withName: MUTECT2 {
+        cpus   = 2
+        memory = '4 GB'
+    }
+
+    withName: EMIT_ORIENTATIONS {
+        cpus   = 1
+        memory = '1 GB'
+    }
+
+    withName: CALCULATECONTAMINATION {
+        cpus   = 1
+        memory = '1 GB'
+    }
+
+    // Bloque crítico para el alineamiento BWA
     withName: 'NFCORE_SAREK:SAREK:FASTQ_PREPROCESS_GATK:FASTQ_ALIGN:BWAMEM1_MEM' {
-        cpus = 8
+        cpus   = 2
+        memory = '4 GB'
     }
 }
 ```
