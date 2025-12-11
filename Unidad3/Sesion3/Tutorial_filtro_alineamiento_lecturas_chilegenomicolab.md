@@ -1,7 +1,7 @@
 # Tutorial para el filtro y alineamiento de lecturas
 
 Karen Oróstica, Cristian Yáñez Lara y Ricardo Verdugo
-Creado abril 2020, actualizado viembre 2025
+Creado abril 2020, actualizado noviembre 2025
 
 En este tutorial presentamos los pasos necesarios para realizar el filtrado y alineamiento de secuencias. En la siguiente imagen les mostramos
 el pipeline a seguir en este tutorial. El análisis de calidad fue realizado en el la clase anterior.
