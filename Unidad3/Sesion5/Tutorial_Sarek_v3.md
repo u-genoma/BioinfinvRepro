@@ -198,6 +198,7 @@ Los dos script son capaces de:
 Debemos crear un archivo de configuración para indicarle a nextflow la capacidad de memoria que debe utilizar. Para esto creamos el archivo `local_sarek_8cpus.config` que debe estar en el directorio `code`.
 
 ```
+
 //
 // nextflow.config — Versión final estable para Sarek en Singularity (SIN AWS)
 // Optimizado para evitar errores de memoria, threads (EAGAIN) y espacio en disco
@@ -263,6 +264,19 @@ process {
         cpus   = 2
         memory = '4 GB'
     }
+
+    // Limitar FASTQC para que no pase de 2 CPUs
+    withName: 'NFCORE_SAREK:SAREK:FASTQC' {
+        cpus   = 2
+        memory = '2 GB'
+    }
+
+    // Limitar FASTP también, para evitar el error anterior
+    withName: 'NFCORE_SAREK:SAREK:FASTQ_PREPROCESS_GATK:FASTP' {
+        cpus   = 2
+        memory = '4 GB'
+    }
+
 }
 ```
 
@@ -278,7 +292,13 @@ chmod +x sarek_somatic.sh
 
 ## Ejecución
 
-Para correr ambos scripts debes ejecutar el siguiente código entregando como parámetro la ruta del read 1 y read 2 y el directorio de salida. Reemplaza los nombres de archivos de acuerdo a lo necesario.
+Para ejecutar los scripts de **análisis germinal** y **análisis somático**, debes posicionarte primero en el directorio `code/`, donde se encuentran los scripts:
+
+```bash
+cd code
+```
+
+Debes ejecutar el siguiente código entregando como parámetro la ruta del read 1 y read 2 y el directorio de salida. Reemplaza los nombres de archivos de acuerdo a lo necesario.
 
 El script germinal se ejecuta de la siguiente forma:
 
@@ -293,6 +313,45 @@ bash sarek_somatic.sh  ../data/SRR1663550_1.fastq.gz ../data/SRR1663550_2.fastq.
 ```
 
 Nota: muestre los comandos usados y desde qué directorio se ejecutaron en su informe.
+
+Si ocurre algún error durante la ejecución y necesitas relanzar el análisis sin perder el progreso previo, debes agregar el flag `-resume`, el cual ya está incorporado dentro de los scripts.
+
+Por lo tanto, no es necesario modificar el comando, basta con volver a ejecutar el mismo script:
+
+```
+bash sarek_somatic.sh ../data/SRR1663550_1.fastq.gz ../data/SRR1663550_2.fastq.gz ../results -resume
+```
+
+Nextflow retomará automáticamente desde el último proceso completado.
+
+---
+
+### Nota sobre errores de threads (pthread_create / EAGAIN)
+
+Durante las primeras ejecuciones del pipeline se observó el siguiente error del sistema:
+
+`pthread_create failed (EAGAIN)`
+
+Este error **no está relacionado con los archivos FASTQ ni con las herramientas del pipeline**, sino que ocurre cuando el sistema operativo alcanza el **límite máximo de procesos/hilos por usuario**.
+
+La causa principal fue una configuración inicial que permitía lanzar demasiados hilos en paralelo.  
+Esto se corrigió ajustando el archivo `local_sarek_8cpus.config` para limitar el uso máximo a **2 CPUs por proceso**, lo que estabiliza la ejecución en un entorno de laboratorio compartido.
+
+*¿Qué hacer si el error persiste?*
+
+En casos excepcionales (por ejemplo, sistemas muy cargados o con límites de usuario muy restrictivos), el error puede persistir. En ese caso, antes de volver a ejecutar el pipeline, se recomienda ejecutar el siguiente comando en la terminal:
+
+```bash
+ulimit -u 16384
+```
+
+Este comando:
+- Aumenta temporalmente el número máximo de procesos/hilos permitidos para la sesión actual.
+- No requiere permisos de administrador.
+- No modifica permanentemente la configuración del sistema.
+
+Luego de esto, se puede volver a ejecutar el script normalmente
+
 
 ---
 
