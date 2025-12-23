@@ -28,13 +28,7 @@ Puede realizar este tutorial necesitará los paquetes:
 * [HTSeq](https://github.com/simon-anders/htseq)
 * [edgeR](https://bioconductor.org/packages/3.8/bioc/html/edgeR.html)
 
-Para su conveniencia, estos paquetes, así como los datos necesarios, ya fueron instalados en el servidor ‘genoma.med.uchile.cl’. Utilizando la cuenta ya entregada, haga login al servidor. Se encontrará en la carpeta principal de la cuenta ‘/shared/bioinfo1’, donde verá los siguiente directorios:
-
-* **common**: que tendrá los archivos iniciales para trabajar y serán compartidos por todos los usuarios.
-* **professor**: carpeta utilizada por el tutor/profesor.
-* **software**: contiene la instalación de uno de los programas que serán utilizados en el tutorial.
-
-La carpeta ‘common’ a su vez, contiene tres carpetas almacenando los inputs necesarios para comenzar a trabajar, estas son:
+Para su conveniencia, estos paquetes, así como los datos necesarios, ya fueron instalados en el servidor ‘genoma.med.uchile.cl’. Utilizando la cuenta ya entregada, haga login al servidor. Se encontrará en la carpeta principal de la cuenta ‘/home/bioinfo1/Tutorial_RNAseq/common, donde verá los siguiente directorios:
 
 * **raw_data**: contiene las cuatro librerías de lecturas en formato ‘fastq’.
 * **ref_genome**: aquí se encuentra un archivo en formato ‘fasta’ con el genoma de referencia de *S. acidocaldarius* en su versión *DSM 639*.
