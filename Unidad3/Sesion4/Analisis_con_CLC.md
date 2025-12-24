@@ -19,9 +19,9 @@ Passcode: ^4BTqT6?
 
 ## Tutoriales
 
-[Tutorial 1](Unidad3/Sesion4/Tutorial1_cancer-identify-variants-tumor.pdf): Identification of Variants in a Tumor Sample
+[Tutorial 1](Tutorial1_cancer-identify-variants-tumor.pdf): Identification of Variants in a Tumor Sample
 
-[Tutorial 2](Unidad3/Sesion4/Tutorial2_qiaseq_panelsv3.pdf): Find Actionable Variants With QIAseq DNA Panels
+[Tutorial 2](Tutorial2_qiaseq_panelsv3.pdf): Find Actionable Variants With QIAseq DNA Panels
 
 ## Tarea
 
