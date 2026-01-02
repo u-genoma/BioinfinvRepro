@@ -112,13 +112,19 @@ Crear una nueva carpeta para resultados.
 mkdir $ALN
 ```
 
+Si trabaja en el servidor, cargue el módulo de BWA:
+
+```
+module load bwa
+```
+
 Luego se ejecuta el alineamiento con ‘bwa mem’.
 
 ```sh
-bwa078 mem "$REF/genome.fasta" -t 1 "$FIL/wild_planctonic/MW001_P.fastq_filtered" > "$ALN/MW001_P_aligned.sam" &
-bwa078 mem "$REF/genome.fasta" -t 1 "$FIL/wild_biofilm/MW001_B3.fastq_filtered" > "$ALN/MW001_B3_aligned.sam" &
-bwa078 mem "$REF/genome.fasta" -t 1 "$FIL/mut_planctonic/0446_P.fastq_filtered" > "$ALN/0446_P_aligned.sam" & 
-bwa078 mem "$REF/genome.fasta" -t 1 "$FIL/mut_biofilm/0446_B3.fastq_filtered" > "$ALN/0446_B3_aligned.sam" &
+bwa mem "$REF/genome.fasta" -t 1 "$FIL/wild_planctonic/MW001_P.fastq_filtered" > "$ALN/MW001_P_aligned.sam" &
+bwa mem "$REF/genome.fasta" -t 1 "$FIL/wild_biofilm/MW001_B3.fastq_filtered" > "$ALN/MW001_B3_aligned.sam" &
+bwa mem "$REF/genome.fasta" -t 1 "$FIL/mut_planctonic/0446_P.fastq_filtered" > "$ALN/0446_P_aligned.sam" & 
+bwa mem "$REF/genome.fasta" -t 10 "$FIL/mut_biofilm/0446_B3.fastq_filtered" > "$ALN/0446_B3_aligned.sam" &
 ```
 
 ## 7.    Estimación de Abundancia
@@ -130,6 +136,14 @@ mkdir $CNT
 ```
 
 Utilizar el programa HTSeq-Count versión  0.6.1 ([http://www-huber.embl.de/users/anders/HTSeq/doc/install.html#install](http://www-huber.embl.de/users/anders/HTSeq/doc/install.html#install))  para estimar la cantidad de lecturas mapeadas en cada uno de los genes en el genoma de referencia, de los cuales se indica su posición a través del archivo GFF3. 
+
+Nota: si está usando el clúster de cómputo,  cargue primero el módulo con la versión 2.8.2 de Python que tienen instalado el módulo HTseq:
+
+```
+module load python/3.8.2
+```
+
+Ahora realice el conteo de lecturas a partir de los archivos SAM:
 
 ```sh
 python -m HTSeq.scripts.count -t Gene -i GenID "$ALN/MW001_P_aligned.sam" "$ANN/saci.gff3" > "$CNT/MW001_P.count" &
