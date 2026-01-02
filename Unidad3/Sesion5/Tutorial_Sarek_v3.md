@@ -198,7 +198,6 @@ Los dos script son capaces de:
 Debemos crear un archivo de configuración para indicarle a nextflow la capacidad de memoria que debe utilizar. Para esto creamos el archivo `local_sarek_8cpus.config` que debe estar en el directorio `code`.
 
 ```
-
 //
 // nextflow.config — Versión final estable para Sarek en Singularity (SIN AWS)
 // Optimizado para evitar errores de memoria, threads (EAGAIN) y espacio en disco
@@ -346,12 +345,12 @@ ulimit -u 16384
 ```
 
 Este comando:
+
 - Aumenta temporalmente el número máximo de procesos/hilos permitidos para la sesión actual.
 - No requiere permisos de administrador.
 - No modifica permanentemente la configuración del sistema.
 
 Luego de esto, se puede volver a ejecutar el script normalmente
-
 
 ---
 
