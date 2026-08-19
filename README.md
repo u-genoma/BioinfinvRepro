@@ -158,7 +158,7 @@ Todas las unidades son obligatorias.
 
 #### [**Sesión 1.1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
 
-**](https://youtu.be/lxVjr32CQ98)
+
 
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash
