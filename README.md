@@ -4,10 +4,7 @@
 
 Mediante una colaboración entre el Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México, CONABIO y la U. de Chile, ofreceremos un curso intensivo de bioinformática, orientado a entregar las herramientas básicas para análisis de datos genómicos en el contexto de genética, especialmente la genética de poblaciones.
 
-INSTRUCTORES ENCARGADOS:
-**Dra. Alicia Mastretta Yanes, PhD.** (México)
-Catedrática CONACYT-CONABIO,
-[www.mastrettayanes-lab.org](www.mastrettayanes-lab.org)
+INSTRUCTOR RESPONSABLE:
 
 **Dr. Ricardo Verdugo Salgado, PhD** (Chile)
 Profesor Asistente, Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile [http://genomed.med.uchile.cl](http://genomed.med.uchile.cl)
@@ -23,6 +20,9 @@ Programa de Genética Humana, ICBM, Facultad de Medicina, Universidad de Chile
 [https://orcid.org/0000-0002-2857-3615](https://orcid.org/0000-0002-2857-3615)
 
 INSTRUCTORES de versiones pasadas:
+
+**Dra. Alicia Mastretta Yanes, PhD.** (México)
+Catedrática CONACYT-CONABIO, [www.mastrettayanes-lab.org](www.mastrettayanes-lab.org)
 
 **Dra. Camille Truong, PhD**.
 Investigadora Instituto de Biología, UNAM
@@ -156,11 +156,10 @@ Todas las unidades son obligatorias.
 
 ### Unidad 1 Introducción a la programación
 
-#### [**Sesión 1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
+#### [**Sesión 1.1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
 
-[**VIDEO: Sesión 1.1**](https://youtu.be/lxVjr32CQ98)
+**](https://youtu.be/lxVjr32CQ98)
 
-* Código en computación
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash
 * Funciones básicas de navegación y manejo de archivos con bash
@@ -173,9 +172,7 @@ Trabajo individual:
 * Redirección con bash
 * Loops con bash
 
-#### [**Sesión 2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
-
-[**VIDEO: Sesión 1.2**](https://youtu.be/6kpQ0PtIae0)
+#### **Sesión 1.2: Organización de un proyecto bioinformático**
 
 * Documentación de scripts y del proyecto
 * Markdown
@@ -187,43 +184,35 @@ Trabajo individual:
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-#### [Sesión 1,3: Introducción a R con un enfoque bioinformático](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
-
-[**VIDEO: Sesión 1.3**](https://youtu.be/txXnnxVx21o)
+#### Sesión 1.3: Introducción a R
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
-* Funciones propias: crear funciones y utilizarlas con source ([Video opcional](https://www.youtube.com/watch?v=98AaKGzfdCw))
+* Funciones propias: crear funciones y utilizarlas con source
 
-Trabajo individual:
+#### Sesión 1.4: Programación y análisis de datos en R
 
 * Graficar en R
 * Bioconductor
-* Manipulación y limpieza de datos en R ([Video opcional](https://www.youtube.com/watch?v=cvTvySyvG-s))
+* Manipulación y limpieza de datos en R
 
 ### Unidad 2 Genética de poblaciones con software especializado
 
-#### [Sesión 1: Datos genéticos](Unidad2/Sesion1/Pop_genetics_software_especializado.md)
-
-[**VIDEO: Sesión 2.1**](https://youtu.be/TYR9Xd_lIBA)
+#### Sesión 2.1: Datos genéticos
 
 * Formatos VCF-tools y plink
 * Paquetes de R y otros software para genética de poblaciones
 
-#### [Sesión 2: Análisis genético de poblaciones](Unidad2/Sesion2/Tutorial_PopGeno.md)
-
-[**VIDEO: Sesión 2.2**](https://youtu.be/LtxeavYa6sE)
+#### Sesión 2.2: Análisis genético de poblaciones
 
 * PCA exploratorios
 * Análisis de estructura poblacional
 * Análisis de mestizaje
 
-#### [Sesión 3: Genética de Poblaciones 2](Unidad2/Sesion3/Tutorial_de_Genetica_de_Poblaciones_usado_estadisticos_F.md)
+#### Sesión 2.3: Genética de Poblaciones 2
 
 Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Medicina, Universidad de Chile
-[**PPT: Sesión 2.3**](Unidad2/Sesion3/Genetica_de_Poblaciones_2.pdf)
-[**VIDEO: Sesión 2.3**](https://youtu.be/BdNl7IJzCt0)
 
 * Estadísticos F2, F3, F4
 
@@ -231,12 +220,9 @@ Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Med
 
 * Modelos pqGraph
 
-### Unidad 3 Generación y alineamiento de datos NGS
+### Unidad 3 Introducción a la genómica y secuenciación de siguiente generación
 
-#### [Sesión 1 Generación y QC de datos NGS](Unidad3/Sesion1/Tutorial_Control_de_calidad_de_lecturas_NGS.md)
-
-[**PPT: Sesión 3.1**](Unidad3/Sesion1/Sesion1_Generacion_Analisis_de_datosNGS_RAV_2019.pdf)
-[**VIDEO: Sesión 3.1**](https://www.youtube.com/watch?v=aoZ6o4silGk)
+#### Sesión 3.1 Generación y alineamiento de datos NGS
 
 * Técnicas de secuenciación
 * Errores de secuenciación
@@ -246,82 +232,46 @@ Trabajo individual:
 
 * Formatos fastq, bam, vcf
 
-#### [Sesión 2: Introducción a las bases de datos](Unidad3/Sesion2/Tutorial_cBioPortal.md)
-
-[**PPT: Sesión 3.2**](Unidad3/Sesion2/Sesion2_DBBiologicas_bioinfo.pdf)
-[**VIDEO: Sesión 3.2**](https://youtu.be/h-IQFwbv7Cs)
+#### Sesión 3.2: Introducción a la Bioinformática
 
 * Datos de secuencias
 * Bases de datos biológicas
 
-#### [Sesión 3: Análisis de secuencias](Unidad3/Sesion3/README.md)
+#### Sesión 3.3: Análisis de secuencias
 
-* [Alineamiento contra un genoma de referencia](Unidad3/Sesion3/Tutorial_filtro_alineamiento_lecturas_chilegenomicolab.md)
-* [Llamado de variantes](Unidad3/Sesion3/Tutorial_para_el_llamado_de_variantes.md)
-  [PPT: Sesión 3.3](Unidad3/Sesion3/Alineamiento_y_llamado_variantes_NGS_2025.pdf)
+* Alineamiento contra un genoma de referencia
+* Llamado de variantes
+  PPT: Sesión 3.3
 
 Trabajo individual:
 
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
-#### [Sesión 4: Análisis de ADN con CLC](Unidad3/Sesion4/Analisis_con_CLC.md)
-
-* Herramientoas de analisis de NGS de Qiagen
-* Introducción al CLC Genomics Workbench
-* Demostración análisis de datos NGS con CLC
-  [VIDEO: Sesión 3.4](https://qiagen.zoom.us/rec/share/EkeRexxOe4uKvhc4qMgovZgsJItv3vvCeG6x80uXhFuJsdE0aFlTMQLva__DNmzE.Lfx8UQTsUdvnONR5) (Passcode: ^4BTqT6?)
-
-#### [Sesión 5: Genómica del cáncer](Unidad3/Sesion5/Tutorial_Sarek_v3.md)
+#### Sesión 3.4: Genómica del cáncer
 
 * Llamado de mutaciones somáticas
 
 * Aplicaciones para la precisión del diagnóstico
-  
-  ##### Material:
 
-* [VIDEO: Sesión 3.5 Clase](https://youtu.be/qp91ZbavBfQ)
+### Unidad 4 Análisis de transcriptomas
 
-* [VIDEO: Sesión 3.5 Nomenclatura mutaciones](https://youtu.be/dFuxDvJlfNY)
-
-* [VIDEO: Sesión 3.5 Tutorial](https://youtu.be/CrGRCj8p85k)
-
-### [Unidad 4 Análisis de transcriptomas](Unidad4/Analisis_de_Transcriptomas.md)
-
-#### [Sesión 1 Expresión diferencial](Unidad4/Sesion1/Tutorial_de_expresion_diferencial_en_R.md)
+#### Sesión 4.1 Expresión diferencial
 
 * Microarreglos
 
 * Diseño experimental
 
 * Análisis de expresión diferencial
-  
-  ##### Material:
 
-* [Láminas proyectadas en clase](Unidad4/Sesion1/Sesion1_Expresion_diferencial.pdf)
-
-* [VIDEO: Sesión 4.1 Clase](https://youtu.be/-GOh4KGDnVU)
-
-* [VIDEO: Sesión 4.1 Tutorial](https://youtu.be/un-eTG0keXc)
-
-#### [Sesión 2 Análisis funcional](Unidad4/Sesion2/Tutorial_Analisis_de_clustering.md)
+#### Sesión 4.2 Análisis funcional
 
 * Clustering
 
 * Enriquecimiento funcional
 
-##### Material:
-
-* [Láminas proyectadas en clase](Unidad4/Sesion2/Sesion2_Analisis_funcional_RAV_2025.pdf)
-* [VIDEO: Sesión 4.2 Clase](https://youtu.be/f_9dWbyGN00)
-* [VIDEO: Sesión 4.2 Tutorial](https://youtu.be/vOopjOpOhKA)
-
-#### [Sesión 3 RNA-seq](Unidad4/Sesion3/Tutorial_RNAseq.md)
+#### Sesión 4.3 RNA-seq
 
 * Generación de datos RNAseq
 * Modelamiento de datos
 * Software
-
-##### Material:
-
-* [Láminas proyectadas en clase](Unidad4/Sesion3/Sesion3_RNAseq.pdf)
