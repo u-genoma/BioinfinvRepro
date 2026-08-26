@@ -22,6 +22,8 @@ El directorio del proyecto debe dividirse a su vez, lo recomendable es que sea e
 
 * **archive** este directorio NO se sube al repositorio, pero es bueno tenerlo para ir poniendo ahí scripts y resultados que crees no necesitar más pero que es bueno no borrar por completo.
 
+* **resultados** es posible incluir un directorio que contenga los archivos generados de los scripts.  De utilizarlo, recomiendo generar un subdirectorio por cada script con el mismo nombre del script.
+
 También es posible tener un directorio para cada subanálisis concreto, por ejemplo uno para *stacks* y otro para *admixture*, pero dentro de cada uno de ellos subdirectorios como los anteriores. 
 
 Independientemente del nombre que escojamos para los directorios y archivos, qué es qué y dónde está cada cosa debe ir explicado en un **README**.
@@ -624,9 +626,9 @@ $ Rscript holascript.R
 
 #### `#!` a `Rscript`
 
-El contenido de un script debe incluir en la primera línea `#!/usr/bin/Rscript` o `/usr/local/bin/Rscript` o lo que sea que diga el output de correr `which Rscript`. Por ejemplo el script `/Unidad2/PracUni2/egR/holascript_ejecutable.R` contiene:
+> > El contenido de un script debe incluir en la primera línea `#!/usr/bin/Rscript` o `/usr/local/bin/Rscript` o lo que sea que diga el output de correr `which Rscript`. Por ejemplo el script `/Unidad2/PracUni2/egR/holascript_ejecutable.R` contiene:
 
-```{R}
+```R
 #!/usr/local/bin/Rscript
 
 x<-10
