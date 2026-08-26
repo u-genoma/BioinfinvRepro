@@ -158,8 +158,6 @@ Todas las unidades son obligatorias.
 
 #### [**Sesión 1.1:  Mis primeros comandos**](Unidad1/Sesion1/Sesion1_Intro_programacion.md)
 
-
-
 * Cómo buscar ayuda (permanentemente)
 * Introducción a la consola y línea de comando de bash
 * Funciones básicas de navegación y manejo de archivos con bash
@@ -172,7 +170,7 @@ Trabajo individual:
 * Redirección con bash
 * Loops con bash
 
-#### **Sesión 1.2: Organización de un proyecto bioinformático**
+#### [**Sesión 1.2: Organización de un proyecto bioinformático**](Unidad1/Sesion2/Sesion2_Organizacion_proyecto_bioinf.md)
 
 * Documentación de scripts y del proyecto
 * Markdown
