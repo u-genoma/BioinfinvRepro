@@ -556,7 +556,7 @@ citation("NombrePaquete")
 
 **Ejercicio 10:** divídanse por equipos de 2-3 personas según su tipo de datos o análisis. Exploren los paquetes de CRAN y de Bioconductor. Elijan 2 paquetes que les perece que pudieran ser los más útiles para sus trabajo de tesis. Cree una página en la Wiki de su repositorio en Github titulada "**Notas Sesión 1.3***", En el cuerdo de la página, bajo un título de nivel 2 titulado "**Ejercicio 10**"  indique el nombre del paquete, URL, una descripción con sus propias palabras de qué hace el paquete y la razón de por qué lo eligió para su proyecto (o posible futuro proyecto). En su informe markdown para esta semana, bajo la sección del Ejercicio 10, incluya un vínculo a la página de la Wiki con su respectiva descripción. Utilizar un vínculo relativo, como este ejemplo:
 
-El resultado del Ejercicio 10 se encuentra en [Wiki/Sesión 1.3](../../wiki/Notas-Sesión-1.3)
+El resultado del Ejercicio 10 se encuentra en [Wiki/Sesión 1.3](../../../../wiki/Notas-Sesión-1.3)
 
 ## Los 25 pasos que no debes olvidar *siempre* que trabajes en R.
 
