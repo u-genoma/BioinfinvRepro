@@ -1,7 +1,5 @@
 # Introducción a la bioinformática e investigación reproducible para análisis genómicos
 
-<!--[![Gitter](https://badges.gitter.im/ugenoma/Bioinfo2020.svg)](https://gitter.im/ugenoma/Bioinfo2020?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)-->
-
 Mediante una colaboración entre el Posgrado en Ciencias Biológicas de la Universidad Nacional Autónoma de México, CONABIO y la U. de Chile, ofreceremos un curso intensivo de bioinformática, orientado a entregar las herramientas básicas para análisis de datos genómicos en el contexto de genética, especialmente la genética de poblaciones.
 
 INSTRUCTOR RESPONSABLE:
@@ -182,7 +180,7 @@ Trabajo individual:
 * Manejo de proyectos e issues en Github
 * Creación de pipelines
 
-#### Sesión 1.3: Introducción a R
+#### [**Sesión 1.3: Introducción a R**](Unidad1/Sesion3/Sesion3_Intro_a_R.md)
 
 * R y RStudio
 * Funciones básicas de R más importantes para bioinformática
