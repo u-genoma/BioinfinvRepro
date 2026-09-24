@@ -186,25 +186,23 @@ Trabajo individual:
 * Funciones básicas de R más importantes para bioinformática
 * Rmarkdown y R Notebook
 * Funciones propias: crear funciones y utilizarlas con source
-
-#### Sesión 1.4: Programación y análisis de datos en R
-
 * Graficar en R
 * Bioconductor
 * Manipulación y limpieza de datos en R
 
 ### Unidad 2 Genética de poblaciones con software especializado
 
-#### Sesión 2.1: Datos genéticos
+#### [**Sesión 2.1 Generación y alineamiento de datos NGS**](Unidad2/Sesion1/Tutorial_Control_de_calidad_de_lecturas_NGS.md)
+
+* Técnicas de secuenciación
+* Errores de secuenciación
+* Limpieza de datos crudos
+
+#### Sesión 2.12 Análisis genético de poblaciones
 
 * Formatos VCF-tools y plink
-* Paquetes de R y otros software para genética de poblaciones
-
-#### Sesión 2.2: Análisis genético de poblaciones
-
 * PCA exploratorios
 * Análisis de estructura poblacional
-* Análisis de mestizaje
 
 #### Sesión 2.3: Genética de Poblaciones 2
 
@@ -217,12 +215,6 @@ Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Med
 * Modelos pqGraph
 
 ### Unidad 3 Introducción a la genómica y secuenciación de siguiente generación
-
-#### Sesión 3.1 Generación y alineamiento de datos NGS
-
-* Técnicas de secuenciación
-* Errores de secuenciación
-* Limpieza de datos crudos
 
 Trabajo individual:
 

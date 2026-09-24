@@ -1,3 +1,7 @@
+# Unidad 2: Genética de poblaciones con software especializado
+
+## _Sesión 1: Generación y alineamiento de datos NGS_
+
 #### Tutorial: Control de calidad de lecturas NGS
 
 Las lecturas crudas obtenidas del secuenciador en Next Generation Sequencing (NGS) pueden contener secuencias de adaptadores usados en la secuenciación, contaminantes y sitios con bajas calidades.
@@ -59,6 +63,9 @@ es en el directorio: 181004_curso_calidad_datos_NGS/fastq_raw/ y las secuencias 
    * Previsualizar las primeras 40 líneas del mismo archivo fastq
    * Ubicar la lectura 3 e identificar la información disponible. Describir en detalle la información entregada. ¿Donde se entrega la calidad del read?, ¿Cuál es el ID (identificador) del read? Etc. Utilice fechas y etiquetas para identificar cada parte.
    * Traducir el código de calidad para las primeras 10 bases del tercer read a valores numéricos (Q) usando la codificación entregada en clase.
+   * Determinar el número de regiones blanco en el panel, analizando el archivo `ls 181004_curso_calidad_datos_NGS/regiones_blanco.bed`
+   * Genere una lista de símbolos de genes encestados (solo valores distintos) 
+   * Cuente cuántos genes hay en la lista
 
 2. Genere un informe de calidad con FastQC para una muestra (cada estudiante una muestra distinta), para R1 y R2.
 
