@@ -198,7 +198,7 @@ Trabajo individual:
 * Errores de secuenciación
 * Limpieza de datos crudos
 
-#### Sesión 2.12 Análisis genético de poblaciones
+#### Sesión 2.2 Análisis genético de poblaciones
 
 * Formatos VCF-tools y plink
 * PCA exploratorios
@@ -216,30 +216,30 @@ Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Med
 
 ### Unidad 3 Introducción a la genómica y secuenciación de siguiente generación
 
-Trabajo individual:
-
-* Formatos fastq, bam, vcf
-
-#### Sesión 3.2: Introducción a la Bioinformática
-
-* Datos de secuencias
-* Bases de datos biológicas
-
-#### Sesión 3.3: Análisis de secuencias
+#### Sesión 3.1: Análisis de secuencias
 
 * Alineamiento contra un genoma de referencia
 * Llamado de variantes
-  PPT: Sesión 3.3
 
 Trabajo individual:
 
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
+#### Sesión 3.2: Bases de datos en Bioinformática
+
+* Datos de secuencias
+* Bases de datos biológicas
+
+#### Sesión 3.3 - Dinámica molecular
+
+* Bases físicas
+* docking molecuar
+* software
+
 #### Sesión 3.4: Genómica del cáncer
 
 * Llamado de mutaciones somáticas
-
 * Aplicaciones para la precisión del diagnóstico
 
 ### Unidad 4 Análisis de transcriptomas
@@ -247,15 +247,12 @@ Trabajo individual:
 #### Sesión 4.1 Expresión diferencial
 
 * Microarreglos
-
 * Diseño experimental
-
 * Análisis de expresión diferencial
 
 #### Sesión 4.2 Análisis funcional
 
 * Clustering
-
 * Enriquecimiento funcional
 
 #### Sesión 4.3 RNA-seq
