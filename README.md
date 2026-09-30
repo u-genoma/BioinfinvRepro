@@ -192,19 +192,21 @@ Trabajo individual:
 
 ### Unidad 2 Genética de poblaciones con software especializado
 
-#### [**Sesión 2.1 Generación y alineamiento de datos NGS**](Unidad2/Sesion1/Tutorial_Control_de_calidad_de_lecturas_NGS.md)
+#### [**Sesión 2.1: Generación y alineamiento de datos NGS**](Unidad2/Sesion1/Tutorial_Control_de_calidad_de_lecturas_NGS.md)
 
 * Técnicas de secuenciación
 * Errores de secuenciación
 * Limpieza de datos crudos
 
-#### Sesión 2.2 Análisis genético de poblaciones
-
-* Formatos VCF-tools y plink
+#### [**Sesión 2.2: Datos de genotipos**](Unidad2/Sesion2/Pop_genetics_software_especializado.md)
+* Formato VCF
+* VCF-tools
+* plink
+#### Sesión 2.3: Análisis genético de poblaciones
 * PCA exploratorios
 * Análisis de estructura poblacional
 
-#### Sesión 2.3: Genética de Poblaciones 2
+#### Sesión 2.4: Genética de Poblaciones 2
 
 Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Medicina, Universidad de Chile
 
