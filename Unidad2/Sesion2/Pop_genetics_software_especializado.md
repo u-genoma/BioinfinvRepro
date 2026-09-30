@@ -1,6 +1,5 @@
 # Unidad 2: Genética de poblaciones con software especializado
 
-
 ## Sesión 2: Datos de genotipos
 
 Los **datos crudos** son las secuencias tal cual salen de la plataforma de secuenciación (Illumina, IonTorrent, PacBio, entre otros). Es decir los **reads** (lecturas).  Este tipo de datos son con los que alimentamos a nuestra pipeline de ensamblado o mapeo a genoma de referencia para eventualmente *llamar SNPs* y poder tener los diferentes alelos para miles de loci (genotipos) en cada uno de nuestros individuos.
@@ -114,7 +113,7 @@ Consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y e
 10. Calcula la heterocigosidad de cada individuo.
 11. Calcula la diversidad nucleotídica por sitio.
 12. Filtra los sitios que tengan una frecuencia del alelo menor <0.05
-13. Convierte el archivo `wolves_maf05.vcf` a formato plink. 
+13. Convierte el archivo `GATK_ChGdb_recalibrated.autosomes.12262013.snps.known.vcf` a formato plink. 
 
 ## Plink
 
