@@ -199,11 +199,17 @@ Trabajo individual:
 * Limpieza de datos crudos
 
 #### [**Sesión 2.2: Datos de genotipos**](Unidad2/Sesion2/Pop_genetics_software_especializado.md)
+
 * Formato VCF
+
 * VCF-tools
+
 * plink
-#### Sesión 2.3: Análisis genético de poblaciones
+  
+  #### Sesión 2.3: Análisis genético de poblaciones
+
 * PCA exploratorios
+
 * Análisis de estructura poblacional
 
 #### Sesión 2.4: Genética de Poblaciones 2

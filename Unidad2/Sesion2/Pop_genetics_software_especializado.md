@@ -82,13 +82,13 @@ $ vcftools
 Si instalas `vcftools` en tu computador personal dentro de un contenedor de **docker**, realiza lo siguiente. Recuerda correr vcftools en un contenedor **montando un volumen** (`-v`) y borrándolo cuando termine de correr (`--rm`):
 
 ```
-docker run --rm -v /RutaAbsolutaA/Unida2/Prac_Uni5/wolves:/data biocontainers/vcftools:0.1.15 vcftools -help
+docker run --rm -v /RutaAbsolutaA/Unida2/Sesion2/VCF:/data biocontainers/vcftools:0.1.15 vcftools -help
 ```
 
 Por facilidad, puedes poner la parte que repetiremos cada vez que queramos correr vcftools (lo anterior hasta "vcftools") en una variable.
 
 ```
-vcftools="docker run --rm -v /RutaAbsolutaA/Unida2/Prac_Uni5/:/data biocontainers/vcftools:0.1.15 vcftools"
+vcftools="docker run --rm -v /RutaAbsolutaA/Unida2/Sesion2/VCF:/data biocontainers/vcftools:0.1.15 vcftools"
 ```
 
 y luego correrlo con `$vcftools` más el comando que quieras. Ejemplo: `$vcftools -help`.
@@ -103,7 +103,7 @@ Consulta el [manual de VCFtools](https://vcftools.github.io/man_latest.html) y e
 
 1. ¿Cuántos individuos y variantes (SNPs) tiene el archivo?
 2. ¿Cuántos sitios del archivo no tienen datos perdidos?
-3. Genera un archivo en tu carpeta de trabajo `Prac_Uni5/data` que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
+3. Genera un archivo en tu carpeta de trabajo `Sesion2/VCF/data` que contenga solo SNPs en una ventana de 2Mb en cualquier cromosoma. Nombra el archivo`CLG_Chr<X>_<Start>-<End>Mb.vcf` donde <X> es número del cromosoma, <Start> es el inicio de la ventana genómica y <End> es el final en megabases.
 4. Reporta cuántas variantes tienen el archivo generado
 5. Reporta la cobertura promedio para todos los individuos del set de datos
 6. Calcula la frecuencia de cada alelo para todos los individuos dentro del archivo y guarda el resultado en un archivo
@@ -225,11 +225,17 @@ $ ls -lh /datos/compartido/ChileGenomico/chilean_all48_hg19*
 -rw-r--r-- 1 filesadmin datagroup 4.0K Sep 24 12:44 /datos/compartido/ChileGenomico/chilean_all48_hg19_popinfo.csv
 ```
 
-Copia esos archivos a tu respositorio en una carpeta para la sesión `Unididad2/Prac_Uni5/data`  y contesta lo siguiente **asumiendo que tu WD es `Unididad2/Sesion2/code` (y no `data`).**
+La carpeta de trabajo para los ejercicios con `plink` será:
+
+```Unididad2/Sesion1/PINLK```
+
+```
+
+Copia esos archivos a tu repositorio en una carpeta para la sesión `Unididad2/Sesion1/PINLK/data`  y contesta lo siguiente **asumiendo que tu WD es `Unididad2/Sesion2/code` (y no `data`).**
 
 1) Enlista los archivos plink que hay en `data`.  ¿Qué tipos de archivos son cada uno?
 
-2) Consulta el manual de [plink1.9](https://www.cog-genomics.org/plink/1.9/formats) y contesta utilizando comandos de plink lo siguiente. Deposita cualquier arquico que generes an una carpeta `Unididad2/Prac_Uni5/results`:
+2) Consulta el manual de [plink1.9](https://www.cog-genomics.org/plink/1.9/formats) y contesta utilizando comandos de plink lo siguiente. Deposita cualquier archivo que generes an una carpeta `Unididad2/Sesion2/PINK/results`:
 
 a) Transforma de formato bed a formato ped (pista: sección Data Managment). El nombre del output debe ser igual, solo cambiando la extensión.
 
@@ -237,7 +243,7 @@ a) Transforma de formato bed a formato ped (pista: sección Data Managment). El 
 $ plink --bfile ../data/chilean_all48_hg19 --recode --out ../results/chilean_all48_hg19
 ```
 
-b) Crea otro archivo ped (ojo PPPPed) pero esta vez filtrando los SNPs cuya frecuencia del alelo menor sea menor a 0.05 Y filtrando los individuos con más de 10% missing data. Tu output debe llamarse maicesArtegaetal2015_maf05_missing10
+b) Crea otro archivo ped (ojo PPPPed) pero esta vez filtrando los SNPs cuya frecuencia del alelo menor sea menor a 0.05 Y filtrando los individuos con más de 10% missing data. Tu output debe llamarse `chilean_all48_hg19_maf05_missing10`
 
 ¿Cuántos SNPs y cuántos individuos fueron removidos por los filtros?
 
@@ -268,7 +274,7 @@ head ../results/chilean_all48_hg19_maf05_missing10.hwe
    1                    rs2073813    UNAFF    A    G              0/17/28   0.3778   0.3064       0.3197
 ```
 
-d) Observa el archivo `maicesArtegaetal2015.fam`. Consulta la documentación de plink para determinar que es cada columna. ¿Qué información hay y no hay en este archivo?
+d) Observa el archivo `chilean_all48_hg19.fam`. Consulta la documentación de plink para determinar que es cada columna. ¿Qué información hay y no hay en este archivo?
 
 ```
 $ head ../data/chilean_all48_hg19.fam
