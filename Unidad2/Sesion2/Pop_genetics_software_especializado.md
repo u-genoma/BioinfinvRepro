@@ -225,7 +225,7 @@ $ ls -lh /datos/compartido/ChileGenomico/chilean_all48_hg19*
 -rw-r--r-- 1 filesadmin datagroup 4.0K Sep 24 12:44 /datos/compartido/ChileGenomico/chilean_all48_hg19_popinfo.csv
 ```
 
-Copia esos archivos a tu respositorio en una carpeta para la sesión `Unididad2/Prac_Uni5/data`  y contesta lo siguiente **asumiendo que tu WD es `Unididad2/Sesion1/code` (y no `data`).**
+Copia esos archivos a tu respositorio en una carpeta para la sesión `Unididad2/Prac_Uni5/data`  y contesta lo siguiente **asumiendo que tu WD es `Unididad2/Sesion2/code` (y no `data`).**
 
 1) Enlista los archivos plink que hay en `data`.  ¿Qué tipos de archivos son cada uno?
 
