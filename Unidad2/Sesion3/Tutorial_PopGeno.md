@@ -444,9 +444,10 @@ Elimine variantes duplicadas del set ChileGenomico
 
 ```sh
 $ plink --bfile chilean_all48_hg19_10 --list-duplicate-vars suppress-first
-$ plink --bfile chilean_all48_hg19_10 --exclude plink.dupvar --make-bed --out chilean_all48_hg19_11Extraiga las variantes presentes en los datos de ChileGenomico.
+$ plink --bfile chilean_all48_hg19_10 --exclude plink.dupvar --make-bed --out chilean_all48_hg19_11
 ```
 
+Extraiga las variantes presentes en los datos de ChileGenomico.
 ```sh
 $ cut -f 2 chilean_all48_hg19_11.bim | sort -u > chilean_all48_hg19_11.snps
 ```
