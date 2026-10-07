@@ -206,7 +206,7 @@ Trabajo individual:
 
 * plink
   
-  #### Sesión 2.3: Análisis genético de poblaciones
+  #### [**Sesión 2.3: Análisis genético de poblaciones**](Unidad2/Sesion3/Tutorial_PopGeno.md)
 
 * PCA exploratorios
 
