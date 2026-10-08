@@ -448,6 +448,7 @@ $ plink --bfile chilean_all48_hg19_10 --exclude plink.dupvar --make-bed --out ch
 ```
 
 Extraiga las variantes presentes en los datos de ChileGenomico.
+
 ```sh
 $ cut -f 2 chilean_all48_hg19_11.bim | sort -u > chilean_all48_hg19_11.snps
 ```
@@ -740,3 +741,9 @@ Rscript $W/admixture_plot.R popinfo_sorted.txt MDS_merge_r2_lt_0.2.fam
 ```
 
 ![admixture.png](img/admixture.png)
+
+#### Tarea:
+
+1. Interprete la figura de ADMIXTURE y compare los resultados distintos K.
+2. Utilice un comando de Unix para extraer los valores de error de cross-validación a partir de los archivos log.
+3. Genere un gráfico de línea en R donde k se muestre en el eje *x* y la tasa de error en el eje *y*.
