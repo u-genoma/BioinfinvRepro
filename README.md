@@ -205,14 +205,14 @@ Trabajo individual:
 * VCF-tools
 
 * plink
-  
-  #### [**Sesión 2.3: Análisis genético de poblaciones**](Unidad2/Sesion3/Tutorial_PopGeno.md)
+
+#### [**Sesión 2.3: Análisis genético de poblaciones**](Unidad2/Sesion3/Tutorial_PopGeno.md)
 
 * PCA exploratorios
 
 * Análisis de estructura poblacional
 
-#### Sesión 2.4: Genética de Poblaciones 2
+#### [**Sesión 2.4: Genética de Poblaciones 2**](Unidad2/Sesion4/Population_Genetics_Fstatistics.md)
 
 Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Medicina, Universidad de Chile
 
@@ -267,4 +267,4 @@ Trabajo individual:
 
 * Generación de datos RNAseq
 * Modelamiento de datos
-* Software
+* Softwarels

@@ -227,8 +227,8 @@ $ ls -lh /datos/compartido/ChileGenomico/chilean_all48_hg19*
 
 La carpeta de trabajo para los ejercicios con `plink` será:
 
-```Unididad2/Sesion1/PINLK```
-
+```
+Unididad2/Sesion1/PINLK
 ```
 
 Copia esos archivos a tu repositorio en una carpeta para la sesión `Unididad2/Sesion1/PINLK/data`  y contesta lo siguiente **asumiendo que tu WD es `Unididad2/Sesion2/code` (y no `data`).**
