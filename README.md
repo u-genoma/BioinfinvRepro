@@ -224,7 +224,7 @@ Profesora: Constanza de la Fuente, Programa de Genética Humana, Facultad de Med
 
 ### Unidad 3 Introducción a la genómica y secuenciación de siguiente generación
 
-#### Sesión 3.1: Análisis de secuencias
+#### [**Sesión 3.1: Análisis de secuencias**](Unidad3/Sesion1/README.md)
 
 * Alineamiento contra un genoma de referencia
 * Llamado de variantes
