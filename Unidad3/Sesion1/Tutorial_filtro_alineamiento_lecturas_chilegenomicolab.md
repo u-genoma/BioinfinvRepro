@@ -317,7 +317,10 @@ Cargar el módulo si está usando el cluster genoma:
 ```
 module load qualimap
 ```
-
+Modificar una variable de ambiente para que qualimap no utilice una opción depricada de Java
+```sh
+export "JAVA_OPTS=-Xms32m -Xmx1200M"
+```
 Comando:
 
 ```sh
