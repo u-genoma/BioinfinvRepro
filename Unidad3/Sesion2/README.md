@@ -32,16 +32,15 @@ Magíster en Genética, Universidad de Chile · sesión de 90 min · R Markdown.
 
 **Anonimización:** los IDs se reemplazaron por PAC01–PAC08, y la tabla de equivalencias queda solo en la carpeta privada de PRADA. Se eliminaron los IDs de laboratorio y de Novogene, las rutas, la edad y la supervivencia.
 
-**Uso:** datos reales para uso docente exclusivo; **no publicar en GitHub**. Para `u-genoma/BioinfinvRepro` se publicará más adelante solo el código, junto con un conjunto de ejemplo.
+**Uso:** datos reales para uso docente exclusivo;
 
 ## Limitaciones conocidas
 
 - Las muestras M tienen pureza de 0–5 %. Las variantes llamadas en M son mayoritariamente artefactos FFPE (C>T de VAF baja).
 - La pureza de ASCAT no es fiable en las muestras M, y ASCAT falló en PAC05D.
 - No se evaluó la MSI.
-- El dN/dS de cohorte está pendiente de decisión.
 - Repertorios TCR poco profundos (43–10.576 moléculas): casi no hay clonotipos compartidos entre T0 y T3.
 
 ## Soluciones
 
-Puede encontrar las soluciones a este tutorial en este [vínculo](https://u-genoma.github.io/BioinfinvRepro/Unidad3/Sesion2/Practica_GenomicaCancer.html).
+Puede encontrar las soluciones a este tutorial en este (https://u-genoma.github.io/BioinfinvRepro/Unidad3/Sesion2/Practica_GenomicaCancer.html).
