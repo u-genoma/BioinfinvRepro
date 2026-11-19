@@ -42,8 +42,6 @@ Magíster en Genética, Universidad de Chile · sesión de 90 min · R Markdown.
 - El dN/dS de cohorte está pendiente de decisión.
 - Repertorios TCR poco profundos (43–10.576 moléculas): casi no hay clonotipos compartidos entre T0 y T3.
 
-
-
 ## Soluciones
 
-Puede encontrar las soluciones a este tutorial en este [vínculo](docs/Practica_GenomicaCancer.html).
+Puede encontrar las soluciones a este tutorial en este [vínculo](https://u-genoma.github.io/BioinfinvRepro/Unidad3/Sesion2/Practica_GenomicaCancer.html).
