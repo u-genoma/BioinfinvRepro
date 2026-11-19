@@ -234,21 +234,17 @@ Trabajo individual:
 * Predicción funcional de variantes
 * Interpretación y anotación de variantes
 
-#### Sesión 3.2: Bases de datos en Bioinformática
+#### [**Sesión 3.2: Genómica del cáncer**](Unidad3/Sesion2/README.md)
 
-* Datos de secuencias
-* Bases de datos biológicas
+* Llamado de mutaciones somáticas
+* Aplicaciones para la precisión del diagnóstico
 
 #### Sesión 3.3 - Dinámica molecular
 
 * Bases físicas
+* Alpha folding
 * docking molecuar
 * software
-
-#### Sesión 3.4: Genómica del cáncer
-
-* Llamado de mutaciones somáticas
-* Aplicaciones para la precisión del diagnóstico
 
 ### Unidad 4 Análisis de transcriptomas
 

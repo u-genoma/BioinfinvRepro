@@ -1,0 +1,521 @@
+---
+title: "Práctica: genómica del cáncer de mama antes y después del tratamiento preoperatorio"
+subtitle: "Magíster en Genética — Universidad de Chile · Sesión práctica guiada (90 min)"
+author: "Luis Zapata Ortiz"
+date: "`r format(Sys.Date(), '%d-%m-%Y')`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: show
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, fig.align = "center", dpi = 120)
+invisible(try(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"), silent = TRUE))  # tildes en las figuras
+```
+
+> **Datos reales anonimizados — uso docente exclusivo.** Los datos provienen de la cohorte del ensayo PRADA (The Institute of Cancer Research, Londres) y se entregan solo para esta práctica. **No los redistribuyas ni los subas a repositorios públicos.** Los pacientes se identifican como `PAC01`–`PAC08`.
+
+# Objetivos, requisitos y cronograma
+
+**Al terminar la práctica podrás:**
+
+1. Leer un VCF somático tumor–normal en R y controlar su calidad (profundidad, recuentos de alelos, VAF).
+2. Comparar dos momentos de un mismo tumor y distinguir **persistencia clonal real** de **ausencia por falta de potencia de detección**.
+3. Relacionar VAF, pureza y número de copias con la fracción de células cancerosas (CCF), y explicitar los supuestos.
+4. Calcular TMB con una definición explícita y explorar espectros mutacionales, separando **espectro observado** de **atribución a firmas**.
+5. Describir el microambiente inmune con firmas de expresión y repertorios TCR, reconociendo los confusores.
+6. Integrar los resultados con la clínica y con los biomarcadores de inmunoterapia (PD-L1, TMB, MSI), usando bases de datos públicas.
+
+**Requisitos:** R ≥ 4.2 con `ggplot2`, `ggsci`, `patchwork` y `nnls`. Todo el código se ejecuta en menos de un minuto.
+
+```{r instalar, eval=FALSE}
+## Ejecutar UNA vez si falta algún paquete
+install.packages(c("ggplot2", "ggsci", "patchwork", "nnls", "rmarkdown"))
+```
+
+| Minutos | Bloque | Figura |
+|---|---|---|
+| 0–8 | 0. El caso y los datos | — |
+| 8–23 | 1. Inspección y control de calidad del VCF | Fig. 1 |
+| 23–43 | 2. Diagnóstico vs cirugía: ¿qué mutaciones persisten? | Fig. 2 |
+| 43–61 | 3. Carga mutacional, espectro y firmas; número de copias y CCF | Fig. 3, Fig. 4 |
+| 61–75 | 4. Microambiente inmune y repertorio TCR | Fig. 5, Fig. 6 |
+| 75–87 | 5. Caso integrador y bases de datos | Tabla |
+| 87–90 | Cierre | — |
+
+```{r paquetes}
+library(ggplot2)
+library(ggsci)       # paleta NPG (scale_color_npg / scale_fill_npg)
+library(patchwork)   # combinar paneles
+source("scripts/funciones_practica.R")   # leer_vcf(), calcular_ccf(), contar_sbs96(), ...
+theme_set(theme_bw(base_size = 11))
+dir.create("figuras", showWarnings = FALSE)
+```
+
+# Bloque 0 — El caso y los datos (8 min)
+
+**Diseño.** Ocho pacientes con cáncer de mama recibieron **quimioterapia y radioterapia preoperatorias** (brazo PRADA). De cada paciente hay:
+
+- **D** — biopsia diagnóstica, antes del tratamiento;
+- **M** — pieza de mastectomía, después del tratamiento;
+- **N** — sangre (normal germinal), usada para llamar variantes **somáticas**.
+
+Se secuenció el exoma completo (**WES**) sobre el genoma de referencia **GRCh38**. Las variantes se llamaron con nextNEOpi (Mutect2 más un segundo llamador, Strelka o VarScan) y se anotaron con VEP.
+
+**Caso guía: `PAC01`**, un carcinoma **triple negativo (TNBC)**, T4, con ganglios positivos y **sin respuesta patológica completa (no pCR)**.
+
+```{r clinica}
+clin <- read.delim("data/clinica_docente.tsv")
+clin
+```
+
+> **Pregunta 0.1.** ¿Por qué la pureza (fracción de células tumorales) de las muestras **M** es tan baja, y en algunos casos 0? ¿Qué esperas encontrar en el VCF de una muestra M con 0 % de tumor?
+
+| Archivo | Contenido |
+|---|---|
+| `data/vcf/PACxx_{D,M}.somatic.vcf.gz` | Variantes somáticas (SNV e indels) con columnas NORMAL y TUMOR |
+| `data/recuentos_forzados_snv.tsv` | Lecturas REF/ALT en D **y** M en todas las SNV del paciente (*pileup* forzado) |
+| `data/cnv/segmentos_sequenza.tsv` | Número de copias total, mayor y menor (Sequenza) |
+| `data/pureza_y_tmb_nextneopi.tsv` | Pureza estimada por patología, Sequenza y ASCAT; territorio exónico evaluable |
+| `data/sv_manta_pass.tsv`, `data/fusiones_arriba.tsv` | Variantes estructurales (Manta, ADN) y fusiones (Arriba, ARN) |
+| `data/expresion_inmune_tpm.tsv` | Expresión (TPM) de 52 genes inmunes y de linaje |
+| `data/tcr/PACxx-T*.tsv` | Clonotipos TCRβ (CDR3) y sus recuentos |
+| `data/cosmic_sbs_v3.4_GRCh38.tsv` | Firmas mutacionales de referencia COSMIC v3.4 |
+
+# Bloque 1 — Inspección y control de calidad (15 min)
+
+## Mirar el VCF crudo
+
+```{r vcf-crudo}
+lineas <- readLines("data/vcf/PAC01_D.somatic.vcf.gz")
+cat(head(grep("^##", lineas, value = TRUE), 6), sep = "\n")
+cat(grep("^#CHROM", lineas, value = TRUE), lineas[!startsWith(lineas, "#")][1], sep = "\n")
+```
+
+> **Pregunta 1.1.** En la primera variante, ¿cuántas lecturas apoyan el alelo alternativo en el **tumor** y cuántas en el **normal**? ¿Por qué es importante que el normal tenga casi 0 lecturas alternativas?
+
+## Leer D y M y calcular la VAF
+
+$$\text{VAF} = \frac{\text{lecturas ALT}}{\text{lecturas REF} + \text{lecturas ALT}}$$
+
+```{r leer}
+D <- leer_vcf("data/vcf/PAC01_D.somatic.vcf.gz"); D$momento <- "D (diagnóstico)"
+M <- leer_vcf("data/vcf/PAC01_M.somatic.vcf.gz"); M$momento <- "M (cirugía)"
+dm <- rbind(D, M)
+## Resumen por muestra
+aggregate(cbind(vaf, t_dp, n_dp) ~ momento, data = dm, FUN = median)
+table(dm$momento, dm$tipo)
+## Control: lecturas alternativas en el normal
+summary(dm$n_alt / dm$n_dp)
+```
+
+## Figura 1 — Profundidad, VAF y artefactos
+
+```{r fig1, fig.width=10, fig.height=4.2}
+f1a <- ggplot(dm, aes(t_dp, vaf, color = momento)) +
+  geom_point(alpha = 0.6, size = 1.4) + scale_x_log10() +
+  facet_wrap(~momento) + scale_color_npg(guide = "none") +
+  labs(x = "Profundidad en el tumor (lecturas, escala log)", y = "VAF", title = "A. Profundidad vs VAF")
+f1b <- ggplot(dm, aes(vaf, fill = momento)) +
+  geom_histogram(binwidth = 0.02, boundary = 0, alpha = 0.8, position = "identity") +
+  scale_fill_npg() + labs(x = "VAF", y = "N.º de variantes", fill = NULL, title = "B. Distribución de VAF") +
+  theme(legend.position = "bottom")
+fig1 <- f1a + f1b + plot_layout(widths = c(2, 1.2))
+fig1
+ggsave("figuras/Fig1_QC_VAF_PAC01.png", fig1, width = 10, dpi = 300, height = 4.2)
+```
+
+> **Pregunta 1.2.** Si una mutación clonal y heterocigota está en un tumor diploide con pureza $p$, su VAF esperada es $p/2$. Con la pureza patológica de D (`r round(clin$pureza_patologia[clin$paciente=="PAC01" & clin$momento=="D"], 2)`), ¿qué VAF esperarías? ¿Coincide con el histograma?
+>
+> **Pregunta 1.3.** ¿Por qué la muestra M tiene casi todas sus variantes con VAF < 0,1? Plantea al menos dos explicaciones: una biológica y una técnica.
+
+# Bloque 2 — Diagnóstico vs cirugía: ¿qué mutaciones persisten? (20 min)
+
+## Compartidas y privadas según el llamador
+
+```{r compartidas}
+D$clave <- paste(D$chrom, D$pos, D$ref, D$alt); M$clave <- paste(M$chrom, M$pos, M$ref, M$alt)
+c(solo_D = sum(!D$clave %in% M$clave), compartidas = sum(D$clave %in% M$clave), solo_M = sum(!M$clave %in% D$clave))
+```
+
+Según el llamador, casi nada se comparte. ¿Significa que el tumor residual es otro tumor? **No necesariamente:** que una mutación no se *llame* no significa que esté *ausente*. Para comprobarlo usamos los **recuentos forzados**: el número de lecturas REF y ALT en **ambas** muestras en cada posición mutada del paciente.
+
+```{r forzados}
+fz <- read.delim("data/recuentos_forzados_snv.tsv")
+fz$clave <- paste(fz$chrom, fz$pos, fz$ref, fz$alt)
+## Tabla ancha: una fila por mutación de PAC01 con lecturas en D y en M
+p1 <- subset(fz, paciente == "PAC01")
+anch <- merge(subset(p1, momento == "D"), subset(p1, momento == "M"), by = "clave", suffixes = c("_D", "_M"))
+anch$vaf_D <- anch$alt_count_D / anch$depth_D
+anch$vaf_M <- anch$alt_count_M / anch$depth_M
+anch$llamada <- ifelse(anch$clave %in% D$clave & anch$clave %in% M$clave, "llamada en D y M",
+                ifelse(anch$clave %in% D$clave, "llamada solo en D", "llamada solo en M"))
+anch$gen <- c(D$gen, M$gen)[match(anch$clave, c(D$clave, M$clave))]
+anch$impacto <- c(D$impacto, M$impacto)[match(anch$clave, c(D$clave, M$clave))]
+## ¿Cuántas mutaciones de D tienen al menos 1 o al menos 3 lecturas ALT en M?
+dD <- subset(anch, llamada != "llamada solo en M")
+c(n_mut_D = nrow(dD), con_1_alt_en_M = sum(dD$alt_count_M >= 1), con_3_alt_en_M = sum(dD$alt_count_M >= 3))
+## Los drivers del caso
+subset(anch, gen %in% c("TP53", "NF1") & impacto %in% c("HIGH", "MODERATE"), c(gen, alt_count_D, depth_D, alt_count_M, depth_M))
+```
+
+## Potencia de detección
+
+Si M tiene una pureza de ~5 %, una mutación clonal y heterocigota tendrá una VAF esperada de ~2,5 %. Con una profundidad de 80×, ¿qué probabilidad hay de ver al menos 3 lecturas alternativas?
+
+```{r potencia}
+pur_M <- clin$pureza_patologia[clin$paciente == "PAC01" & clin$momento == "M"]
+potencia_deteccion(dp = 80, vaf_esperada = pur_M / 2, k_min = 3)
+## Potencia media sobre las mutaciones reales de D, usando la profundidad observada en M
+mean(potencia_deteccion(dD$depth_M, pur_M / 2, 3))
+```
+
+## Control negativo: las muestras M sin tumor
+
+Tres pacientes tienen **0 % de tumor** en M según patología: `PAC02` y `PAC07` (con pCR) y `PAC06` (sin pCR, clasificado como no respondedor; ¿cómo puede ser? piensa en el muestreo del bloque de patología frente al lecho tumoral). En ellas, las lecturas alternativas en posiciones de D reflejan **ruido técnico** (o células tumorales aisladas que la patología no vio).
+
+```{r cohorte-persistencia}
+cohorte <- do.call(rbind, lapply(sprintf("PAC%02d", 1:8), function(p) {
+  d <- leer_vcf(sprintf("data/vcf/%s_D.somatic.vcf.gz", p))
+  f <- subset(fz, paciente == p & momento == "M" & clave %in% paste(d$chrom, d$pos, d$ref, d$alt))
+  data.frame(paciente = p,
+             pureza_M = clin$pureza_patologia[clin$paciente == p & clin$momento == "M"],
+             pCR = clin$pCR[clin$paciente == p & clin$momento == "M"],
+             frac_alt3_en_M = mean(f$alt_count >= 3),
+             llamados_en_M = nrow(leer_vcf(sprintf("data/vcf/%s_M.somatic.vcf.gz", p))))
+}))
+cohorte
+```
+
+## Figura 2 — Persistencia clonal y límites de detección
+
+```{r fig2, fig.width=13, fig.height=5}
+f2a <- ggplot(anch, aes(vaf_D, vaf_M, color = llamada)) +
+  geom_point(alpha = 0.7, size = 1.6) +
+  geom_text(data = subset(anch, gen %in% c("TP53", "NF1") & impacto %in% c("HIGH", "MODERATE")),
+            aes(label = gen), color = "black", vjust = -0.8, size = 3.2) +
+  scale_color_npg() +
+  labs(x = "VAF en D (diagnóstico)", y = "VAF en M (cirugía, recuento forzado)", color = NULL,
+       title = "A. PAC01: VAF en D y en M") + theme(legend.position = "bottom")
+f2b <- ggplot(cohorte, aes(pureza_M * 100, frac_alt3_en_M * 100, color = pCR, label = paciente)) +
+  geom_point(size = 3) + geom_text(data = subset(cohorte, pureza_M > 0.01), vjust = -0.9, size = 3, show.legend = FALSE) +
+  scale_color_npg() +
+  labs(x = "Pureza de M por patología (%)", y = "% mutaciones de D con ≥3 ALT en M",
+       title = "B. Persistencia (cohorte)") + theme(legend.position = "bottom")
+curva <- expand.grid(dp = c(50, 100, 200, 500), pureza = seq(0, 0.2, 0.005))
+curva$potencia <- potencia_deteccion(curva$dp, curva$pureza / 2, 3)
+f2c <- ggplot(curva, aes(pureza * 100, potencia, color = factor(dp))) + geom_line(linewidth = 1) +
+  scale_color_npg() + labs(x = "Pureza (%)", y = "P(≥3 lecturas ALT)", color = "Profundidad",
+                           title = "C. Potencia (mutación clonal)") +
+  theme(legend.position = "bottom")
+fig2 <- f2a + f2b + f2c + plot_layout(widths = c(1.3, 1, 1))
+fig2
+ggsave("figuras/Fig2_persistencia_D_vs_M.png", fig2, width = 13, height = 5, dpi = 300)
+```
+
+> **Pregunta 2.1.** ¿TP53 persiste en la muestra residual de PAC01? ¿Cuántas lecturas la apoyan y qué tan convincente es esa evidencia?
+>
+> **Pregunta 2.2.** En la Fig. 2B, ¿qué pacientes muestran una persistencia por encima del ruido de fondo que definen las muestras con 0 % de tumor? ¿Por qué PAC05 es tan distinto?
+>
+> **Pregunta 2.3.** Las muestras M con 0 % de tumor tienen igualmente entre `r min(cohorte$llamados_en_M[cohorte$pureza_M == 0])` y `r max(cohorte$llamados_en_M[cohorte$pureza_M == 0])` variantes "somáticas" llamadas. ¿Qué son? ¿Qué consecuencia tiene esto al interpretar mutaciones "privadas de M" como evolución clonal?
+
+# Bloque 3 — Carga mutacional, espectro, firmas y número de copias (18 min)
+
+## Consecuencias funcionales y carga mutacional (TMB)
+
+**Definición de TMB usada aquí** (debe declararse siempre):
+
+- **Mutaciones elegibles:** SNV e indels somáticos codificantes **no sinónimos** (missense, nonsense, frameshift, indels in-frame, sitios de splicing), con VAF ≥ 0,05 y profundidad ≥ 20 en el tumor.
+- **Territorio evaluable:** megabases del exoma con cobertura suficiente en tumor **y** normal, calculadas por nextNEOpi para cada muestra (~42–51 Mb).
+
+```{r tmb}
+no_sinonimas <- c("missense_variant", "stop_gained", "frameshift_variant", "splice_acceptor_variant",
+                  "splice_donor_variant", "inframe_deletion", "inframe_insertion", "start_lost",
+                  "stop_lost", "protein_altering_variant")
+table(D$consecuencia)[order(-table(D$consecuencia))][1:8]
+pt <- read.delim("data/pureza_y_tmb_nextneopi.tsv")
+tmb <- do.call(rbind, lapply(sprintf("PAC%02d", 1:8), function(p) {
+  v <- leer_vcf(sprintf("data/vcf/%s_D.somatic.vcf.gz", p))
+  n <- sum(v$consecuencia %in% no_sinonimas & v$vaf >= 0.05 & v$t_dp >= 20)
+  mb <- pt$territorio_exonico_pb_nextneopi[pt$muestra == paste0(p, "D")] / 1e6
+  data.frame(paciente = p, subtipo = clin$subtipo[clin$paciente == p][1],
+             mutaciones = n, Mb = round(mb, 1), TMB = round(n / mb, 2))
+}))
+tmb
+```
+
+> **Pregunta 3.1.** El umbral de TMB alto aprobado por la FDA para pembrolizumab, de forma agnóstica al tumor, es **≥ 10 mut/Mb** (medido con el panel FoundationOne CDx). ¿Alguno de estos tumores lo alcanza? ¿Por qué no es trivial comparar una TMB de WES con una de panel?
+
+## Espectro mutacional (SBS96) y atribución a firmas
+
+El **espectro** es una *observación*: cuántas mutaciones hay de cada tipo en su contexto trinucleotídico. La **atribución a firmas** es una *estimación*: un modelo (aquí NNLS) que explica el espectro como mezcla de firmas COSMIC. Con pocas mutaciones, la estimación es muy incierta.
+
+```{r espectro}
+cosmic <- read.delim("data/cosmic_sbs_v3.4_GRCh38.tsv", check.names = FALSE)
+canales <- cosmic$Type
+todas <- do.call(rbind, lapply(sprintf("PAC%02d", 1:8), function(p) do.call(rbind, lapply(c("D", "M"), function(t) {
+  v <- leer_vcf(sprintf("data/vcf/%s_%s.somatic.vcf.gz", p, t)); v$paciente <- p; v$momento <- t; v }))))
+snv <- subset(todas, tipo == "SNV")
+## Clase de sustitución (convención de pirimidina)
+pur <- snv$ref %in% c("A", "G")
+snv$sust <- paste0(ifelse(pur, chartr("AG", "TC", snv$ref), snv$ref), ">",
+                   ifelse(pur, chartr("ACGT", "TGCA", snv$alt), snv$alt))
+snv$rango_vaf <- cut(snv$vaf, c(0, 0.05, 0.1, 0.2, 1), labels = c("<0,05", "0,05–0,1", "0,1–0,2", ">0,2"))
+round(prop.table(table(snv$rango_vaf, snv$sust), 1), 2)
+```
+
+> **Pregunta 3.2.** ¿Qué tipo de sustitución domina entre las variantes de VAF baja? Las muestras son tejido fijado en formalina e incluido en parafina (**FFPE**), y la formalina desamina citosinas. ¿Qué sugiere esto?
+
+```{r firmas}
+firmas_sel <- c("SBS1", "SBS2", "SBS13", "SBS3", "SBS5", "SBS8", "SBS18", "SBS30", "SBS31")
+F <- as.matrix(cosmic[, firmas_sel])
+grupos <- list("Cohorte D, todas"      = subset(snv, momento == "D"),
+               "Cohorte D, VAF ≥ 0,1"  = subset(snv, momento == "D" & vaf >= 0.1),
+               "PAC01 D, todas"        = subset(snv, paciente == "PAC01" & momento == "D"))
+ajustes <- do.call(rbind, lapply(names(grupos), function(g) {
+  x <- contar_sbs96(grupos[[g]]$ref, grupos[[g]]$alt, grupos[[g]]$trinuc, canales)
+  b <- bootstrap_firmas(x, F, B = 200)
+  data.frame(grupo = g, n = sum(x), firma = firmas_sel, aporte = ajustar_firmas(x, F),
+             li = apply(b, 2, quantile, 0.025), ls = apply(b, 2, quantile, 0.975),
+             coseno = similitud_coseno(x, F %*% ajustar_firmas(x, F)))
+}))
+unique(ajustes[, c("grupo", "n", "coseno")])
+```
+
+## Figura 3 — TMB, espectro y firmas
+
+```{r fig3, fig.width=12, fig.height=7.5}
+x96 <- contar_sbs96(grupos[[2]]$ref, grupos[[2]]$alt, grupos[[2]]$trinuc, canales)
+esp <- data.frame(canal = factor(canales, levels = canales), n = x96, sust = substr(canales, 3, 5))
+f3a <- ggplot(esp, aes(canal, n, fill = sust)) + geom_col() + facet_grid(~sust, scales = "free_x", space = "free_x") +
+  scale_fill_npg(guide = "none") + labs(x = NULL, y = "N.º de SNV", title = "A. Espectro SBS96 — cohorte D, VAF ≥ 0,1") +
+  theme(axis.text.x = element_text(angle = 90, size = 5, family = "mono"), panel.spacing = unit(0.1, "lines"))
+f3b <- ggplot(as.data.frame(prop.table(table(snv$rango_vaf, snv$sust), 1)), aes(Var1, Freq, fill = Var2)) +
+  geom_col() + scale_fill_npg() + labs(x = "VAF", y = "Proporción", fill = NULL, title = "B. Sustituciones según VAF")
+f3c <- ggplot(ajustes, aes(firma, aporte, fill = grupo)) +
+  geom_col(position = position_dodge(0.8), width = 0.75) +
+  geom_errorbar(aes(ymin = li, ymax = ls), position = position_dodge(0.8), width = 0.3) +
+  scale_fill_npg() + labs(x = NULL, y = "Fracción atribuida (IC 95 % bootstrap)", fill = NULL, title = "C. Atribución a firmas (NNLS)") +
+  theme(legend.position = "bottom", axis.text.x = element_text(angle = 45, hjust = 1))
+f3d <- ggplot(tmb, aes(reorder(paciente, TMB), TMB, fill = subtipo)) + geom_col() +
+  geom_hline(yintercept = 10, linetype = 2) + annotate("text", x = 1.5, y = 9.3, label = "TMB-alto (≥10)", size = 3) +
+  scale_fill_npg() + labs(x = NULL, y = "mut/Mb", fill = "Subtipo", title = "D. TMB (diagnóstico)")
+fig3 <- f3a / (f3b | f3c | f3d) + plot_layout(heights = c(1, 1.2))
+fig3
+ggsave("figuras/Fig3_TMB_espectro_firmas.png", fig3, width = 12, height = 7.5, dpi = 300)
+```
+
+> **Pregunta 3.3.** Al filtrar por VAF ≥ 0,1, ¿qué firmas ganan peso? (SBS2/SBS13 = APOBEC; SBS1/SBS5 = "reloj"; SBS3 = déficit de recombinación homóloga; SBS30 se parece al daño por desaminación.) ¿Qué cambia en la interpretación?
+>
+> **Pregunta 3.4.** Compara los intervalos de PAC01 (~250 SNV) con los de la cohorte. ¿Podrías afirmar que PAC01 tiene un déficit de recombinación homóloga (SBS3) con estos datos? ¿Qué dato adicional (por ejemplo, WGS, firmas de indels o de reordenamientos, o mutaciones en *BRCA1/2*) lo permitiría?
+
+## Número de copias, pureza y CCF
+
+```{r cnv}
+cnv <- read.delim("data/cnv/segmentos_sequenza.tsv")
+subset(pt, muestra %in% c("PAC01D", "PAC01M"), c(muestra, pureza_patologia, pureza_sequenza, ploidia_sequenza, pureza_ascat))
+## Asignar a cada mutación de D el número de copias de su segmento
+c01 <- subset(cnv, paciente == "PAC01" & momento == "D")
+idx <- sapply(seq_len(nrow(D)), function(i) {
+  w <- which(c01$chrom == D$chrom[i] & c01$inicio <= D$pos[i] & c01$fin >= D$pos[i]); if (length(w)) w[1] else NA })
+D$CN_total <- c01$CN_total[idx]; D$CN_mayor <- c01$CN_mayor[idx]; D$CN_menor <- c01$CN_menor[idx]
+D$CN_total[is.na(D$CN_total)] <- 2
+## Supuestos: pureza de Sequenza; m = 1 copia mutada (salvo indicación); el normal es diploide
+p_D <- pt$pureza_sequenza[pt$muestra == "PAC01D"]
+D$CCF_m1 <- calcular_ccf(D$vaf, p_D, D$CN_total, m = 1)
+## m estimado: n.º de copias mutadas más compatible con la VAF (entre 1 y el CN del alelo mayor)
+D$m_est <- pmin(pmax(1, round(D$vaf * (p_D * D$CN_total + 2 * (1 - p_D)) / p_D)), pmax(1, D$CN_mayor, na.rm = TRUE))
+D$CCF <- calcular_ccf(D$vaf, p_D, D$CN_total, m = D$m_est)
+subset(D, gen %in% c("TP53", "NF1") & impacto %in% c("HIGH", "MODERATE"), c(gen, hgvsp, vaf, CN_total, CN_mayor, CN_menor, CCF_m1, m_est, CCF))
+mean(D$CCF >= 0.8)   # fracción de mutaciones "clonales" (CCF ≥ 0,8)
+```
+
+> **Pregunta 3.5.** En PAC01, *TP53* está en un segmento con CN mayor = 3 y CN menor = 0, es decir, con **pérdida de heterocigosidad (LOH)**. Si todas las copias portan la mutación ($m = 3$), ¿cuál es la CCF? ¿Y con $m = 1$? ¿Qué valor es biológicamente coherente? Repite el cálculo con la pureza patológica: ¿cuán sensible es la CCF a la pureza?
+
+## Figura 4 — Perfil de número de copias y CCF
+
+```{r fig4, fig.width=12, fig.height=6}
+crom <- paste0("chr", c(1:22, "X"))
+largo <- tapply(cnv$fin, factor(cnv$chrom, levels = crom), max, na.rm = TRUE)
+offset <- setNames(c(0, cumsum(as.numeric(largo))[-length(largo)]), crom)
+seg <- subset(cnv, paciente == "PAC01" & chrom %in% crom)
+seg$x0 <- seg$inicio + offset[seg$chrom]; seg$x1 <- seg$fin + offset[seg$chrom]
+segl <- rbind(transform(seg, cn = CN_mayor, alelo = "mayor"), transform(seg, cn = CN_menor, alelo = "menor"))
+segl$momento <- ifelse(segl$momento == "D", "D (diagnóstico)", "M (cirugía)")
+f4a <- ggplot(segl) + geom_segment(aes(x = x0, xend = x1, y = cn + ifelse(alelo == "menor", -0.08, 0.08),
+                                         yend = cn + ifelse(alelo == "menor", -0.08, 0.08), color = alelo), linewidth = 1.6) +
+  geom_vline(xintercept = offset, color = "grey85") + facet_wrap(~momento, ncol = 1) +
+  scale_x_continuous(breaks = offset + largo / 2, labels = sub("chr", "", crom)) +
+  scale_color_npg() + coord_cartesian(ylim = c(-0.2, 6)) +
+  labs(x = "Cromosoma", y = "Número de copias", color = "Alelo", title = "A. PAC01: número de copias alelo-específico (Sequenza)")
+ccf_l <- rbind(data.frame(modelo = "m = 1", CCF = D$CCF_m1), data.frame(modelo = "m estimado", CCF = D$CCF))
+f4b <- ggplot(ccf_l, aes(CCF, fill = modelo)) + geom_histogram(binwidth = 0.1, boundary = 0, alpha = 0.7, position = "identity") +
+  geom_vline(xintercept = 1, linetype = 2) + scale_fill_npg() +
+  labs(x = "CCF (truncada en 1,5)", y = "N.º de mutaciones", fill = NULL, title = "B. CCF en D") + theme(legend.position = "bottom")
+fig4 <- f4a + f4b + plot_layout(widths = c(3, 1))
+fig4
+ggsave("figuras/Fig4_CNV_CCF_PAC01.png", fig4, width = 12, height = 6, dpi = 300)
+```
+
+> **Pregunta 3.6.** ¿Por qué el perfil de M es casi plano (diploide)? ¿Significa que el tumor residual perdió las alteraciones de número de copias?
+
+## Variantes estructurales, fusiones y MSI (sin figura)
+
+```{r sv-fusiones}
+sv <- read.delim("data/sv_manta_pass.tsv"); fus <- read.delim("data/fusiones_arriba.tsv")
+table(sv$muestra, sv$tipo)
+subset(fus, muestra == "PAC01D" & confianza == "high", c(gen1, gen2, tipo, lecturas_split, marco))
+```
+
+> **Pregunta 3.7.** El WES captura ~1–2 % del genoma. ¿Por qué Manta detecta tan pocas SV en estos exomas, y qué tecnología usarías para caracterizarlas (WGS, lecturas largas)? Las fusiones de Arriba vienen del **ARN**: ¿qué evidencia mínima pedirías para considerar una fusión real y "accionable" (por ejemplo, *NTRK*)?
+>
+> **Pregunta 3.8 (MSI).** En estos datos no se ejecutó ningún algoritmo de MSI (por ejemplo, MSIsensor). ¿Qué esperarías encontrar en un tumor con inestabilidad de microsatélites (dMMR/MSI-H) en cuanto a indels en homopolímeros, TMB y firmas (SBS6/15/26/44)? La MSI es rara en mama (<1–2 %). ¿Qué prueba clínica pedirías (IHQ de MLH1/MSH2/MSH6/PMS2, PCR o NGS)?
+
+# Bloque 4 — Microambiente inmune y repertorio TCR (14 min)
+
+## Firmas de expresión
+
+- **CYT (actividad citolítica):** media geométrica de *GZMA* y *PRF1*.
+- **IFN-γ (6 genes; Ayers et al., 2017):** media de log2(TPM+1) de *IDO1, CXCL10, CXCL9, HLA-DRA, STAT1, IFNG*.
+
+```{r inmune}
+ex <- read.delim("data/expresion_inmune_tpm.tsv")
+ex$muestra <- paste0(ex$paciente, ex$momento)
+mat <- with(ex, tapply(TPM, list(gen, muestra), sum))
+puntajes <- data.frame(muestra = colnames(mat),
+  CYT   = sqrt((mat["GZMA", ] + 1) * (mat["PRF1", ] + 1)) - 1,
+  IFNG6 = colMeans(log2(mat[c("IDO1", "CXCL10", "CXCL9", "HLA-DRA", "STAT1", "IFNG"), ] + 1)),
+  CD8A  = log2(mat["CD8A", ] + 1), PTPRC = log2(mat["PTPRC", ] + 1),
+  EPCAM = log2(mat["EPCAM", ] + 1), COL1A1 = log2(mat["COL1A1", ] + 1))
+puntajes$paciente <- substr(puntajes$muestra, 1, 5); puntajes$momento <- substr(puntajes$muestra, 6, 6)
+puntajes <- merge(puntajes, clin[, c("paciente", "momento", "subtipo", "respuesta", "sTIL")])
+puntajes[, c("muestra", "subtipo", "respuesta", "sTIL", "CYT", "IFNG6", "EPCAM", "COL1A1")]
+```
+
+## Figura 5 — Firmas inmunes: D vs M, por grupo y heatmap
+
+```{r fig5, fig.width=12, fig.height=8}
+larga <- reshape(puntajes[, c("paciente", "momento", "respuesta", "CYT", "IFNG6", "CD8A", "PTPRC", "EPCAM", "COL1A1")],
+                 direction = "long", varying = c("CYT", "IFNG6", "CD8A", "PTPRC", "EPCAM", "COL1A1"),
+                 v.names = "valor", timevar = "rasgo", times = c("CYT", "IFNG6", "CD8A", "PTPRC", "EPCAM", "COL1A1"))
+larga$valor_log <- ifelse(larga$rasgo == "CYT", log2(larga$valor + 1), larga$valor)
+f5a <- ggplot(larga, aes(momento, valor_log, fill = momento)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.6) + geom_line(aes(group = paciente), color = "grey50") +
+  geom_point(size = 1.8) + facet_wrap(~rasgo, scales = "free_y", nrow = 1) + scale_fill_npg(guide = "none") +
+  labs(x = NULL, y = "log2(TPM+1) o puntaje", title = "A. Rasgos inmunes y de linaje, D vs M (pareado)")
+f5b <- ggplot(subset(larga, momento == "D" & rasgo %in% c("CYT", "IFNG6", "CD8A")), aes(respuesta, valor_log, fill = respuesta)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.6) + geom_jitter(width = 0.1, size = 2) +
+  facet_wrap(~rasgo, scales = "free_y") + scale_fill_npg(guide = "none") +
+  labs(x = NULL, y = NULL, title = "B. Diagnóstico: respondedores vs no respondedores")
+genes_hm <- c("CD3E", "CD8A", "CD4", "FOXP3", "GZMA", "GZMB", "PRF1", "IFNG", "CXCL9", "CXCL10", "CXCL13", "IDO1",
+              "STAT1", "CD274", "PDCD1", "CTLA4", "LAG3", "TIGIT", "HAVCR2", "MS4A1", "CD79A", "JCHAIN", "CD68", "CD163",
+              "HLA-A", "B2M", "ESR1", "ERBB2", "KRT5", "EPCAM", "MKI67", "COL1A1")
+z <- t(scale(t(log2(mat[genes_hm, ] + 1))))
+hm <- data.frame(gen = factor(rep(rownames(z), ncol(z)), levels = rev(genes_hm)),
+                 muestra = rep(colnames(z), each = nrow(z)), z = as.vector(z))
+f5c <- ggplot(hm, aes(muestra, gen, fill = pmax(pmin(z, 2.5), -2.5))) + geom_tile() +
+  scale_fill_gradient2(low = pal_npg()(4)[4], mid = "white", high = pal_npg()(1), name = "z") +
+  labs(x = NULL, y = NULL, title = "C. Heatmap (z-score por gen)") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5), axis.text.y = element_text(size = 7))
+fig5 <- (f5a) / (f5b | f5c) + plot_layout(heights = c(1, 1.6))
+fig5
+ggsave("figuras/Fig5_firmas_inmunes.png", fig5, width = 12, height = 8, dpi = 300)
+```
+
+> **Pregunta 4.1.** La CYT baja de D a M en casi todos los pacientes. ¿Es "inmunosupresión por el tratamiento"? Mira *EPCAM* y *COL1A1*: ¿cómo cambia la **composición** del tejido? ¿Qué método usarías para separar composición de estado celular (deconvolución, scRNA-seq, transcriptómica espacial)?
+>
+> **Pregunta 4.2.** Con n = 6 pacientes con ARN, ¿puedes concluir algo sobre respondedores vs no respondedores? ¿Qué tamaño muestral necesitarías?
+
+## Repertorio TCRβ
+
+T0 = pretratamiento; T3 = momento de la cirugía. Los repertorios tienen **profundidades muy distintas** (de decenas a miles de moléculas), por lo que la diversidad debe compararse **tras rarefacción**.
+
+```{r tcr}
+arch <- list.files("data/tcr", full.names = TRUE)
+tcr <- lapply(arch, read.delim); names(tcr) <- sub("\\.tsv$", "", basename(arch))
+met <- data.frame(muestra = names(tcr), t(sapply(tcr, function(x) metricas_tcr(x$conteo))))
+met$paciente <- substr(met$muestra, 1, 5); met$tiempo <- sub(".*-", "", met$muestra)
+n_min <- 200   # profundidad común de rarefacción (moléculas)
+rar <- t(sapply(tcr, function(x) if (sum(x$conteo) >= n_min) rarefaccion_tcr(x$conteo, n_min) else c(clonotipos = NA, shannon = NA, clonalidad = NA)))
+met <- cbind(met, setNames(as.data.frame(rar), paste0(colnames(rar), "_rar")))
+met[, c("muestra", "lecturas", "clonotipos", "clonalidad", "frac_top10", "clonotipos_rar", "clonalidad_rar")]
+## Solapamiento de clonotipos T0–T3 en PAC01
+a <- tcr[["PAC01-T0"]]; b <- tcr[["PAC01-T3"]]
+comp <- merge(a, b, by = c("cdr3b", "v", "j"), all = TRUE, suffixes = c("_T0", "_T3")); comp[is.na(comp)] <- 0
+c(compartidos = sum(comp$conteo_T0 > 0 & comp$conteo_T3 > 0), solo_T0 = sum(comp$conteo_T3 == 0), solo_T3 = sum(comp$conteo_T0 == 0))
+```
+
+## Figura 6 — Repertorio TCR
+
+```{r fig6, fig.width=12, fig.height=4.5}
+pares <- subset(met, tiempo %in% c("T0", "T3") & paciente %in% names(which(table(met$paciente[met$tiempo %in% c("T0", "T3")]) == 2)))
+f6a <- ggplot(met, aes(lecturas, clonotipos, color = tiempo, label = paciente)) + geom_point(size = 2.5) +
+  geom_text(vjust = -0.8, size = 2.7, show.legend = FALSE) + scale_x_log10() + scale_y_log10() + scale_color_npg() +
+  labs(x = "Moléculas TCRβ (log)", y = "Clonotipos únicos (log)", title = "A. La riqueza depende de la profundidad")
+f6b <- ggplot(pares, aes(tiempo, frac_top10, group = paciente, color = paciente)) + geom_line() + geom_point(size = 2.5) +
+  scale_color_npg() + labs(x = NULL, y = "Fracción ocupada por los 10 clones principales", title = "B. Expansión clonal T0 → T3")
+solap <- do.call(rbind, lapply(unique(pares$paciente), function(p) {
+  a <- tcr[[paste0(p, "-T0")]]$cdr3b; b <- tcr[[paste0(p, "-T3")]]$cdr3b
+  data.frame(paciente = p, categoria = c("solo T0", "compartidos", "solo T3"),
+             n = c(length(setdiff(a, b)), length(intersect(a, b)), length(setdiff(b, a)))) }))
+solap$categoria <- factor(solap$categoria, levels = c("solo T0", "compartidos", "solo T3"))
+f6c <- ggplot(solap, aes(paciente, n, fill = categoria)) + geom_col(position = "fill") + scale_fill_npg() +
+  geom_text(data = subset(solap, categoria == "compartidos"), aes(y = 0.5, label = paste0("compartidos = ", n)), angle = 90, size = 3) +
+  labs(x = NULL, y = "Proporción de clonotipos únicos", fill = NULL, title = "C. Solapamiento de CDR3β T0–T3")
+fig6 <- f6a + f6b + f6c
+fig6
+ggsave("figuras/Fig6_TCR.png", fig6, width = 12, height = 4.5, dpi = 300)
+```
+
+> **Pregunta 4.3.** Casi ningún clonotipo se comparte entre T0 y T3. ¿Es recambio biológico del repertorio o **submuestreo** (cientos de moléculas frente a ~10⁸ clonotipos en una persona)? ¿Cómo lo distinguirías: más profundidad, réplicas técnicas o comparación con sangre? ¿Qué indicaría que los clones dominantes de T3 fueran nuevos o preexistentes? ¿Puedes saber si un clon expandido reconoce un antígeno tumoral? ¿Qué falta: la cadena α, la especificidad, el HLA, datos funcionales?
+>
+> **Pregunta 4.4 (BCR).** Estos datos son solo de TCRβ. ¿Qué agregaría el repertorio BCR? Piensa en las estructuras linfoides terciarias, en *CXCL13* y *MS4A1* de la Fig. 5C, y en la hipermutación somática.
+
+# Bloque 5 — Caso integrador y bases de datos (12 min)
+
+## Resumen molecular de PAC01
+
+```{r resumen}
+data.frame(
+  rasgo = c("Subtipo", "Respuesta (pCR)", "TMB codificante (mut/Mb, D)", "Drivers somáticos", "Número de copias",
+            "Persistencia en M", "Espectro (cohorte, VAF ≥ 0,1)", "sTIL D → M", "MSI", "PD-L1"),
+  valor = c("Triple negativo", "No (enfermedad residual ~5 %)",
+            tmb$TMB[tmb$paciente == "PAC01"],
+            paste(unique(subset(D, gen %in% c("TP53", "NF1"))$hgvsp), collapse = "; "),
+            "Ploidía ~2,9; LOH de 17p (TP53)", "TP53 con 3 lecturas ALT en M (VAF ~3 %)",
+            "APOBEC + reloj; SBS3 incierto", paste(clin$sTIL[clin$paciente == "PAC01"], collapse = " → "),
+            "No evaluado", "No disponible"))
+```
+
+## Consultas en bases de datos (en el navegador)
+
+1. **cBioPortal** (<https://www.cbioportal.org>) → estudio *Breast Invasive Carcinoma (TCGA, PanCancer Atlas)* → consulta `TP53 NF1 PIK3CA`. ¿Con qué frecuencia está mutado *TP53* en los tumores basal-like frente a los luminales? ¿*TP53* V173M es un *hotspot*?
+2. **COSMIC** (<https://cancer.sanger.ac.uk>) → busca *TP53* p.V173M. ¿En cuántas muestras aparece? ¿Qué firmas de referencia tienen las mayores contribuciones en cáncer de mama?
+3. **OncoKB** (<https://www.oncokb.org>) → busca *TP53* y *PIK3CA* H1047R (presente en PAC05). ¿Qué nivel de evidencia terapéutica tiene cada uno, y para qué subtipo y línea de tratamiento?
+4. **GDC / TCGA** (<https://portal.gdc.cancer.gov>) → proyecto TCGA-BRCA. ¿Qué tipos de datos hay (WXS, RNA-seq, metilación), cuáles son de acceso abierto y cuáles controlado, y por qué?
+
+## Preguntas de integración
+
+> **5.1 (Observación vs estimación).** Clasifica estas afirmaciones como *observación*, *estimación*, *hipótesis* o *implicación clínica*: (a) "M tiene 142 variantes llamadas"; (b) "TP53 es clonal en D"; (c) "el tumor residual desciende del clon fundador"; (d) "PAC01 podría beneficiarse de inmunoterapia".
+>
+> **5.2 (Biomarcadores de inmunoterapia).** En TNBC temprano de alto riesgo, pembrolizumab neoadyuvante con quimioterapia (KEYNOTE-522) se usa **sin exigir** PD-L1, TMB ni MSI. En TNBC metastásico de primera línea (KEYNOTE-355), se exige **PD-L1 CPS ≥ 10** (22C3). ¿Qué tres biomarcadores evaluarías en PAC01 si recayera, y qué umbral usaría cada uno? ¿Por qué una TMB baja no excluye el beneficio?
+>
+> **5.3 (Vacunas de neoantígenos y CAR-T).** Con la TMB de PAC01, ¿cuántos neoantígenos candidatos esperarías, en orden de magnitud? ¿Por qué conviene priorizar mutaciones **clonales** y **persistentes** (como TP53) para una vacuna personalizada? ¿Por qué CAR-T ha funcionado en neoplasias hematológicas (CD19, BCMA) y no aún en cáncer de mama?
+>
+> **5.4 (Conclusión y validación).** Redacta en tres líneas una conclusión molecular sobre PAC01 y propón **un** experimento o dato adicional que podría cambiarla (por ejemplo, secuenciación profunda dirigida de M, ctDNA, WGS o la prueba de PD-L1).
+
+# Cierre (3 min)
+
+- Una variante **no llamada** no es una variante **ausente**: la potencia depende de la pureza y de la profundidad.
+- Las muestras de baja pureza y FFPE acumulan **artefactos** (C>T de VAF baja); los controles negativos naturales permiten medirlos.
+- TMB, CCF y firmas son **estimaciones** que dependen de definiciones y supuestos: decláralos siempre.
+- Las firmas inmunes de *bulk* mezclan composición y estado; los repertorios requieren normalizar la profundidad.
+- Toda implicación clínica depende del tipo tumoral, el estadio, la línea de tratamiento y el nivel de evidencia.
+
+```{r session}
+sessionInfo()
+```
